@@ -1,0 +1,11 @@
+conf.py
+.tx
+_build
+compile_messages
+init
+*~
+*.mo
+*.swp
+*.bak
+i18n
+locale

@@ -1,0 +1,31 @@
+language: python
+
+install:
+# Sphinx requirements
+  - pip install -r requirements.txt
+
+before_script:
+  - ./scripts/ci/create_transifexrc.sh
+  - ./scripts/ci/transifex_push.sh
+
+script:
+  - ./scripts/build-docs.sh $TRAVIS_TAG
+
+deploy:
+#  - provider: pages
+#    skip-cleanup: true
+#    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+#    keep-history: true
+#    local-dir: _build/html
+#    on:
+#      branch: master
+  - provider: script
+    skip_cleanup: true
+    script: bash scripts/travis_tag_publish.sh $TRAVIS_TAG
+    on:
+      tags: true
+  - provider: script
+    skip_cleanup: true
+    script: bash scripts/travis_tag_publish.sh
+    on:
+      branch: master
