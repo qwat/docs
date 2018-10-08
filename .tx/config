@@ -1,0 +1,101 @@
+[main]
+host = https://www.transifex.com
+
+[qgep-documentation.index]
+source_file = i18n/pot/index.pot
+source_lang = en
+trans.de = i18n/de/index.po
+trans.fr = i18n/fr/index.po
+trans.it = i18n/it/index.po
+trans.ro = i18n/ro/index.po
+type = PO
+
+[qgep-documentation.admin-guide]
+source_file = i18n/pot/admin-guide.pot
+source_lang = en
+trans.de = i18n/de/admin-guide.po
+trans.fr = i18n/fr/admin-guide.po
+trans.it = i18n/it/admin-guide.po
+trans.ro = i18n/ro/admin-guide.po
+type = PO
+
+[qgep-documentation.contributor-guide]
+source_file = i18n/pot/contributor-guide.pot
+source_lang = en
+trans.de = i18n/de/contributor-guide.po
+trans.fr = i18n/fr/contributor-guide.po
+trans.it = i18n/it/contributor-guide.po
+trans.ro = i18n/ro/contributor-guide.po
+type = PO
+
+[qgep-documentation.demo-guide]
+source_file = i18n/pot/demo-guide.pot
+source_lang = en
+trans.de = i18n/de/demo-guide.po
+trans.fr = i18n/fr/demo-guide.po
+trans.it = i18n/it/demo-guide.po
+trans.ro = i18n/ro/demo-guide.po
+type = PO
+
+[qgep-documentation.developer-guide]
+source_file = i18n/pot/developer-guide.pot
+source_lang = en
+trans.de = i18n/de/developer-guide.po
+trans.fr = i18n/fr/developer-guide.po
+trans.it = i18n/it/developer-guide.po
+trans.ro = i18n/ro/developer-guide.po
+type = PO
+
+[qgep-documentation.faq]
+source_file = i18n/pot/faq.pot
+source_lang = en
+trans.de = i18n/de/faq.po
+trans.fr = i18n/fr/faq.po
+trans.it = i18n/it/faq.po
+trans.ro = i18n/ro/faq.po
+type = PO
+
+[qgep-documentation.features-guide]
+source_file = i18n/pot/f.pot
+source_lang = en
+trans.de = i18n/de/features-guide.po
+trans.fr = i18n/fr/features-guide.po
+trans.it = i18n/it/features-guide.po
+trans.ro = i18n/ro/features-guide.po
+type = PO
+
+[qgep-documentation.glossary]
+source_file = i18n/pot/glossary.pot
+source_lang = en
+trans.de = i18n/de/glossary.po
+trans.fr = i18n/fr/glossary.po
+trans.it = i18n/it/glossary.po
+trans.ro = i18n/ro/glossary.po
+type = PO
+
+[qgep-documentation.installation-guide]
+source_file = i18n/pot/installation-guide.pot
+source_lang = en
+trans.de = i18n/de/installation-guide.po
+trans.fr = i18n/fr/installation-guide.po
+trans.it = i18n/it/installation-guide.po
+trans.ro = i18n/ro/installation-guide.po
+type = PO
+
+[qgep-documentation.translation]
+source_file = i18n/pot/translation.pot
+source_lang = en
+trans.de = i18n/de/translation.po
+trans.fr = i18n/fr/translation.po
+trans.it = i18n/it/translation.po
+trans.ro = i18n/ro/translation.po
+type = PO
+
+[qgep-documentation.user-guide]
+source_file = i18n/pot/user-guide.pot
+source_lang = en
+trans.de = i18n/de/user-guide.po
+trans.fr = i18n/fr/user-guide.po
+trans.it = i18n/it/user-guide.po
+trans.ro = i18n/ro/user-guide.po
+type = PO
