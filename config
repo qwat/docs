@@ -79,6 +79,12 @@ source_file = _build/gettext/user-guide/delete.pot
 source_lang = en
 type = PO
 
+[qwat-doc.user-guide--test]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/test.po
+source_file = _build/gettext/user-guide/test.pot
+source_lang = en
+type = PO
+
 [qwat-doc.user-guide--update]
 file_filter = locale/<lang>/LC_MESSAGES/user-guide/update.po
 source_file = _build/gettext/user-guide/update.pot
