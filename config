@@ -1,0 +1,159 @@
+[main]
+host = https://www.transifex.com
+
+[qwat-doc.index]
+file_filter = locale/<lang>/LC_MESSAGES/index.po
+source_file = _build/gettext/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.translation--index]
+file_filter = locale/<lang>/LC_MESSAGES/translation/index.po
+source_file = _build/gettext/translation/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.developer-guide--qwat_dev]
+file_filter = locale/<lang>/LC_MESSAGES/developer-guide/qwat_dev.po
+source_file = _build/gettext/developer-guide/qwat_dev.pot
+source_lang = en
+type = PO
+
+[qwat-doc.developer-guide--upgrade]
+file_filter = locale/<lang>/LC_MESSAGES/developer-guide/upgrade.po
+source_file = _build/gettext/developer-guide/upgrade.pot
+source_lang = en
+type = PO
+
+[qwat-doc.developer-guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/developer-guide/index.po
+source_file = _build/gettext/developer-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.developer-guide--local_customizations]
+file_filter = locale/<lang>/LC_MESSAGES/developer-guide/local_customizations.po
+source_file = _build/gettext/developer-guide/local_customizations.pot
+source_lang = en
+type = PO
+
+[qwat-doc.admin-guide--data_manager]
+file_filter = locale/<lang>/LC_MESSAGES/admin-guide/data_manager.po
+source_file = _build/gettext/admin-guide/data_manager.pot
+source_lang = en
+type = PO
+
+[qwat-doc.admin-guide--triggers]
+file_filter = locale/<lang>/LC_MESSAGES/admin-guide/triggers.po
+source_file = _build/gettext/admin-guide/triggers.pot
+source_lang = en
+type = PO
+
+[qwat-doc.admin-guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/admin-guide/index.po
+source_file = _build/gettext/admin-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.contributor-guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/contributor-guide/index.po
+source_file = _build/gettext/contributor-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.demo-guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/demo-guide/index.po
+source_file = _build/gettext/demo-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.features-guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/features-guide/index.po
+source_file = _build/gettext/features-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide--delete]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/delete.po
+source_file = _build/gettext/user-guide/delete.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide--update]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/update.po
+source_file = _build/gettext/user-guide/update.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide--elevation]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/elevation.po
+source_file = _build/gettext/user-guide/elevation.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide--print]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/print.po
+source_file = _build/gettext/user-guide/print.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide--create]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/create.po
+source_file = _build/gettext/user-guide/create.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/index.po
+source_file = _build/gettext/user-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide--qwat_struct]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/qwat_struct.po
+source_file = _build/gettext/user-guide/qwat_struct.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide--link]
+file_filter = locale/<lang>/LC_MESSAGES/user-guide/link.po
+source_file = _build/gettext/user-guide/link.pot
+source_lang = en
+type = PO
+
+[qwat-doc.faq--index]
+file_filter = locale/<lang>/LC_MESSAGES/faq/index.po
+source_file = _build/gettext/faq/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.glossary--index]
+file_filter = locale/<lang>/LC_MESSAGES/glossary/index.po
+source_file = _build/gettext/glossary/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.installation-guide--server]
+file_filter = locale/<lang>/LC_MESSAGES/installation-guide/server.po
+source_file = _build/gettext/installation-guide/server.pot
+source_lang = en
+type = PO
+
+[qwat-doc.installation-guide--database-initialization]
+file_filter = locale/<lang>/LC_MESSAGES/installation-guide/database-initialization.po
+source_file = _build/gettext/installation-guide/database-initialization.pot
+source_lang = en
+type = PO
+
+[qwat-doc.installation-guide--index]
+file_filter = locale/<lang>/LC_MESSAGES/installation-guide/index.po
+source_file = _build/gettext/installation-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.installation-guide--workstation]
+file_filter = locale/<lang>/LC_MESSAGES/installation-guide/workstation.po
+source_file = _build/gettext/installation-guide/workstation.pot
+source_lang = en
+type = PO
+
