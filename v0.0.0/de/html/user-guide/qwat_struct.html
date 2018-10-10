@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="de" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.1. Structuration du réseau d’Eau Potable sur QWAT &mdash; QWAT v0.0.0 Dokumentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="3.2. Création d’objets dans QWAT" href="create.html" />
+    <link rel="prev" title="3. QWAT User Guide" href="index.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> QWAT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. QWAT User Guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. Structuration du réseau d’Eau Potable sur QWAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ordre-de-saisie-des-differents-type-dobjets">3.1.1. Ordre de saisie des différents type d’objets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#directive-de-saisie-des-conduites">3.1.2. Directive de saisie des conduites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="create.html">3.2. Création d’objets dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">3.3. Règles de base pour la mise à jour sur QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">3.4. Suppression d’objets dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">3.5. Liaisons des différents objets dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Impression dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Elevation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">3. QWAT User Guide</a> &raquo;</li>
+        
+      <li>3.1. Structuration du réseau d’Eau Potable sur QWAT</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user-guide/qwat_struct.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="structuration-du-reseau-deau-potable-sur-qwat">
+<h1>3.1. Structuration du réseau d’Eau Potable sur QWAT<a class="headerlink" href="#structuration-du-reseau-deau-potable-sur-qwat" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="ordre-de-saisie-des-differents-type-dobjets">
+<h2>3.1.1. Ordre de saisie des différents type d’objets<a class="headerlink" href="#ordre-de-saisie-des-differents-type-dobjets" title="Link zu dieser Überschrift">¶</a></h2>
+<p>La mise à jour sur QWAT se fait dans l’ordre suivant:</p>
+<ul>
+<li><ol class="first arabic simple">
+<li>Points de construction <cite>qwat_od.node</cite>, pour tous les:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>points de construction</li>
+<li>Té</li>
+<li>Bouchon</li>
+<li>Changement de matériau</li>
+<li>Changement d’année</li>
+<li>Changement de diamètre</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="2">
+<li>Création des conduites <cite>qwat_od.pipe</cite>, pour toutes les:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Conduites principales (réseau)</li>
+<li>Conduites hydrantes</li>
+<li>Conduites de branchement</li>
+<li>Conduites de branch. secondaire</li>
+<li>Conduites de transport</li>
+<li>Conduites d’arrosage</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="3">
+<li>Création des pièces d’installation <cite>qwat_od.vw_element_part</cite>, pour tous les:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Croix</li>
+<li>Changement de pente</li>
+<li>Coude</li>
+<li>Manchon</li>
+<li>Collier de prise</li>
+<li>Bouchon</li>
+<li>Bouches d’arrosage</li>
+<li>Autres pièces diverses</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="4">
+<li>Création des points d’introduction, pour tous les:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Points d’introduction</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="5">
+<li>Création des vannes <cite>qwat_od.valve</cite>, pour toutes les:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Vannes réseau</li>
+<li>Vannes hydrant</li>
+<li>Vannes de prise</li>
+<li>Vannes de prise secondaire</li>
+<li>Vannes de régulation</li>
+<li>Purge</li>
+<li>Vannes de vidange automatique</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="6">
+<li>Création des bornes hydrantes <cite>qwat_od.vw_element_hydrant</cite>, pour toutes les:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Bornes hydrant</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="7">
+<li>Création des manchons de réparation, pour tous les:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Manchon de réparation</li>
+</ul>
+</div></blockquote>
+</li>
+<li><ol class="first arabic simple" start="8">
+<li>Création des ouvrages, pour tous les:</li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Ouvrages <cite>qwat_od.vw_element_installation</cite></li>
+<li>Couvercles <cite>qwat_od.cover</cite></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="directive-de-saisie-des-conduites">
+<h2>3.1.2. Directive de saisie des conduites<a class="headerlink" href="#directive-de-saisie-des-conduites" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">Cette partie est susceptible de changer en fonction du développement de QWAT. Le projet étant inité par les communes vaudoises (CH), elle se base sur les directives du SIRE. En la matière, il existe plusieurs numérisations possibles des réseaux d’eaux. Des modifications pourront être apportées suivant l’évolution du projet et des règles en vigueur.</p>
+</div>
+<p>La saisie du réseau doit être effectuée en respectant les directives fixées par SIRE, selon les exemples ci‐après.</p>
+<img alt="../_images/SIRE.png" src="../_images/SIRE.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="create.html" class="btn btn-neutral float-right" title="3.2. Création d’objets dans QWAT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="3. QWAT User Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, QWAT team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
