@@ -27,7 +27,7 @@ Vous devez maintenant remplir les attributs des différents points pour chaque c
 Création des points de construction
 -----------------------------------
 
-Pour créer de nouvelles pièces d’installation il faut sélectionner la catégorie
+Pour créer de nouveaux points de construction il faut sélectionner la catégorie
 « points de construction » qui est une sous‐couche dans la couche « Côtes ». 
 Il faut ensuite basculer en mode édition
 
