@@ -90,10 +90,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Developer’s guide</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. QWAT Development Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#prerequisites">6.1.1. Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#environment">6.1.2. Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qwat-architecture">6.1.3. QWAT architecture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#roles">6.1.4. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">6.1.1. Prérequis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environment">6.1.2. Environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qwat-architecture">6.1.3. Architecture de QWAT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roles">6.1.4. Rôles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#release-cycles-and-versioning">6.1.5. Release cycles and versioning</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#version-and-release-management-policy">6.1.5.1. Version and release management policy</a></li>
 </ul>
@@ -183,35 +183,35 @@
   <div class="section" id="qwat-development-overview">
 <h1>6.1. QWAT Development Overview<a class="headerlink" href="#qwat-development-overview" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="prerequisites">
-<h2>6.1.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre">¶</a></h2>
-<p>In order to develop for QWAT, the following skills may be required :</p>
+<h2>6.1.1. Prérequis<a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le but de contribuer au développement de QWAT, les compétences suivantes sont requises :</p>
 <ul class="simple">
-<li>Good general knowledge of GIS</li>
-<li>Good general knowledge of QGIS</li>
-<li>Skills in relational databases and PostgreSQL/PostGIS specifically</li>
-<li>Skills in Python</li>
+<li>Bonnes connaissances générales de SIG</li>
+<li>Bonnes connaissances générales de QGIS</li>
+<li>Compétences en bases de données relationnelles et PostgreSQL/PostGIS spécifiquement</li>
+<li>Compétences en Python</li>
 </ul>
 </div>
 <div class="section" id="environment">
-<h2>6.1.2. Environment<a class="headerlink" href="#environment" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>6.1.2. Environnement<a class="headerlink" href="#environment" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li>You will need to <a class="reference external" href="https://help.github.com/articles/set-up-git/">install and configure Git and GitHub</a></li>
-<li>Have python 3 installed and as your default python. In case it is not, use a <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a></li>
-<li>have a bash shell</li>
-<li>have admin rights to create and drop PostgreSQL databases</li>
+<li>Vous aurez besoin d”<a class="reference external" href="https://help.github.com/articles/set-up-git/">installer et configurer Git et GitHub</a></li>
+<li>Avoir python 3 installé comme python par défaut. Dans le cas contraire, utiliser un <a class="reference external" href="https://docs.python.org/3/library/venv.html">environnement virtuel</a></li>
+<li>Avoir un une console bash</li>
+<li>Avoir les droits administrateurs pour créer et supprimer des bases de données PostgreSQL</li>
 </ul>
 </div>
 <div class="section" id="qwat-architecture">
-<h2>6.1.3. QWAT architecture<a class="headerlink" href="#qwat-architecture" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>6.1.3. Architecture de QWAT<a class="headerlink" href="#qwat-architecture" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li>Describe here various parts of QWAT</li>
 <li>Describe relation to other projects (plugins, qgis core)</li>
 </ul>
 </div>
 <div class="section" id="roles">
-<h2>6.1.4. Roles<a class="headerlink" href="#roles" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>6.1.4. Rôles<a class="headerlink" href="#roles" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
-<li><em>Commiters</em> have access to QWAT code repositories and can push to them. It means they control the evolution of the software</li>
+<li>Les <em>Commiters</em> on accès au dépôt de code QWAT et peuvent y pousser leur code. Ceci signifie qu’ils contrôlent l’évolution du logiciel.</li>
 <li><em>contributors</em> can provide information, code, documentation to the project. They do not have direct access for modifications and must go through the <em>commiters</em> to get their modifications applied. See the [[Contributors_guide]] for more information and processes.</li>
 <li>The <em>release manager</em> is in charge of deciding when a new version of the software is published, and to actually publish the release. Current release manager is <a class="reference external" href="https://github.com/haubourg">Régis Haubourg (OSLANDIA)</a> on behalf of the QWAT’s group.</li>
 </ul>
@@ -347,7 +347,6 @@ PUM allows to add pre and post files, either in python or sql for each update, s
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
   
