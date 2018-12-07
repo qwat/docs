@@ -1,0 +1,307 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="it" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="it" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.3. Upgrade database &mdash; QWAT v1.3.3 documentazione</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="7. Demo data and project" href="../demo-guide/index.html" />
+    <link rel="prev" title="6.2. Customize local DB models" href="local_customizations.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> QWAT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.3.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Developer’s guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html">6.1. QWAT Development Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html">6.2. Customize local DB models</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.3. Upgrade database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-new-upgrade-delta">6.3.1. Create a new upgrade delta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#migrate-an-existing-database">6.3.2. Migrate an existing database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-way-it-works">6.3.3. The way it works</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">6. Developer’s guide</a> &raquo;</li>
+        
+      <li>6.3. Upgrade database</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/developer-guide/upgrade.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="upgrade-database">
+<h1>6.3. Upgrade database<a class="headerlink" href="#upgrade-database" title="Link a questa intestazione">¶</a></h1>
+<div class="section" id="create-a-new-upgrade-delta">
+<h2>6.3.1. Create a new upgrade delta<a class="headerlink" href="#create-a-new-upgrade-delta" title="Link a questa intestazione">¶</a></h2>
+<ul class="simple">
+<li>First create a new branch for your modification on the model</li>
+<li>Modify the SQL creation code at your convenience</li>
+<li>Create the corresponding SQL delta file in <em>data-model/update/delta</em>.
+* file must be named : delta_{tag_number}_{increment}_{short description}.sql <a class="reference external" href="qwat_dev.html#release-cycles-and-versioning">see Release cycles and versioning.</a></li>
+<li>Push your branch, and check travis result</li>
+<li>If travis test is OK, then you can create a pull request to merge your modifications in master</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Data model should be TAGGED. Tag should respect the following syntax like this: x.x.x. For each major version, the tag MUST be called x.0.0.</p>
+</div>
+</div>
+<div class="section" id="migrate-an-existing-database">
+<h2>6.3.2. Migrate an existing database<a class="headerlink" href="#migrate-an-existing-database" title="Link a questa intestazione">¶</a></h2>
+<p>If you use an old version of QWAT model, you can upgrade it by following the instructions bellow:</p>
+<div class="admonition warning">
+<p class="first admonition-title">Avvertimento</p>
+<p class="last">You should always save you current database before upgrading</p>
+</div>
+<ul class="simple">
+<li>Open a terminal, and move to <em>qwat_project/data-model/update</em></li>
+<li><dl class="first docutils">
+<dt>Launch upgrade command: <code class="docutils literal notranslate"><span class="pre">./upgrade_db.sh</span></code></dt>
+<dd><ul class="first last">
+<li>This will test the migration process</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>If the migration process is OK, then launch again the command with the parameter to upgrade the real DB : <code class="docutils literal notranslate"><span class="pre">./upgrade_db.sh</span> <span class="pre">--upgrade</span> <span class="pre">yes</span></code></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Your <em>.pg_service.conf</em> must contain connexions to qwat, qwat_test and qwat_conform DB</p>
+</div>
+</div>
+<div class="section" id="the-way-it-works">
+<h2>6.3.3. The way it works<a class="headerlink" href="#the-way-it-works" title="Link a questa intestazione">¶</a></h2>
+<p>We’ve got a tag for version x.0</p>
+<p>In <em>/update/delta/ directory</em>, we find the SQL files list which contain the current evolutions (delta).
+If we execute <em>init_qwat.sh</em> in the current git repository, we should have the same DB than if we execute <em>init_qwat.sh</em> of the x.0 version.
+The contributor who add a new delta SQL file must also update the DB creation SQL script.</p>
+<p>For a user, the migration process consists in :</p>
+<ul class="simple">
+<li>Get the version of his base (should be given in QWAT the system schema).</li>
+<li><dl class="first docutils">
+<dt>Execute the migration script, which take in parameter that version number. The script execute the following tasks :</dt>
+<dd><ul class="first last">
+<li>pg_dump of the QWAT DB</li>
+<li>pg_restore of the previous dump in a test DB (<em>qwat_test</em>)</li>
+<li>Execute on test DB all SQL delta above or equals to the version number (sql deltas must be named <em>delta_{tag_number}_{increment}_{short description}.sql</em>)</li>
+<li><dl class="first docutils">
+<dt>Execute conformity test script:</dt>
+<dd><ul class="first last">
+<li>Create a new DB: <em>qwat_test_conform</em></li>
+<li>Produce the reference file (result from the DB test sql)</li>
+<li>Comparison of that reference file with the one produced by the <em>qwat_test</em> DB previously created</li>
+<li>If all is OK, user is invited to launch the migration on his real DB</li>
+<li>If errors occur, the user has to debug himself or contact the QWAT team</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../demo-guide/index.html" class="btn btn-neutral float-right" title="7. Demo data and project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="local_customizations.html" class="btn btn-neutral" title="6.2. Customize local DB models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, QWAT team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
