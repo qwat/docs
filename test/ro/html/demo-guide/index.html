@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ro" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ro" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. Demo data and project &mdash; QWAT test documentație</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Căutare" href="../search.html" />
+    <link rel="next" title="8. FAQ" href="../faq/index.html" />
+    <link rel="prev" title="6.3. Upgrade database" href="../developer-guide/upgrade.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> QWAT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                test
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>7. Demo data and project</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/demo-guide/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="demo-data-and-project">
+<h1>7. Demo data and project<a class="headerlink" href="#demo-data-and-project" title="Link permanent la acest titlu">¶</a></h1>
+<p>QWAT can be tested by downloading the QGS project repository <a class="reference external" href="https://github.com/qwat/QWAT">here</a> and restoring the latest <a class="reference external" href="https://github.com/qwat/qwat-data-model/releases/latest">data_and_structure_sample.backup</a> in PostgreSQL (+ extension PostGIS and hstore).</p>
+<p>On the download page you can find theses backups:</p>
+<ul class="simple">
+<li><cite>qwat_vX.X.X_data_and_structure_sample.backup</cite>: Restore the QWAT schema plus the sample dataset</li>
+<li><cite>qwat_vX.X.X_structure_only.backup</cite>:  Restore only the QWAT schema only. In addition you’ll also need to restore the value_list_data_only dump</li>
+<li><cite>qwat_vX.X.X_value_list_data_only.backup</cite>: Restore the value list of QWAT demo project</li>
+<li><cite>qwat_vX.X.X_data_only_sample.backup</cite>: Restore the sample dataset (the init_qwat.sh script should be run prior to restoring the sample dataset)</li>
+</ul>
+<p>More detailed instructions:</p>
+<p>How to install the data sample from the QWAT Water distribution management project.</p>
+<p>Create the QWAT database model with roles and restore the latest version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the database and the extensions</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create database qwat;&#39;</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create extension postgis;&#39;</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create extension hstore;&#39;</span>
+
+<span class="c1"># Create the roles for QWAT</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;CREATE ROLE qwat_viewer NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;&#39;</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;CREATE ROLE qwat_user NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;&#39;</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;CREATE ROLE qwat_manager NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;&#39;</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;CREATE ROLE qwat_sysadmin NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;&#39;</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
+
+<span class="c1"># And restore it into your QWAT database</span>
+<span class="n">pg_restore</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbname</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">e</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">owner</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">--</span><span class="n">jobs</span><span class="o">=</span><span class="mi">3</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">triggers</span> <span class="o">--</span><span class="n">port</span> <span class="mi">5432</span> <span class="n">qwat_dump</span><span class="o">.</span><span class="n">backup</span>
+</pre></div>
+</div>
+<p>You now have the latest data model (with sample data) + database roles.</p>
+<p><strong>Create the QWAT service in the .pg_service.conf file</strong></p>
+<p>If you already have the service defined you can skip this step, else edit the <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> file and make it look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">qwat</span><span class="p">]</span>
+<span class="c1">#enter your database ip</span>
+<span class="n">host</span><span class="o">=</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+<span class="c1">#database name</span>
+<span class="n">dbname</span><span class="o">=</span><span class="n">qwat</span>
+<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
+<span class="n">user</span><span class="o">=</span><span class="n">postgres</span>
+<span class="c1">#you can also add your password if you like</span>
+<span class="n">password</span><span class="o">=</span><span class="n">YourPassword</span>
+
+<span class="p">[</span><span class="n">qwat_prod</span><span class="p">]</span>
+<span class="c1">#enter your database ip</span>
+<span class="n">host</span><span class="o">=</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+<span class="c1">#database name</span>
+<span class="n">dbname</span><span class="o">=</span><span class="n">qwat</span>
+<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
+<span class="n">user</span><span class="o">=</span><span class="n">postgres</span>
+<span class="c1">#you can also add your password if you like</span>
+<span class="n">password</span><span class="o">=</span><span class="n">YourPassword</span>
+</pre></div>
+</div>
+<p><strong>Open the qgis project</strong></p>
+<p>You can open the <strong>qwat.qgs</strong> project from the qwat-data-sample directory and you should see this screen:</p>
+<img alt="../_images/qgis.png" src="../_images/qgis.png" />
+<div class="admonition note">
+<p class="first admonition-title">Notă</p>
+<p class="last">You can also try out the latest <strong>qwat.qgs</strong> project from the QWAT directory. Keep in mind that there there’s a chance
+that it doesn’t fit the sample data model. This is because the sample data model may be a little older than the latest
+data model and only the corresponding <strong>.qgs</strong> project has been matched.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../faq/index.html" class="btn btn-neutral float-right" title="8. FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../developer-guide/upgrade.html" class="btn btn-neutral" title="6.3. Upgrade database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, QWAT team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
