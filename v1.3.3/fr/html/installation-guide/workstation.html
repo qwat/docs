@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="fr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.3. Setup workstation &mdash; Documentation QWAT v1.3.3</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="3. QWAT Guide de l’utilisateur" href="../user-guide/index.html" />
+    <link rel="prev" title="2.2. Database initialization" href="database-initialization.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> QWAT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.3.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. Fonctionnalités de QWAT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. QWAT Installation Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server.html">2.1. Setup database server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">2.2. Database initialization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.3. Setup workstation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#required-software">2.3.1. Required Software</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-qgis">2.3.1.1. Install QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#database-configuration">2.3.2. Database configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows-pg-service">2.3.2.1. Windows pg_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unix-pg-service">2.3.2.2. Unix pg_service</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-systems">2.3.2.3. All systems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT Guide de l’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Traduction</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">2. QWAT Installation Guide</a> &raquo;</li>
+        
+      <li>2.3. Setup workstation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installation-guide/workstation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="setup-workstation">
+<h1>2.3. Setup workstation<a class="headerlink" href="#setup-workstation" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="required-software">
+<h2>2.3.1. Required Software<a class="headerlink" href="#required-software" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="install-qgis">
+<h3>2.3.1.1. Install QGIS<a class="headerlink" href="#install-qgis" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Client side components are:</p>
+<ul class="simple">
+<li>QGIS (2.14+)</li>
+<li>QGIS extensions (depending on specific use case)</li>
+</ul>
+<p>The exact required configuration is very dependant on the data sizes and complexity of rendering.
+However, water network data tend not to be huge volumes, and the minimal required configuration
+is not really high. For smooth map rendering, it is advised to use recent hardware, good video card and enough RAM though.</p>
+<p>A comfortable configuration would be:</p>
+<ul class="simple">
+<li>4x core Intel processor</li>
+<li>8GB of RAM</li>
+<li>SSD storage</li>
+<li>Good video card (recent onboard Intel are ok, or dedicated NVidia/AMD)</li>
+<li>Minimum requirement 2.14</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We recommend using the latest LTR version: 2.18.
+which often offers a better experience in combination with QWAT.
+For Windows installation, download the <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">OSGeo4W Installer</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="database-configuration">
+<h2>2.3.2. Database configuration<a class="headerlink" href="#database-configuration" title="Lien permanent vers ce titre">¶</a></h2>
+<p>To tell a workstation, where the database is (on the local system or on a
+network server) you will have to create some files initially on every device on
+which you will have QGIS/QWAT running. It is not required to do that on the
+server itself.</p>
+<p>These instructions depend on your operating system.</p>
+<div class="section" id="windows-pg-service">
+<h3>2.3.2.1. Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Create a new directory where you want to store the configuration in. (E.g. a new folder <code class="docutils literal notranslate"><span class="pre">pgconfig</span></code> in your home folder). This directory will be referred to as <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code> in this guide.</p>
+<p>Set the environment variable <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code>.</p>
+<p>Inside this folder, there will be two files</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">pgpass</span></code> (If you do not want to enter the password for the db every time)</li>
+</ul>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">On Windows, you need to save <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> in Unix format in order to work.
+One way to do it is to open it with <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a>
+and <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">--&gt;</span> <span class="pre">EOL</span> <span class="pre">Conversion</span> <span class="pre">--&gt;</span> <span class="pre">UNIX</span> <span class="pre">Format</span> <span class="pre">--&gt;</span> <span class="pre">File</span> <span class="pre">save</span></code> .</p>
+</div>
+</div>
+<div class="section" id="unix-pg-service">
+<span id="pg-service-unix"></span><h3>2.3.2.2. Unix pg_service<a class="headerlink" href="#unix-pg-service" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On Unix-like systems (linux/macOS/*BSD etc.) you may put the files <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> and <code class="docutils literal notranslate"><span class="pre">.pgpass</span></code> into your home folder (normally <code class="docutils literal notranslate"><span class="pre">/home/[username]</span></code>).</p>
+</div>
+<div class="section" id="all-systems">
+<h3>2.3.2.3. All systems<a class="headerlink" href="#all-systems" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Put the following content in the file <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> or <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code>.
+You may have to adapt the variables for your setup.</p>
+<div class="code ini highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">qwat</span><span class="p">]</span>
+<span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
+<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
+<span class="n">dbname</span><span class="o">=</span><span class="n">qwat</span>
+<span class="n">user</span><span class="o">=</span><span class="n">qwatuser</span>
+</pre></div>
+</div>
+<p>To save the password as well on the system you may use the file <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
+<div class="code ini highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">localhost</span><span class="p">:</span><span class="mi">5432</span><span class="p">:</span><span class="o">*</span><span class="p">:</span><span class="n">qwatuser</span><span class="p">:</span><span class="n">password</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you don’t have the database on your local machine replace any
+occurence of <code class="docutils literal notranslate"><span class="pre">localhost</span></code> with the network address of your database
+server.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../user-guide/index.html" class="btn btn-neutral float-right" title="3. QWAT Guide de l’utilisateur" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="database-initialization.html" class="btn btn-neutral" title="2.2. Database initialization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, QWAT team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
