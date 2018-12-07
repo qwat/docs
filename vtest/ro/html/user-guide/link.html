@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ro" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ro" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.5. Liaisons des différents objets dans QWAT &mdash; QWAT vtest documentație</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Căutare" href="../search.html" />
+    <link rel="next" title="3.6. Impression dans QWAT" href="print.html" />
+    <link rel="prev" title="3.4. Suppression d’objets dans QWAT" href="delete.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> QWAT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                vtest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. QWAT User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Structuration du réseau d’Eau Potable sur QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create.html">3.2. Création d’objets dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">3.3. Règles de base pour la mise à jour sur QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">3.4. Suppression d’objets dans QWAT</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.5. Liaisons des différents objets dans QWAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-relations-parentsenfants-des-conduites">3.5.1. Création des relations parents‐enfants des conduites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#suppression-des-relations-parentsenfants-des-conduites">3.5.2. Suppression des relations parents‐enfants des conduites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-relations-fuitesconduites">3.5.3. Création des relations fuites‐conduites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Impression dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Elevation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">3. QWAT User Guide</a> &raquo;</li>
+        
+      <li>3.5. Liaisons des différents objets dans QWAT</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user-guide/link.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="liaisons-des-differents-objets-dans-qwat">
+<h1>3.5. Liaisons des différents objets dans QWAT<a class="headerlink" href="#liaisons-des-differents-objets-dans-qwat" title="Link permanent la acest titlu">¶</a></h1>
+<p>Dans QWAT il n’y a que 2 types de liaison à créer manuellement, à savoir:</p>
+<ul class="simple">
+<li>les liaisons parents‐enfants des conduites (cela permet de lier 2 conduites adjacentes ayant les même attributs, qui seront agrégées en un seul objet dans les vues schématiques)</li>
+<li>Les liaisons fuites‐conduites (Afin de relier une fuite à la conduite sur laquelle elle se trouve)</li>
+</ul>
+<div class="section" id="creation-des-relations-parentsenfants-des-conduites">
+<h2>3.5.1. Création des relations parents‐enfants des conduites<a class="headerlink" href="#creation-des-relations-parentsenfants-des-conduites" title="Link permanent la acest titlu">¶</a></h2>
+<p>Pour créer une relation parent‐enfant, il faut sélectionner la catégorie « conduites »
+qui est une sous‐couche dans la couche « Réseau ».
+Basculer en mode édition.</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>Sélectionner la conduite enfant (celle qui va reprendre les attributs de la conduite parent) avec le bouton « identifier les entités ».</p>
+<img alt="../_images/icon_identify.png" src="../_images/icon_identify.png" />
+<p>Le masque de l’objet s’ouvre.
+Il faut ensuite aller dans l’onglet « Rendu ». Vous avez un champ « Parent » qui indique le numéro
+de la conduite parent, si il y en a une. Pour rajouter une conduite parent, il faut cliquer sur le bouton</p>
+<img alt="../_images/icon_link.png" src="../_images/icon_link.png" />
+<p>et ensuite aller cliquez sur notre conduite parent (sur le plan). Le champ parent a du se remplir.</p>
+</div>
+<div class="section" id="suppression-des-relations-parentsenfants-des-conduites">
+<h2>3.5.2. Suppression des relations parents‐enfants des conduites<a class="headerlink" href="#suppression-des-relations-parentsenfants-des-conduites" title="Link permanent la acest titlu">¶</a></h2>
+<p>Pour supprimer une relation parent‐enfant, il faut sélectionner la catégorie « conduites »
+qui est une sous‐couche dans la couche « Réseau ».
+Basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>Sélectionner la conduite enfant (celle qui va reprendre les attributs de la conduite parent)
+avec le bouton « identifier les entités ».</p>
+<img alt="../_images/icon_identify.png" src="../_images/icon_identify.png" />
+<p>Le masque de l’objet s’ouvre. Il faut ensuite aller dans l’onglet « Rendu ».
+Vous avez un champ « Parent » qui indique le numéro de la conduite parent.
+Pour supprimer ce numéro, cliquez sur le  bouton</p>
+<img alt="../_images/icon_del_relation.png" src="../_images/icon_del_relation.png" />
+<p>Le numéro a du s’effacer et il doit y avoir à la place « NULL (pas de sélection) ».</p>
+</div>
+<div class="section" id="creation-des-relations-fuitesconduites">
+<h2>3.5.3. Création des relations fuites‐conduites<a class="headerlink" href="#creation-des-relations-fuitesconduites" title="Link permanent la acest titlu">¶</a></h2>
+<p>Une fois le manchon de réparation crée, il faut faire passer la conduite par ce manchon.
+Pour se faire, utiliser « l’outil de nœud »</p>
+<img alt="../_images/icon_edge_tools.png" src="../_images/icon_edge_tools.png" />
+<p>et double cliquer sur la conduite à un endroit proche du manchon de réparation.
+Déplacer le point nouvellement créer avec le même outil. Ouvrir le masque de la conduite,
+aller sous l’onglet « fuite » et créer la liaison en activant l’édition de donnée</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>Cliquer ensuite sur:</p>
+<img alt="../_images/icon_create_link.png" src="../_images/icon_create_link.png" />
+<p>Un tableau de toutes les fuites apparait, trouver celle qui nous concerne et sélectionner‐la
+en cliquant sur le numéro de ligne correspondant. Cliquer ensuite sur « OK », vous êtes ramenés dans le
+masque de la conduite avec normalement le numéro ID du manchon de réparation indiqué en rouge.</p>
+<p>Désactiver ensuite l’éditeur de donnée, on vous demande si vous voulez sauver les modifications
+de la couche « fuites ». Cliquer sur enregistrer. Le numéro doit être passé en noir.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="print.html" class="btn btn-neutral float-right" title="3.6. Impression dans QWAT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="delete.html" class="btn btn-neutral" title="3.4. Suppression d’objets dans QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, QWAT team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
