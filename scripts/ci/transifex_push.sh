@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-if test "$TRAVIS_SECURE_ENV_VARS" = "true" -a "$TRAVIS_BRANCH" = "master";
+if test "$TRAVIS_SECURE_ENV_VARS" = "true";
 then
 
   GNUMAKE="make"
