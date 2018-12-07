@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="it" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="it" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5. Contributor’s guide &mdash; QWAT 1.3.3 documentazione</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Indice" href="../genindex.html" />
+    <link rel="search" title="Cerca" href="../search.html" />
+    <link rel="next" title="6. Developer’s guide" href="../developer-guide/index.html" />
+    <link rel="prev" title="4.2. Triggers" href="../admin-guide/triggers.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> QWAT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Contributor’s guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">5.1. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#discussing-features">5.2. Discussing features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i-found-a-bug-in-qwat-what-do-i-do">5.2.1. I found a bug in QWAT, what do I do ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-found-a-bug-in-the-data-model-what-do-i-do">5.2.2. I found a bug in the data model, what do I do ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-want-a-new-feature-in-qwat-what-do-i-do">5.2.3. I want a new feature in QWAT, what do I do ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-want-to-collaborate-on-feature-specs-what-do-i-do">5.2.4. I want to collaborate on feature specs, what do I do ?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-model-changes">5.3. Data model changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#i-need-a-change-in-the-data-model-what-is-the-process">5.3.1. I need a change in the data model, what is the process ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my-change-demand-has-been-considered-valid-what-is-next">5.3.2. My change demand has been considered valid. What is next ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-can-write-the-patch-myself-what-do-i-do">5.3.3. I can write the patch myself, what do I do ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-want-someone-to-write-the-modifications-what-is-the-process">5.3.4. I want someone to write the modifications, what is the process ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-want-to-add-some-custom-fields-table-to-the-model-how-do-i-do">5.3.5. I want to add some custom fields/table to the model, how do I do ?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>5. Contributor’s guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/contributor-guide/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="contributor-s-guide">
+<h1>5. Contributor’s guide<a class="headerlink" href="#contributor-s-guide" title="Link a questa intestazione">¶</a></h1>
+<p>How to contribute to QWAT and collaborate with developers.</p>
+<p>This guide is dedicated to anyone willing to contribute to QWAT. From sending a data sample to giving advices on features, or contributing to documentation, you will find useful informations here.</p>
+<p>If you want to go further, you can look at <a class="reference external" href="../developer-guide/index.html">the Developer’s Guide</a></p>
+<div class="section" id="prerequisites">
+<h2>5.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Link a questa intestazione">¶</a></h2>
+<p>You will need a GitHub account. Please create one here : <a class="reference external" href="https://github.com/join">https://github.com/join</a>.</p>
+</div>
+<div class="section" id="discussing-features">
+<h2>5.2. Discussing features<a class="headerlink" href="#discussing-features" title="Link a questa intestazione">¶</a></h2>
+<p>Bug reports, feature demand, feature specifications and all collaboration on QWAT takes place first in QWAT issues :</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/qwat/QWAT/issues">https://github.com/qwat/QWAT/issues</a></li>
+</ul>
+<p>This is the starting place for all demands. If other modules are impacted (QGIS core, data model, plugins), then additional tickets in respective projects are created.</p>
+<p>Read below advices on how to contribute.</p>
+<div class="section" id="i-found-a-bug-in-qwat-what-do-i-do">
+<h3>5.2.1. I found a bug in QWAT, what do I do ?<a class="headerlink" href="#i-found-a-bug-in-qwat-what-do-i-do" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>If the bug you find is a QGIS issue, please search if it doesn’t exist upstream at <a class="reference external" href="https://issues.qgis.org/projects/qgis/issues/">https://issues.qgis.org/projects/qgis/issues/</a> and add one if needed</li>
+<li>Create a new issue here : <a class="reference external" href="https://github.com/qwat/QWAT/issues">https://github.com/qwat/QWAT/issues</a>. Reference any upstream issue there.</li>
+<li>Be sure to include all relevant information to reproduce the bug : minimal steps to follow, sample data, QGIS version, options used…</li>
+<li>Be clear and concise. Any screencast or screenshot will help a lot.</li>
+<li>Tag your issue as «Bug»</li>
+<li>Keep an eye on the following discussion to give additional informations if needed</li>
+</ul>
+</div>
+<div class="section" id="i-found-a-bug-in-the-data-model-what-do-i-do">
+<h3>5.2.2. I found a bug in the data model, what do I do ?<a class="headerlink" href="#i-found-a-bug-in-the-data-model-what-do-i-do" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>Open a new issue here as well : <a class="reference external" href="https://github.com/qwat/QWAT/issues">https://github.com/qwat/QWAT/issues</a></li>
+<li><dl class="first docutils">
+<dt>If you are 100% sure that it is a data model bug :</dt>
+<dd><ul class="first last">
+<li>tag your issue as «Data model»</li>
+<li>open a new issue here : <a class="reference external" href="https://github.com/qwat/qwat-data-model/issues">https://github.com/qwat/qwat-data-model/issues</a></li>
+<li>reference this new issue in the QWAT issue originally created</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>If unsure, help developers to qualify the bug</li>
+</ul>
+</div>
+<div class="section" id="i-want-a-new-feature-in-qwat-what-do-i-do">
+<h3>5.2.3. I want a new feature in QWAT, what do I do ?<a class="headerlink" href="#i-want-a-new-feature-in-qwat-what-do-i-do" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>Open a new issue here : <a class="reference external" href="https://github.com/qwat/QWAT/issues">https://github.com/qwat/QWAT/issues</a></li>
+<li>Describe carefully the feature with details, include images and mockups if needed</li>
+<li>Tag the issue as «Enhancement»</li>
+<li>Consider funding the development</li>
+</ul>
+</div>
+<div class="section" id="i-want-to-collaborate-on-feature-specs-what-do-i-do">
+<h3>5.2.4. I want to collaborate on feature specs, what do I do ?<a class="headerlink" href="#i-want-to-collaborate-on-feature-specs-what-do-i-do" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>Check the existing issues <a class="reference external" href="https://github.com/qwat/QWAT/issues?q=is%3Aissue+is%3Aopen+label%3AEnhancement">here</a></li>
+<li>Add comments to the discussion</li>
+</ul>
+</div>
+</div>
+<div class="section" id="data-model-changes">
+<h2>5.3. Data model changes<a class="headerlink" href="#data-model-changes" title="Link a questa intestazione">¶</a></h2>
+<div class="section" id="i-need-a-change-in-the-data-model-what-is-the-process">
+<h3>5.3.1. I need a change in the data model, what is the process ?<a class="headerlink" href="#i-need-a-change-in-the-data-model-what-is-the-process" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>be sure that the required feature is really a change in the data model itself and not the application</li>
+<li>open an issue on GitHub in the data model project (<a class="reference external" href="https://github.com/qwat/qwat-data-model/issues">https://github.com/qwat/qwat-data-model/issues</a>)</li>
+<li>include in your issues a clear and concise explanation of the reasons for the change</li>
+<li>allow some time for others to reply</li>
+<li>participate in the discussion</li>
+<li>do not hesitate to mention concerned people (like &#64;vpicavet for example) to notify them of the discussion</li>
+<li>when the discussion converges, a decision is taken by commiters to go for this modification or not</li>
+<li><a class="reference external" href="http://oslandia.com/en/home-en/">OSLANDIA</a>, on behalf of the PSC, is the data model release manager and will have final word in case of unclear trend</li>
+</ul>
+</div>
+<div class="section" id="my-change-demand-has-been-considered-valid-what-is-next">
+<h3>5.3.2. My change demand has been considered valid. What is next ?<a class="headerlink" href="#my-change-demand-has-been-considered-valid-what-is-next" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>Two cases : you can write the change, or you want somedy else to do it.</li>
+</ul>
+</div>
+<div class="section" id="i-can-write-the-patch-myself-what-do-i-do">
+<h3>5.3.3. I can write the patch myself, what do I do ?<a class="headerlink" href="#i-can-write-the-patch-myself-what-do-i-do" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>Read the <a class="reference external" href="../developer-guide/index.html">developer’s guide</a></li>
+<li>Write the patch</li>
+<li>send a pull request to the qwat-data-model repository</li>
+<li>commiters will review and merge it</li>
+</ul>
+<p>Note that a continuous integration tool will automatically run functional tests and conformity tests on your pull request.
+Please note that a patch must be done in two parts: the core model files used for initialization, and the delta files used to migrate existing database versions.
+A patch must lead to the exactly the same state between initialization and migration process to be valid.</p>
+</div>
+<div class="section" id="i-want-someone-to-write-the-modifications-what-is-the-process">
+<h3>5.3.4. I want someone to write the modifications, what is the process ?<a class="headerlink" href="#i-want-someone-to-write-the-modifications-what-is-the-process" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>a specification is written as new comment to the issue (by you or someone else)</li>
+<li>impacts on other parts of QWAT are studied, and corresponding issues are opened (on qwat/QWAT project namely)</li>
+<li>a required funding estimation is done</li>
+<li>funding is found</li>
+<li>development takes place</li>
+<li>a PR is created on the qwat-data-model repository</li>
+<li>commiters will review and merge it</li>
+</ul>
+</div>
+<div class="section" id="i-want-to-add-some-custom-fields-table-to-the-model-how-do-i-do">
+<h3>5.3.5. I want to add some custom fields/table to the model, how do I do ?<a class="headerlink" href="#i-want-to-add-some-custom-fields-table-to-the-model-how-do-i-do" title="Link a questa intestazione">¶</a></h3>
+<ul class="simple">
+<li>See <a class="reference external" href="../developer-guide/index.html">the Developer’s Guide</a> and <a class="reference external" href="../developer-guide/local_customizations.html">customization guidelines</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../developer-guide/index.html" class="btn btn-neutral float-right" title="6. Developer’s guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../admin-guide/triggers.html" class="btn btn-neutral" title="4.2. Triggers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, QWAT team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
