@@ -167,7 +167,7 @@ They are accessible via the links http://qwat.github.io/docs/TAG/LANG/html/ wher
 
 Redirections are in place to avoid 404 github page errors:
 
-http://qwat.github.io/docs/ -> http://qwat.github.io/docs/master/en/html http://qwat.github.io/docs/master/en/html
+http://qwat.github.io/docs/ -> http://qwat.github.io/docs/master/en/html
 
 http://qwat.github.io/docs/TAG/ -> http://qwat.github.io/docs/TAG/en/html
 
