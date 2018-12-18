@@ -113,3 +113,61 @@ I want to add some custom fields/table to the model, how do I do ?
 * See `the Developer's Guide <developer_>`_ and `customization guidelines <../developer-guide/local_customizations.html>`_
 
 .. _developer: ../developer-guide/index.html
+
+
+Documentation
+-------------
+
+How to contribute to the documentation
+``````````````````````````````````````
+Documentation must be written in English only, translations are done in Transifex, see below. The text format is rst (ReStructuredText), a guide to this format is available on the page `A ReStructuredText Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_.
+
+Documentation must be clear, simple and up to date. In particular, developers are asked to add documentation of their functionalities to each modification based on the principle of "You write the code, you write the doc".
+
+You will find a guide to writing documentation on the `Write the docs <https://www.writethedocs.org/>`_ site and more specifically on the `Documentation Principles <https://www.writethedocs.org/guide/writing/docs-principles/>`_ page
+
+
+Translating QWAT
+````````````````
+
+QWAT uses Transiflex, an open source translation platform, to power the translation of QWAT into different languages. All translations are hosted at `Transifex.com`<https://www.transifex.com>`_, which provides a web application allowing translators to write, submit and manage their translations.
+
+Getting started with Transifex
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Contributors who want to help translate QWAT find translation projects on Transifex.
+
+Sign up for an account
+++++++++++++++++++++++
+Go to https://www.transifex.com/signup/ and fill out the form to create a free Transifex account, if you do not have one already.
+
+Join a translation team
++++++++++++++++++++++++
+After you set up your account, visit the `QWAT project <https://www.transifex.com/qwat/qwat-doc/dashboard/>`_ to become a translator for a language.
+
+The project page lists languages that have translation projects. If your target language is listed, click on the name of the language to go to the language’s page. An example of choosing the French translation project follows.
+
+Translating with Transifex
+++++++++++++++++++++++++++
+After you become a member of the translation team, you can select any of the resources in the project to begin translating it.
+
+For help documentation on Transifex, see the `Transifex translators doc <https://docs.transifex.com/getting-started-1/translators>`_.
+
+Each language page lists a set of distinct resources to translate.
+
+.. image:: img/transifex_intro.png
+
+General principle on the automatic creation of translated pages
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Each time the documentation is modified, a "master" version is translated by `the continuous integration <https://travis-ci.org/qwat/docs>`_. Each time a "tags" is created, a translation is made for the tagged version: this is the versioning.
+
+The HTML pages are pushed to another branch named `gh-pages <https://github.com/qwat/docs/tree/gh-pages>`_ of the repository, in the version sub-folder. This branch should not be modified directly.
+
+They are accessible via the links http://qwat.github.io/docs/TAG/LANG/html/ where TAG is the name of the version and LANG is the language of the documentation.
+
+Redirections are in place to avoid 404 github page errors:
+
+http://qwat.github.io/docs/ -> http://qwat.github.io/docs/master/en/html
+
+http://qwat.github.io/docs/TAG/ -> http://qwat.github.io/docs/TAG/en/html
+

@@ -104,6 +104,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#i-want-to-add-some-custom-fields-table-to-the-model-how-do-i-do">5.3.5. I want to add some custom fields/table to the model, how do I do ?</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">5.4. Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-contribute-to-the-documentation">5.4.1. How to contribute to the documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#translating-qwat">5.4.2. Translating QWAT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#getting-started-with-transifex">5.4.2.1. Getting started with Transifex</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
@@ -287,6 +295,48 @@ A patch must lead to the exactly the same state between initialization and migra
 <ul class="simple">
 <li>See <a class="reference external" href="../developer-guide/index.html">the Developer’s Guide</a> and <a class="reference external" href="../developer-guide/local_customizations.html">customization guidelines</a></li>
 </ul>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>5.4. Documentation<a class="headerlink" href="#documentation" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="how-to-contribute-to-the-documentation">
+<h3>5.4.1. How to contribute to the documentation<a class="headerlink" href="#how-to-contribute-to-the-documentation" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Documentation must be written in English only, translations are done in Transifex, see below. The text format is rst (ReStructuredText), a guide to this format is available on the page <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">A ReStructuredText Primer</a>.</p>
+<p>Documentation must be clear, simple and up to date. In particular, developers are asked to add documentation of their functionalities to each modification based on the principle of „You write the code, you write the doc“.</p>
+<p>You will find a guide to writing documentation on the <a class="reference external" href="https://www.writethedocs.org/">Write the docs</a> site and more specifically on the <a class="reference external" href="https://www.writethedocs.org/guide/writing/docs-principles/">Documentation Principles</a> page</p>
+</div>
+<div class="section" id="translating-qwat">
+<h3>5.4.2. Translating QWAT<a class="headerlink" href="#translating-qwat" title="Link zu dieser Überschrift">¶</a></h3>
+<p>QWAT uses Transiflex, an open source translation platform, to power the translation of QWAT into different languages. All translations are hosted at <a href="#id1"><span class="problematic" id="id2">`Transifex.com`&lt;https://www.transifex.com&gt;`_</span></a>, which provides a web application allowing translators to write, submit and manage their translations.</p>
+<div class="section" id="getting-started-with-transifex">
+<h4>5.4.2.1. Getting started with Transifex<a class="headerlink" href="#getting-started-with-transifex" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Contributors who want to help translate QWAT find translation projects on Transifex.</p>
+<div class="section" id="sign-up-for-an-account">
+<h5>5.4.2.1.1. Sign up for an account<a class="headerlink" href="#sign-up-for-an-account" title="Link zu dieser Überschrift">¶</a></h5>
+<p>Go to <a class="reference external" href="https://www.transifex.com/signup/">https://www.transifex.com/signup/</a> and fill out the form to create a free Transifex account, if you do not have one already.</p>
+</div>
+<div class="section" id="join-a-translation-team">
+<h5>5.4.2.1.2. Join a translation team<a class="headerlink" href="#join-a-translation-team" title="Link zu dieser Überschrift">¶</a></h5>
+<p>After you set up your account, visit the <a class="reference external" href="https://www.transifex.com/qwat/qwat-doc/dashboard/">QWAT project</a> to become a translator for a language.</p>
+<p>The project page lists languages that have translation projects. If your target language is listed, click on the name of the language to go to the language’s page. An example of choosing the French translation project follows.</p>
+</div>
+<div class="section" id="translating-with-transifex">
+<h5>5.4.2.1.3. Translating with Transifex<a class="headerlink" href="#translating-with-transifex" title="Link zu dieser Überschrift">¶</a></h5>
+<p>After you become a member of the translation team, you can select any of the resources in the project to begin translating it.</p>
+<p>For help documentation on Transifex, see the <a class="reference external" href="https://docs.transifex.com/getting-started-1/translators">Transifex translators doc</a>.</p>
+<p>Each language page lists a set of distinct resources to translate.</p>
+<img alt="../_images/transifex_intro.png" src="../_images/transifex_intro.png" />
+</div>
+<div class="section" id="general-principle-on-the-automatic-creation-of-translated-pages">
+<h5>5.4.2.1.4. General principle on the automatic creation of translated pages<a class="headerlink" href="#general-principle-on-the-automatic-creation-of-translated-pages" title="Link zu dieser Überschrift">¶</a></h5>
+<p>Each time the documentation is modified, a „master“ version is translated by <a class="reference external" href="https://travis-ci.org/qwat/docs">the continuous integration</a>. Each time a „tags“ is created, a translation is made for the tagged version: this is the versioning.</p>
+<p>The HTML pages are pushed to another branch named <a class="reference external" href="https://github.com/qwat/docs/tree/gh-pages">gh-pages</a> of the repository, in the version sub-folder. This branch should not be modified directly.</p>
+<p>They are accessible via the links <a class="reference external" href="http://qwat.github.io/docs/TAG/LANG/html/">http://qwat.github.io/docs/TAG/LANG/html/</a> where TAG is the name of the version and LANG is the language of the documentation.</p>
+<p>Redirections are in place to avoid 404 github page errors:</p>
+<p><a class="reference external" href="http://qwat.github.io/docs/">http://qwat.github.io/docs/</a> -&gt; <a class="reference external" href="http://qwat.github.io/docs/master/en/html">http://qwat.github.io/docs/master/en/html</a></p>
+<p><a class="reference external" href="http://qwat.github.io/docs/TAG/">http://qwat.github.io/docs/TAG/</a> -&gt; <a class="reference external" href="http://qwat.github.io/docs/TAG/en/html">http://qwat.github.io/docs/TAG/en/html</a></p>
+</div>
+</div>
 </div>
 </div>
 </div>
