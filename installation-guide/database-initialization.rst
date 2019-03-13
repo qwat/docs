@@ -63,7 +63,7 @@ The script has the following options:
 - ``-d`` or ``--drop-schema``    drop schemas (cascaded) if they exist
 - ``-r`` or ``--create-roles`` create roles in the database
 
-Roles are: ``qgep_viewer``, ``qgep_user``, ``qgep_manager``, ``qgep_sysadmin``.
+Roles are: ``qwat_viewer``, ``qwat_user``, ``qwat_manager``, ``qwat_sysadmin``.
 
 - Viewer: Can consult tables and views.
 - User: Can edit data.
