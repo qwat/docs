@@ -110,7 +110,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="local_customizations.html">6.2. Customize local DB models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html">6.3. Upgrade database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html#create-an-extension">6.3. Create an extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html">6.4. Upgrade database</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
@@ -189,34 +190,34 @@
 <h2>6.1.1. Prerequisites<a class="headerlink" href="#prerequisites" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In order to develop for QWAT, the following skills may be required :</p>
 <ul class="simple">
-<li>Good general knowledge of GIS</li>
-<li>Good general knowledge of QGIS</li>
-<li>Skills in relational databases and PostgreSQL/PostGIS specifically</li>
-<li>Skills in Python</li>
+<li><p>Good general knowledge of GIS</p></li>
+<li><p>Good general knowledge of QGIS</p></li>
+<li><p>Skills in relational databases and PostgreSQL/PostGIS specifically</p></li>
+<li><p>Skills in Python</p></li>
 </ul>
 </div>
 <div class="section" id="environment">
 <h2>6.1.2. Environment<a class="headerlink" href="#environment" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>You will need to <a class="reference external" href="https://help.github.com/articles/set-up-git/">install and configure Git and GitHub</a></li>
-<li>Have python 3 installed and as your default python. In case it is not, use a <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a></li>
-<li>have a bash shell</li>
-<li>have admin rights to create and drop PostgreSQL databases</li>
+<li><p>You will need to <a class="reference external" href="https://help.github.com/articles/set-up-git/">install and configure Git and GitHub</a></p></li>
+<li><p>Have python 3 installed and as your default python. In case it is not, use a <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a></p></li>
+<li><p>have a bash shell</p></li>
+<li><p>have admin rights to create and drop PostgreSQL databases</p></li>
 </ul>
 </div>
 <div class="section" id="qwat-architecture">
 <h2>6.1.3. QWAT architecture<a class="headerlink" href="#qwat-architecture" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>Describe here various parts of QWAT</li>
-<li>Describe relation to other projects (plugins, qgis core)</li>
+<li><p>Describe here various parts of QWAT</p></li>
+<li><p>Describe relation to other projects (plugins, qgis core)</p></li>
 </ul>
 </div>
 <div class="section" id="roles">
 <h2>6.1.4. Roles<a class="headerlink" href="#roles" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li><em>Commiters</em> have access to QWAT code repositories and can push to them. It means they control the evolution of the software</li>
-<li><em>contributors</em> can provide information, code, documentation to the project. They do not have direct access for modifications and must go through the <em>commiters</em> to get their modifications applied. See the [[Contributors_guide]] for more information and processes.</li>
-<li>The <em>release manager</em> is in charge of deciding when a new version of the software is published, and to actually publish the release. Current release manager is <a class="reference external" href="https://github.com/haubourg">Régis Haubourg (OSLANDIA)</a> on behalf of the QWAT’s group.</li>
+<li><p><em>Commiters</em> have access to QWAT code repositories and can push to them. It means they control the evolution of the software</p></li>
+<li><p><em>contributors</em> can provide information, code, documentation to the project. They do not have direct access for modifications and must go through the <em>commiters</em> to get their modifications applied. See the [[Contributors_guide]] for more information and processes.</p></li>
+<li><p>The <em>release manager</em> is in charge of deciding when a new version of the software is published, and to actually publish the release. Current release manager is <a class="reference external" href="https://github.com/haubourg">Régis Haubourg (OSLANDIA)</a> on behalf of the QWAT’s group.</p></li>
 </ul>
 </div>
 <div class="section" id="release-cycles-and-versioning">
@@ -226,14 +227,14 @@
 <div class="section" id="version-and-release-management-policy">
 <h3>6.1.5.1. Version and release management policy<a class="headerlink" href="#version-and-release-management-policy" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
-<li>Version numbers follows the <a class="reference external" href="http://semver.org">semantic versioning approach</a>.</li>
-<li>Version Roadmap for new features must be shared on the tracker and with the general committee. Issues must be opened and tagged using labels (1.4 , 1.5).</li>
-<li>Do not create a version for each code change.</li>
-<li>Versions will group different code change and must be discussed with the released manager.</li>
-<li>It is possible to multiple Delta files for one <em>version-release</em> Ex: <cite>delta_1.3.2_0001_one_change</cite>, <cite>delta_1.3.2_0002_another_change</cite></li>
-<li>Each new version will systematically have a release. A release is materialized by a git tag</li>
-<li>travis-CI automatically deploys a release when the tag is pushed AND the tests succeed</li>
-<li>Data administrators must NEVER work on master branch, but use release. The rationale behind that is that the latest version in master branch changes until the release, so it is not a reliable version tag . This means for git user they ahve to fetch remote tags and checkout to the desired release using git checkout tag_number</li>
+<li><p>Version numbers follows the <a class="reference external" href="http://semver.org">semantic versioning approach</a>.</p></li>
+<li><p>Version Roadmap for new features must be shared on the tracker and with the general committee. Issues must be opened and tagged using labels (1.4 , 1.5).</p></li>
+<li><p>Do not create a version for each code change.</p></li>
+<li><p>Versions will group different code change and must be discussed with the released manager.</p></li>
+<li><p>It is possible to multiple Delta files for one <em>version-release</em> Ex: <cite>delta_1.3.2_0001_one_change</cite>, <cite>delta_1.3.2_0002_another_change</cite></p></li>
+<li><p>Each new version will systematically have a release. A release is materialized by a git tag</p></li>
+<li><p>travis-CI automatically deploys a release when the tag is pushed AND the tests succeed</p></li>
+<li><p>Data administrators must NEVER work on master branch, but use release. The rationale behind that is that the latest version in master branch changes until the release, so it is not a reliable version tag . This means for git user they ahve to fetch remote tags and checkout to the desired release using git checkout tag_number</p></li>
 </ul>
 </div>
 </div>
@@ -241,20 +242,20 @@
 <h2>6.1.6. Release process<a class="headerlink" href="#release-process" title="Link zu dieser Überschrift">¶</a></h2>
 <p>The release process for QWAT is the following :</p>
 <ul class="simple">
-<li>Issues are triaged with milestones for next versions</li>
-<li>The <em>release manager</em> decides when the next release will be made, in accordance with the community needs</li>
-<li>He announces the estimated release date in advance (at least 1 week)</li>
-<li>Issues are re-triaged and the date can be moved according to how the work progresses</li>
-<li>CHANGES.md is checked to be sure that it contains a description of changes for this version</li>
-<li>When ready (all due tickets closed), the <em>release manager</em> add version metadata to the project and tags the project(s) to release (data model, QWAT project) with the new version,</li>
-<li>The <em>release manager</em> announces the new version (mailing lists, IRC, twitter…)</li>
+<li><p>Issues are triaged with milestones for next versions</p></li>
+<li><p>The <em>release manager</em> decides when the next release will be made, in accordance with the community needs</p></li>
+<li><p>He announces the estimated release date in advance (at least 1 week)</p></li>
+<li><p>Issues are re-triaged and the date can be moved according to how the work progresses</p></li>
+<li><p>CHANGES.md is checked to be sure that it contains a description of changes for this version</p></li>
+<li><p>When ready (all due tickets closed), the <em>release manager</em> add version metadata to the project and tags the project(s) to release (data model, QWAT project) with the new version,</p></li>
+<li><p>The <em>release manager</em> announces the new version (mailing lists, IRC, twitter…)</p></li>
 </ul>
 </div>
 <div class="section" id="additional-dependencies">
 <h2>6.1.7. Additional dependencies<a class="headerlink" href="#additional-dependencies" title="Link zu dieser Überschrift">¶</a></h2>
 <p>QWAT Project has several dependencies on different submodules</p>
 <ul class="simple">
-<li>Fetching their content is achieved with a specific git command</li>
+<li><p>Fetching their content is achieved with a specific git command</p></li>
 </ul>
 </div>
 <div class="section" id="versioning-your-extensions">
@@ -267,12 +268,12 @@ However, we recommend using only one customization SQL script, with no version i
 <h2>6.1.9. Developing the core data model<a class="headerlink" href="#developing-the-core-data-model" title="Link zu dieser Überschrift">¶</a></h2>
 <p>To keep a controlled process over versioning, we have the following system :</p>
 <ul class="simple">
-<li>The SQL files corresponding to the creation of the core data model</li>
-<li>SQL files corresponding to the modifications from version X to version X+1 („diff SQL“)</li>
+<li><p>The SQL files corresponding to the creation of the core data model</p></li>
+<li><p>SQL files corresponding to the modifications from version X to version X+1 („diff SQL“)</p></li>
 </ul>
 <p>Diff files are located in the repository in the „delta“ directory. Their name has this convention, which is used by PUM module :</p>
 <ul class="simple">
-<li><cite>delta_1.3.2_0001_one_change.sql</cite></li>
+<li><p><cite>delta_1.3.2_0001_one_change.sql</cite></p></li>
 </ul>
 <p>Deploying a model for a specific version and applying the diff files successively to reach another version should lead to the exact same model as deploying this latter version. The QWAT project will have tools to test for this compliance.</p>
 <p>It is advised to write the diff files at the same time as the model modification, but this is not mandatory. Diff files <em>must</em> be complete and uptodate when a new model version is released.
@@ -282,24 +283,24 @@ That means that adding user fields (in elements or pipes for instance), will req
 PUM allows to add pre and post files, either in python or sql for each update, see delta.1.2.8 for exemples.</p>
 <p>As a consequence, when developing the core data model, you should :</p>
 <ul class="simple">
-<li>Put your modifications to the core model SQL files</li>
-<li>Add your modifications to the correct diff file.</li>
+<li><p>Put your modifications to the core model SQL files</p></li>
+<li><p>Add your modifications to the correct diff file.</p></li>
 </ul>
 <p>Your pull request should be complete with these elements, or you have to be ready to review the diff SQL files before the release to ensure that the diff are uptodate.</p>
 </div>
 <div class="section" id="developing-a-qgis-project">
 <h2>6.1.10. Developing a QGIS project<a class="headerlink" href="#developing-a-qgis-project" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>How to modify default project or create a new one</li>
-<li>How to share these modifications</li>
+<li><p>How to modify default project or create a new one</p></li>
+<li><p>How to share these modifications</p></li>
 </ul>
 </div>
 <div class="section" id="adding-new-features-to-qwat">
 <h2>6.1.11. Adding new features to QWAT<a class="headerlink" href="#adding-new-features-to-qwat" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>see contributor’s guide for discussion process &amp; issue management</li>
-<li>creating a specific plugin</li>
-<li>contributing to QGIS&nbsp;core</li>
+<li><p>see contributor’s guide for discussion process &amp; issue management</p></li>
+<li><p>creating a specific plugin</p></li>
+<li><p>contributing to QGIS core</p></li>
 </ul>
 </div>
 </div>

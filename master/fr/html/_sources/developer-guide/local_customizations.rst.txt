@@ -3,9 +3,9 @@ Customize local DB models
 
 Since QWAT 1.3.2, customization process and extension have been formalised.
 
-An **extension is a core data model customization** that is part of the core. It can be activated at any time, using its own initialization script.
-An extension follows the core data model life cycle, which means that fixing or improving a core extension will require a QWAT update.
-Currently, the only existing extension is the SIRE export extension. Note that it extends the value lists and is not totally separated from the core right now.
+An **extension is a core data model customization** that is part of a dedicated repository. It can be activated at any time, using its own initialization script.
+An extension can follows the core data model life cycle, which means that fixing or improving a core extension will require a QWAT update, but can have an own life cycle.
+Currently, the only existing extension is the `SIRE export extension <https://github.com/qwat/extension_sire>`_. Note that it extends the value lists and is modified the qwat core right now.
 
 A **local customization** will follow exactly the same developpement rules as an extension, except that it must be stored in a separate repository, apart from QWAT core directories.
 local customizations must be first initialized manually and then applied in QWAT migration process using upgrade_db.sh specific option to add additional directories.
@@ -17,12 +17,12 @@ Both extension and customizations require the following :
 - a set of update scripts used when upgrading QWAT core data model :
 
   - a pre-all.py script wich will eventually drop all additionnal views, trigger function or any dependencies locking the data model upgrade
-  
+
   - a set of SQL files prefixed with a version number inlined with QWAT core data model versions (ex: 1.3.1.001_local_Pully_script)
-  
+
   - a post-all.py script restoring the necessary dependencies once the core model and the extension/customization have been applied
 
-A full example is provided in the `.build/customizations/sigip <https://github.com/qwat/qwat-data-model/tree/master/.build/customizations/sigip>`_ folder
+A full example is provided in the `.build/customizations/sigip <https://github.com/qwat/qwat-data-model/tree/master/.build/customizations/sigip>`_ folder or the `SIRE extension <https://github.com/qwat/extension_sire>`_.
 
 Customizing the data model
 --------------------------
@@ -104,3 +104,8 @@ Example : adding color informations to hydrants
     ALTER TABLE usr_cityservices.hydrant_paint DROP CONSTRAINT hydrant_fk;
     DROP TABLE usr_cityservices.hydrant_paint;
     DROP SCHEMA usr_cityservices;
+
+Create an extension
+===================
+
+Extensions have dedicated repositories like SIRE Extension. To create an extension you have to make a new repository from the `template <https://github.com/qwat/extension_template>`_ and follow the procedure.

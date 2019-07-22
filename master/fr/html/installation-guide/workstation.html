@@ -187,23 +187,23 @@
 <h3>2.3.1.1. Install QGIS<a class="headerlink" href="#install-qgis" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Client side components are:</p>
 <ul class="simple">
-<li>QGIS (2.14+)</li>
-<li>QGIS extensions (depending on specific use case)</li>
+<li><p>QGIS (2.14+)</p></li>
+<li><p>QGIS extensions (depending on specific use case)</p></li>
 </ul>
 <p>The exact required configuration is very dependant on the data sizes and complexity of rendering.
 However, water network data tend not to be huge volumes, and the minimal required configuration
 is not really high. For smooth map rendering, it is advised to use recent hardware, good video card and enough RAM though.</p>
 <p>A comfortable configuration would be:</p>
 <ul class="simple">
-<li>4x core Intel processor</li>
-<li>8GB of RAM</li>
-<li>SSD storage</li>
-<li>Good video card (recent onboard Intel are ok, or dedicated NVidia/AMD)</li>
-<li>Minimum requirement 2.14</li>
+<li><p>4x core Intel processor</p></li>
+<li><p>8GB of RAM</p></li>
+<li><p>SSD storage</p></li>
+<li><p>Good video card (recent onboard Intel are ok, or dedicated NVidia/AMD)</p></li>
+<li><p>Minimum requirement 2.14</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We recommend using the latest LTR version: 2.18.
+<p class="admonition-title">Note</p>
+<p>We recommend using the latest LTR version: 2.18.
 which often offers a better experience in combination with QWAT.
 For Windows installation, download the <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">OSGeo4W Installer</a></p>
 </div>
@@ -222,12 +222,12 @@ server itself.</p>
 <p>Set the environment variable <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <p>Inside this folder, there will be two files</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">pgpass</span></code> (If you do not want to enter the password for the db every time)</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pgpass</span></code> (If you do not want to enter the password for the db every time)</p></li>
 </ul>
 <div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">On Windows, you need to save <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> in Unix format in order to work.
+<p class="admonition-title">Attention</p>
+<p>On Windows, you need to save <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> in Unix format in order to work.
 One way to do it is to open it with <a class="reference external" href="https://notepad-plus-plus.org/">Notepad++</a>
 and <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">--&gt;</span> <span class="pre">EOL</span> <span class="pre">Conversion</span> <span class="pre">--&gt;</span> <span class="pre">UNIX</span> <span class="pre">Format</span> <span class="pre">--&gt;</span> <span class="pre">File</span> <span class="pre">save</span></code> .</p>
 </div>
@@ -240,20 +240,20 @@ and <code class="docutils literal notranslate"><span class="pre">Edit</span> <sp
 <h3>2.3.2.3. All systems<a class="headerlink" href="#all-systems" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Put the following content in the file <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> or <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code>.
 You may have to adapt the variables for your setup.</p>
-<div class="code ini highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">qwat</span><span class="p">]</span>
-<span class="n">host</span><span class="o">=</span><span class="n">localhost</span>
-<span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
-<span class="n">dbname</span><span class="o">=</span><span class="n">qwat</span>
-<span class="n">user</span><span class="o">=</span><span class="n">qwatuser</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[qwat]</span>
+<span class="na">host</span><span class="o">=</span><span class="s">localhost</span>
+<span class="na">port</span><span class="o">=</span><span class="s">5432</span>
+<span class="na">dbname</span><span class="o">=</span><span class="s">qwat</span>
+<span class="na">user</span><span class="o">=</span><span class="s">qwatuser</span>
 </pre></div>
 </div>
 <p>To save the password as well on the system you may use the file <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>
-<div class="code ini highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">localhost</span><span class="p">:</span><span class="mi">5432</span><span class="p">:</span><span class="o">*</span><span class="p">:</span><span class="n">qwatuser</span><span class="p">:</span><span class="n">password</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">localhost:5432:*:qwatuser:password</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you don’t have the database on your local machine replace any
+<p class="admonition-title">Note</p>
+<p>If you don’t have the database on your local machine replace any
 occurence of <code class="docutils literal notranslate"><span class="pre">localhost</span></code> with the network address of your database
 server.</p>
 </div>

@@ -183,40 +183,40 @@ desktop you are working on, this can be installed on the same machine.</p>
 <h3>2.1.1.1. Server installation<a class="headerlink" href="#server-installation" title="Permalink to this headline">¶</a></h3>
 <p>Server side software components are:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://postgresql.org/">PostgreSQL</a> (&gt;= 9.6)</li>
-<li><a class="reference external" href="https://postgis.net/">PostGIS</a>, the spatial extension (&gt; 2.3)</li>
-<li><a class="reference external" href="https://www.python.org/">Python</a>, for installation and update (&gt; 3.5)</li>
-<li><a class="reference external" href="https://github.com/opengisch/pum">PUM</a> for upgrade</li>
+<li><p><a class="reference external" href="https://postgresql.org/">PostgreSQL</a> (&gt;= 9.6)</p></li>
+<li><p><a class="reference external" href="https://postgis.net/">PostGIS</a>, the spatial extension (&gt; 2.3)</p></li>
+<li><p><a class="reference external" href="https://www.python.org/">Python</a>, for installation and update (&gt; 3.5)</p></li>
+<li><p><a class="reference external" href="https://github.com/opengisch/pum">PUM</a> for upgrade</p></li>
 </ul>
 <p>Supported and tested versions are PostgreSQL 9.6 and Postgis 2.3.</p>
 <p>The exact required hardware configuration is very dependant on the data sizes.
 However, water network data tend not to be huge volumes, and the minimal required configuration is very low.</p>
 <p>A comfortable configuration would be the following:</p>
 <ul class="simple">
-<li>4x Core Intel</li>
-<li>&gt;= 8GB RAM</li>
-<li>SSD Storage (40GB+) with Raid capabilities for data redundancy</li>
+<li><p>4x Core Intel</p></li>
+<li><p>&gt;= 8GB RAM</p></li>
+<li><p>SSD Storage (40GB+) with Raid capabilities for data redundancy</p></li>
 </ul>
 <p>We recommend using Linux as Operating System when running PostgreSQL, for performance and stability.</p>
 <p>In order to benefit fully from your hardware, PostgreSQL should be configured correctly.
 You can use the following application to have a basic configuration better than default values : <a class="reference external" href="http://pgtune.leopard.in.ua/">http://pgtune.leopard.in.ua/</a></p>
 <p>Choose the following parameters:</p>
 <ul class="simple">
-<li>DB Version : your PostgreSQL database version</li>
-<li>OS Type : your Operating System</li>
-<li>DB Type : “Mixed type of applications”</li>
-<li>Total memory : how much memory is installed on your server</li>
-<li>Number of connections : how many concurrent users you want to allow (as a maximum). Optional parameter</li>
+<li><p>DB Version : your PostgreSQL database version</p></li>
+<li><p>OS Type : your Operating System</p></li>
+<li><p>DB Type : “Mixed type of applications”</p></li>
+<li><p>Total memory : how much memory is installed on your server</p></li>
+<li><p>Number of connections : how many concurrent users you want to allow (as a maximum). Optional parameter</p></li>
 </ul>
 <p>The application should give you the settings to adapt in the <code class="docutils literal notranslate"><span class="pre">postgresql.conf</span></code> configuration file.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>In a single desktop environment (no network database server) you can set up
 your database to trust local connections.</p>
 <p>This way, the database won’t ask for a password if you’re connecting from your
 local workstation while no password is written anywhere. You even can do
 with no database password at all.</p>
-<p class="last">This can be done by editing the database access configuration file
+<p>This can be done by editing the database access configuration file
 <a class="reference external" href="http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html">pg_hba.conf</a>
 and set the auth-options from <code class="docutils literal notranslate"><span class="pre">md5</span></code> to <code class="docutils literal notranslate"><span class="pre">trust</span></code>. A database service reload
 is required to activate changes.</p>
