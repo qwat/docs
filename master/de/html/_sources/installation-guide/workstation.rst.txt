@@ -24,10 +24,15 @@ A comfortable configuration would be:
 * Good video card (recent onboard Intel are ok, or dedicated NVidia/AMD)
 * Minimum requirement 2.14
 
-.. note:: 
+.. note::
   We recommend using the latest LTR version: 2.18.
   which often offers a better experience in combination with QWAT.
   For Windows installation, download the `OSGeo4W Installer <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_
+
+Optional plugin
+~~~~~~~~~~~~~~~
+
+QWAT uses a data historization process. The ``pg history viewer`` `plugin <http://plugins.qgis.org/plugins/pg_history_viewer/>`_ allows you to view the changes made and replay some of them.
 
 Database configuration
 ----------------------
@@ -56,7 +61,7 @@ Inside this folder, there will be two files
  On Windows, you need to save ``pg_service.conf`` in Unix format in order to work.
  One way to do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_
  and ``Edit --> EOL Conversion --> UNIX Format --> File save`` .
-  
+
 .. _pg_service-unix:
 
 Unix pg_service
