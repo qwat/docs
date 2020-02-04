@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="fr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.2. Création d’objets dans QWAT &mdash; Documentation QWAT v1.3.4</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="3.3. Règles de base pour la mise à jour sur QWAT" href="update.html" />
+    <link rel="prev" title="3.1. Structuration du réseau d’Eau Potable sur QWAT" href="qwat_struct.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> QWAT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.3.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. Fonctionnalités de QWAT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Guide d’installation QWAT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. QWAT Guide de l’utilisateur</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Structuration du réseau d’Eau Potable sur QWAT</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Création d’objets dans QWAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#importation-des-points-releves">3.2.1. Importation des points relevés</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-points-de-construction">3.2.2. Création des points de construction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-conduites">3.2.3. Création des conduites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#separation-dune-conduite-en-deux-conduites">3.2.4. Séparation d’une conduite en deux conduites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-differentes-pieces-dinstallation">3.2.5. Création des différentes pièces d’installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-points-dintroduction">3.2.6. Création des points d’introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-vannes">3.2.7. Création des vannes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-bornes-hydrantes">3.2.8. Création des bornes hydrantes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-dun-manchon-de-reparation">3.2.9. Création d’un manchon de réparation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-douvrages-ainsi-que-de-tous-leurs-details">3.2.10. Création d’ouvrages ainsi que de tous leurs détails</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-de-louvrage-general">3.2.11. Création de l’ouvrage général</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-du-couvercle-de-louvrage">3.2.12. Création du couvercle de l’ouvrage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-de-lemprise-de-louvrage">3.2.13. Création de l’emprise de l’ouvrage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-details-de-louvrage">3.2.14. Création des détails de l’ouvrage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">3.3. Règles de base pour la mise à jour sur QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">3.4. Suppression d’objets dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">3.5. Liaisons des différents objets dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Impression dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Elevation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">3.8. History viewer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Guide Administrateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Guide du contributeur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Guide du développeur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Projet démo et données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Traduction</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">3. </span>QWAT Guide de l’utilisateur</a> &raquo;</li>
+        
+      <li><span class="section-number">3.2. </span>Création d’objets dans QWAT</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user-guide/create.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creation-dobjets-dans-qwat">
+<h1><span class="section-number">3.2. </span>Création d’objets dans QWAT<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ce guide se veut un résumé des fonctionnalités de créations des données adaptées au besoin de QWAT dans QGIS.</p>
+<p>Il ne saurait remplacer la lecture du <a class="reference external" href="https://docs.qgis.org/2.18/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html">manuel</a> de QGIS expliquant en détail les différentes commandes. Le dessinateur est libre d’utiliser les plugins de dessin pour enrichir sa palette d’outils.</p>
+<div class="section" id="importation-des-points-releves">
+<h2><span class="section-number">3.2.1. </span>Importation des points relevés<a class="headerlink" href="#importation-des-points-releves" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour importer des points dans QWAT, il faut cliquer sur l’icône « <a class="reference external" href="https://github.com/VilleDePully/EasyImport">EasyImport</a> »</p>
+<img alt="../_images/icon_plugin.png" src="../_images/icon_plugin.png" />
+<p>La fenêtre suivante s’ouvre :</p>
+<img alt="../_images/dialog_esayimport.png" src="../_images/dialog_esayimport.png" />
+<ul class="simple">
+<li><p>Choisir le chemin du fichier à importer</p></li>
+<li><p>Choisir le bon réseau (EP‐ASS)</p></li>
+<li><p>Cliquer sur « Import »</p></li>
+</ul>
+<p>Les points ont été importés dans les bonnes couches, ces dernières sont passées en mode édition.
+Vous devez maintenant remplir les attributs des différents points pour chaque couche en suivant la marche à suivre.</p>
+</div>
+<div class="section" id="creation-des-points-de-construction">
+<h2><span class="section-number">3.2.2. </span>Création des points de construction<a class="headerlink" href="#creation-des-points-de-construction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer de nouveaux points de construction il faut sélectionner la catégorie
+« points de construction » qui est une sous‐couche dans la couche « Côtes ».
+Il faut ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité »</p>
+<img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
+<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
+Le formulaire de l’objet s’ouvre, il n’y a aucun champ à remplir.
+(Vous pouvez mettre une remarque éventuellement)</p>
+</div>
+<div class="section" id="creation-des-conduites">
+<h2><span class="section-number">3.2.3. </span>Création des conduites<a class="headerlink" href="#creation-des-conduites" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer de nouvelles conduites il faut sélectionner la catégorie « conduites »
+qui est une sous‐couche dans la couche « Réseau ». Nous devons ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton «ajouter une entité»</p>
+<img alt="../_images/icon_create_line.png" src="../_images/icon_create_line.png" />
+<p>Dessiner ensuite la conduite et faites un clic droit pour la valider
+une fois tous les points de passage créés.</p>
+<p>Le formulaire de la conduite s’ouvre.</p>
+<img alt="../_images/pipe_form.png" src="../_images/pipe_form.png" />
+<p>Il faut remplir les champs suivants:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Onglet Général</dt><dd><ul>
+<li><p>Distributeur</p></li>
+<li><p>Année</p></li>
+<li><p>Fonction</p></li>
+<li><p>Statut</p></li>
+<li><p>Matériau</p></li>
+<li><p>Mode de pose</p></li>
+<li><p>Protection</p></li>
+<li><p>Lit de pose (matériau)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Hydraulique</dt><dd><ul>
+<li><p>Qualité eau</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Géométrie</dt><dd><ul>
+<li><p>Précision</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Rendu</dt><dd><ul>
+<li><p>« Schématique » à cocher si on veut que la conduite apparaisse sur la schématique</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Fuites</dt><dd><ul>
+<li><p>Liaison avec les manchons de fuites à faire si besoin (cf partie sur les fuites)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="separation-dune-conduite-en-deux-conduites">
+<h2><span class="section-number">3.2.4. </span>Séparation d’une conduite en deux conduites<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Lors d’une mise à jour, il arrive régulièrement que l’on doive couper une conduite existante
+pour se raccorder sur le nouveau point levé. Pour se faire, il faut utiliser l’outil « Séparer les entités »</p>
+<img alt="../_images/icon_cut_entity.png" src="../_images/icon_cut_entity.png" />
+<p>Il faut ensuite faire une droite coupant notre conduite à l’endroit où l’on veut qu’elle soit coupée :</p>
+<img alt="../_images/cut_entity.png" src="../_images/cut_entity.png" />
+<p>La conduite se coupe alors en deux conduites. Les champs n’ont pas besoin d’être complété,
+la nouvelle conduite reprend les même attributs, le numéro d’ID de la conduite est créé automatiquement.</p>
+</div>
+<div class="section" id="creation-des-differentes-pieces-dinstallation">
+<h2><span class="section-number">3.2.5. </span>Création des différentes pièces d’installation<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer de nouvelles pièces d’installation il faut sélectionner la catégorie
+« pièce d’installation » qui est une sous‐couche dans la couche « Nœuds ».
+Il faut ensuite basculer en mode édition.</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité »</p>
+<img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
+<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
+Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<ul class="simple">
+<li><p>Identification (numéro du point levé)</p></li>
+<li><p>Année</p></li>
+<li><p>Orientation (de la pièce)</p></li>
+<li><p>Type</p></li>
+<li><p>Statut</p></li>
+</ul>
+</div>
+<div class="section" id="creation-des-points-dintroduction">
+<h2><span class="section-number">3.2.6. </span>Création des points d’introduction<a class="headerlink" href="#creation-des-points-dintroduction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le point d’introduction se crée en créant une pièce d’installation ayant comme
+« Type » = « point d’introduction ». Une fois cela fait, un point d’introduction sera
+automatiquement crée dans la couche « Nœuds » lors de la génération des nœuds (voir les explications ci-dessous).</p>
+</div>
+<div class="section" id="creation-des-vannes">
+<h2><span class="section-number">3.2.7. </span>Création des vannes<a class="headerlink" href="#creation-des-vannes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer de nouvelles vannes il faut sélectionner la catégorie « vannes » qui est une
+sous‐couche dans la couche « Réseau ». Il faut ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité ».</p>
+<img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
+<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
+Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Onglet Général</dt><dd><ul>
+<li><p>Année</p></li>
+<li><p>Fermée (à cocher si c’est le cas)</p></li>
+<li><p>Type</p></li>
+<li><p>Fonction</p></li>
+<li><p>Statut</p></li>
+<li><p>Maintenance (si défaut)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Géométrie</dt><dd><ul>
+<li><p>Altitude réelle (coordonnée Z du point)</p></li>
+<li><p>Précision alti.</p></li>
+<li><p>Précision (planimétrique)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Rendu</dt><dd><ul>
+<li><p>Schématique à cocher si on veut que la conduite apparaisse sur la schématique</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="creation-des-bornes-hydrantes">
+<h2><span class="section-number">3.2.8. </span>Création des bornes hydrantes<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer de nouvelles bornes hydrantes il faut sélectionner la catégorie « hydrantes »
+qui est une sous‐couche dans la couche « Réseau ».</p>
+<p>Il faut ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité ».</p>
+<img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
+<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
+Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Onglet Général</dt><dd><ul>
+<li><p>Année</p></li>
+<li><p>Distributeur</p></li>
+<li><p>Etat</p></li>
+<li><p>Fournisseur</p></li>
+<li><p>Souterraine (à cocher si c’est le cas)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Géométrie</dt><dd><ul>
+<li><p>Altitude réelle (coordonnée Z du point)</p></li>
+<li><p>Précision alti.</p></li>
+<li><p>Précision (planimétrique)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Hydraulique</dt><dd><ul>
+<li><p>Pression statique</p></li>
+<li><p>Pression dynamique</p></li>
+<li><p>Débit</p></li>
+<li><p>Mesuré le</p></li>
+<li><p>Mesuré par</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="creation-dun-manchon-de-reparation">
+<h2><span class="section-number">3.2.9. </span>Création d’un manchon de réparation<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer un nouveau manchon de réparation il faut sélectionner la catégorie « fuites »
+qui est une sous‐couche dans la couche « Réseau ».
+Il faut ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité ».</p>
+<img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
+<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
+Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>« réparée »</dt><dd><ul>
+<li><p>à cocher si la fuite est réparée</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>détection</dt><dd><ul>
+<li><p>date de détection de la fuite</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>adresse</dt><dd><ul>
+<li><p>endroit où a eu lieu la fuite</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Description</p></li>
+<li><dl class="simple">
+<dt>Type</dt><dd><ul>
+<li><p>Type de dégâts</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Cause</dt><dd><ul>
+<li><p>Cause de la fuite</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Dommage</dt><dd><ul>
+<li><p>Gravité des dégâts</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>« Conduite remplacée »</dt><dd><ul>
+<li><p>à cocher si un bout de conduite a été changé</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Réparation</dt><dd><ul>
+<li><p>Pièce utilisée pour la réparation</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Date réparation</p></li>
+</ul>
+<p>Pour que la liaison avec la conduite se fasse automatiquement, il faut enregistrer
+la conduite une fois le manchon crée.</p>
+</div>
+<div class="section" id="creation-douvrages-ainsi-que-de-tous-leurs-details">
+<h2><span class="section-number">3.2.10. </span>Création d’ouvrages ainsi que de tous leurs détails<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les ouvrages et leurs détails sont contenus dans plusieurs couches:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Le points principal se trouve dans la sous‐couche « ouvrage général »</p></li>
+<li><p>Le couvercle de l’ouvrage, si il y en a un, se trouve dans la sous‐couche « couvercle »</p></li>
+<li><p>L’emprise réelle de l’ouvrage se trouve dans la sous‐couche « ouvrage – polygones »</p></li>
+<li><p>Les points de détail des ouvrages (par exemple les vannes d’une chambre de vannes) se trouvent dans la sous‐couche « détail ».</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="creation-de-louvrage-general">
+<h2><span class="section-number">3.2.11. </span>Création de l’ouvrage général<a class="headerlink" href="#creation-de-louvrage-general" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
+qui est une sous‐couche dans la couche « ouvrages ».
+Il faut ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité ».</p>
+<img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
+<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
+Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<ul class="simple">
+<li><p>Nom (composé d’une lettre suivi d’un nombre)</p></li>
+<li><p>Statut</p></li>
+<li><p>« Visible schéma » à cocher si on veut que la conduite apparaisse sur la schématique</p></li>
+<li><p>Année</p></li>
+<li><p>Type</p></li>
+</ul>
+</div>
+<div class="section" id="creation-du-couvercle-de-louvrage">
+<h2><span class="section-number">3.2.12. </span>Création du couvercle de l’ouvrage<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer le couvercle de l’ouvrage, il faut sélectionner la catégorie « couvercles »
+qui est une sous‐couche dans la couche « ouvrages ».
+Il faut ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité ».</p>
+<img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
+<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
+Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<ul>
+<li><p>identification (identique au champ « Nom » de l’ouvrage)</p></li>
+<li><p>Diamètre (en mm)</p></li>
+<li><p>Altitude</p></li>
+<li><p>Type</p></li>
+<li><p>« Circulaire » à cocher si le couvercle est rond</p></li>
+<li><dl>
+<dt>Ouvrage</dt><dd><ul class="simple">
+<li><p>Il faut lier l’ouvrage principal au couvercle. Pour se faire, cliquez sur le bouton</p></li>
+</ul>
+<img alt="../_images/icon_link.png" src="../_images/icon_link.png" />
+<p>et ensuite aller cliquez sur le point principal de l’ouvrage (sur le plan).
+Le champ a du se remplir avec le nom de l’ouvrage.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="creation-de-lemprise-de-louvrage">
+<h2><span class="section-number">3.2.13. </span>Création de l’emprise de l’ouvrage<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
+qui est une sous‐couche dans la couche « ouvrages ».
+Il faut ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité ».</p>
+<img alt="../_images/icon_create_polygon.png" src="../_images/icon_create_polygon.png" />
+<p>Il ne reste plus qu’à digitaliser l’emprise de l’ouvrage. Une fois le polygone crée, faites un clic‐droit pour arrêter la saisie.
+Le formulaire s’ouvre, il faut remplir les champs suivants:</p>
+<ul class="simple">
+<li><p>name (identique au champ « Nom » de l’ouvrage)</p></li>
+<li><p>id_type</p></li>
+<li><p>Year</p></li>
+</ul>
+</div>
+<div class="section" id="creation-des-details-de-louvrage">
+<h2><span class="section-number">3.2.14. </span>Création des détails de l’ouvrage<a class="headerlink" href="#creation-des-details-de-louvrage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour créer les détails de l’ouvrage, il faut sélectionner la catégorie du détail voulu qui est une sous‐couche dans la couche « détail ».
+Il faut ensuite basculer en mode édition</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>et utiliser le bouton « ajouter une entité ».</p>
+<img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
+<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
+Le formulaire de l’objet s’ouvre, il faut remplir les attributs selon
+le type de détail que l’on a créé (réservoirs, sources etc..).</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="update.html" class="btn btn-neutral float-right" title="3.3. Règles de base pour la mise à jour sur QWAT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qwat_struct.html" class="btn btn-neutral float-left" title="3.1. Structuration du réseau d’Eau Potable sur QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, QWAT team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
