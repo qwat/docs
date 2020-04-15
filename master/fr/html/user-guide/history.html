@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -97,9 +97,9 @@
 <li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Impression dans QWAT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Elevation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3.8. History viewer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#plugin-configuration">3.8.1. Plugin configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#plugin-configuration">3.8.1. Configuration du plugin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#usage">3.8.2. Usage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#replay-function">3.8.3. Replay function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#replay-function">3.8.3. Fonction « Replay »</a></li>
 </ul>
 </li>
 </ul>
@@ -156,9 +156,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">3. QWAT Guide de l’utilisateur</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3. </span>QWAT Guide de l’utilisateur</a> &raquo;</li>
         
-      <li>3.8. History viewer</li>
+      <li><span class="section-number">3.8. </span>History viewer</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,42 +178,42 @@
            <div itemprop="articleBody">
             
   <div class="section" id="history-viewer">
-<h1>3.8. History viewer<a class="headerlink" href="#history-viewer" title="Lien permanent vers ce titre">¶</a></h1>
-<p><cite>PG history viewer</cite> plugin allows you to retrieve modification on the QWAT database.</p>
+<h1><span class="section-number">3.8. </span>History viewer<a class="headerlink" href="#history-viewer" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Le plugin <cite>PG history viewer</cite> vous permet de suivre les modifications dans la base de données QWAT.</p>
 <div class="section" id="plugin-configuration">
-<h2>3.8.1. Plugin configuration<a class="headerlink" href="#plugin-configuration" title="Lien permanent vers ce titre">¶</a></h2>
-<p>First, you have to configure the plugin for the session like this:</p>
+<h2><span class="section-number">3.8.1. </span>Configuration du plugin<a class="headerlink" href="#plugin-configuration" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Premièrement, le plugin doit être configuré pour la session de cette manière :</p>
 <img alt="../_images/pg_hv_configuration.png" src="../_images/pg_hv_configuration.png" />
 </div>
 <div class="section" id="usage">
-<h2>3.8.2. Usage<a class="headerlink" href="#usage" title="Lien permanent vers ce titre">¶</a></h2>
-<p>The « logged events » window is composed of 4 parts.</p>
+<h2><span class="section-number">3.8.2. </span>Usage<a class="headerlink" href="#usage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fenêtre « logged events » est composée de 4 parties.</p>
 <img alt="../_images/pg_hv_history.png" src="../_images/pg_hv_history.png" />
 <ul class="simple">
 <li><ol class="arabic simple">
-<li><p>Part identifying the tools used to filter modifications in the database.</p></li>
+<li><p>Les outils utilisés pour filtrer les modifications dans la base de données.</p></li>
 </ol>
 </li>
 <li><ol class="arabic simple" start="2">
-<li><p>Logged events with the modification date, the table, the action type « Update/Delete/Insert », the application and the user who made the modification.</p></li>
+<li><p>Les événements loggés avec leur date de modification, la table, le type d’action « Update/Delete/Insert », l’application et l’utilisateur responsable de la modification.</p></li>
 </ol>
 </li>
 <li><ol class="arabic simple" start="3">
-<li><p>The view comparing the data before and after the change. The red lines are the ones modified.</p></li>
+<li><p>La vue compare les données avant et après le changement. Les lignes rouges sont celles qui ont été modifiées.</p></li>
 </ol>
 </li>
 <li><ol class="arabic simple" start="4">
-<li><p>If the geometry has been modified, a canvas will show the difference.</p></li>
+<li><p>Si la géométrie a été modifiée, une carte montre la différence.</p></li>
 </ol>
 </li>
 </ul>
 </div>
 <div class="section" id="replay-function">
-<h2>3.8.3. Replay function<a class="headerlink" href="#replay-function" title="Lien permanent vers ce titre">¶</a></h2>
-<p>If you have configured the replay option, you can replay actions. Example below:</p>
-<p>Actual value:</p>
+<h2><span class="section-number">3.8.3. </span>Fonction « Replay »<a class="headerlink" href="#replay-function" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le cas ou l’option replay a été configurée, il est possible de rejouer des actions. Exemple ci-dessous :</p>
+<p>Valeur actuelle :</p>
 <img alt="../_images/pg_hv_replay_before.png" src="../_images/pg_hv_replay_before.png" />
-<p>Select the event you want to replay and its values will become the current ones. Example for the year that becomes 2004 again:</p>
+<p>Sélectionner l’événement à rejouer et ses anciennes valeurs seront restaurées. Exemple pour l’année qui redevient 2004 :</p>
 <img alt="../_images/pg_hv_replay_after.png" src="../_images/pg_hv_replay_after.png" />
 </div>
 </div>

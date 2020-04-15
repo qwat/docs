@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -152,9 +152,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">6. Developer’s guide</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">6. </span>Developer’s guide</a> &raquo;</li>
         
-      <li>6.4. Upgrade database</li>
+      <li><span class="section-number">6.4. </span>Upgrade database</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,9 +174,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="upgrade-database">
-<h1>6.4. Upgrade database<a class="headerlink" href="#upgrade-database" title="Link a questa intestazione">¶</a></h1>
+<h1><span class="section-number">6.4. </span>Upgrade database<a class="headerlink" href="#upgrade-database" title="Link a questa intestazione">¶</a></h1>
 <div class="section" id="create-a-new-upgrade-delta">
-<h2>6.4.1. Create a new upgrade delta<a class="headerlink" href="#create-a-new-upgrade-delta" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">6.4.1. </span>Create a new upgrade delta<a class="headerlink" href="#create-a-new-upgrade-delta" title="Link a questa intestazione">¶</a></h2>
 <ul class="simple">
 <li><p>First create a new branch for your modification on the model</p></li>
 <li><p>Modify the SQL creation code at your convenience</p></li>
@@ -191,7 +191,7 @@
 </div>
 </div>
 <div class="section" id="migrate-an-existing-database">
-<h2>6.4.2. Migrate an existing database<a class="headerlink" href="#migrate-an-existing-database" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">6.4.2. </span>Migrate an existing database<a class="headerlink" href="#migrate-an-existing-database" title="Link a questa intestazione">¶</a></h2>
 <p>If you use an old version of QWAT model, you can upgrade it by following the instructions bellow:</p>
 <div class="admonition warning">
 <p class="admonition-title">Avvertimento</p>
@@ -214,7 +214,7 @@
 </div>
 </div>
 <div class="section" id="the-way-it-works">
-<h2>6.4.3. The way it works<a class="headerlink" href="#the-way-it-works" title="Link a questa intestazione">¶</a></h2>
+<h2><span class="section-number">6.4.3. </span>The way it works<a class="headerlink" href="#the-way-it-works" title="Link a questa intestazione">¶</a></h2>
 <p>We’ve got a tag for version x.0</p>
 <p>In <em>/update/delta/ directory</em>, we find the SQL files list which contain the current evolutions (delta).
 If we execute <em>init_qwat.sh</em> in the current git repository, we should have the same DB than if we execute <em>init_qwat.sh</em> of the x.0 version.

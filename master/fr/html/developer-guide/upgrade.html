@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="7. Projet démo et données" href="../demo-guide/index.html" />
-    <link rel="prev" title="6.2. Customize local DB models" href="local_customizations.html" /> 
+    <link rel="prev" title="6.2. Personnaliser le modèle de données local" href="local_customizations.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,7 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Guide du contributeur</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Guide du développeur</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="qwat_dev.html">6.1. QWAT Development Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="local_customizations.html">6.2. Customize local DB models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html">6.2. Personnaliser le modèle de données local</a></li>
 <li class="toctree-l2"><a class="reference internal" href="local_customizations.html#create-an-extension">6.3. Create an extension</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.4. Mettre à jour la base de données</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-new-upgrade-delta">6.4.1. Créer un delta de mise à jour</a></li>
@@ -152,9 +152,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">6. Guide du développeur</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">6. </span>Guide du développeur</a> &raquo;</li>
         
-      <li>6.4. Mettre à jour la base de données</li>
+      <li><span class="section-number">6.4. </span>Mettre à jour la base de données</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,9 +174,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="upgrade-database">
-<h1>6.4. Mettre à jour la base de données<a class="headerlink" href="#upgrade-database" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">6.4. </span>Mettre à jour la base de données<a class="headerlink" href="#upgrade-database" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="create-a-new-upgrade-delta">
-<h2>6.4.1. Créer un delta de mise à jour<a class="headerlink" href="#create-a-new-upgrade-delta" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">6.4.1. </span>Créer un delta de mise à jour<a class="headerlink" href="#create-a-new-upgrade-delta" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>Premièrement créer une nouvelle branche pour votre modification du modèle</p></li>
 <li><p>Modifier le code SQL de création selon le besoin</p></li>
@@ -190,7 +190,7 @@
 </div>
 </div>
 <div class="section" id="migrate-an-existing-database">
-<h2>6.4.2. Migrer une base de donnée existante<a class="headerlink" href="#migrate-an-existing-database" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">6.4.2. </span>Migrer une base de donnée existante<a class="headerlink" href="#migrate-an-existing-database" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si vous utilisez une ancienne version du modèle de donnée QWAT, vous pouvez le mettre à jour en suivant les instructions ci-dessous :</p>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
@@ -213,7 +213,7 @@
 </div>
 </div>
 <div class="section" id="the-way-it-works">
-<h2>6.4.3. Fonctionnement<a class="headerlink" href="#the-way-it-works" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">6.4.3. </span>Fonctionnement<a class="headerlink" href="#the-way-it-works" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un tag est attribué pour une version x.0</p>
 <p>Dans <em>/update/delta/ directory</em> se trouvent les fichiers SQL qui contiennent les évolutions courantes (delta). Si on exécute <em>init_qwat.sh</em> dans le dossier git courant, la base de donnée générées correspond à la même base de données que si <em>init_qwat.sh</em> en version x.0 est exécuté.</p>
 <p>Pour un utilisateur, le processus de migration consiste en :</p>
@@ -254,7 +254,7 @@
         <a href="../demo-guide/index.html" class="btn btn-neutral float-right" title="7. Projet démo et données" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="local_customizations.html" class="btn btn-neutral float-left" title="6.2. Customize local DB models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="local_customizations.html" class="btn btn-neutral float-left" title="6.2. Personnaliser le modèle de données local" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
