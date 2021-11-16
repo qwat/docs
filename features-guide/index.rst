@@ -2,7 +2,7 @@ QWAT / TEKSI Drinking Water
 ===========================
 
 QWAT is a PostgreSQL - PostGIS data model almost compatible with the swiss norm SIA405. The data are accessed and edited with a dedicated QGIS project.
-The project is maintained by the `community TEKSI <https://github.com/qwat/extension_sire>`_.
+The project is maintained by the `TEKSI community <https://www.teksi.ch>`_.
 
 Main features
 -------------
