@@ -26,7 +26,7 @@ The data model contains all the objects of a drinking water network and their at
 * Sampling point
 * Leaks
 
-Their geometries contain the Z value (altitude).
+Their geometries contain the Z value (altitude) which can be edited via the native QGIS tools.
 
 The data model is almost compatible with the SIA405.
 The model is comprehensive and provide all the common objects and atttributes.
