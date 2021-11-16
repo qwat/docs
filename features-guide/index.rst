@@ -37,7 +37,7 @@ Viewing and editing
 ^^^^^^^^^^^^^^^^^^^^
 A preconfigured QGIS project is provided. The network objects are shown with a standard symbology. 
 
-The editing can be done directly from QGIS, each object has a corresponding form that eases the edition of the attributes.
+The editing can be done directly from QGIS, each object has a corresponding form that eases the edition of attributes.
 
 
 `Edition documentation <https://qwat.github.io/docs/master/en/html/user-guide/create.html>`_
