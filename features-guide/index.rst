@@ -30,7 +30,7 @@ Their geometries contain the Z value (altitude) which can be edited via the nati
 
 The data model is almost compatible with the SIA405.
 The model is comprehensive and provide all the common objects and atttributes.
-However, there is the possibility to add your own attributes or objects.
+However, there is the possibility to customize attributes or objects and suggest modifications to the community.
 
 
 Viewing and editing
