@@ -1,7 +1,15 @@
 QWAT / TEKSI Drinking Water
 ===========================
 
-QWAT is a PostgreSQL - PostGIS data model almost compatible with the swiss norm SIA405. The data are accessed and edited with a dedicated QGIS project.
+The TEKSI drinking water module (project name: QWAT) is a decision support tool that allows you to:
+
+* manage and map the data of your drinking water network with all its components such as pipes, valves, pumps, tanks, etc.
+* indicate the characteristics of network objects in the form of attributes such as diameter, material, installation depth, leaks, date of installation, etc.
+* produce plans and extract statistics from the database such as network value, total length of pipes, identification of future interventions, etc.
+* export geodata in compliance with the requirements of Swiss standards
+
+
+QWAT is a complete open source module based on a PostgreSQL - PostGIS data model almost compatible with the swiss norm SIA405. The data are accessed and edited with a dedicated QGIS project.
 The project is maintained by the `TEKSI community <https://www.teksi.ch>`_.
 
 Main features
