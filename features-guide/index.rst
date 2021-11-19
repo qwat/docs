@@ -37,7 +37,7 @@ The data model contains all the objects of a drinking water network and their at
 The altitude of these objects is handled directly in their geometries which can be modified by the native QGIS tools.
 
 The data model is almost compatible with the SIA405.
-The model is comprehensive and provide all the common objects and atttributes.
+The model is comprehensive and provide all the common objects and attributes.
 However, there is the possibility to customize attributes or objects and suggest modifications to the community.
 
 
