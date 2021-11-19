@@ -15,7 +15,7 @@ The project is maintained by the `TEKSI community <https://www.teksi.ch>`_.
 Main features
 -------------
 
-Data model
+Network objects
 ^^^^^^^^^^
 The data model contains all the objects of a drinking water network and their attributes:
 
