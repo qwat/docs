@@ -1,7 +1,8 @@
 Data manager
 ============
 
-How to import and export data, backup and restore, etc
+Import data to QWAT
+-------------------------
 
 It is generally prefered to load QWAT data trough the views and not the tables, given the complexity of object model, and the business intelligence located in the edit triggers. (e.g. node and topology handling). 
 
@@ -14,6 +15,13 @@ Import data from Topobase
 * describe the automated and manual checks to do
 * mention specific point of attention
 
+Export data to INTERLIS SIA 405 format
+-------------------
+
+* describe the process and tools
+* describe the automated and manual checks to do
+* mention specific point of attention
+
 Export data to SIRE
 -------------------
 
@@ -21,13 +29,13 @@ Export data to SIRE
 * describe the automated and manual checks to do
 * mention specific point of attention
 
-Backup the data
+Backup data
 ---------------
 
 * Use PostgreSQL backups
 * points of attention (PG versions…)
 
-Restoring the data
+Restoring data
 ------------------
 
 * Use PostgreSQL backups
