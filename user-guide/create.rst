@@ -3,7 +3,7 @@ Object creation in QWAT
 
 This guide is intended to summarize feature creation according to QWAT fonctionnalities in QGIS.
 
-It is not a substitute of the QGIS `documentation <https://docs.qgis.org/3.10/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_.
+It is not a substitute of the QGIS `documentation <https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_.
 
 Import of survey points
 ------------------------------
