@@ -1,6 +1,6 @@
 sphinx
 sphinx[transifex]
 sphinx-intl
-sphinx_rtd_theme
+sphinx-rtd-theme
 Pygments>=2.0.1
 transifex-client
