@@ -1,6 +1,6 @@
 conf.py
 .tx
-_build
+build
 compile_messages
 init
 *~
