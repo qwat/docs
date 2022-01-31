@@ -9,3 +9,4 @@ init
 *.bak
 i18n
 locale
+.vscode
