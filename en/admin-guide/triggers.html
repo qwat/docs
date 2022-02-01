@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4.2. Triggers &mdash; QWAT %%VERSION%% documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Contributor’s guide" href="../contributor-guide/index.html" />
+    <link rel="prev" title="4.1. Data manager" href="data_manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> QWAT
+          </a>
+              <div class="version">
+                %%VERSION%%
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Admin Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="data_manager.html">4.1. Data manager</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Triggers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#behaviour-trigger-functions">4.2.1. Behaviour Trigger functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ft-geom3d-altitude">4.2.1.1. ft_geom3d_altitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-controled-crossing">4.2.1.2. ft_controled_crossing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-leak-pipe">4.2.1.3. ft_leak_pipe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-leak-repaired">4.2.1.4. ft_leak_repaired</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-node-add-pipe-vertex">4.2.1.5. ft_node_add_pipe_vertex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-geometry-alternative-aux">4.2.1.6. ft_geometry_alternative_aux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-geometry-alternative-main">4.2.1.7. ft_geometry_alternative_main</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-node-geom">4.2.1.8. ft_node_geom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-pipe-node-moved">4.2.1.9. ft_pipe_node_moved</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-pipe-geom">4.2.1.10. ft_pipe_geom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-pipe-node-type">4.2.1.11. ft_pipe_node_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-pipe-tunnelbridge">4.2.1.12. ft_pipe_tunnelbridge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-valve-pipe-update">4.2.1.13. ft_valve_pipe_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-tank">4.2.1.14. ft_tank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-valve-update">4.2.1.15. ft_valve_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-valve-handle-altitude">4.2.1.16. ft_valve_handle_altitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-valve-node-set-type">4.2.1.17. ft_valve_node_set_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qwat-sys-if-modified-func">4.2.1.18. qwat_sys.if_modified_func</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#redirection-trigger-functions">4.2.2. Redirection trigger functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-hydrant-delete">4.2.2.1. ft_element_hydrant_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-hydrant-insert">4.2.2.2. ft_element_hydrant_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-hydrant-update">4.2.2.3. ft_element_hydrant_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-installation-delete">4.2.2.4. ft_element_installation_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-installation-insert">4.2.2.5. ft_element_installation_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-installation-update">4.2.2.6. ft_element_installation_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-meter-delete">4.2.2.7. ft_element_meter_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-meter-insert">4.2.2.8. ft_element_meter_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-meter-update">4.2.2.9. ft_element_meter_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-part-delete">4.2.2.10. ft_element_part_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-part-insert">4.2.2.11. ft_element_part_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-part-update">4.2.2.12. ft_element_part_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-samplingpoint-delete">4.2.2.13. ft_element_samplingpoint_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-samplingpoint-insert">4.2.2.14. ft_element_samplingpoint_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-samplingpoint-update">4.2.2.15. ft_element_samplingpoint_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-subscriber-delete">4.2.2.16. ft_element_subscriber_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-subscriber-insert">4.2.2.17. ft_element_subscriber_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-subscriber-update">4.2.2.18. ft_element_subscriber_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-valve-delete">4.2.2.19. ft_element_valve_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-valve-insert">4.2.2.20. ft_element_valve_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-element-valve-update">4.2.2.21. ft_element_valve_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-chamber-delete">4.2.2.22. ft_installation_chamber_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-chamber-insert">4.2.2.23. ft_installation_chamber_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-chamber-update">4.2.2.24. ft_installation_chamber_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-pressurecontrol-delete">4.2.2.25. ft_installation_pressurecontrol_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-pressurecontrol-insert">4.2.2.26. ft_installation_pressurecontrol_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-pressurecontrol-update">4.2.2.27. ft_installation_pressurecontrol_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-pump-delete">4.2.2.28. ft_installation_pump_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-pump-insert">4.2.2.29. ft_installation_pump_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-pump-update">4.2.2.30. ft_installation_pump_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-source-delete">4.2.2.31. ft_installation_source_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-source-insert">4.2.2.32. ft_installation_source_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-source-update">4.2.2.33. ft_installation_source_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-tank-delete">4.2.2.34. ft_installation_tank_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-tank-insert">4.2.2.35. ft_installation_tank_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-tank-update">4.2.2.36. ft_installation_tank_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-treatment-delete">4.2.2.37. ft_installation_treatment_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-treatment-insert">4.2.2.38. ft_installation_treatment_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-installation-treatment-update">4.2.2.39. ft_installation_treatment_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-node-element-delete">4.2.2.40. ft_node_element_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-node-element-insert">4.2.2.41. ft_node_element_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-node-element-update">4.2.2.42. ft_node_element_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-all-nodes-delete">4.2.2.43. ft_vw_all_nodes_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-all-nodes-insert">4.2.2.44. ft_vw_all_nodes_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-all-nodes-update">4.2.2.45. ft_vw_all_nodes_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-qwat-installation-delete">4.2.2.46. ft_vw_qwat_installation_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-qwat-installation-insert">4.2.2.47. ft_vw_qwat_installation_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-qwat-installation-update">4.2.2.48. ft_vw_qwat_installation_update</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-qwat-network-element-delete">4.2.2.49. ft_vw_qwat_network_element_delete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-qwat-network-element-insert">4.2.2.50. ft_vw_qwat_network_element_insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ft-vw-qwat-network-element-update">4.2.2.51. ft_vw_qwat_network_element_update</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">4.2.3. Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fn-get-district">4.2.3.1. fn_get_district</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-get-pressurezone">4.2.3.2. fn_get_pressurezone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-get-printmap-id">4.2.3.3. fn_get_printmap_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-get-printmaps">4.2.3.4. fn_get_printmaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-litres-per-cm">4.2.3.5. fn_litres_per_cm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-node-create">4.2.3.6. fn_node_create</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-node-get-ids">4.2.3.7. fn_node_get_ids</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-node-set-type">4.2.3.8. fn_node_set_type[]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">4.2.3.9. fn_node_set_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-node-update-id">4.2.3.10. fn_node_update_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-pipe-get-id">4.2.3.11. fn_pipe_get_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-pipe-update-valve">4.2.3.12. fn_pipe_update_valve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-update-pipe-crossing">4.2.3.13. fn_update_pipe_crossing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fn-update-sequences">4.2.3.14. fn_update_sequences</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tables">4.2.4. Tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#chamber">4.2.4.1. chamber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#consumptionzone">4.2.4.2. consumptionzone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cover">4.2.4.3. cover</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#crossing">4.2.4.4. crossing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distributor">4.2.4.5. distributor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#district">4.2.4.6. district</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#folder">4.2.4.7. folder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydrant">4.2.4.8. hydrant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation">4.2.4.9. installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#leak">4.2.4.10. leak</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#meter">4.2.4.11. meter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#meter-reference">4.2.4.12. meter_reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#network-element">4.2.4.13. network_element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#node">4.2.4.14. node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#part">4.2.4.15. part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pipe">4.2.4.16. pipe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pressurecontrol">4.2.4.17. pressurecontrol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pressurezone">4.2.4.18. pressurezone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#printmap">4.2.4.19. printmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#protectionzone">4.2.4.20. protectionzone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pump">4.2.4.21. pump</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remote">4.2.4.22. remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#samplingpoint">4.2.4.23. samplingpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source">4.2.4.24. source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subscriber">4.2.4.25. subscriber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subscriber-reference">4.2.4.26. subscriber_reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#surveypoint">4.2.4.27. surveypoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tank">4.2.4.28. tank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#treatment">4.2.4.29. treatment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#valve">4.2.4.30. valve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#worker">4.2.4.31. worker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#views">4.2.5. Views</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vw-element-hydrant">4.2.5.1. vw_element_hydrant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-consumptionzone">4.2.5.2. vw_consumptionzone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-element-installation">4.2.5.3. vw_element_installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-element-meter">4.2.5.4. vw_element_meter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-element-part">4.2.5.5. vw_element_part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-element-samplingpoint">4.2.5.6. vw_element_samplingpoint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-element-subscriber">4.2.5.7. vw_element_subscriber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-export-hydrant">4.2.5.8. vw_export_hydrant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-export-installation">4.2.5.9. vw_export_installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-export-meter">4.2.5.10. vw_export_meter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-export-part">4.2.5.11. vw_export_part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-export-subscriber">4.2.5.12. vw_export_subscriber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-export-valve">4.2.5.13. vw_export_valve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-element-valve">4.2.5.14. vw_element_valve</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-installation-chamber">4.2.5.15. vw_installation_chamber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-installation-pressurecontrol">4.2.5.16. vw_installation_pressurecontrol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-installation-pump">4.2.5.17. vw_installation_pump</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-installation-source">4.2.5.18. vw_installation_source</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-installation-tank">4.2.5.19. vw_installation_tank</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-installation-treatment">4.2.5.20. vw_installation_treatment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-leak">4.2.5.21. vw_leak</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-node-element">4.2.5.22. vw_node_element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-pipe">4.2.5.23. vw_pipe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-pipe-child-parent">4.2.5.24. vw_pipe_child_parent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-pipe-schema">4.2.5.25. vw_pipe_schema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-pipe-schema-error">4.2.5.26. vw_pipe_schema_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-pipe-schema-merged">4.2.5.27. vw_pipe_schema_merged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-pipe-schema-visibleitems">4.2.5.28. vw_pipe_schema_visibleitems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-printmap">4.2.5.29. vw_printmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-protectionzone">4.2.5.30. vw_protectionzone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-qwat-installation">4.2.5.31. vw_qwat_installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-qwat-network-element">4.2.5.32. vw_qwat_network_element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-all-nodes">4.2.5.33. vw_all_nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-remote">4.2.5.34. vw_remote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-search-view">4.2.5.35. vw_search_view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-subscriber-pipe-relation">4.2.5.36. vw_subscriber_pipe_relation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vw-valves-lines">4.2.5.37. vw_valves_lines</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">4. </span>Admin Guide</a> &raquo;</li>
+      <li><span class="section-number">4.2. </span>Triggers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/admin-guide/triggers.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="triggers">
+<h1><span class="section-number">4.2. </span>Triggers<a class="headerlink" href="#triggers" title="Permalink to this headline"></a></h1>
+<p>Most of the triggers are located in the qwat_od schema.</p>
+<p>We can classify the triggers in 3 categories:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>specific behaviour triggers</p></li>
+<li><p>audit triggers</p></li>
+<li><p>redirection triggers (triggers on view)</p></li>
+</ol>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the description below, triggers’s name which are not prefixed with the schema name are contained in <em>qwat_od</em> schema.</p>
+</div>
+<section id="behaviour-trigger-functions">
+<h2><span class="section-number">4.2.1. </span>Behaviour Trigger functions<a class="headerlink" href="#behaviour-trigger-functions" title="Permalink to this headline"></a></h2>
+<section id="ft-geom3d-altitude">
+<h3><span class="section-number">4.2.1.1. </span>ft_geom3d_altitude<a class="headerlink" href="#ft-geom3d-altitude" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE altitude</p></li>
+<li><p>UPDATE geometry</p></li>
+</ul>
+<p>Altitude is prioritary on Z value of the geometry (if both changed, only altitude is taken into account)</p>
+</section>
+<section id="ft-controled-crossing">
+<h3><span class="section-number">4.2.1.2. </span>ft_controled_crossing<a class="headerlink" href="#ft-controled-crossing" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE controled = True</p></li>
+</ul>
+</section>
+<section id="ft-leak-pipe">
+<h3><span class="section-number">4.2.1.3. </span>ft_leak_pipe<a class="headerlink" href="#ft-leak-pipe" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE fk_pipe = <a class="reference internal" href="#fn-pipe-get-id">fn_pipe_get_id</a></p></li>
+</ul>
+</section>
+<section id="ft-leak-repaired">
+<h3><span class="section-number">4.2.1.4. </span>ft_leak_repaired<a class="headerlink" href="#ft-leak-repaired" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE _repaired</p></li>
+</ul>
+</section>
+<section id="ft-node-add-pipe-vertex">
+<h3><span class="section-number">4.2.1.5. </span>ft_node_add_pipe_vertex<a class="headerlink" href="#ft-node-add-pipe-vertex" title="Permalink to this headline"></a></h3>
+<p>Add a vertex to the corresponding pipe if it intersects.
+When the node is close enough to the pipe (&lt; 1 micrometer) the node is considered to intersect the pipe
+It allows to deal with intersections that cannot be represented by floating point numbers</p>
+<ul class="simple">
+<li><p>UPDATE pipe (geometry) using St_Snap</p></li>
+</ul>
+</section>
+<section id="ft-geometry-alternative-aux">
+<h3><span class="section-number">4.2.1.6. </span>ft_geometry_alternative_aux<a class="headerlink" href="#ft-geometry-alternative-aux" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+</ul>
+</section>
+<section id="ft-geometry-alternative-main">
+<h3><span class="section-number">4.2.1.7. </span>ft_geometry_alternative_main<a class="headerlink" href="#ft-geometry-alternative-main" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+</ul>
+</section>
+<section id="ft-node-geom">
+<h3><span class="section-number">4.2.1.8. </span>ft_node_geom<a class="headerlink" href="#ft-node-geom" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+<li><p><a class="reference internal" href="#fn-get-district">fn_get_district</a></p></li>
+<li><p><a class="reference internal" href="#fn-get-pressurezone">fn_get_pressurezone</a></p></li>
+<li><p><a class="reference internal" href="#fn-get-printmap-id">fn_get_printmap_id</a></p></li>
+<li><p><a class="reference internal" href="#fn-get-printmaps">fn_get_printmaps</a></p></li>
+</ul>
+</section>
+<section id="ft-pipe-node-moved">
+<h3><span class="section-number">4.2.1.9. </span>ft_pipe_node_moved<a class="headerlink" href="#ft-pipe-node-moved" title="Permalink to this headline"></a></h3>
+<p>Update pipe’s nodes extremities by creating new nodes, or taking existing ones.</p>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#pipe">pipe</a> (fk_node_a, fk_node_b) using <a class="reference internal" href="#fn-node-create">fn_node_create</a></p></li>
+</ul>
+</section>
+<section id="ft-pipe-geom">
+<h3><span class="section-number">4.2.1.10. </span>ft_pipe_geom<a class="headerlink" href="#ft-pipe-geom" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+<li><p><a class="reference internal" href="#fn-node-create">fn_node_create</a></p></li>
+</ul>
+</section>
+<section id="ft-pipe-node-type">
+<h3><span class="section-number">4.2.1.11. </span>ft_pipe_node_type<a class="headerlink" href="#ft-pipe-node-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+<li><p><a class="reference internal" href="#id1">fn_node_set_type</a></p></li>
+</ul>
+</section>
+<section id="ft-pipe-tunnelbridge">
+<h3><span class="section-number">4.2.1.12. </span>ft_pipe_tunnelbridge<a class="headerlink" href="#ft-pipe-tunnelbridge" title="Permalink to this headline"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>to be completed</p>
+</div>
+</section>
+<section id="ft-valve-pipe-update">
+<h3><span class="section-number">4.2.1.13. </span>ft_valve_pipe_update<a class="headerlink" href="#ft-valve-pipe-update" title="Permalink to this headline"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>to be completed</p>
+</div>
+</section>
+<section id="ft-tank">
+<h3><span class="section-number">4.2.1.14. </span>ft_tank<a class="headerlink" href="#ft-tank" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+<li><p><a class="reference internal" href="#fn-litres-per-cm">fn_litres_per_cm</a></p></li>
+</ul>
+</section>
+<section id="ft-valve-update">
+<h3><span class="section-number">4.2.1.15. </span>ft_valve_update<a class="headerlink" href="#ft-valve-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#fn-pipe-update-valve">fn_pipe_update_valve</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#pipe">pipe</a></p></li>
+</ul>
+</section>
+<section id="ft-valve-handle-altitude">
+<h3><span class="section-number">4.2.1.16. </span>ft_valve_handle_altitude<a class="headerlink" href="#ft-valve-handle-altitude" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+</ul>
+</section>
+<section id="ft-valve-node-set-type">
+<h3><span class="section-number">4.2.1.17. </span>ft_valve_node_set_type<a class="headerlink" href="#ft-valve-node-set-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1">fn_node_set_type</a></p></li>
+</ul>
+</section>
+<section id="qwat-sys-if-modified-func">
+<h3><span class="section-number">4.2.1.18. </span>qwat_sys.if_modified_func<a class="headerlink" href="#qwat-sys-if-modified-func" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Audit trigger</p></li>
+</ul>
+<p>Add a new record in <em>qwat_sys.logged_actions</em> (schema, table, user, time…).</p>
+</section>
+</section>
+<section id="redirection-trigger-functions">
+<h2><span class="section-number">4.2.2. </span>Redirection trigger functions<a class="headerlink" href="#redirection-trigger-functions" title="Permalink to this headline"></a></h2>
+<section id="ft-element-hydrant-delete">
+<h3><span class="section-number">4.2.2.1. </span>ft_element_hydrant_delete<a class="headerlink" href="#ft-element-hydrant-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#hydrant">hydrant</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-hydrant-insert">
+<h3><span class="section-number">4.2.2.2. </span>ft_element_hydrant_insert<a class="headerlink" href="#ft-element-hydrant-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#hydrant">hydrant</a></p></li>
+</ul>
+</section>
+<section id="ft-element-hydrant-update">
+<h3><span class="section-number">4.2.2.3. </span>ft_element_hydrant_update<a class="headerlink" href="#ft-element-hydrant-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#hydrant">hydrant</a></p></li>
+</ul>
+</section>
+<section id="ft-element-installation-delete">
+<h3><span class="section-number">4.2.2.4. </span>ft_element_installation_delete<a class="headerlink" href="#ft-element-installation-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#vw-qwat-installation">vw_qwat_installation</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-installation-insert">
+<h3><span class="section-number">4.2.2.5. </span>ft_element_installation_insert<a class="headerlink" href="#ft-element-installation-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#vw-qwat-installation">vw_qwat_installation</a></p></li>
+</ul>
+</section>
+<section id="ft-element-installation-update">
+<h3><span class="section-number">4.2.2.6. </span>ft_element_installation_update<a class="headerlink" href="#ft-element-installation-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#vw-qwat-installation">vw_qwat_installation</a></p></li>
+</ul>
+</section>
+<section id="ft-element-meter-delete">
+<h3><span class="section-number">4.2.2.7. </span>ft_element_meter_delete<a class="headerlink" href="#ft-element-meter-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#meter">meter</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-meter-insert">
+<h3><span class="section-number">4.2.2.8. </span>ft_element_meter_insert<a class="headerlink" href="#ft-element-meter-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#meter">meter</a></p></li>
+</ul>
+</section>
+<section id="ft-element-meter-update">
+<h3><span class="section-number">4.2.2.9. </span>ft_element_meter_update<a class="headerlink" href="#ft-element-meter-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#meter">meter</a></p></li>
+</ul>
+</section>
+<section id="ft-element-part-delete">
+<h3><span class="section-number">4.2.2.10. </span>ft_element_part_delete<a class="headerlink" href="#ft-element-part-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#part">part</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-part-insert">
+<h3><span class="section-number">4.2.2.11. </span>ft_element_part_insert<a class="headerlink" href="#ft-element-part-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#part">part</a></p></li>
+</ul>
+</section>
+<section id="ft-element-part-update">
+<h3><span class="section-number">4.2.2.12. </span>ft_element_part_update<a class="headerlink" href="#ft-element-part-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#part">part</a></p></li>
+</ul>
+</section>
+<section id="ft-element-samplingpoint-delete">
+<h3><span class="section-number">4.2.2.13. </span>ft_element_samplingpoint_delete<a class="headerlink" href="#ft-element-samplingpoint-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#samplingpoint">samplingpoint</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-samplingpoint-insert">
+<h3><span class="section-number">4.2.2.14. </span>ft_element_samplingpoint_insert<a class="headerlink" href="#ft-element-samplingpoint-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#samplingpoint">samplingpoint</a></p></li>
+</ul>
+</section>
+<section id="ft-element-samplingpoint-update">
+<h3><span class="section-number">4.2.2.15. </span>ft_element_samplingpoint_update<a class="headerlink" href="#ft-element-samplingpoint-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-subscriber-delete">
+<h3><span class="section-number">4.2.2.16. </span>ft_element_subscriber_delete<a class="headerlink" href="#ft-element-subscriber-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#subscriber">subscriber</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-subscriber-insert">
+<h3><span class="section-number">4.2.2.17. </span>ft_element_subscriber_insert<a class="headerlink" href="#ft-element-subscriber-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#subscriber">subscriber</a></p></li>
+</ul>
+</section>
+<section id="ft-element-subscriber-update">
+<h3><span class="section-number">4.2.2.18. </span>ft_element_subscriber_update<a class="headerlink" href="#ft-element-subscriber-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-valve-delete">
+<h3><span class="section-number">4.2.2.19. </span>ft_element_valve_delete<a class="headerlink" href="#ft-element-valve-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#valve">valve</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-element-valve-insert">
+<h3><span class="section-number">4.2.2.20. </span>ft_element_valve_insert<a class="headerlink" href="#ft-element-valve-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#valve">valve</a></p></li>
+</ul>
+</section>
+<section id="ft-element-valve-update">
+<h3><span class="section-number">4.2.2.21. </span>ft_element_valve_update<a class="headerlink" href="#ft-element-valve-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#valve">valve</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-chamber-delete">
+<h3><span class="section-number">4.2.2.22. </span>ft_installation_chamber_delete<a class="headerlink" href="#ft-installation-chamber-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#chamber">chamber</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#installation">installation</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-chamber-insert">
+<h3><span class="section-number">4.2.2.23. </span>ft_installation_chamber_insert<a class="headerlink" href="#ft-installation-chamber-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#chamber">chamber</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-chamber-update">
+<h3><span class="section-number">4.2.2.24. </span>ft_installation_chamber_update<a class="headerlink" href="#ft-installation-chamber-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#chamber">chamber</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-pressurecontrol-delete">
+<h3><span class="section-number">4.2.2.25. </span>ft_installation_pressurecontrol_delete<a class="headerlink" href="#ft-installation-pressurecontrol-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#pressurecontrol">pressurecontrol</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#installation">installation</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-pressurecontrol-insert">
+<h3><span class="section-number">4.2.2.26. </span>ft_installation_pressurecontrol_insert<a class="headerlink" href="#ft-installation-pressurecontrol-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#pressurecontrol">pressurecontrol</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-pressurecontrol-update">
+<h3><span class="section-number">4.2.2.27. </span>ft_installation_pressurecontrol_update<a class="headerlink" href="#ft-installation-pressurecontrol-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#pressurecontrol">pressurecontrol</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-pump-delete">
+<h3><span class="section-number">4.2.2.28. </span>ft_installation_pump_delete<a class="headerlink" href="#ft-installation-pump-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#pump">pump</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#installation">installation</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-pump-insert">
+<h3><span class="section-number">4.2.2.29. </span>ft_installation_pump_insert<a class="headerlink" href="#ft-installation-pump-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#pump">pump</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-pump-update">
+<h3><span class="section-number">4.2.2.30. </span>ft_installation_pump_update<a class="headerlink" href="#ft-installation-pump-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#pump">pump</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-source-delete">
+<h3><span class="section-number">4.2.2.31. </span>ft_installation_source_delete<a class="headerlink" href="#ft-installation-source-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#source">source</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#installation">installation</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-source-insert">
+<h3><span class="section-number">4.2.2.32. </span>ft_installation_source_insert<a class="headerlink" href="#ft-installation-source-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#source">source</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-source-update">
+<h3><span class="section-number">4.2.2.33. </span>ft_installation_source_update<a class="headerlink" href="#ft-installation-source-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#source">source</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-tank-delete">
+<h3><span class="section-number">4.2.2.34. </span>ft_installation_tank_delete<a class="headerlink" href="#ft-installation-tank-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#tank">tank</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#installation">installation</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-tank-insert">
+<h3><span class="section-number">4.2.2.35. </span>ft_installation_tank_insert<a class="headerlink" href="#ft-installation-tank-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#tank">tank</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-tank-update">
+<h3><span class="section-number">4.2.2.36. </span>ft_installation_tank_update<a class="headerlink" href="#ft-installation-tank-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#tank">tank</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-treatment-delete">
+<h3><span class="section-number">4.2.2.37. </span>ft_installation_treatment_delete<a class="headerlink" href="#ft-installation-treatment-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#treatment">treatment</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#installation">installation</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-treatment-insert">
+<h3><span class="section-number">4.2.2.38. </span>ft_installation_treatment_insert<a class="headerlink" href="#ft-installation-treatment-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#treatment">treatment</a></p></li>
+</ul>
+</section>
+<section id="ft-installation-treatment-update">
+<h3><span class="section-number">4.2.2.39. </span>ft_installation_treatment_update<a class="headerlink" href="#ft-installation-treatment-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#treatment">treatment</a></p></li>
+</ul>
+</section>
+<section id="ft-node-element-delete">
+<h3><span class="section-number">4.2.2.40. </span>ft_node_element_delete<a class="headerlink" href="#ft-node-element-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#network-element">network_element</a></p></li>
+<li><p><a class="reference internal" href="#id1">fn_node_set_type</a></p></li>
+</ul>
+</section>
+<section id="ft-node-element-insert">
+<h3><span class="section-number">4.2.2.41. </span>ft_node_element_insert<a class="headerlink" href="#ft-node-element-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+<li><p><a class="reference internal" href="#fn-node-create">fn_node_create</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#network-element">network_element</a></p></li>
+</ul>
+</section>
+<section id="ft-node-element-update">
+<h3><span class="section-number">4.2.2.42. </span>ft_node_element_update<a class="headerlink" href="#ft-node-element-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#node">node</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#network-element">network_element</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-all-nodes-delete">
+<h3><span class="section-number">4.2.2.43. </span>ft_vw_all_nodes_delete<a class="headerlink" href="#ft-vw-all-nodes-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#network-element">network_element</a></p></li>
+<li><p><a class="reference internal" href="#id1">fn_node_set_type</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-all-nodes-insert">
+<h3><span class="section-number">4.2.2.44. </span>ft_vw_all_nodes_insert<a class="headerlink" href="#ft-vw-all-nodes-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+<li><p><a class="reference internal" href="#fn-node-create">fn_node_create</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#node">node</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#network-element">network_element</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-all-nodes-update">
+<h3><span class="section-number">4.2.2.45. </span>ft_vw_all_nodes_update<a class="headerlink" href="#ft-vw-all-nodes-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Update table fields</p></li>
+<li><p>UPDATE <a class="reference internal" href="#node">node</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#network-element">network_element</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-qwat-installation-delete">
+<h3><span class="section-number">4.2.2.46. </span>ft_vw_qwat_installation_delete<a class="headerlink" href="#ft-vw-qwat-installation-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#source">source</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#pump">pump</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#tank">tank</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#treatment">treatment</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#chamber">chamber</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#pressurecontrol">pressurecontrol</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#installation">installation</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-qwat-installation-insert">
+<h3><span class="section-number">4.2.2.47. </span>ft_vw_qwat_installation_insert<a class="headerlink" href="#ft-vw-qwat-installation-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#source">source</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#pump">pump</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#tank">tank</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#treatment">treatment</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#chamber">chamber</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#pressurecontrol">pressurecontrol</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-qwat-installation-update">
+<h3><span class="section-number">4.2.2.48. </span>ft_vw_qwat_installation_update<a class="headerlink" href="#ft-vw-qwat-installation-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#installation">installation</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#source">source</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#pump">pump</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#tank">tank</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#treatment">treatment</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#chamber">chamber</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#pressurecontrol">pressurecontrol</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-qwat-network-element-delete">
+<h3><span class="section-number">4.2.2.49. </span>ft_vw_qwat_network_element_delete<a class="headerlink" href="#ft-vw-qwat-network-element-delete" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE <a class="reference internal" href="#subscriber">subscriber</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#part">part</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-qwat-installation">vw_qwat_installation</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#hydrant">hydrant</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#samplingpoint">samplingpoint</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#valve">valve</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#meter">meter</a></p></li>
+<li><p>DELETE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-qwat-network-element-insert">
+<h3><span class="section-number">4.2.2.50. </span>ft_vw_qwat_network_element_insert<a class="headerlink" href="#ft-vw-qwat-network-element-insert" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>INSERT <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#subscriber">subscriber</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#part">part</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#vw-qwat-installation">vw_qwat_installation</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#hydrant">hydrant</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#samplingpoint">samplingpoint</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#valve">valve</a></p></li>
+<li><p>INSERT <a class="reference internal" href="#meter">meter</a></p></li>
+</ul>
+</section>
+<section id="ft-vw-qwat-network-element-update">
+<h3><span class="section-number">4.2.2.51. </span>ft_vw_qwat_network_element_update<a class="headerlink" href="#ft-vw-qwat-network-element-update" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>UPDATE <a class="reference internal" href="#vw-node-element">vw_node_element</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#subscriber">subscriber</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#part">part</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#vw-qwat-installation">vw_qwat_installation</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#hydrant">hydrant</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#valve">valve</a></p></li>
+<li><p>UPDATE <a class="reference internal" href="#meter">meter</a></p></li>
+</ul>
+</section>
+</section>
+<section id="functions">
+<h2><span class="section-number">4.2.3. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
+<section id="fn-get-district">
+<h3><span class="section-number">4.2.3.1. </span>fn_get_district<a class="headerlink" href="#fn-get-district" title="Permalink to this headline"></a></h3>
+<p>Returns the id of the first overlapping district.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>geom</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform an intersection between the geom and <a class="reference internal" href="#district">district</a>.</p>
+</section>
+<section id="fn-get-pressurezone">
+<h3><span class="section-number">4.2.3.2. </span>fn_get_pressurezone<a class="headerlink" href="#fn-get-pressurezone" title="Permalink to this headline"></a></h3>
+<p>Returns the id of the first overlapping pressurezone.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>geom</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform an intersection between the geom and the <a class="reference internal" href="#pressurezone">pressurezone</a> geometry.</p>
+</section>
+<section id="fn-get-printmap-id">
+<h3><span class="section-number">4.2.3.3. </span>fn_get_printmap_id<a class="headerlink" href="#fn-get-printmap-id" title="Permalink to this headline"></a></h3>
+<p>Returns the id of the first overlapping printmap.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>geom</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform an intersection between the geom and <a class="reference internal" href="#printmap">printmap</a> geometry.</p>
+</section>
+<section id="fn-get-printmaps">
+<h3><span class="section-number">4.2.3.4. </span>fn_get_printmaps<a class="headerlink" href="#fn-get-printmaps" title="Permalink to this headline"></a></h3>
+<p>Returns a string contaning all the short names of the polygons in table printmap which overlap the given geometry.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>geom</p></li>
+<li><p>result</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform an intersection between the geom and the <a class="reference internal" href="#printmap">printmap</a> geometry.</p>
+</section>
+<section id="fn-litres-per-cm">
+<h3><span class="section-number">4.2.3.5. </span>fn_litres_per_cm<a class="headerlink" href="#fn-litres-per-cm" title="Permalink to this headline"></a></h3>
+<p>Calculate the litres_per_cm of a <a class="reference internal" href="#tank">tank</a> cistern.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>fk_type</p></li>
+<li><p>dim1</p></li>
+<li><p>dim2</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform a calculation with dim1 &amp; dim2.</p>
+</section>
+<section id="fn-node-create">
+<h3><span class="section-number">4.2.3.6. </span>fn_node_create<a class="headerlink" href="#fn-node-create" title="Permalink to this headline"></a></h3>
+<p>Returns the node for a given geometry (point). If node does not exist, create it.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>_point (geometry)</p></li>
+<li><p>deactivate_node_add_pipe_vertex</p></li>
+</ul>
+</dd>
+<dt>Behaviour:</dt><dd><ul class="simple">
+<li><p>Search for a node a the _point location.</p></li>
+<li><dl class="simple">
+<dt>If a node if found</dt><dd><ul>
+<li><p>Deactivate the node_add_pipe_vertex_insert trigger if needed</p></li>
+<li><p>INSERT into <a class="reference internal" href="#node">node</a></p></li>
+<li><p>Reactivate the node_add_pipe_vertex_insert trigger if needed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="fn-node-get-ids">
+<h3><span class="section-number">4.2.3.7. </span>fn_node_get_ids<a class="headerlink" href="#fn-node-get-ids" title="Permalink to this headline"></a></h3>
+<p>Returns a list of node IDs contained a given extent.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>extent</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform a selection on <a class="reference internal" href="#node">node</a> with the given extent. If no extent is provided, return all ids.</p>
+</section>
+<section id="fn-node-set-type">
+<h3><span class="section-number">4.2.3.8. </span>fn_node_set_type[]<a class="headerlink" href="#fn-node-set-type" title="Permalink to this headline"></a></h3>
+<p>Set the type and orientation for node. If three pipe arrives at the node: intersection. If one pipe: end. If two: depends on characteristics of pipe: year (is different), material (and year), diameter(and material/year).</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>_node_ids[]</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform <a class="reference internal" href="#id1">fn_node_set_type</a> for each <a class="reference internal" href="#node">node</a> given in param. If no ids are given, the process is perform on all <a class="reference internal" href="#node">node</a> ids.</p>
+</section>
+<section id="id1">
+<h3><span class="section-number">4.2.3.9. </span>fn_node_set_type<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<p>Set the orientation and type for a node. If three pipe arrives at the node: intersection. If one pipe: end. If two: depends on characteristics of pipe: year (is different), material (and year), diameter(and material/year).</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>_node_id</p></li>
+</ul>
+</dd>
+<dt>Perform a lot of processing:</dt><dd><ul class="simple">
+<li><p>Count the active pipes associated to this <a class="reference internal" href="#node">node</a> (by joining tables from qwat_vlstatus &amp; qwat_vl_pipe_function)</p></li>
+<li><dl class="simple">
+<dt>If count = 0:</dt><dd><ul>
+<li><dl class="simple">
+<dt>If _node_id not on a <a class="reference internal" href="#pipe">pipe</a> extremity (fk_node_a, fk_node_b)</dt><dd><ul>
+<li><p>If this is really a <a class="reference internal" href="#node">node</a>, delete it from node</p></li>
+<li><dl class="simple">
+<dt>Else, the node must be on the pipe vertex</dt><dd><ul>
+<li><p>Get geometry of the <a class="reference internal" href="#pipe">pipe</a></p></li>
+<li><p>If the geometry is null: raise an error</p></li>
+<li><p>Else calculate the orientation of the <a class="reference internal" href="#pipe">pipe</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>If count = 1 or 2</dt><dd><ul>
+<li><p>Loop over them, and take the 2 first/last vertices of the <a class="reference internal" href="#pipe">pipe</a> to determine orientation (used for symbology)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>If count &gt; 2</dt><dd><ul>
+<li><p>Nothing to do</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>UPDATE node (_pipe_node_type, _pipe_orientation, _pipe_schema_visible)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="fn-node-update-id">
+<h3><span class="section-number">4.2.3.10. </span>fn_node_update_id<a class="headerlink" href="#fn-node-update-id" title="Permalink to this headline"></a></h3>
+<p>Not used anymore ?</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>to be completed</p>
+</div>
+</section>
+<section id="fn-pipe-get-id">
+<h3><span class="section-number">4.2.3.11. </span>fn_pipe_get_id<a class="headerlink" href="#fn-pipe-get-id" title="Permalink to this headline"></a></h3>
+<p>Returns the <a class="reference internal" href="#pipe">pipe</a> at a given position. If geometry is a point, do not return a <a class="reference internal" href="#pipe">pipe</a> which ends on it.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>geometry</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform an intersection between the geometry and the <a class="reference internal" href="#pipe">pipe</a> geometries.</p>
+</section>
+<section id="fn-pipe-update-valve">
+<h3><span class="section-number">4.2.3.12. </span>fn_pipe_update_valve<a class="headerlink" href="#fn-pipe-update-valve" title="Permalink to this headline"></a></h3>
+<p>Update <a class="reference internal" href="#pipe">pipe</a> valves informations.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>_pipe_id</p></li>
+</ul>
+</dd>
+</dl>
+<p>Perform an update on <a class="reference internal" href="#pipe">pipe</a> (_valve_count, _valve_closed) by joining <a class="reference internal" href="#valve">valve</a>.</p>
+</section>
+<section id="fn-update-pipe-crossing">
+<h3><span class="section-number">4.2.3.13. </span>fn_update_pipe_crossing<a class="headerlink" href="#fn-update-pipe-crossing" title="Permalink to this headline"></a></h3>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>update_existing</p></li>
+<li><p>delete_unused</p></li>
+</ul>
+</dd>
+<dt>Process:</dt><dd><ul class="simple">
+<li><p>Get all crossing points (by performing intersections between pipes)</p></li>
+<li><dl class="simple">
+<dt>For each point</dt><dd><ul>
+<li><p>If point is at the end of a pipe: do nothing</p></li>
+<li><dl class="simple">
+<dt>Else, for the 2 crossing pipes :</dt><dd><ul>
+<li><p>Perform azimuth for all segments of the pipes with the corresponding linear referencing</p></li>
+<li><p>Find the correct segment according to linear referencing of the crossing point</p></li>
+<li><p>Get the corresponding azimuth according to segment id</p></li>
+<li><p>Reports errors if azimuth are null</p></li>
+<li><p>If the crossing is already existing: update it (_pipe1_id, _pipe1_angle, _pipe2_id, _pipe2_angle,geometry)</p></li>
+<li><p>Else: create it</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Delete the old crossing</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This trigger use a fixed fk_status values = 1301</p>
+</div>
+</section>
+<section id="fn-update-sequences">
+<h3><span class="section-number">4.2.3.14. </span>fn_update_sequences<a class="headerlink" href="#fn-update-sequences" title="Permalink to this headline"></a></h3>
+<p>Update a specific sequence.</p>
+<dl class="simple">
+<dt>Params:</dt><dd><ul class="simple">
+<li><p>none</p></li>
+</ul>
+</dd>
+</dl>
+<p>For all columns in the DB associated to a sequence, calculate the max value + 1 for the column, and reassociate the next value of the sequence to that max.</p>
+</section>
+</section>
+<section id="tables">
+<h2><span class="section-number">4.2.4. </span>Tables<a class="headerlink" href="#tables" title="Permalink to this headline"></a></h2>
+<section id="chamber">
+<h3><span class="section-number">4.2.4.1. </span>chamber<a class="headerlink" href="#chamber" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="consumptionzone">
+<h3><span class="section-number">4.2.4.2. </span>consumptionzone<a class="headerlink" href="#consumptionzone" title="Permalink to this headline"></a></h3>
+<p>No triggers</p>
+</section>
+<section id="cover">
+<h3><span class="section-number">4.2.4.3. </span>cover<a class="headerlink" href="#cover" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-geom3d-altitude">ft_geom3d_altitude</a></p></li>
+<li><p>BEFORE UPDATE altitude, geometry - <a class="reference internal" href="#ft-geom3d-altitude">ft_geom3d_altitude</a></p></li>
+</ul>
+</section>
+<section id="crossing">
+<h3><span class="section-number">4.2.4.4. </span>crossing<a class="headerlink" href="#crossing" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>BEFORE UPDATE - <a class="reference internal" href="#ft-controled-crossing">ft_controled_crossing</a></p></li>
+</ul>
+</section>
+<section id="distributor">
+<h3><span class="section-number">4.2.4.5. </span>distributor<a class="headerlink" href="#distributor" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="district">
+<h3><span class="section-number">4.2.4.6. </span>district<a class="headerlink" href="#district" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="folder">
+<h3><span class="section-number">4.2.4.7. </span>folder<a class="headerlink" href="#folder" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="hydrant">
+<h3><span class="section-number">4.2.4.8. </span>hydrant<a class="headerlink" href="#hydrant" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="installation">
+<h3><span class="section-number">4.2.4.9. </span>installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="leak">
+<h3><span class="section-number">4.2.4.10. </span>leak<a class="headerlink" href="#leak" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-leak-pipe">ft_leak_pipe</a></p></li>
+<li><p>BEFORE INSERT OR UPDATE repair_date - <a class="reference internal" href="#ft-leak-repaired">ft_leak_repaired</a></p></li>
+</ul>
+</section>
+<section id="meter">
+<h3><span class="section-number">4.2.4.11. </span>meter<a class="headerlink" href="#meter" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="meter-reference">
+<h3><span class="section-number">4.2.4.12. </span>meter_reference<a class="headerlink" href="#meter-reference" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="network-element">
+<h3><span class="section-number">4.2.4.13. </span>network_element<a class="headerlink" href="#network-element" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="node">
+<h3><span class="section-number">4.2.4.14. </span>node<a class="headerlink" href="#node" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>AFTER INSERT - <a class="reference internal" href="#ft-node-add-pipe-vertex">ft_node_add_pipe_vertex</a></p></li>
+<li><p>AFTER UPDATE geometry - <a class="reference internal" href="#ft-node-add-pipe-vertex">ft_node_add_pipe_vertex</a></p></li>
+<li><p>BEFORE UPDATE geometry_alt1, geometry_alt2 - <a class="reference internal" href="#ft-geometry-alternative-aux">ft_geometry_alternative_aux</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-geometry-alternative-main">ft_geometry_alternative_main</a></p></li>
+<li><p>BEFORE UPDATE geometry - <a class="reference internal" href="#ft-geometry-alternative-main">ft_geometry_alternative_main</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-node-geom">ft_node_geom</a></p></li>
+<li><p>BEFORE UPDATE geometry - <a class="reference internal" href="#ft-node-geom">ft_node_geom</a></p></li>
+<li><p>AFTER UPDATE geometry - <a class="reference internal" href="#ft-pipe-node-moved">ft_pipe_node_moved</a></p></li>
+</ul>
+</section>
+<section id="part">
+<h3><span class="section-number">4.2.4.15. </span>part<a class="headerlink" href="#part" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="pipe">
+<h3><span class="section-number">4.2.4.16. </span>pipe<a class="headerlink" href="#pipe" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+<li><p>BEFORE UPDATE OF geometry_alt1, geometry_alt2 - <a class="reference internal" href="#ft-geometry-alternative-aux">ft_geometry_alternative_aux</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-geometry-alternative-main">ft_geometry_alternative_main</a></p></li>
+<li><p>BEFORE UPDATE geometry - <a class="reference internal" href="#ft-geometry-alternative-main">ft_geometry_alternative_main</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-pipe-geom">ft_pipe_geom</a></p></li>
+<li><p>BEFORE UPDATE geometry - <a class="reference internal" href="#ft-pipe-geom">ft_pipe_geom</a></p></li>
+<li><p>AFTER INSERT OR DELETE - <a class="reference internal" href="#ft-pipe-node-type">ft_pipe_node_type</a></p></li>
+<li><p>AFTER UPDATE geometry - <a class="reference internal" href="#ft-pipe-node-type">ft_pipe_node_type</a></p></li>
+<li><p>BEFORE INSERT OR UPDATE tunnel_or_bridge - <a class="reference internal" href="#ft-pipe-tunnelbridge">ft_pipe_tunnelbridge</a></p></li>
+<li><p>AFTER DELETE - <a class="reference internal" href="#ft-valve-pipe-update">ft_valve_pipe_update</a></p></li>
+<li><p>AFTER UPDATE geometry - <a class="reference internal" href="#ft-valve-pipe-update">ft_valve_pipe_update</a></p></li>
+</ul>
+</section>
+<section id="pressurecontrol">
+<h3><span class="section-number">4.2.4.17. </span>pressurecontrol<a class="headerlink" href="#pressurecontrol" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="pressurezone">
+<h3><span class="section-number">4.2.4.18. </span>pressurezone<a class="headerlink" href="#pressurezone" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+<li><p>BEFORE UPDATE geometry_alt1, geometry_alt2 - <a class="reference internal" href="#ft-geometry-alternative-aux">ft_geometry_alternative_aux</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-geometry-alternative-main">ft_geometry_alternative_main</a></p></li>
+<li><p>BEFORE UPDATE geometry - <a class="reference internal" href="#ft-geometry-alternative-main">ft_geometry_alternative_main</a></p></li>
+</ul>
+</section>
+<section id="printmap">
+<h3><span class="section-number">4.2.4.19. </span>printmap<a class="headerlink" href="#printmap" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="protectionzone">
+<h3><span class="section-number">4.2.4.20. </span>protectionzone<a class="headerlink" href="#protectionzone" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="pump">
+<h3><span class="section-number">4.2.4.21. </span>pump<a class="headerlink" href="#pump" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="remote">
+<h3><span class="section-number">4.2.4.22. </span>remote<a class="headerlink" href="#remote" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>BEFORE UPDATE geometry_alt1, geometry_alt2 - <a class="reference internal" href="#ft-geometry-alternative-aux">ft_geometry_alternative_aux</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-geometry-alternative-main">ft_geometry_alternative_main</a></p></li>
+<li><p>BEFORE UPDATE geometry - <a class="reference internal" href="#ft-geometry-alternative-main">ft_geometry_alternative_main</a></p></li>
+</ul>
+</section>
+<section id="samplingpoint">
+<h3><span class="section-number">4.2.4.23. </span>samplingpoint<a class="headerlink" href="#samplingpoint" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="source">
+<h3><span class="section-number">4.2.4.24. </span>source<a class="headerlink" href="#source" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="subscriber">
+<h3><span class="section-number">4.2.4.25. </span>subscriber<a class="headerlink" href="#subscriber" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="subscriber-reference">
+<h3><span class="section-number">4.2.4.26. </span>subscriber_reference<a class="headerlink" href="#subscriber-reference" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="surveypoint">
+<h3><span class="section-number">4.2.4.27. </span>surveypoint<a class="headerlink" href="#surveypoint" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-geom3d-altitude">ft_geom3d_altitude</a></p></li>
+<li><p>BEFORE UPDATE altitude, geometry - <a class="reference internal" href="#ft-geom3d-altitude">ft_geom3d_altitude</a></p></li>
+</ul>
+</section>
+<section id="tank">
+<h3><span class="section-number">4.2.4.28. </span>tank<a class="headerlink" href="#tank" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+<li><p>BEFORE INSERT OR UPDATE cistern1_fk_type, cistern1_dimension_1, cistern1_dimension_2, cistern2_fk_type, cistern2_dimension_1, cistern2_dimension_2 - <a class="reference internal" href="#ft-tank">ft_tank</a></p></li>
+</ul>
+</section>
+<section id="treatment">
+<h3><span class="section-number">4.2.4.29. </span>treatment<a class="headerlink" href="#treatment" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+</ul>
+</section>
+<section id="valve">
+<h3><span class="section-number">4.2.4.30. </span>valve<a class="headerlink" href="#valve" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#qwat-sys-if-modified-func">qwat_sys.if_modified_func</a></p></li>
+<li><p>AFTER UPDATE - <a class="reference internal" href="#ft-valve-update">ft_valve_update</a></p></li>
+<li><p>BEFORE INSERT - <a class="reference internal" href="#ft-valve-handle-altitude">ft_valve_handle_altitude</a></p></li>
+<li><p>BEFORE UPDATE handle_altitude, handle_geometry - <a class="reference internal" href="#ft-valve-handle-altitude">ft_valve_handle_altitude</a></p></li>
+<li><p>AFTER INSERT - <a class="reference internal" href="#ft-valve-node-set-type">ft_valve_node_set_type</a></p></li>
+</ul>
+</section>
+<section id="worker">
+<h3><span class="section-number">4.2.4.31. </span>worker<a class="headerlink" href="#worker" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+</section>
+<section id="views">
+<h2><span class="section-number">4.2.5. </span>Views<a class="headerlink" href="#views" title="Permalink to this headline"></a></h2>
+<section id="vw-element-hydrant">
+<h3><span class="section-number">4.2.5.1. </span>vw_element_hydrant<a class="headerlink" href="#vw-element-hydrant" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-element-hydrant-delete">ft_element_hydrant_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-element-hydrant-insert">ft_element_hydrant_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-element-hydrant-update">ft_element_hydrant_update</a></p></li>
+</ul>
+</section>
+<section id="vw-consumptionzone">
+<h3><span class="section-number">4.2.5.2. </span>vw_consumptionzone<a class="headerlink" href="#vw-consumptionzone" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-element-installation">
+<h3><span class="section-number">4.2.5.3. </span>vw_element_installation<a class="headerlink" href="#vw-element-installation" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-element-installation-delete">ft_element_installation_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-element-installation-insert">ft_element_installation_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-element-installation-update">ft_element_installation_update</a></p></li>
+</ul>
+</section>
+<section id="vw-element-meter">
+<h3><span class="section-number">4.2.5.4. </span>vw_element_meter<a class="headerlink" href="#vw-element-meter" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-element-meter-delete">ft_element_meter_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-element-meter-insert">ft_element_meter_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-element-meter-update">ft_element_meter_update</a></p></li>
+</ul>
+</section>
+<section id="vw-element-part">
+<h3><span class="section-number">4.2.5.5. </span>vw_element_part<a class="headerlink" href="#vw-element-part" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-element-part-delete">ft_element_part_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-element-part-insert">ft_element_part_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-element-part-update">ft_element_part_update</a></p></li>
+</ul>
+</section>
+<section id="vw-element-samplingpoint">
+<h3><span class="section-number">4.2.5.6. </span>vw_element_samplingpoint<a class="headerlink" href="#vw-element-samplingpoint" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-element-samplingpoint-delete">ft_element_samplingpoint_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-element-samplingpoint-insert">ft_element_samplingpoint_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-element-samplingpoint-update">ft_element_samplingpoint_update</a></p></li>
+</ul>
+</section>
+<section id="vw-element-subscriber">
+<h3><span class="section-number">4.2.5.7. </span>vw_element_subscriber<a class="headerlink" href="#vw-element-subscriber" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-element-subscriber-delete">ft_element_subscriber_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-element-subscriber-insert">ft_element_subscriber_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-element-subscriber-update">ft_element_subscriber_update</a></p></li>
+</ul>
+</section>
+<section id="vw-export-hydrant">
+<h3><span class="section-number">4.2.5.8. </span>vw_export_hydrant<a class="headerlink" href="#vw-export-hydrant" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-export-installation">
+<h3><span class="section-number">4.2.5.9. </span>vw_export_installation<a class="headerlink" href="#vw-export-installation" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-export-meter">
+<h3><span class="section-number">4.2.5.10. </span>vw_export_meter<a class="headerlink" href="#vw-export-meter" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-export-part">
+<h3><span class="section-number">4.2.5.11. </span>vw_export_part<a class="headerlink" href="#vw-export-part" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-export-subscriber">
+<h3><span class="section-number">4.2.5.12. </span>vw_export_subscriber<a class="headerlink" href="#vw-export-subscriber" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-export-valve">
+<h3><span class="section-number">4.2.5.13. </span>vw_export_valve<a class="headerlink" href="#vw-export-valve" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-element-valve">
+<h3><span class="section-number">4.2.5.14. </span>vw_element_valve<a class="headerlink" href="#vw-element-valve" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-element-valve-delete">ft_element_valve_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-element-valve-insert">ft_element_valve_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-element-valve-update">ft_element_valve_update</a></p></li>
+</ul>
+</section>
+<section id="vw-installation-chamber">
+<h3><span class="section-number">4.2.5.15. </span>vw_installation_chamber<a class="headerlink" href="#vw-installation-chamber" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-installation-chamber-delete">ft_installation_chamber_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-installation-chamber-insert">ft_installation_chamber_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-installation-chamber-update">ft_installation_chamber_update</a></p></li>
+</ul>
+</section>
+<section id="vw-installation-pressurecontrol">
+<h3><span class="section-number">4.2.5.16. </span>vw_installation_pressurecontrol<a class="headerlink" href="#vw-installation-pressurecontrol" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-installation-pressurecontrol-delete">ft_installation_pressurecontrol_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-installation-pressurecontrol-insert">ft_installation_pressurecontrol_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-installation-pressurecontrol-update">ft_installation_pressurecontrol_update</a></p></li>
+</ul>
+</section>
+<section id="vw-installation-pump">
+<h3><span class="section-number">4.2.5.17. </span>vw_installation_pump<a class="headerlink" href="#vw-installation-pump" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-installation-pump-delete">ft_installation_pump_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-installation-pump-insert">ft_installation_pump_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-installation-pump-update">ft_installation_pump_update</a></p></li>
+</ul>
+</section>
+<section id="vw-installation-source">
+<h3><span class="section-number">4.2.5.18. </span>vw_installation_source<a class="headerlink" href="#vw-installation-source" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-installation-source-delete">ft_installation_source_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-installation-source-insert">ft_installation_source_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-installation-source-update">ft_installation_source_update</a></p></li>
+</ul>
+</section>
+<section id="vw-installation-tank">
+<h3><span class="section-number">4.2.5.19. </span>vw_installation_tank<a class="headerlink" href="#vw-installation-tank" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-installation-tank-delete">ft_installation_tank_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-installation-tank-insert">ft_installation_tank_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-installation-tank-update">ft_installation_tank_update</a></p></li>
+</ul>
+</section>
+<section id="vw-installation-treatment">
+<h3><span class="section-number">4.2.5.20. </span>vw_installation_treatment<a class="headerlink" href="#vw-installation-treatment" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-installation-treatment-delete">ft_installation_treatment_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-installation-treatment-insert">ft_installation_treatment_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-installation-treatment-update">ft_installation_treatment_update</a></p></li>
+</ul>
+</section>
+<section id="vw-leak">
+<h3><span class="section-number">4.2.5.21. </span>vw_leak<a class="headerlink" href="#vw-leak" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-node-element">
+<h3><span class="section-number">4.2.5.22. </span>vw_node_element<a class="headerlink" href="#vw-node-element" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-node-element-delete">ft_node_element_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-node-element-insert">ft_node_element_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-node-element-update">ft_node_element_update</a></p></li>
+</ul>
+</section>
+<section id="vw-pipe">
+<h3><span class="section-number">4.2.5.23. </span>vw_pipe<a class="headerlink" href="#vw-pipe" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-pipe-child-parent">
+<h3><span class="section-number">4.2.5.24. </span>vw_pipe_child_parent<a class="headerlink" href="#vw-pipe-child-parent" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-pipe-schema">
+<h3><span class="section-number">4.2.5.25. </span>vw_pipe_schema<a class="headerlink" href="#vw-pipe-schema" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>RULE - UPDATE <a class="reference internal" href="#pipe">pipe</a></p></li>
+</ul>
+</section>
+<section id="vw-pipe-schema-error">
+<h3><span class="section-number">4.2.5.26. </span>vw_pipe_schema_error<a class="headerlink" href="#vw-pipe-schema-error" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-pipe-schema-merged">
+<h3><span class="section-number">4.2.5.27. </span>vw_pipe_schema_merged<a class="headerlink" href="#vw-pipe-schema-merged" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-pipe-schema-visibleitems">
+<h3><span class="section-number">4.2.5.28. </span>vw_pipe_schema_visibleitems<a class="headerlink" href="#vw-pipe-schema-visibleitems" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>RULE - DELETE / UPDATE <a class="reference internal" href="#pipe">pipe</a></p></li>
+<li><p>RULE - UPDATE / UPDATE <a class="reference internal" href="#pipe">pipe</a></p></li>
+</ul>
+</section>
+<section id="vw-printmap">
+<h3><span class="section-number">4.2.5.29. </span>vw_printmap<a class="headerlink" href="#vw-printmap" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-protectionzone">
+<h3><span class="section-number">4.2.5.30. </span>vw_protectionzone<a class="headerlink" href="#vw-protectionzone" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-qwat-installation">
+<h3><span class="section-number">4.2.5.31. </span>vw_qwat_installation<a class="headerlink" href="#vw-qwat-installation" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-vw-qwat-installation-delete">ft_vw_qwat_installation_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-vw-qwat-installation-insert">ft_vw_qwat_installation_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-vw-qwat-installation-update">ft_vw_qwat_installation_update</a></p></li>
+</ul>
+</section>
+<section id="vw-qwat-network-element">
+<h3><span class="section-number">4.2.5.32. </span>vw_qwat_network_element<a class="headerlink" href="#vw-qwat-network-element" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-vw-qwat-network-element-delete">ft_vw_qwat_network_element_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-vw-qwat-network-element-insert">ft_vw_qwat_network_element_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-vw-qwat-network-element-update">ft_vw_qwat_network_element_update</a></p></li>
+</ul>
+</section>
+<section id="vw-all-nodes">
+<h3><span class="section-number">4.2.5.33. </span>vw_all_nodes<a class="headerlink" href="#vw-all-nodes" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>DELETE - <a class="reference internal" href="#ft-vw-all-nodes-delete">ft_vw_all_nodes_delete</a></p></li>
+<li><p>INSERT - <a class="reference internal" href="#ft-vw-all-nodes-insert">ft_vw_all_nodes_insert</a></p></li>
+<li><p>UPDATE - <a class="reference internal" href="#ft-vw-all-nodes-update">ft_vw_all_nodes_update</a></p></li>
+</ul>
+</section>
+<section id="vw-remote">
+<h3><span class="section-number">4.2.5.34. </span>vw_remote<a class="headerlink" href="#vw-remote" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-search-view">
+<h3><span class="section-number">4.2.5.35. </span>vw_search_view<a class="headerlink" href="#vw-search-view" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-subscriber-pipe-relation">
+<h3><span class="section-number">4.2.5.36. </span>vw_subscriber_pipe_relation<a class="headerlink" href="#vw-subscriber-pipe-relation" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+<section id="vw-valves-lines">
+<h3><span class="section-number">4.2.5.37. </span>vw_valves_lines<a class="headerlink" href="#vw-valves-lines" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>No triggers</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data_manager.html" class="btn btn-neutral float-left" title="4.1. Data manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../contributor-guide/index.html" class="btn btn-neutral float-right" title="5. Contributor’s guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, QWAT team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

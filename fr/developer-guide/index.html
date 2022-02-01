@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Developer’s guide &mdash; Documentation QWAT %%VERSION%%</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="6.1. QWAT Development Overview" href="qwat_dev.html" />
+    <link rel="prev" title="5. Contributor’s guide" href="../contributor-guide/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> QWAT
+          </a>
+              <div class="version">
+                %%VERSION%%
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Developer’s guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html">6.1. QWAT Development Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html">6.2. Customize local DB models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html#create-an-extension">6.3. Create an extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html">6.4. Upgrade database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">6. </span>Developer’s guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/developer-guide/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="developer-s-guide">
+<span id="developer"></span><h1><span class="section-number">6. </span>Developer’s guide<a class="headerlink" href="#developer-s-guide" title="Lien permanent vers ce titre"></a></h1>
+<p>How to develop QWAT core datamodel.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qwat_dev.html">6.1. QWAT Development Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#prerequisites">6.1.1. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#environment">6.1.2. Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#qwat-architecture">6.1.3. QWAT architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#roles">6.1.4. Roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#release-cycles-and-versioning">6.1.5. Release cycles and versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#release-process">6.1.6. Release process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#additional-dependencies">6.1.7. Additional dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#versioning-your-extensions">6.1.8. Versioning your extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#developing-the-core-data-model">6.1.9. Developing the core data model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#developing-a-qgis-project">6.1.10. Developing a QGIS project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qwat_dev.html#adding-new-features-to-qwat">6.1.11. Adding new features to QWAT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="local_customizations.html">6.2. Customize local DB models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html#customizing-the-data-model">6.2.1. Customizing the data model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html#adding-a-field">6.2.2. Adding a field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html#adding-a-table">6.2.3. Adding a table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="local_customizations.html#create-an-extension">6.3. Create an extension</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">6.4. Upgrade database</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#create-a-new-upgrade-delta">6.4.1. Create a new upgrade delta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#migrate-an-existing-database">6.4.2. Migrate an existing database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#the-way-it-works">6.4.3. The way it works</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../contributor-guide/index.html" class="btn btn-neutral float-left" title="5. Contributor’s guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="qwat_dev.html" class="btn btn-neutral float-right" title="6.1. QWAT Development Overview" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, QWAT team.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

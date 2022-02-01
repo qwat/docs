@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.4. Suppression d’objets dans QWAT &mdash; Documentation QWAT %%VERSION%%</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="3.5. Liaisons des différents objets dans QWAT" href="link.html" />
+    <link rel="prev" title="3.3. Règles de base pour la mise à jour sur QWAT" href="update.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> QWAT
+          </a>
+              <div class="version">
+                %%VERSION%%
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. QWAT User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Structuration du réseau d’Eau Potable sur QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create.html">3.2. Création d’objets dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">3.3. Règles de base pour la mise à jour sur QWAT</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.4. Suppression d’objets dans QWAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#suppression-des-pieces-dinstallation-points-dintroduction-vannes-bornes-hydrantes-manchons-de-reparation-et-conduites">3.4.1. Suppression des pièces d’installation / points d’introduction / vannes / bornes  hydrantes / manchons de réparation et conduites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">3.5. Liaisons des différents objets dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Impression dans QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Elevation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">3.8. History viewer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3. </span>QWAT User Guide</a> &raquo;</li>
+      <li><span class="section-number">3.4. </span>Suppression d’objets dans QWAT</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user-guide/delete.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="suppression-dobjets-dans-qwat">
+<h1><span class="section-number">3.4. </span>Suppression d’objets dans QWAT<a class="headerlink" href="#suppression-dobjets-dans-qwat" title="Lien permanent vers ce titre"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Pour supprimer une conduite, il faut commencer par supprimer tous les points liés à cette conduite.</p>
+</div>
+<p>Les données étant liées en base, des erreurs peuvent survenir si les données amont n’ont pas été supprimées ou détachées au préalable:</p>
+<img alt="../_images/error_commit_delete.png" src="../_images/error_commit_delete.png" />
+<img alt="../_images/error_commit_delete_window.png" src="../_images/error_commit_delete_window.png" />
+<img alt="../_images/error_commit_delete_2.png" src="../_images/error_commit_delete_2.png" />
+<section id="suppression-des-pieces-dinstallation-points-dintroduction-vannes-bornes-hydrantes-manchons-de-reparation-et-conduites">
+<h2><span class="section-number">3.4.1. </span>Suppression des pièces d’installation / points d’introduction / vannes / bornes  hydrantes / manchons de réparation et conduites<a class="headerlink" href="#suppression-des-pieces-dinstallation-points-dintroduction-vannes-bornes-hydrantes-manchons-de-reparation-et-conduites" title="Lien permanent vers ce titre"></a></h2>
+<p>Commencer par aller sur la couche de l’objet que vous voulez effacer et basculer en mode édition.</p>
+<img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
+<p>Sélectionner ensuite le point avec l’outil de sélection. Vous pouvez soit faire une zone
+de sélection ou tout simplement cliquer sur le point à effacer.</p>
+<img alt="../_images/icon_select.png" src="../_images/icon_select.png" />
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>À ce moment, soyez attentif au fait de n’avoir que les points désirés à effacer, sinon tous les points sélectionnés seront effacés.</p>
+</div>
+<p>Pour voir quels objets sont selectionnés, il faut ouvrir la table d’attributs.</p>
+<img alt="../_images/icon_attributes.png" src="../_images/icon_attributes.png" />
+<p>Un tableau s’ouvre. En bas à gauche de ce tableau se trouve une fenêtre à choix multiples
+où il faut choisir « ne montrer que les entités selectionnées ». Il ne reste dans votre
+tableau, normalement, que les objets que vous voulez effacer!</p>
+<p>Si des objets supplémentaires apparaissent, cliquez sur le bouton « tout désélectionner »</p>
+<img alt="../_images/icon_unselect.png" src="../_images/icon_unselect.png" />
+<p>Fermez le tableau et recommencez votre sélection.
+Une fois que vous n’avez que les points à effacer de sélectionnés, cliquez sur le bouton « supprimer les entités sélectionnées ».</p>
+<img alt="../_images/icon_delete.png" src="../_images/icon_delete.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="update.html" class="btn btn-neutral float-left" title="3.3. Règles de base pour la mise à jour sur QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="link.html" class="btn btn-neutral float-right" title="3.5. Liaisons des différents objets dans QWAT" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, QWAT team.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
