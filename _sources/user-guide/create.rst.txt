@@ -3,7 +3,7 @@ Création d’objets dans QWAT
 
 Ce guide se veut un résumé des fonctionnalités de créations des données adaptées au besoin de QWAT dans QGIS.
 
-Il ne saurait remplacer la lecture du `manuel <https://docs.qgis.org/2.18/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_ de QGIS expliquant en détail les différentes commandes. Le dessinateur est libre d'utiliser les plugins de dessin pour enrichir sa palette d'outils.
+Il ne saurait remplacer la lecture du `manuel <https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_ de QGIS expliquant en détail les différentes commandes. Le dessinateur est libre d'utiliser les plugins de dessin pour enrichir sa palette d'outils.
 
 Importation des points relevés
 ------------------------------
