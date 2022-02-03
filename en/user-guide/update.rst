@@ -46,4 +46,4 @@ Commandes de base
 
   .. image:: img/icon_delete.png
 
-Ces informations ne sauraient remplacer la lecture du `manuel <https://docs.qgis.org/2.18/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_ de QGIS expliquant en détail les différentes commandes.
+Ces informations ne sauraient remplacer la lecture du `manuel <https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_ de QGIS expliquant en détail les différentes commandes.
