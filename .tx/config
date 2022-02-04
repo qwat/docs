@@ -1,3 +1,11 @@
 [main]
 host = https://www.transifex.com
 
+[qwat-doc.index]
+source_file = i18n/pot/index.pot
+source_lang = en
+trans.de = i18n/de/index.po
+trans.fr = i18n/fr/index.po
+trans.it = i18n/it/index.po
+trans.ro = i18n/ro/index.po
+type = PO
