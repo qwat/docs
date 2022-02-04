@@ -3,6 +3,7 @@ This is the documentation for the QWAT project
 
 [![Build
 Status](https://travis-ci.org/qwat/docs.svg)](https://travis-ci.org/qwat/docs)
+Travis build is now Github Actions
 
 ## Resources
 
