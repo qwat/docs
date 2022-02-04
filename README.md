@@ -1,9 +1,7 @@
 # QWAT-Documentation
-This is the documentation for the QWAT project
+This is the documentation for the TEKSI Water module (project QWAT)
 
-[![Build
-Status](https://travis-ci.org/qwat/docs.svg)](https://travis-ci.org/qwat/docs)
-Travis build is now Github Actions
+This documentation is built using Github Actions
 
 ## Resources
 
