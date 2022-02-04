@@ -1,23 +1,20 @@
-# QWAT-Documentation
+# TEKSI Water module (project QWAT)-Documentation
 This is the documentation for the TEKSI Water module (project QWAT)
-
-This documentation is built using Github Actions
 
 ## Resources
 
 The final product can be found here:
 
- * [English](https://qwat.github.io/docs/master/en/html)
- * [Deutsch](https://qwat.github.io/docs/master/de/html)
- * [Français](https://qwat.github.io/docs/master/fr/html)
- * [Italiano](https://qwat.github.io/docs/master/it/html)
- * [Română](https://qwat.github.io/docs/master/ro/html)
+ * [English](https://qwat.github.io/docs/en/)
+ * [Deutsch](https://qwat.github.io/docs/de/)
+ * [Français](https://qwat.github.io/docs/fr/)
+ * [Italiano](https://qwat.github.io/docs/it/)
+ * [Română](https://qwat.github.io/docs/ro/)
 
 ## Process
 
 The documentation is written in English and managed in this git repository.
-The latest version of the documentation is automatically built (on [Travis
-CI](https://travis-ci.org/qwat/docs)) and published on the links above.
+The latest version of the documentation is automatically built (using Github Actions) and published on the links above.
 
 Translation is done via transifex.
 
