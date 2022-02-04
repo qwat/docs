@@ -16,7 +16,7 @@ Main features
 -------------
 
 Network objects
-^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 The data model contains all the objects of a drinking water network and their attributes:
 
 * Pipe

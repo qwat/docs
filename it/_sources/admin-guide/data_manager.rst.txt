@@ -9,14 +9,14 @@ It is generally prefered to load QWAT data trough the views and not the tables, 
 A [nice alternative technique](git@github.com:nliaudat/qwat-import-sample.git) is proposed by Nicolas Liaudat, that uses directly QGIS and expressions to load datasets. Please contribute to it if you find enhancements of issues. 
 
 Import data from Topobase
--------------------------
+--------------------------
 
 * describe the process and tools
 * describe the automated and manual checks to do
 * mention specific point of attention
 
 Export data to INTERLIS SIA 405 format
--------------------
+---------------------------------------
 
 Exporting a QWAT database to the Interlis Exchange Format (.xtf) is possible using the dedicated
 tool `qgepqwat2ili <https://github.com/QGEP/qgepqwat2ili>`_ developped as part of an NGDI project.
