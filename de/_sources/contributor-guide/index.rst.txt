@@ -130,7 +130,7 @@ You will find a guide to writing documentation on the `Write the docs <https://w
 Translating QWAT
 ````````````````
 
-QWAT uses Transiflex, an open source translation platform, to power the translation of QWAT into different languages. All translations are hosted at `Transifex.com`<https://www.transifex.com>`_, which provides a web application allowing translators to write, submit and manage their translations.
+QWAT uses Transiflex, an open source translation platform, to power the translation of QWAT into different languages. All translations are hosted at `Transifex.com <https://www.transifex.com>`_, which provides a web application allowing translators to write, submit and manage their translations.
 
 Getting started with Transifex
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
