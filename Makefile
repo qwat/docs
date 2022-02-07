@@ -87,13 +87,19 @@ init: en/*
 	@echo "Init finished. Other target can now be built.";\
 	touch init
 
-transifex_sync: gettext
+transifex_mapping: gettext
+	@set -e;\
+	tx tx config mapping-bulk --project qwat-doc --file-extension '.pot' --source-file-dir i18n/pot --source-lang en --type PO --expression 'i18n/<lang>/{filepath}/{filename}.po' --execute;
+	@echo "Transifex mapping created"
+  
+
+transifex_sync: transifex_mapping
 	@set -e;\
 	./scripts/create_transifex_resources.sh; \
 	tx push -s;
 	@echo "Transifex resources synchronized"
 
-transifex_pull:
+transifex_pull: transifex_mapping
 	@set -e;\
 	  tx pull -a;
 	@echo "Transifex translations pulled"
