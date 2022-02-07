@@ -2,7 +2,7 @@
 host = https://www.transifex.com
 
 [qwat-doc.admin-guide-data-manager]
-source_file = i18n/pot/admin-guide-data-manager.pot
+source_file = i18n/pot/admin-guide/data-manager.pot
 source_lang = en
 trans.de = i18n/de/admin-guide/data-manager.po
 trans.fr = i18n/fr/admin-guide/data-manager.po
@@ -11,7 +11,7 @@ trans.ro = i18n/ro/admin-guide/data-manager.po
 type = PO
 
 [qwat-doc.admin-guide-index]
-source_file = i18n/pot/admin-guide-index.pot
+source_file = i18n/pot/admin-guide/index.pot
 source_lang = en
 trans.de = i18n/de/admin-guide/index.po
 trans.fr = i18n/fr/admin-guide/index.po
@@ -20,7 +20,7 @@ trans.ro = i18n/ro/admin-guide/index.po
 type = PO
 
 [qwat-doc.admin-guide-triggers]
-source_file = i18n/pot/admin-guide-triggers.pot
+source_file = i18n/pot/admin-guide/triggers.pot
 source_lang = en
 trans.de = i18n/de/admin-guide/triggers.po
 trans.fr = i18n/fr/admin-guide/triggers.po
@@ -29,7 +29,7 @@ trans.ro = i18n/ro/admin-guide/triggers.po
 type = PO
 
 [qwat-doc.contributor-guide-index]
-source_file = i18n/pot/contributor-guide-index.pot
+source_file = i18n/pot/contributor-guide/index.pot
 source_lang = en
 trans.de = i18n/de/contributor-guide/index.po
 trans.fr = i18n/fr/contributor-guide/index.po
@@ -38,7 +38,7 @@ trans.ro = i18n/ro/contributor-guide/index.po
 type = PO
 
 [qwat-doc.demo-guide-index]
-source_file = i18n/pot/contributor-guide-index.pot
+source_file = i18n/pot/contributor-guide/index.pot
 source_lang = en
 trans.de = i18n/de/demo-guide/index.po
 trans.fr = i18n/fr/demo-guide/index.po
@@ -47,7 +47,7 @@ trans.ro = i18n/ro/demo-guide/index.po
 type = PO
 
 [qwat-doc.developer-guide-index]
-source_file = i18n/pot/developer-guide-index.pot
+source_file = i18n/pot/developer/guide-index.pot
 source_lang = en
 trans.de = i18n/de/developer-guide/index.po
 trans.fr = i18n/fr/developer-guide/index.po
@@ -56,7 +56,7 @@ trans.ro = i18n/ro/developer-guide/index.po
 type = PO
 
 [qwat-doc.developer-guide-local-customizations]
-source_file = i18n/pot/developer-guide-local-customizations.pot
+source_file = i18n/pot/developer-guide/local-customizations.pot
 source_lang = en
 trans.de = i18n/de/developer-guide/local-customizations.po
 trans.fr = i18n/fr/developer-guide/local-customizations.po
@@ -65,7 +65,7 @@ trans.ro = i18n/ro/developer-guide/local-customizations.po
 type = PO
 
 [qwat-doc.developer-guide-qwat-dev]
-source_file = i18n/pot/developer-guide-qwat-dev.pot
+source_file = i18n/pot/developer-guide/qwat-dev.pot
 source_lang = en
 trans.de = i18n/de/developer-guide/qwat-dev.po
 trans.fr = i18n/fr/developer-guide/qwat-dev.po
@@ -74,7 +74,7 @@ trans.ro = i18n/ro/developer-guide/qwat-dev.po
 type = PO
 
 [qwat-doc.developer-guide-upgrade]
-source_file = i18n/pot/developer-guide-upgrade.pot
+source_file = i18n/pot/developer-guide/upgrade.pot
 source_lang = en
 trans.de = i18n/de/developer-guide/upgrade.po
 trans.fr = i18n/fr/developer-guide/upgrade.po
@@ -83,7 +83,7 @@ trans.ro = i18n/ro/developer-guide/upgrade.po
 type = PO
 
 [qwat-doc.faq-index]
-source_file = i18n/pot/faq-index.pot
+source_file = i18n/pot/faq/index.pot
 source_lang = en
 trans.de = i18n/de/faq/index.po
 trans.fr = i18n/fr/faq/index.po
@@ -92,7 +92,7 @@ trans.ro = i18n/ro/faq/index.po
 type = PO
 
 [qwat-doc.features-guide-index]
-source_file = i18n/pot/features-guide-index.pot
+source_file = i18n/pot/features/guide-index.pot
 source_lang = en
 trans.de = i18n/de/features-guide/index.po
 trans.fr = i18n/fr/features-guide/index.po
@@ -101,7 +101,7 @@ trans.ro = i18n/ro/features-guide/index.po
 type = PO
 
 [qwat-doc.glossary-index]
-source_file = i18n/pot/glossary-index.pot
+source_file = i18n/pot/glossary/index.pot
 source_lang = en
 trans.de = i18n/de/glossary/index.po
 trans.fr = i18n/fr/glossary/index.po
@@ -119,7 +119,7 @@ trans.ro = i18n/ro/index.po
 type = PO
 
 [qwat-doc.installation-guide-database-initialization]
-source_file = i18n/pot/installation-guide-database-initialization.pot
+source_file = i18n/pot/installation-guide/database-initialization.pot
 source_lang = en
 trans.de = i18n/de/installation-guide/database-initialization.po
 trans.fr = i18n/fr/installation-guide/database-initialization.po
@@ -128,7 +128,7 @@ trans.ro = i18n/ro/installation-guide/database-initialization.po
 type = PO
 
 [qwat-doc.installation-guide-index]
-source_file = i18n/pot/installation-guide-index.pot
+source_file = i18n/pot/installation-guide/index.pot
 source_lang = en
 trans.de = i18n/de/installation-guide/index.po
 trans.fr = i18n/fr/installation-guide/index.po
@@ -137,7 +137,7 @@ trans.ro = i18n/ro/installation-guide/index.po
 type = PO
 
 [qwat-doc.installation-guide-server]
-source_file = i18n/pot/installation-guide-server.pot
+source_file = i18n/pot/installation-guide/server.pot
 source_lang = en
 trans.de = i18n/de/installation-guide/server.po
 trans.fr = i18n/fr/installation-guide/server.po
@@ -146,7 +146,7 @@ trans.ro = i18n/ro/installation-guide/server.po
 type = PO
 
 [qwat-doc.installation-guide-workstation]
-source_file = i18n/pot/installation-guide-workstation.pot
+source_file = i18n/pot/installation-guide/workstation.pot
 source_lang = en
 trans.de = i18n/de/installation-guide/workstation.po
 trans.fr = i18n/fr/installation-guide/workstation.po
@@ -155,7 +155,7 @@ trans.ro = i18n/ro/installation-guide/workstation.po
 type = PO
 
 [qwat-doc.translation-index]
-source_file = i18n/pot/translation-index.pot
+source_file = i18n/pot/translation/index.pot
 source_lang = en
 trans.de = i18n/de/translation/index.po
 trans.fr = i18n/fr/translation/index.po
@@ -164,7 +164,7 @@ trans.ro = i18n/ro/translation/index.po
 type = PO
 
 [qwat-doc.user-guide-create]
-source_file = i18n/pot/user-guide-create.pot
+source_file = i18n/pot/user-guide/create.pot
 source_lang = en
 trans.de = i18n/de/user-guide/create.po
 trans.fr = i18n/fr/user-guide/create.po
@@ -173,7 +173,7 @@ trans.ro = i18n/ro/user-guide/create.po
 type = PO
 
 [qwat-doc.user-guide-delete]
-source_file = i18n/pot/user-guide-delete.pot
+source_file = i18n/pot/user-guide/delete.pot
 source_lang = en
 trans.de = i18n/de/user-guide/delete.po
 trans.fr = i18n/fr/user-guide/delete.po
@@ -182,7 +182,7 @@ trans.ro = i18n/ro/user-guide/delete.po
 type = PO
 
 [qwat-doc.user-guide-elevation]
-source_file = i18n/pot/user-guide-elevation.pot
+source_file = i18n/pot/user-guide/elevation.pot
 source_lang = en
 trans.de = i18n/de/user-guide/elevation.po
 trans.fr = i18n/fr/user-guide/elevation.po
@@ -191,7 +191,7 @@ trans.ro = i18n/ro/user-guide/elevation.po
 type = PO
 
 [qwat-doc.user-guide-history]
-source_file = i18n/pot/user-guide-history.pot
+source_file = i18n/pot/user-guide/history.pot
 source_lang = en
 trans.de = i18n/de/user-guide/history.po
 trans.fr = i18n/fr/user-guide/history.po
@@ -200,7 +200,7 @@ trans.ro = i18n/ro/user-guide/history.po
 type = PO
 
 [qwat-doc.user-guide-index]
-source_file = i18n/pot/user-guide-index.pot
+source_file = i18n/pot/user-guide/index.pot
 source_lang = en
 trans.de = i18n/de/user-guide/index.po
 trans.fr = i18n/fr/user-guide/index.po
@@ -209,7 +209,7 @@ trans.ro = i18n/ro/user-guide/index.po
 type = PO
 
 [qwat-doc.user-guide-link]
-source_file = i18n/pot/user-guide-link.pot
+source_file = i18n/pot/user-guide/link.pot
 source_lang = en
 trans.de = i18n/de/user-guide/link.po
 trans.fr = i18n/fr/user-guide/link.po
@@ -218,7 +218,7 @@ trans.ro = i18n/ro/user-guide/link.po
 type = PO
 
 [qwat-doc.user-guide-print]
-source_file = i18n/pot/user-guide-print.pot
+source_file = i18n/pot/user-guide/print.pot
 source_lang = en
 trans.de = i18n/de/user-guide/print.po
 trans.fr = i18n/fr/user-guide/print.po
@@ -227,7 +227,7 @@ trans.ro = i18n/ro/user-guide/print.po
 type = PO
 
 [qwat-doc.user-guide-qwat-struct]
-source_file = i18n/pot/user-guide-qwat-struct.pot
+source_file = i18n/pot/user-guide/qwat-struct.pot
 source_lang = en
 trans.de = i18n/de/user-guide/qwat-struct.po
 trans.fr = i18n/fr/user-guide/qwat-struct.po
@@ -236,7 +236,7 @@ trans.ro = i18n/ro/user-guide/qwat-struct.po
 type = PO
 
 [qwat-doc.user-guide-update]
-source_file = i18n/pot/user-guide-update.pot
+source_file = i18n/pot/user-guide/update.pot
 source_lang = en
 trans.de = i18n/de/user-guide/update.po
 trans.fr = i18n/fr/user-guide/update.po
