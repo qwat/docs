@@ -3,4 +3,4 @@ sphinx[transifex]
 sphinx-intl
 sphinx-rtd-theme
 Pygments>=2.0.1
-transifex-client
+transifex-client>=0.13.0

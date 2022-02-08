@@ -21,6 +21,10 @@ jobs:
           TX_TOKEN=${{ secrets.TX_TOKEN }} make transifex_sync # push
           TX_TOKEN=${{ secrets.TX_TOKEN }} make transifex_pull
 
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update .tx/config
+
       - name: build
         run: |
           make html

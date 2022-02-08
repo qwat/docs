@@ -89,9 +89,8 @@ init: en/*
 
 transifex_mapping: gettext
 	@set -e;\
-	tx config mapping-bulk --project qwat-doc --file-extension '.pot' --source-file-dir i18n/pot --source-lang en --type PO --expression 'i18n/<lang>/{filepath}/{filename}.po' --execute;
+	python ./scripts/create_tx_conf.py
 	@echo "Transifex mapping created"
-  
 
 transifex_sync: transifex_mapping
 	@set -e;\

@@ -1,5 +1,4 @@
 conf.py
-.tx
 build
 compile_messages
 init
@@ -11,3 +10,4 @@ i18n
 locale
 .vscode
 Pipfile
+Pipfile.lock
