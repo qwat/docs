@@ -89,7 +89,7 @@ init: en/*
 
 transifex_mapping: gettext
 	@set -e;\
-	tx tx config mapping-bulk --project qwat-doc --file-extension '.pot' --source-file-dir i18n/pot --source-lang en --type PO --expression 'i18n/<lang>/{filepath}/{filename}.po' --execute;
+	tx config mapping-bulk --project qwat-doc --file-extension '.pot' --source-file-dir i18n/pot --source-lang en --type PO --expression 'i18n/<lang>/{filepath}/{filename}.po' --execute;
 	@echo "Transifex mapping created"
   
 
