@@ -95,7 +95,6 @@ transifex_mapping: gettext
 
 transifex_sync: transifex_mapping
 	@set -e;\
-	./scripts/create_transifex_resources.sh; \
 	tx push -s;
 	@echo "Transifex resources synchronized"
 
