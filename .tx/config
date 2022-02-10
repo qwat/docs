@@ -1,165 +1,165 @@
 [main]
 host = https://www.transifex.com
 
-[qwat-zzz.index]
+[qwat-doc.index]
 file_filter = i18n/<lang>/index.po
 source_file = i18n/pot/index.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.admin-guide-data-manager]
-file_filter = i18n/<lang>/admin-guide/data_manager.po
-source_file = i18n/pot/admin-guide/data_manager.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.admin-guide-index]
-file_filter = i18n/<lang>/admin-guide/index.po
-source_file = i18n/pot/admin-guide/index.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.admin-guide-triggers]
-file_filter = i18n/<lang>/admin-guide/triggers.po
-source_file = i18n/pot/admin-guide/triggers.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.contributor-guide-index]
-file_filter = i18n/<lang>/contributor-guide/index.po
-source_file = i18n/pot/contributor-guide/index.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.demo-guide-index]
+[qwat-doc.demo-guide-index]
 file_filter = i18n/<lang>/demo-guide/index.po
 source_file = i18n/pot/demo-guide/index.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.developer-guide-index]
-file_filter = i18n/<lang>/developer-guide/index.po
-source_file = i18n/pot/developer-guide/index.pot
+[qwat-doc.contributor-guide-index]
+file_filter = i18n/<lang>/contributor-guide/index.po
+source_file = i18n/pot/contributor-guide/index.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.developer-guide-local-customizations]
-file_filter = i18n/<lang>/developer-guide/local_customizations.po
-source_file = i18n/pot/developer-guide/local_customizations.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.developer-guide-qwat-dev]
-file_filter = i18n/<lang>/developer-guide/qwat_dev.po
-source_file = i18n/pot/developer-guide/qwat_dev.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.developer-guide-upgrade]
-file_filter = i18n/<lang>/developer-guide/upgrade.po
-source_file = i18n/pot/developer-guide/upgrade.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.faq-index]
-file_filter = i18n/<lang>/faq/index.po
-source_file = i18n/pot/faq/index.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.features-guide-index]
-file_filter = i18n/<lang>/features-guide/index.po
-source_file = i18n/pot/features-guide/index.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.glossary-index]
-file_filter = i18n/<lang>/glossary/index.po
-source_file = i18n/pot/glossary/index.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.installation-guide-database-initialization]
+[qwat-doc.installation-guide-database-initialization]
 file_filter = i18n/<lang>/installation-guide/database-initialization.po
 source_file = i18n/pot/installation-guide/database-initialization.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.installation-guide-index]
+[qwat-doc.installation-guide-index]
 file_filter = i18n/<lang>/installation-guide/index.po
 source_file = i18n/pot/installation-guide/index.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.installation-guide-server]
-file_filter = i18n/<lang>/installation-guide/server.po
-source_file = i18n/pot/installation-guide/server.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.installation-guide-workstation]
+[qwat-doc.installation-guide-workstation]
 file_filter = i18n/<lang>/installation-guide/workstation.po
 source_file = i18n/pot/installation-guide/workstation.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.translation-index]
+[qwat-doc.installation-guide-server]
+file_filter = i18n/<lang>/installation-guide/server.po
+source_file = i18n/pot/installation-guide/server.pot
+source_lang = en
+type = PO
+
+[qwat-doc.features-guide-index]
+file_filter = i18n/<lang>/features-guide/index.po
+source_file = i18n/pot/features-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.faq-index]
+file_filter = i18n/<lang>/faq/index.po
+source_file = i18n/pot/faq/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.developer-guide-upgrade]
+file_filter = i18n/<lang>/developer-guide/upgrade.po
+source_file = i18n/pot/developer-guide/upgrade.pot
+source_lang = en
+type = PO
+
+[qwat-doc.developer-guide-qwat-dev]
+file_filter = i18n/<lang>/developer-guide/qwat_dev.po
+source_file = i18n/pot/developer-guide/qwat_dev.pot
+source_lang = en
+type = PO
+
+[qwat-doc.developer-guide-index]
+file_filter = i18n/<lang>/developer-guide/index.po
+source_file = i18n/pot/developer-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.developer-guide-local-customizations]
+file_filter = i18n/<lang>/developer-guide/local_customizations.po
+source_file = i18n/pot/developer-guide/local_customizations.pot
+source_lang = en
+type = PO
+
+[qwat-doc.translation-index]
 file_filter = i18n/<lang>/translation/index.po
 source_file = i18n/pot/translation/index.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.user-guide-create]
-file_filter = i18n/<lang>/user-guide/create.po
-source_file = i18n/pot/user-guide/create.pot
+[qwat-doc.glossary-index]
+file_filter = i18n/<lang>/glossary/index.po
+source_file = i18n/pot/glossary/index.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.user-guide-delete]
-file_filter = i18n/<lang>/user-guide/delete.po
-source_file = i18n/pot/user-guide/delete.pot
+[qwat-doc.admin-guide-data-manager]
+file_filter = i18n/<lang>/admin-guide/data_manager.po
+source_file = i18n/pot/admin-guide/data_manager.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.user-guide-elevation]
+[qwat-doc.admin-guide-index]
+file_filter = i18n/<lang>/admin-guide/index.po
+source_file = i18n/pot/admin-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.admin-guide-triggers]
+file_filter = i18n/<lang>/admin-guide/triggers.po
+source_file = i18n/pot/admin-guide/triggers.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide-elevation]
 file_filter = i18n/<lang>/user-guide/elevation.po
 source_file = i18n/pot/user-guide/elevation.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.user-guide-history]
-file_filter = i18n/<lang>/user-guide/history.po
-source_file = i18n/pot/user-guide/history.pot
+[qwat-doc.user-guide-update]
+file_filter = i18n/<lang>/user-guide/update.po
+source_file = i18n/pot/user-guide/update.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.user-guide-index]
-file_filter = i18n/<lang>/user-guide/index.po
-source_file = i18n/pot/user-guide/index.pot
-source_lang = en
-type = PO
-
-[qwat-zzz.user-guide-link]
+[qwat-doc.user-guide-link]
 file_filter = i18n/<lang>/user-guide/link.po
 source_file = i18n/pot/user-guide/link.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.user-guide-print]
+[qwat-doc.user-guide-history]
+file_filter = i18n/<lang>/user-guide/history.po
+source_file = i18n/pot/user-guide/history.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide-delete]
+file_filter = i18n/<lang>/user-guide/delete.po
+source_file = i18n/pot/user-guide/delete.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide-print]
 file_filter = i18n/<lang>/user-guide/print.po
 source_file = i18n/pot/user-guide/print.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.user-guide-qwat-struct]
+[qwat-doc.user-guide-index]
+file_filter = i18n/<lang>/user-guide/index.po
+source_file = i18n/pot/user-guide/index.pot
+source_lang = en
+type = PO
+
+[qwat-doc.user-guide-qwat-struct]
 file_filter = i18n/<lang>/user-guide/qwat_struct.po
 source_file = i18n/pot/user-guide/qwat_struct.pot
 source_lang = en
 type = PO
 
-[qwat-zzz.user-guide-update]
-file_filter = i18n/<lang>/user-guide/update.po
-source_file = i18n/pot/user-guide/update.pot
+[qwat-doc.user-guide-create]
+file_filter = i18n/<lang>/user-guide/create.po
+source_file = i18n/pot/user-guide/create.pot
 source_lang = en
 type = PO
 
