@@ -6,7 +6,7 @@ from pathlib import Path
 import os
 import tempfile
 
-repo_slug = 'qwat-test'
+repo_slug = 'qwat-doc'
 
 with open('.tx/config', 'w') as f:
     f.write('[main]\n')
