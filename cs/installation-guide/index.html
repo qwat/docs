@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. QWAT Installation Guide &mdash; Dokumentace pro QWAT 1.0</title>
+  <title>2. Instalační příručka QWAT &mdash; Dokumentace pro QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
-    <link rel="next" title="2.1. Setup database server" href="server.html" />
-    <link rel="prev" title="1. QWAT / TEKSI Drinking Water" href="../features-guide/index.html" /> 
+    <link rel="next" title="2.1. Nastavení databázového serveru" href="server.html" />
+    <link rel="prev" title="1. QWAT / TEKSI Pitná voda" href="../features-guide/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,21 +42,21 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. QWAT Installation Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="server.html">2.1. Setup database server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">2.2. Database initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workstation.html">2.3. Setup workstation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Pitná voda</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Instalační příručka QWAT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="server.html">2.1. Nastavení databázového serveru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html">2.2. Inicializace databáze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workstation.html">2.3. Nastavení pracovní stanice</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. Uživatelská příručka QWAT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Průvodce správce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Příručka přispěvatele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Příručka pro vývojáře</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Ukázková data a projekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. Časté otázky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Slovník</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Překlad</a></li>
 </ul>
 
         </div>
@@ -73,7 +73,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">2. </span>QWAT Installation Guide</li>
+      <li><span class="section-number">2. </span>Instalační příručka QWAT</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation-guide/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -84,35 +84,34 @@
            <div itemprop="articleBody">
              
   <section id="qwat-installation-guide">
-<h1><span class="section-number">2. </span>QWAT Installation Guide<a class="headerlink" href="#qwat-installation-guide" title="Trvalý odkaz na tento nadpis"></a></h1>
-<p>This will guide you through the setup of required applications and services to
-get your system ready for running QWAT.</p>
+<h1><span class="section-number">2. </span>Instalační příručka QWAT<a class="headerlink" href="#qwat-installation-guide" title="Trvalý odkaz na tento nadpis"></a></h1>
+<p>To vás provede nastavením požadovaných aplikací a služeb, aby byl váš systém připraven k provozu QWAT.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="server.html">2.1. Setup database server</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="server.html#required-software">2.1.1. Required Software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="server.html#server-installation">2.1.1.1. Server installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">2.1. Nastavení databázového serveru</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="server.html#required-software">2.1.1. Požadovaný software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="server.html#server-installation">2.1.1.1. Instalace serveru</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="database-initialization.html">2.2. Database initialization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="database-initialization.html#process">2.2.1. Process</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="database-initialization.html#restore-demo-datamodel">2.2.1.1. Restore demo datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database-initialization.html">2.2. Inicializace databáze</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="database-initialization.html#process">2.2.1. Průběh</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="database-initialization.html#restore-demo-datamodel">2.2.1.1. Obnovte demo datamodel</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="workstation.html">2.3. Setup workstation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="workstation.html#required-software">2.3.1. Required Software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="workstation.html#install-qgis">2.3.1.1. Install QGIS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="workstation.html#optional-plugin">2.3.1.2. Optional plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workstation.html">2.3. Nastavení pracovní stanice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workstation.html#required-software">2.3.1. Vyžadovaný Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="workstation.html#install-qgis">2.3.1.1. Instalovat QGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workstation.html#optional-plugin">2.3.1.2. Volitelný plugin</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="workstation.html#database-configuration">2.3.2. Database configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workstation.html#database-configuration">2.3.2. Konfigurace databáze</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="workstation.html#windows-pg-service">2.3.2.1. Windows pg_service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="workstation.html#unix-pg-service">2.3.2.2. Unix pg_service</a></li>
-<li class="toctree-l3"><a class="reference internal" href="workstation.html#all-systems">2.3.2.3. All systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workstation.html#all-systems">2.3.2.3. Všechny systémy</a></li>
 </ul>
 </li>
 </ul>
@@ -125,8 +124,8 @@ get your system ready for running QWAT.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../features-guide/index.html" class="btn btn-neutral float-left" title="1. QWAT / TEKSI Drinking Water" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="server.html" class="btn btn-neutral float-right" title="2.1. Setup database server" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../features-guide/index.html" class="btn btn-neutral float-left" title="1. QWAT / TEKSI Pitná voda" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="server.html" class="btn btn-neutral float-right" title="2.1. Nastavení databázového serveru" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

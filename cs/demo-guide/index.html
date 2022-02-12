@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7. Demo data and project &mdash; Dokumentace pro QWAT 1.0</title>
+  <title>7. Ukázková data a projekt &mdash; Dokumentace pro QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
-    <link rel="next" title="8. FAQ" href="../faq/index.html" />
-    <link rel="prev" title="6.4. Upgrade database" href="../developer-guide/upgrade.html" /> 
+    <link rel="next" title="8. Časté otázky" href="../faq/index.html" />
+    <link rel="prev" title="6.4. Upgradovat databázi" href="../developer-guide/upgrade.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,16 +42,16 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Demo data and project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Pitná voda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Instalační příručka QWAT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. Uživatelská příručka QWAT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Průvodce správce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Příručka přispěvatele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Příručka pro vývojáře</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Ukázková data a projekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. Časté otázky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Slovník</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Překlad</a></li>
 </ul>
 
         </div>
@@ -68,7 +68,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">7. </span>Demo data and project</li>
+      <li><span class="section-number">7. </span>Ukázková data a projekt</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/demo-guide/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -79,18 +79,18 @@
            <div itemprop="articleBody">
              
   <section id="demo-data-and-project">
-<h1><span class="section-number">7. </span>Demo data and project<a class="headerlink" href="#demo-data-and-project" title="Trvalý odkaz na tento nadpis"></a></h1>
-<p>QWAT can be tested by downloading the QGS project repository <a class="reference external" href="https://github.com/qwat/QWAT">here</a> and restoring the latest <a class="reference external" href="https://github.com/qwat/qwat-data-model/releases/latest">data_and_structure_sample.backup</a> in PostgreSQL (+ extension PostGIS and hstore).</p>
-<p>On the download page you can find theses backups:</p>
+<h1><span class="section-number">7. </span>Ukázková data a projekt<a class="headerlink" href="#demo-data-and-project" title="Trvalý odkaz na tento nadpis"></a></h1>
+<p>QWAT lze testovat stažením úložiště projektu QGS <a class="reference external" href="https://github.com/qwat/QWAT">zde</a> a obnovením nejnovějšího <a class="reference external" href="https://github.com/qwat/qwat-data-model/releases/latest">data_and_structure_sample.backup</a> v PostgreSQL (+ rozšíření PostGIS a hstore).</p>
+<p>Na stránce stahování najdete tyto zálohy:</p>
 <ul class="simple">
-<li><p><cite>qwat_vX.X.X_data_and_structure_sample.backup</cite>: Restore the QWAT schema plus the sample dataset</p></li>
-<li><p><cite>qwat_vX.X.X_structure_only.backup</cite>:  Restore only the QWAT schema only. In addition you’ll also need to restore the value_list_data_only dump</p></li>
-<li><p><cite>qwat_vX.X.X_value_list_data_only.backup</cite>: Restore the value list of QWAT demo project</p></li>
-<li><p><cite>qwat_vX.X.X_data_only_sample.backup</cite>: Restore the sample dataset (the init_qwat.sh script should be run prior to restoring the sample dataset)</p></li>
+<li><p><cite>qwat_vX.X.X_data_and_structure_sample.backup</cite>: Obnovení schématu QWAT plus ukázkový dataset</p></li>
+<li><p><cite>qwat_vX.X.X_structure_only.backup</cite>: Obnoví pouze schéma QWAT. Kromě toho budete také muset obnovit dump value_list_data_only</p></li>
+<li><p><cite>qwat_vX.X.X_value_list_data_only.backup</cite>: Obnovení seznamu hodnot demo projektu QWAT</p></li>
+<li><p><cite>qwat_vX.X.X_data_only_sample.backup</cite>: Obnovení vzorového datového souboru (skript init_qwat.sh by měl být spuštěn před obnovením vzorového datového souboru)</p></li>
 </ul>
-<p>More detailed instructions:</p>
-<p>How to install the data sample from the QWAT Water distribution management project.</p>
-<p>Create the QWAT database model with roles and restore the latest version:</p>
+<p>Podrobnější pokyny:</p>
+<p>Jak nainstalovat vzorek dat z projektu QWAT Water Distribution Management.</p>
+<p>Vytvořte databázový model QWAT pomocí rolí a obnovte nejnovější verzi:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the database and the extensions</span>
 <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create database qwat;&#39;</span>
 <span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create extension postgis;&#39;</span>
@@ -106,9 +106,9 @@
 <span class="n">pg_restore</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbname</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">e</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">owner</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">--</span><span class="n">jobs</span><span class="o">=</span><span class="mi">3</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">triggers</span> <span class="o">--</span><span class="n">port</span> <span class="mi">5432</span> <span class="n">qwat_dump</span><span class="o">.</span><span class="n">backup</span>
 </pre></div>
 </div>
-<p>You now have the latest data model (with sample data) + database roles.</p>
-<p><strong>Create the QWAT service in the .pg_service.conf file</strong></p>
-<p>If you already have the service defined you can skip this step, else edit the <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> file and make it look like:</p>
+<p>Nyní máte nejnovější datový model (s ukázkovými daty) + databázové role.</p>
+<p><strong>Vytvořte službu QWAT v souboru .pg_service.conf</strong></p>
+<p>Pokud již máte službu definovanou, můžete tento krok přeskočit, jinak upravte soubor <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> a nechte jej vypadat takto:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">qwat</span><span class="p">]</span>
 <span class="c1">#enter your database ip</span>
 <span class="n">host</span><span class="o">=</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
@@ -130,14 +130,12 @@
 <span class="n">password</span><span class="o">=</span><span class="n">YourPassword</span>
 </pre></div>
 </div>
-<p><strong>Open the qgis project</strong></p>
-<p>You can open the <strong>qwat.qgs</strong> project from the qwat-data-sample directory and you should see this screen:</p>
+<p><strong>Otevřete projekt qgis</strong></p>
+<p>Projekt <strong>qwat.qgs</strong> můžete otevřít z adresáře qwat-data-sample a měla by se zobrazit tato obrazovka:</p>
 <img alt="../_images/qgis.png" src="../_images/qgis.png" />
 <div class="admonition note">
 <p class="admonition-title">Poznámka</p>
-<p>You can also try out the latest <strong>qwat.qgs</strong> project from the QWAT directory. Keep in mind that there there’s a chance
-that it doesn’t fit the sample data model. This is because the sample data model may be a little older than the latest
-data model and only the corresponding <strong>.qgs</strong> project has been matched.</p>
+<p>Můžete také vyzkoušet nejnovější projekt <strong>qwat.qgs</strong> z adresáře QWAT. Mějte na paměti, že existuje šance, že se nehodí do vzorového datového modelu. Důvodem je, že vzorový datový model může být o něco starší než nejnovější datový model a odpovídá pouze odpovídajícímu projektu <strong>.qgs</strong>.</p>
 </div>
 </section>
 
@@ -145,8 +143,8 @@ data model and only the corresponding <strong>.qgs</strong> project has been mat
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../developer-guide/upgrade.html" class="btn btn-neutral float-left" title="6.4. Upgrade database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../faq/index.html" class="btn btn-neutral float-right" title="8. FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../developer-guide/upgrade.html" class="btn btn-neutral float-left" title="6.4. Upgradovat databázi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../faq/index.html" class="btn btn-neutral float-right" title="8. Časté otázky" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

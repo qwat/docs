@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="6.2. Customize local DB models" href="local_customizations.html" />
-    <link rel="prev" title="6. Developer’s guide" href="index.html" /> 
+    <link rel="next" title="6.2. Personnaliser le modèle de données local" href="local_customizations.html" />
+    <link rel="prev" title="6. Guide du développeur" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,17 +42,17 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Developer’s guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Module réseau de distribution d’eau</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Guide d’installation QWAT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT Guide de l’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Guide Administrateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Guide du contributeur</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. Guide du développeur</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. QWAT Development Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#prerequisites">6.1.1. Prerequisites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#environment">6.1.2. Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qwat-architecture">6.1.3. QWAT architecture</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#roles">6.1.4. Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">6.1.1. Prérequis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environment">6.1.2. Environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qwat-architecture">6.1.3. Architecture de QWAT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#roles">6.1.4. Rôles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#release-cycles-and-versioning">6.1.5. Release cycles and versioning</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#version-and-release-management-policy">6.1.5.1. Version and release management policy</a></li>
 </ul>
@@ -65,15 +65,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#adding-new-features-to-qwat">6.1.11. Adding new features to QWAT</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="local_customizations.html">6.2. Customize local DB models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="local_customizations.html">6.2. Personnaliser le modèle de données local</a></li>
 <li class="toctree-l2"><a class="reference internal" href="local_customizations.html#create-an-extension">6.3. Create an extension</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html">6.4. Upgrade database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html">6.4. Mettre à jour la base de données</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Projet démo et données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Traduction</a></li>
 </ul>
 
         </div>
@@ -90,7 +90,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">6. </span>Developer’s guide</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">6. </span>Guide du développeur</a> &raquo;</li>
       <li><span class="section-number">6.1. </span>QWAT Development Overview</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/developer-guide/qwat_dev.rst.txt" rel="nofollow"> Afficher la source de la page</a>
@@ -104,35 +104,35 @@
   <section id="qwat-development-overview">
 <h1><span class="section-number">6.1. </span>QWAT Development Overview<a class="headerlink" href="#qwat-development-overview" title="Lien permanent vers ce titre"></a></h1>
 <section id="prerequisites">
-<h2><span class="section-number">6.1.1. </span>Prerequisites<a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
-<p>In order to develop for QWAT, the following skills may be required :</p>
+<h2><span class="section-number">6.1.1. </span>Prérequis<a class="headerlink" href="#prerequisites" title="Lien permanent vers ce titre"></a></h2>
+<p>Dans le but de contribuer au développement de QWAT, les compétences suivantes sont requises :</p>
 <ul class="simple">
-<li><p>Good general knowledge of GIS</p></li>
-<li><p>Good general knowledge of QGIS</p></li>
-<li><p>Skills in relational databases and PostgreSQL/PostGIS specifically</p></li>
-<li><p>Skills in Python</p></li>
+<li><p>Bonnes connaissances générales de SIG</p></li>
+<li><p>Bonnes connaissances générales de QGIS</p></li>
+<li><p>Compétences en bases de données relationnelles et PostgreSQL/PostGIS spécifiquement</p></li>
+<li><p>Compétences en Python</p></li>
 </ul>
 </section>
 <section id="environment">
-<h2><span class="section-number">6.1.2. </span>Environment<a class="headerlink" href="#environment" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">6.1.2. </span>Environnement<a class="headerlink" href="#environment" title="Lien permanent vers ce titre"></a></h2>
 <ul class="simple">
-<li><p>You will need to <a class="reference external" href="https://help.github.com/articles/set-up-git/">install and configure Git and GitHub</a></p></li>
-<li><p>Have python 3 installed and as your default python. In case it is not, use a <a class="reference external" href="https://docs.python.org/3/library/venv.html">virtual environment</a></p></li>
-<li><p>have a bash shell</p></li>
-<li><p>have admin rights to create and drop PostgreSQL databases</p></li>
+<li><p>Vous aurez besoin d”<a class="reference external" href="https://help.github.com/articles/set-up-git/">installer et configurer Git et GitHub</a></p></li>
+<li><p>Avoir python 3 installé comme python par défaut. Dans le cas contraire, utiliser un <a class="reference external" href="https://docs.python.org/3/library/venv.html">environnement virtuel</a></p></li>
+<li><p>Avoir un une console bash</p></li>
+<li><p>Avoir les droits administrateurs pour créer et supprimer des bases de données PostgreSQL</p></li>
 </ul>
 </section>
 <section id="qwat-architecture">
-<h2><span class="section-number">6.1.3. </span>QWAT architecture<a class="headerlink" href="#qwat-architecture" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">6.1.3. </span>Architecture de QWAT<a class="headerlink" href="#qwat-architecture" title="Lien permanent vers ce titre"></a></h2>
 <ul class="simple">
 <li><p>Describe here various parts of QWAT</p></li>
 <li><p>Describe relation to other projects (plugins, qgis core)</p></li>
 </ul>
 </section>
 <section id="roles">
-<h2><span class="section-number">6.1.4. </span>Roles<a class="headerlink" href="#roles" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">6.1.4. </span>Rôles<a class="headerlink" href="#roles" title="Lien permanent vers ce titre"></a></h2>
 <ul class="simple">
-<li><p><em>Commiters</em> have access to QWAT code repositories and can push to them. It means they control the evolution of the software</p></li>
+<li><p>Les <em>Commiters</em> on accès au dépôt de code QWAT et peuvent y pousser leur code. Ceci signifie qu’ils contrôlent l’évolution du logiciel.</p></li>
 <li><p><em>contributors</em> can provide information, code, documentation to the project. They do not have direct access for modifications and must go through the <em>commiters</em> to get their modifications applied. See the [[Contributors_guide]] for more information and processes.</p></li>
 <li><p>The <em>release manager</em> is in charge of deciding when a new version of the software is published, and to actually publish the release. Current release manager is <a class="reference external" href="https://github.com/haubourg">Régis Haubourg (OSLANDIA)</a> on behalf of the QWAT’s group.</p></li>
 </ul>
@@ -226,8 +226,8 @@ PUM allows to add pre and post files, either in python or sql for each update, s
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="index.html" class="btn btn-neutral float-left" title="6. Developer’s guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="local_customizations.html" class="btn btn-neutral float-right" title="6.2. Customize local DB models" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="6. Guide du développeur" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="local_customizations.html" class="btn btn-neutral float-right" title="6.2. Personnaliser le modèle de données local" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

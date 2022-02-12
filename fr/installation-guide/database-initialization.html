@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.2. Database initialization &mdash; Documentation QWAT 1.0</title>
+  <title>2.2. Initialisation de la base de données &mdash; Documentation QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -42,10 +42,10 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. QWAT Installation Guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Module réseau de distribution d’eau</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Guide d’installation QWAT</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="server.html">2.1. Setup database server</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Database initialization</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Initialisation de la base de données</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#process">2.2.1. Process</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#restore-demo-datamodel">2.2.1.1. Restore demo datamodel</a></li>
 </ul>
@@ -55,14 +55,14 @@
 <li class="toctree-l2"><a class="reference internal" href="workstation.html">2.3. Setup workstation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT Guide de l’utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Guide Administrateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Guide du contributeur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Guide du développeur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Projet démo et données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Traduction</a></li>
 </ul>
 
         </div>
@@ -79,8 +79,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">2. </span>QWAT Installation Guide</a> &raquo;</li>
-      <li><span class="section-number">2.2. </span>Database initialization</li>
+          <li><a href="index.html"><span class="section-number">2. </span>Guide d’installation QWAT</a> &raquo;</li>
+      <li><span class="section-number">2.2. </span>Initialisation de la base de données</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation-guide/database-initialization.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -91,7 +91,7 @@
            <div itemprop="articleBody">
              
   <section id="database-initialization">
-<span id="id1"></span><h1><span class="section-number">2.2. </span>Database initialization<a class="headerlink" href="#database-initialization" title="Lien permanent vers ce titre"></a></h1>
+<span id="id1"></span><h1><span class="section-number">2.2. </span>Initialisation de la base de données<a class="headerlink" href="#database-initialization" title="Lien permanent vers ce titre"></a></h1>
 <p>Note that installing QWAT using the initialization script is only required for contributing to the model or extending the model.
 If you only need to test a demo or use a production database, a regular postgreSQL dump is enough. See <a class="reference external" href="../demo-guide/index.html">Demo page</a> for that.</p>
 <section id="process">

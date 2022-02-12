@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4.1. Data manager &mdash; Dokumentace pro QWAT 1.0</title>
+  <title>4.1. Správce dat &mdash; Dokumentace pro QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
-    <link rel="next" title="4.2. Triggers" href="triggers.html" />
-    <link rel="prev" title="4. Admin Guide" href="index.html" /> 
+    <link rel="next" title="4.2. Spouštěče" href="triggers.html" />
+    <link rel="prev" title="4. Průvodce správce" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,33 +42,33 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Admin Guide</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. Data manager</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#import-data-to-qwat">4.1.1. Import data to QWAT</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#import-data-from-topobase">4.1.2. Import data from Topobase</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#export-data-to-interlis-sia-405-format">4.1.3. Export data to INTERLIS SIA 405 format</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#usage">4.1.3.1. Usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#limitations">4.1.3.2. Limitations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Pitná voda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Instalační příručka QWAT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. Uživatelská příručka QWAT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Průvodce správce</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. Správce dat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#import-data-to-qwat">4.1.1. Import dat do QWAT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-data-from-topobase">4.1.2. Importovat data z Topobase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-data-to-interlis-sia-405-format">4.1.3. Export dat do formátu INTERLIS SIA 405</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">4.1.3.1. Použití</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#limitations">4.1.3.2. Omezení</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#export-data-to-sire">4.1.4. Export data to SIRE</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#backup-data">4.1.5. Backup data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#restoring-data">4.1.6. Restoring data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qwat-analysis-tools">4.1.7. QWAT analysis tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-data-to-sire">4.1.4. Exportovat data do SIRE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backup-data">4.1.5. Záloha dat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#restoring-data">4.1.6. Obnovení dat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qwat-analysis-tools">4.1.7. Nástroje pro analýzu QWAT</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="triggers.html">4.2. Triggers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="triggers.html">4.2. Spouštěče</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Příručka přispěvatele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Příručka pro vývojáře</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Ukázková data a projekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. Časté otázky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Slovník</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Překlad</a></li>
 </ul>
 
         </div>
@@ -85,8 +85,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">4. </span>Admin Guide</a> &raquo;</li>
-      <li><span class="section-number">4.1. </span>Data manager</li>
+          <li><a href="index.html"><span class="section-number">4. </span>Průvodce správce</a> &raquo;</li>
+      <li><span class="section-number">4.1. </span>Správce dat</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/admin-guide/data_manager.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -97,36 +97,35 @@
            <div itemprop="articleBody">
              
   <section id="data-manager">
-<h1><span class="section-number">4.1. </span>Data manager<a class="headerlink" href="#data-manager" title="Trvalý odkaz na tento nadpis"></a></h1>
+<h1><span class="section-number">4.1. </span>Správce dat<a class="headerlink" href="#data-manager" title="Trvalý odkaz na tento nadpis"></a></h1>
 <section id="import-data-to-qwat">
-<h2><span class="section-number">4.1.1. </span>Import data to QWAT<a class="headerlink" href="#import-data-to-qwat" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>It is generally prefered to load QWAT data trough the views and not the tables, given the complexity of object model, and the business intelligence located in the edit triggers. (e.g. node and topology handling).</p>
-<p>A [nice alternative technique](<a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:nliaudat/qwat-import-sample.git) is proposed by Nicolas Liaudat, that uses directly QGIS and expressions to load datasets. Please contribute to it if you find enhancements of issues.</p>
+<h2><span class="section-number">4.1.1. </span>Import dat do QWAT<a class="headerlink" href="#import-data-to-qwat" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Obecně je výhodné načítat data QWAT přes pohledy a ne tabulky, vzhledem ke složitosti objektového modelu a obchodní inteligenci umístěné ve spouštěcích prvcích úprav. (např. zpracování uzlů a topologií).</p>
+<p>[Pěknou technickou alternativu](<a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:nliaudat/qwat-import-sample.git)  navrhuje Nicolas Liaudat, který používá přímo QGIS a výrazy k načtení datových sad. Pokud zjistíte vylepšení problémů, přispějte k tomu.</p>
 </section>
 <section id="import-data-from-topobase">
-<h2><span class="section-number">4.1.2. </span>Import data from Topobase<a class="headerlink" href="#import-data-from-topobase" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">4.1.2. </span>Importovat data z Topobase<a class="headerlink" href="#import-data-from-topobase" title="Trvalý odkaz na tento nadpis"></a></h2>
 <ul class="simple">
-<li><p>describe the process and tools</p></li>
-<li><p>describe the automated and manual checks to do</p></li>
-<li><p>mention specific point of attention</p></li>
+<li><p>popsat proces a nástroje</p></li>
+<li><p>popište automatizované a manuální kontroly</p></li>
+<li><p>uveďte konkrétní bod pozornosti</p></li>
 </ul>
 </section>
 <section id="export-data-to-interlis-sia-405-format">
-<h2><span class="section-number">4.1.3. </span>Export data to INTERLIS SIA 405 format<a class="headerlink" href="#export-data-to-interlis-sia-405-format" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Exporting a QWAT database to the Interlis Exchange Format (.xtf) is possible using the dedicated
-tool <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">qgepqwat2ili</a> developped as part of an NGDI project.</p>
+<h2><span class="section-number">4.1.3. </span>Export dat do formátu INTERLIS SIA 405<a class="headerlink" href="#export-data-to-interlis-sia-405-format" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Export databáze QWAT do výměnného formátu Interlis (.xtf) je možný pomocí specializovaného nástroje <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">qgepqwat2ili</a> vyvinutého v rámci projektu NGDI.</p>
 <section id="usage">
-<h3><span class="section-number">4.1.3.1. </span>Usage<a class="headerlink" href="#usage" title="Trvalý odkaz na tento nadpis"></a></h3>
-<p>Qgepqwat2ili requires Java (JRE 1.6 or above) and python (3.6 or above).</p>
-<p>Then, it can be installed like any other python library:</p>
+<h3><span class="section-number">4.1.3.1. </span>Použití<a class="headerlink" href="#usage" title="Trvalý odkaz na tento nadpis"></a></h3>
+<p>Qgepqwat2ili vyžaduje Javu (JRE 1.6 nebo vyšší) a Python (3.6 nebo vyšší).</p>
+<p>Pak ji lze nainstalovat jako jakoukoli jinou knihovnu Pythonu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">qgepqwat2ili</span>
 </pre></div>
 </div>
-<p>A simple export is done like this (assuming you have a pgservice defined named <cite>qwat</cite>):</p>
+<p>Jednoduchý export se provádí takto (za předpokladu, že máte definovanou službu pgservice s názvem <cite>qwat</cite>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">qgepqwat2ili</span> <span class="n">qwat</span> <span class="n">export</span> <span class="n">desktop</span><span class="o">/</span><span class="n">my_export</span><span class="o">.</span><span class="n">xtf</span>
 </pre></div>
 </div>
-<p>Full usage:</p>
+<p>Plné využití:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">qgepqwat2ili</span> <span class="n">qwat</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">recreate_schema</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">skip_validation</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">pgservice</span> <span class="n">PGSERVICE</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">log</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">include_hydraulics</span><span class="p">]</span> <span class="n">export</span> <span class="n">path</span>
 
 <span class="n">positional</span> <span class="n">arguments</span><span class="p">:</span>
@@ -144,54 +143,48 @@ tool <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">q
 <span class="o">--</span><span class="n">log</span>                 <span class="n">saves</span> <span class="n">a</span> <span class="n">log</span> <span class="n">file</span> <span class="nb">next</span> <span class="n">to</span> <span class="n">the</span> <span class="nb">input</span><span class="o">/</span><span class="n">output</span> <span class="n">file</span> <span class="p">(</span><span class="n">default</span><span class="p">:</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Further documentation as well as an issue tracker can be found on the <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">qgepqwat2ili repository</a>.</p>
+<p>Další dokumentaci a sledování problémů naleznete v repozitáři <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">qgepqwat2ili</a>.</p>
 </section>
 <section id="limitations">
-<h3><span class="section-number">4.1.3.2. </span>Limitations<a class="headerlink" href="#limitations" title="Trvalý odkaz na tento nadpis"></a></h3>
-<p>The tool is currently experimental. Please be aware of the following limitations:</p>
+<h3><span class="section-number">4.1.3.2. </span>Omezení<a class="headerlink" href="#limitations" title="Trvalý odkaz na tento nadpis"></a></h3>
+<p>Nástroj je v současné době experimentální. Upozorňujeme na následující omezení:</p>
 <ul class="simple">
-<li><p>The tool has not yet been tested much with actual data.</p></li>
-<li><p>The QWAT datamodel and the SIA 405 datamodel have some important differences. Thus, not all classes or properties
-can be matched precisely.</p></li>
-<li><p>By default, the tool does not export hydraulic classes. An option must explicitely be added to do so, but this will
-result to invalid files, due to differences mentionned above.</p></li>
-<li><p>The tool is currently only available as a command line tool. It will at some point be embedded in the QWAT plugin,
-similarly to what was done for QGEP.</p></li>
-<li><p>The tool currently supports only export. Supporting imports is planned, but this require larger changes to bring the
-QWAT datamodel closer to the SIA405 norm.</p></li>
+<li><p>Nástroj zatím nebyl příliš testován na skutečných datech.</p></li>
+<li><p>Datový model QWAT a datový model SIA 405 mají některé důležité rozdíly. Proto nelze všechny třídy nebo vlastnosti přesně přiřadit.</p></li>
+<li><p>Ve výchozím nastavení nástroj neexportuje hydraulické třídy. Je třeba výslovně přidat volbu, která to umožní, ale výsledkem budou neplatné soubory kvůli výše uvedeným rozdílům.</p></li>
+<li><p>Nástroj je v současné době k dispozici pouze jako nástroj příkazového řádku. V určitém okamžiku bude začleněn do zásuvného modulu QWAT, podobně jako tomu bylo u QGEP.</p></li>
+<li><p>Nástroj v současné době podporuje pouze export. Plánuje se podpora importu, ale to vyžaduje větší změny, aby se datový model QWAT přiblížil normě SIA405.</p></li>
 </ul>
-<p>Make sure that you carefully review the resulting data, and ensure you are getting expected results before distributing
-your files. Also please report any error or inconsistencies that you are getting on the
-<a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/issues">qgepqwat2ili issue tracker</a> to help improving the tool.</p>
+<p>Před distribucí souborů pečlivě zkontrolujte výsledná data a ujistěte se, že jste získali očekávané výsledky. Rovněž prosím nahlaste všechny chyby nebo nesrovnalosti, které se vám objevují, na <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili/issues">qgepqwat2ili issue tracker</a>, abyste pomohli nástroj vylepšit.</p>
 </section>
 </section>
 <section id="export-data-to-sire">
-<h2><span class="section-number">4.1.4. </span>Export data to SIRE<a class="headerlink" href="#export-data-to-sire" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">4.1.4. </span>Exportovat data do SIRE<a class="headerlink" href="#export-data-to-sire" title="Trvalý odkaz na tento nadpis"></a></h2>
 <ul class="simple">
-<li><p>describe the process and tools</p></li>
-<li><p>describe the automated and manual checks to do</p></li>
-<li><p>mention specific point of attention</p></li>
+<li><p>popsat proces a nástroje</p></li>
+<li><p>popište automatizované a manuální kontroly</p></li>
+<li><p>uveďte konkrétní bod pozornosti</p></li>
 </ul>
 </section>
 <section id="backup-data">
-<h2><span class="section-number">4.1.5. </span>Backup data<a class="headerlink" href="#backup-data" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">4.1.5. </span>Záloha dat<a class="headerlink" href="#backup-data" title="Trvalý odkaz na tento nadpis"></a></h2>
 <ul class="simple">
-<li><p>Use PostgreSQL backups</p></li>
-<li><p>points of attention (PG versions…)</p></li>
+<li><p>Použít zálohy PostgreSQL</p></li>
+<li><p>body pozornosti (verze PG…)</p></li>
 </ul>
 </section>
 <section id="restoring-data">
-<h2><span class="section-number">4.1.6. </span>Restoring data<a class="headerlink" href="#restoring-data" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">4.1.6. </span>Obnovení dat<a class="headerlink" href="#restoring-data" title="Trvalý odkaz na tento nadpis"></a></h2>
 <ul class="simple">
-<li><p>Use PostgreSQL backups</p></li>
-<li><p>points of attention</p></li>
+<li><p>Použít zálohy PostgreSQL</p></li>
+<li><p>body pozornosti</p></li>
 </ul>
 </section>
 <section id="qwat-analysis-tools">
-<h2><span class="section-number">4.1.7. </span>QWAT analysis tools<a class="headerlink" href="#qwat-analysis-tools" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">4.1.7. </span>Nástroje pro analýzu QWAT<a class="headerlink" href="#qwat-analysis-tools" title="Trvalý odkaz na tento nadpis"></a></h2>
 <ul class="simple">
-<li><p>Where to find data analysis scripts</p></li>
-<li><p>How to use them</p></li>
+<li><p>Kde najít skripty pro analýzu dat</p></li>
+<li><p>Jak je používat</p></li>
 </ul>
 </section>
 </section>
@@ -200,8 +193,8 @@ your files. Also please report any error or inconsistencies that you are getting
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="4. Admin Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="triggers.html" class="btn btn-neutral float-right" title="4.2. Triggers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="4. Průvodce správce" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="triggers.html" class="btn btn-neutral float-right" title="4.2. Spouštěče" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

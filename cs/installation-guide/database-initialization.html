@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2.2. Database initialization &mdash; Dokumentace pro QWAT 1.0</title>
+  <title>2.2. Inicializace databáze &mdash; Dokumentace pro QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
-    <link rel="next" title="2.3. Setup workstation" href="workstation.html" />
-    <link rel="prev" title="2.1. Setup database server" href="server.html" /> 
+    <link rel="next" title="2.3. Nastavení pracovní stanice" href="workstation.html" />
+    <link rel="prev" title="2.1. Nastavení databázového serveru" href="server.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,27 +42,27 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. QWAT Installation Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="server.html">2.1. Setup database server</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Database initialization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#process">2.2.1. Process</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#restore-demo-datamodel">2.2.1.1. Restore demo datamodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Pitná voda</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Instalační příručka QWAT</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="server.html">2.1. Nastavení databázového serveru</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. Inicializace databáze</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#process">2.2.1. Průběh</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#restore-demo-datamodel">2.2.1.1. Obnovte demo datamodel</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="workstation.html">2.3. Setup workstation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workstation.html">2.3. Nastavení pracovní stanice</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. Uživatelská příručka QWAT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Průvodce správce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Příručka přispěvatele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Příručka pro vývojáře</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Ukázková data a projekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. Časté otázky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Slovník</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Překlad</a></li>
 </ul>
 
         </div>
@@ -79,8 +79,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">2. </span>QWAT Installation Guide</a> &raquo;</li>
-      <li><span class="section-number">2.2. </span>Database initialization</li>
+          <li><a href="index.html"><span class="section-number">2. </span>Instalační příručka QWAT</a> &raquo;</li>
+      <li><span class="section-number">2.2. </span>Inicializace databáze</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation-guide/database-initialization.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -91,31 +91,25 @@
            <div itemprop="articleBody">
              
   <section id="database-initialization">
-<span id="id1"></span><h1><span class="section-number">2.2. </span>Database initialization<a class="headerlink" href="#database-initialization" title="Trvalý odkaz na tento nadpis"></a></h1>
-<p>Note that installing QWAT using the initialization script is only required for contributing to the model or extending the model.
-If you only need to test a demo or use a production database, a regular postgreSQL dump is enough. See <a class="reference external" href="../demo-guide/index.html">Demo page</a> for that.</p>
+<span id="id1"></span><h1><span class="section-number">2.2. </span>Inicializace databáze<a class="headerlink" href="#database-initialization" title="Trvalý odkaz na tento nadpis"></a></h1>
+<p>Pamatujte, že instalace QWAT pomocí inicializačního skriptu je nutná pouze pro přispění k modelu nebo rozšíření modelu. Pokud potřebujete pouze otestovat ukázku nebo použít produkční databázi, postačuje běžný výpis postgreSQL. Viz <a class="reference external" href="../demo-guide/index.html">Demo page</a>.</p>
 <section id="process">
-<h2><span class="section-number">2.2.1. </span>Process<a class="headerlink" href="#process" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Assuming you have installed a postgresql server. In a shell:</p>
+<h2><span class="section-number">2.2.1. </span>Průběh<a class="headerlink" href="#process" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Za předpokladu, že jste nainstalovali postgresql server. Ve shellu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">qwat</span><span class="o">/</span><span class="n">qwat</span>
 <span class="n">cd</span> <span class="n">qwat</span>
 </pre></div>
 </div>
-<p>Update data-model submodule:</p>
+<p>Aktualizujte submodul datového modelu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">recursive</span>
 </pre></div>
 </div>
-<p>In order to create the database model you need to create a postgresql database.
-Do to this you may execute for example:</p>
+<p>Chcete-li vytvořit model databáze, musíte vytvořit databázi postgresql. Můžete to provést například:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create database qwat&#39;</span>
 </pre></div>
 </div>
-<p>You can choose whatever name for the database and whatever user as its owner.
-The script that is used to create the database model looks for the
-<a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgservice.html">.pg_service.conf</a> file in the
-users home directory or in the directory specified by the
-<a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-envars.html">PGSYSCONFDIR or PGSERVICEFILE</a> variables.</p>
-<p>Assuming you named your database <code class="docutils literal notranslate"><span class="pre">qwat</span></code>, edit the <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> file and make it look like:</p>
+<p>Můžete si vybrat libovolný název databáze a libovolného uživatele jako jejího vlastníka. Skript, který se používá k vytvoření modelu databáze, hledá soubor <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgservice.html">.pg_service.conf</a> v domovském adresáři uživatelů nebo v adresáři určeném proměnnými <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-envars.html">PGSYSCONFDIR nebo PGSERVICEFILE</a>.</p>
+<p>Za předpokladu, že jste pojmenovali databázi <code class="docutils literal notranslate"><span class="pre">qwat</span></code>, upravte soubor <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> aby vypadal takto:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">qwat</span><span class="p">]</span>
 <span class="c1">#enter your database ip</span>
 <span class="n">host</span><span class="o">=</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
@@ -127,28 +121,28 @@ users home directory or in the directory specified by the
 <span class="n">password</span><span class="o">=</span><span class="n">YourPassword</span>
 </pre></div>
 </div>
-<p>Now go to the <code class="docutils literal notranslate"><span class="pre">data-model</span></code> directory and run the <code class="docutils literal notranslate"><span class="pre">./init_qwat.sh</span></code> script:</p>
+<p>Nyní přejděte do adresáře <code class="docutils literal notranslate"><span class="pre">data-model</span></code> a spusťte skript <code class="docutils literal notranslate"><span class="pre">./init_qwat.sh</span></code> :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">data</span><span class="o">-</span><span class="n">model</span>
 <span class="o">./</span><span class="n">init_qwat</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">p</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">s</span> <span class="mi">21781</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">r</span>
 </pre></div>
 </div>
-<p>The script has the following options:</p>
+<p>Skript má následující možnosti:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>                     PG service to connect to the database.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>                     PG služba pro připojení k databázi.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-s</span></code> or <code class="docutils literal notranslate"><span class="pre">--srid</span></code>         PostGIS SRID. Default to 21781 (ch1903)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-d</span></code> or <code class="docutils literal notranslate"><span class="pre">--drop-schema</span></code>    drop schemas (cascaded) if they exist</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-r</span></code> or <code class="docutils literal notranslate"><span class="pre">--create-roles</span></code> create roles in the database</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-d</span></code> or <code class="docutils literal notranslate"><span class="pre">--drop-schema</span></code>    drop schemas (kaskádově), pokud existují</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-r</span></code> or <code class="docutils literal notranslate"><span class="pre">--create-roles</span></code> vytváří role v databázi</p></li>
 </ul>
-<p>Roles are: <code class="docutils literal notranslate"><span class="pre">qwat_viewer</span></code>, <code class="docutils literal notranslate"><span class="pre">qwat_user</span></code>, <code class="docutils literal notranslate"><span class="pre">qwat_manager</span></code>, <code class="docutils literal notranslate"><span class="pre">qwat_sysadmin</span></code>.</p>
+<p>Role jsou: <code class="docutils literal notranslate"><span class="pre">qwat_viewer</span></code>, <code class="docutils literal notranslate"><span class="pre">qwat_user</span></code>, <code class="docutils literal notranslate"><span class="pre">qwat_manager</span></code>, <code class="docutils literal notranslate"><span class="pre">qwat_sysadmin</span></code>.</p>
 <ul class="simple">
-<li><p>Viewer: Can consult tables and views.</p></li>
-<li><p>User: Can edit data.</p></li>
-<li><p>Manager: Can edit data and value lists.</p></li>
-<li><p>Admin: Database administrator.</p></li>
+<li><p>Prohlížeč: Může nahlédnout do tabulek a pohledů.</p></li>
+<li><p>Uživatel: Může upravovat data.</p></li>
+<li><p>Manager: Může upravovat seznamy dat a hodnot.</p></li>
+<li><p>Správce: Správce databáze.</p></li>
 </ul>
 <section id="restore-demo-datamodel">
-<span id="restore-demomodel"></span><h3><span class="section-number">2.2.1.1. </span>Restore demo datamodel<a class="headerlink" href="#restore-demo-datamodel" title="Trvalý odkaz na tento nadpis"></a></h3>
-<p>Optionally, you can restore a sample dataset. For that you need to <a class="reference external" href="https://github.com/qwat/qwat-data-model/releases/latest">download</a> the data sample dump and restore it into the QWAT database with pgAdmin or with pg_restore, assuming you have named the download file <em>qwat_dump.backup</em>:</p>
+<span id="restore-demomodel"></span><h3><span class="section-number">2.2.1.1. </span>Obnovte demo datamodel<a class="headerlink" href="#restore-demo-datamodel" title="Trvalý odkaz na tento nadpis"></a></h3>
+<p>Volitelně můžete obnovit vzorovou datovou sadu. K tomu je potřeba <a class="reference external" href="https://github.com/qwat/qwat-data-model/releases/latest">stáhnout</a> výpis datového výpisu a obnovit jej do databáze QWAT pomocí pgAdmin nebo pg_restore, za předpokladu, že máte pojmenovaný soubor ke stažení <em>qwat_dump.backup</em>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pg_restore</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbname</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">e</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">owner</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">--</span><span class="n">jobs</span><span class="o">=</span><span class="mi">3</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">triggers</span> <span class="o">--</span><span class="n">port</span> <span class="mi">5432</span> <span class="n">qwat_dump</span><span class="o">.</span><span class="n">backup</span>
 </pre></div>
 </div>
@@ -160,8 +154,8 @@ users home directory or in the directory specified by the
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="server.html" class="btn btn-neutral float-left" title="2.1. Setup database server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="workstation.html" class="btn btn-neutral float-right" title="2.3. Setup workstation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="server.html" class="btn btn-neutral float-left" title="2.1. Nastavení databázového serveru" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="workstation.html" class="btn btn-neutral float-right" title="2.3. Nastavení pracovní stanice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

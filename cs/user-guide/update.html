@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.3. Règles de base pour la mise à jour sur QWAT &mdash; Dokumentace pro QWAT 1.0</title>
+  <title>3.3. Základní pravidla pro aktualizaci na QWAT &mdash; Dokumentace pro QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
-    <link rel="next" title="3.4. Suppression d’objets dans QWAT" href="delete.html" />
-    <link rel="prev" title="3.2. Création d’objets dans QWAT" href="create.html" /> 
+    <link rel="next" title="3.4. Mazání objektů v QWAT" href="delete.html" />
+    <link rel="prev" title="3.2. Vytváření objektů v QWAT" href="create.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,29 +42,29 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. QWAT User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Structuration du réseau d’Eau Potable sur QWAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create.html">3.2. Création d’objets dans QWAT</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.3. Règles de base pour la mise à jour sur QWAT</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#commandes-de-base">3.3.1. Commandes de base</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Pitná voda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Instalační příručka QWAT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Uživatelská příručka QWAT</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Struktura sítě pitné vody na QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create.html">3.2. Vytváření objektů v QWAT</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.3. Základní pravidla pro aktualizaci na QWAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#commandes-de-base">3.3.1. Základní příkazy</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="delete.html">3.4. Suppression d’objets dans QWAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="link.html">3.5. Liaisons des différents objets dans QWAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Impression dans QWAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Elevation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="history.html">3.8. History viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">3.4. Mazání objektů v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">3.5. Odkazy různých objektů v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Tisk v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Nadmořská výška</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">3.8. Prohlížeč historie</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Průvodce správce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Příručka přispěvatele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Příručka pro vývojáře</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Ukázková data a projekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. Časté otázky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Slovník</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Překlad</a></li>
 </ul>
 
         </div>
@@ -81,8 +81,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">3. </span>QWAT User Guide</a> &raquo;</li>
-      <li><span class="section-number">3.3. </span>Règles de base pour la mise à jour sur QWAT</li>
+          <li><a href="index.html"><span class="section-number">3. </span>Uživatelská příručka QWAT</a> &raquo;</li>
+      <li><span class="section-number">3.3. </span>Základní pravidla pro aktualizaci na QWAT</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/user-guide/update.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -93,46 +93,46 @@
            <div itemprop="articleBody">
              
   <section id="regles-de-base-pour-la-mise-a-jour-sur-qwat">
-<h1><span class="section-number">3.3. </span>Règles de base pour la mise à jour sur QWAT<a class="headerlink" href="#regles-de-base-pour-la-mise-a-jour-sur-qwat" title="Trvalý odkaz na tento nadpis"></a></h1>
+<h1><span class="section-number">3.3. </span>Základní pravidla pro aktualizaci na QWAT<a class="headerlink" href="#regles-de-base-pour-la-mise-a-jour-sur-qwat" title="Trvalý odkaz na tento nadpis"></a></h1>
 <ul class="simple">
-<li><p>A chaque entité créée ou supprimée, enregistrez pour voir si un message d’erreur apparait et ainsi pouvoir résoudre ces erreurs de saisie beaucoup plus facilement sans devoir chercher sur quel objet se trouve quelle erreur.</p></li>
-<li><p>Quand vous changez de catégorie d’objet, n’oubliez pas de fermer le mode édition des autres catégories et s’assurer ainsi que tout a été mis à jour avant d’aller plus loin.</p></li>
-<li><p>Comme tout programme informatique, n’oubliez pas d’enregistrer régulièrement votre projet.</p></li>
+<li><p>S každou vytvořenou nebo odstraněnou entitou uložte, abyste zjistili, zda se zobrazí chybová zpráva, a mohli tak snáze vyřešit tyto vstupní chyby, aniž byste museli hledat, který objekt je která chyba.</p></li>
+<li><p>Když změníte kategorii objektu, nezapomeňte zavřít režim úprav ostatních kategorií a před dalším pokračováním se ujistěte, že bylo vše aktualizováno.</p></li>
+<li><p>Jako u každého počítačového programu nezapomeňte svůj projekt pravidelně ukládat.</p></li>
 </ul>
 <section id="commandes-de-base">
-<h2><span class="section-number">3.3.1. </span>Commandes de base<a class="headerlink" href="#commandes-de-base" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">3.3.1. </span>Základní příkazy<a class="headerlink" href="#commandes-de-base" title="Trvalý odkaz na tento nadpis"></a></h2>
 <ul>
-<li><p>Pour créer de nouveaux objets, utilisez le bouton « basculer en mode édition »</p>
+<li><p>Chcete-li vytvořit nové objekty, použijte tlačítko „přepnout do režimu úprav“</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <ul>
-<li><p>Si c’est une catégorie de type point, vous aurez le symbole suivant:</p>
+<li><p>Pokud se jedná o kategorii typu bodu, budete mít následující symbol:</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
 </li>
-<li><p>Si c’est une catégorie de type ligne, vous aurez le symbole suivant:</p>
+<li><p>Pokud se jedná o kategorii typu čáry, budete mít následující symbol:</p>
 <img alt="../_images/icon_create_line.png" src="../_images/icon_create_line.png" />
 </li>
-<li><p>Enfin, si c’est une catégorie de type polygone, vous aurez le symbole suivant:</p>
+<li><p>Enfin, je nejlepší kategorie polygonu, vhodný pro symboly:</p>
 <img alt="../_images/icon_create_polygon.png" src="../_images/icon_create_polygon.png" />
 </li>
 </ul>
 </li>
-<li><p>Pour enregistrer les dernière modifications de la catégorie sélectionnée uniquement, cliquez sur le bouton « sauvegarder les modifications ».</p>
+<li><p>Chcete-li uložit pouze poslední úpravy vybrané kategorie, klikněte na tlačítko „Uložit změny“.</p>
 <img alt="../_images/icon_edit_save.png" src="../_images/icon_edit_save.png" />
 </li>
-<li><p>Pour ouvrir les différents masques de nos objets, utilisez le bouton « identifier les entités ».</p>
+<li><p>Chcete-li otevřít různé masky našich objektů, použijte tlačítko „identifikovat entity“.</p>
 <img alt="../_images/icon_identify.png" src="../_images/icon_identify.png" />
 </li>
-<li><p>Pour sélectionner des objets, utilisez le bouton</p>
+<li><p>K výběru objektů použijte tlačítko</p>
 <img alt="../_images/icon_select.png" src="../_images/icon_select.png" />
 </li>
-<li><p>Pour désélectionner des objets, utilisez le bouton</p>
+<li><p>Chcete-li zrušit výběr objektů, použijte tlačítko</p>
 <img alt="../_images/icon_unselect.png" src="../_images/icon_unselect.png" />
 </li>
-<li><p>Pour supprimer les objets sélectionnés, utilisez le bouton</p>
+<li><p>Chcete-li odstranit vybrané objekty, použijte tlačítko</p>
 <img alt="../_images/icon_delete.png" src="../_images/icon_delete.png" />
 </li>
 </ul>
-<p>Ces informations ne sauraient remplacer la lecture du <a class="reference external" href="https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html">manuel</a> de QGIS expliquant en détail les différentes commandes.</p>
+<p>Tyto informace nenahrazují čtení <cite>příručky QGIS &lt;https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html&gt;</cite>, která podrobně vysvětluje jednotlivé příkazy.</p>
 </section>
 </section>
 
@@ -140,8 +140,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="create.html" class="btn btn-neutral float-left" title="3.2. Création d’objets dans QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="delete.html" class="btn btn-neutral float-right" title="3.4. Suppression d’objets dans QWAT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="create.html" class="btn btn-neutral float-left" title="3.2. Vytváření objektů v QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="delete.html" class="btn btn-neutral float-right" title="3.4. Mazání objektů v QWAT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

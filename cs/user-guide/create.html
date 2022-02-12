@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2. Création d’objets dans QWAT &mdash; Dokumentace pro QWAT 1.0</title>
+  <title>3.2. Vytváření objektů v QWAT &mdash; Dokumentace pro QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
-    <link rel="next" title="3.3. Règles de base pour la mise à jour sur QWAT" href="update.html" />
-    <link rel="prev" title="3.1. Structuration du réseau d’Eau Potable sur QWAT" href="qwat_struct.html" /> 
+    <link rel="next" title="3.3. Základní pravidla pro aktualizaci na QWAT" href="update.html" />
+    <link rel="prev" title="3.1. Struktura sítě pitné vody na QWAT" href="qwat_struct.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,42 +42,42 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Drinking Water</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. QWAT User Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Structuration du réseau d’Eau Potable sur QWAT</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Création d’objets dans QWAT</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#importation-des-points-releves">3.2.1. Importation des points relevés</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-points-de-construction">3.2.2. Création des points de construction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-conduites">3.2.3. Création des conduites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#separation-dune-conduite-en-deux-conduites">3.2.4. Séparation d’une conduite en deux conduites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-differentes-pieces-dinstallation">3.2.5. Création des différentes pièces d’installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-points-dintroduction">3.2.6. Création des points d’introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-vannes">3.2.7. Création des vannes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-bornes-hydrantes">3.2.8. Création des bornes hydrantes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-dun-manchon-de-reparation">3.2.9. Création d’un manchon de réparation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-douvrages-ainsi-que-de-tous-leurs-details">3.2.10. Création d’ouvrages ainsi que de tous leurs détails</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-de-louvrage-general">3.2.11. Création de l’ouvrage général</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-du-couvercle-de-louvrage">3.2.12. Création du couvercle de l’ouvrage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-de-lemprise-de-louvrage">3.2.13. Création de l’emprise de l’ouvrage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-details-de-louvrage">3.2.14. Création des détails de l’ouvrage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI Pitná voda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Instalační příručka QWAT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Uživatelská příručka QWAT</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Struktura sítě pitné vody na QWAT</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Vytváření objektů v QWAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#importation-des-points-releves">3.2.1. Import sledovaných bodů</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-points-de-construction">3.2.2. Vytváření stavebních bodů</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-conduites">3.2.3. Vytváření potrubí</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#separation-dune-conduite-en-deux-conduites">3.2.4. Rozdělení potrubí na dvě trubky</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-differentes-pieces-dinstallation">3.2.5. Vytvoření různých instalačních dílů</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-points-dintroduction">3.2.6. Vytváření úvodních bodů</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-vannes">3.2.7. Tvorba ventilů</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-bornes-hydrantes">3.2.8. Tvorba hydrantů</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-dun-manchon-de-reparation">3.2.9. Vytvoření opravného pouzdra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-douvrages-ainsi-que-de-tous-leurs-details">3.2.10. Tvorba díla a všechny jejich detaily</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-de-louvrage-general">3.2.11. Vytvoření obecného díla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-du-couvercle-de-louvrage">3.2.12. Vytvoření obálky knihy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-de-lemprise-de-louvrage">3.2.13. Vytvoření práva na cestu struktury</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-des-details-de-louvrage">3.2.14. Vytvoření detailů díla</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="update.html">3.3. Règles de base pour la mise à jour sur QWAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="delete.html">3.4. Suppression d’objets dans QWAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="link.html">3.5. Liaisons des différents objets dans QWAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Impression dans QWAT</a></li>
-<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Elevation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="history.html">3.8. History viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">3.3. Základní pravidla pro aktualizaci na QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">3.4. Mazání objektů v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">3.5. Odkazy různých objektů v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Tisk v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Nadmořská výška</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">3.8. Prohlížeč historie</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Contributor’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Developer’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Demo data and project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Průvodce správce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Příručka přispěvatele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Příručka pro vývojáře</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Ukázková data a projekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. Časté otázky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Slovník</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Překlad</a></li>
 </ul>
 
         </div>
@@ -94,8 +94,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html"><span class="section-number">3. </span>QWAT User Guide</a> &raquo;</li>
-      <li><span class="section-number">3.2. </span>Création d’objets dans QWAT</li>
+          <li><a href="index.html"><span class="section-number">3. </span>Uživatelská příručka QWAT</a> &raquo;</li>
+      <li><span class="section-number">3.2. </span>Vytváření objektů v QWAT</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/user-guide/create.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -106,86 +106,79 @@
            <div itemprop="articleBody">
              
   <section id="creation-dobjets-dans-qwat">
-<h1><span class="section-number">3.2. </span>Création d’objets dans QWAT<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Trvalý odkaz na tento nadpis"></a></h1>
-<p>Ce guide se veut un résumé des fonctionnalités de créations des données adaptées au besoin de QWAT dans QGIS.</p>
-<p>Il ne saurait remplacer la lecture du <a class="reference external" href="https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html">manuel</a> de QGIS expliquant en détail les différentes commandes. Le dessinateur est libre d’utiliser les plugins de dessin pour enrichir sa palette d’outils.</p>
+<h1><span class="section-number">3.2. </span>Vytváření objektů v QWAT<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Trvalý odkaz na tento nadpis"></a></h1>
+<p>Účelem této příručky je shrnout funkce vytváření dat přizpůsobené potřebám QWAT v QGIS.</p>
+<p>Nenahrazuje čtení příručky QGIS &lt;<a class="reference external" href="https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html">https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html</a>&gt;`_, která podrobně vysvětluje jednotlivé příkazy. Kreslíř může volně používat zásuvné moduly pro obohacení své palety nástrojů.</p>
 <section id="importation-des-points-releves">
-<h2><span class="section-number">3.2.1. </span>Importation des points relevés<a class="headerlink" href="#importation-des-points-releves" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour importer des points dans QWAT, il faut cliquer sur l’icône « <a class="reference external" href="https://github.com/VilleDePully/EasyImport">EasyImport</a> »</p>
+<h2><span class="section-number">3.2.1. </span>Import sledovaných bodů<a class="headerlink" href="#importation-des-points-releves" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li importovat body do QWAT, klikněte na ikonu « <a class="reference external" href="https://github.com/VilleDePully/EasyImport">EasyImport</a> »</p>
 <img alt="../_images/icon_plugin.png" src="../_images/icon_plugin.png" />
-<p>La fenêtre suivante s’ouvre :</p>
+<p>Otevře se následující okno:</p>
 <img alt="../_images/dialog_esayimport.png" src="../_images/dialog_esayimport.png" />
 <ul class="simple">
-<li><p>Choisir le chemin du fichier à importer</p></li>
-<li><p>Choisir le bon réseau (EP‐ASS)</p></li>
-<li><p>Cliquer sur « Import »</p></li>
+<li><p>Vyberte cestu k importu souboru</p></li>
+<li><p>Výběr správné sítě (EP - ASS)</p></li>
+<li><p>Klikněte na „Import“</p></li>
 </ul>
-<p>Les points ont été importés dans les bonnes couches, ces dernières sont passées en mode édition.
-Vous devez maintenant remplir les attributs des différents points pour chaque couche en suivant la marche à suivre.</p>
+<p>Body byly importovány do správných vrstev, ty byly přepnuty do režimu úprav. Nyní musíte vyplnit atributy různých bodů pro každou vrstvu podle následujícího postupu.</p>
 </section>
 <section id="creation-des-points-de-construction">
-<h2><span class="section-number">3.2.2. </span>Création des points de construction<a class="headerlink" href="#creation-des-points-de-construction" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer de nouveaux points de construction il faut sélectionner la catégorie
-« points de construction » qui est une sous‐couche dans la couche « Côtes ».
-Il faut ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.2. </span>Vytváření stavebních bodů<a class="headerlink" href="#creation-des-points-de-construction" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit nové stavební body, vyberte kategorii „stavební body“, což je podložka ve vrstvě „Pobřeží“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité »</p>
+<p>a použijte tlačítko „přidat entitu“</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
-<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
-Le formulaire de l’objet s’ouvre, il n’y a aucun champ à remplir.
-(Vous pouvez mettre une remarque éventuellement)</p>
+<p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář objektu, není vyplněno žádné pole. (V případě potřeby můžete napsat poznámku)</p>
 </section>
 <section id="creation-des-conduites">
-<h2><span class="section-number">3.2.3. </span>Création des conduites<a class="headerlink" href="#creation-des-conduites" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer de nouvelles conduites il faut sélectionner la catégorie « conduites »
-qui est une sous‐couche dans la couche « Réseau ». Nous devons ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.3. </span>Vytváření potrubí<a class="headerlink" href="#creation-des-conduites" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit nová potrubí, vyberte kategorii „potrubí“, která je pod vrstvou ve vrstvě „Síť“. Pak musíme přepnout do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton «ajouter une entité»</p>
+<p>a použijte tlačítko „přidat entitu“</p>
 <img alt="../_images/icon_create_line.png" src="../_images/icon_create_line.png" />
-<p>Dessiner ensuite la conduite et faites un clic droit pour la valider
-une fois tous les points de passage créés.</p>
-<p>Le formulaire de la conduite s’ouvre.</p>
+<p>Poté nakreslete potrubí a kliknutím pravým tlačítkem jej potvrďte, jakmile jsou vytvořeny všechny trasové body.</p>
+<p>Otevře se formulář pro potrubí.</p>
 <img alt="../_images/pipe_form.png" src="../_images/pipe_form.png" />
-<p>Il faut remplir les champs suivants:</p>
+<p>Musí být vyplněna následující pole:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>Onglet Général</dt><dd><ul>
-<li><p>Distributeur</p></li>
-<li><p>Année</p></li>
-<li><p>Fonction</p></li>
-<li><p>Statut</p></li>
-<li><p>Matériau</p></li>
-<li><p>Mode de pose</p></li>
-<li><p>Protection</p></li>
-<li><p>Lit de pose (matériau)</p></li>
+<dt>Karta Obecné</dt><dd><ul>
+<li><p>Distributor</p></li>
+<li><p>Rok</p></li>
+<li><p>Funkce</p></li>
+<li><p>Stav</p></li>
+<li><p>Materiál</p></li>
+<li><p>Způsob instalace</p></li>
+<li><p>Ochrana</p></li>
+<li><p>Lůžko (materiál)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Hydraulique</dt><dd><ul>
-<li><p>Qualité eau</p></li>
+<dt>Hydraulický</dt><dd><ul>
+<li><p>Kvalita vody</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Géométrie</dt><dd><ul>
-<li><p>Précision</p></li>
+<dt>Geometrie</dt><dd><ul>
+<li><p>Přesnost</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Rendu</dt><dd><ul>
-<li><p>« Schématique » à cocher si on veut que la conduite apparaisse sur la schématique</p></li>
+<dt>Vykreslování</dt><dd><ul>
+<li><p>„Schéma“, abyste zkontrolovali, zda se má potrubí ve schématu objevit</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Fuites</dt><dd><ul>
-<li><p>Liaison avec les manchons de fuites à faire si besoin (cf partie sur les fuites)</p></li>
+<dt>Úniky</dt><dd><ul>
+<li><p>Je-li to nutné, musí být provedeno spojení s netěsnými manžetami (viz část o netěsnostech).</p></li>
 </ul>
 </dd>
 </dl>
@@ -193,73 +186,64 @@ une fois tous les points de passage créés.</p>
 </ul>
 </section>
 <section id="separation-dune-conduite-en-deux-conduites">
-<h2><span class="section-number">3.2.4. </span>Séparation d’une conduite en deux conduites<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Lors d’une mise à jour, il arrive régulièrement que l’on doive couper une conduite existante
-pour se raccorder sur le nouveau point levé. Pour se faire, il faut utiliser l’outil « Séparer les entités »</p>
+<h2><span class="section-number">3.2.4. </span>Rozdělení potrubí na dvě trubky<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Během aktualizace se často stává, že pro připojení k novému zvýšenému bodu musíte přerušit existující potrubí. Chcete-li to provést, musíte použít nástroj „Oddělené entity“</p>
 <img alt="../_images/icon_cut_entity.png" src="../_images/icon_cut_entity.png" />
-<p>Il faut ensuite faire une droite coupant notre conduite à l’endroit où l’on veut qu’elle soit coupée :</p>
+<p>Pak musíme udělat přímku, která rozřízne naši trubku na místě, kde chceme, aby byla řezána:</p>
 <img alt="../_images/cut_entity.png" src="../_images/cut_entity.png" />
-<p>La conduite se coupe alors en deux conduites. Les champs n’ont pas besoin d’être complété,
-la nouvelle conduite reprend les même attributs, le numéro d’ID de la conduite est créé automatiquement.</p>
+<p>Potrubí se pak rozdělí na dvě trubky. Pole nemusí být vyplněna, nový kanál má stejné atributy, ID kanálu je vytvořeno automaticky.</p>
 </section>
 <section id="creation-des-differentes-pieces-dinstallation">
-<h2><span class="section-number">3.2.5. </span>Création des différentes pièces d’installation<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer de nouvelles pièces d’installation il faut sélectionner la catégorie
-« pièce d’installation » qui est une sous‐couche dans la couche « Nœuds ».
-Il faut ensuite basculer en mode édition.</p>
+<h2><span class="section-number">3.2.5. </span>Vytvoření různých instalačních dílů<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit nové instalační kusy, vyberte kategorii „instalační kus“, což je podložka ve vrstvě „Uzly“. Poté musíte přepnout do režimu úprav.</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité »</p>
+<p>a použijte tlačítko „přidat entitu“</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
-<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
-Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář pro objekt, musíte vyplnit následující pole:</p>
 <ul class="simple">
-<li><p>Identification (numéro du point levé)</p></li>
-<li><p>Année</p></li>
-<li><p>Orientation (de la pièce)</p></li>
-<li><p>Type</p></li>
-<li><p>Statut</p></li>
+<li><p>Identifikace (počet zvýšených bodů)</p></li>
+<li><p>Rok</p></li>
+<li><p>Orientace (kusu)</p></li>
+<li><p>Typ</p></li>
+<li><p>Stav</p></li>
 </ul>
 </section>
 <section id="creation-des-points-dintroduction">
-<h2><span class="section-number">3.2.6. </span>Création des points d’introduction<a class="headerlink" href="#creation-des-points-dintroduction" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Le point d’introduction se crée en créant une pièce d’installation ayant comme
-« Type » = « point d’introduction ». Une fois cela fait, un point d’introduction sera
-automatiquement crée dans la couche « Nœuds » lors de la génération des nœuds (voir les explications ci-dessous).</p>
+<h2><span class="section-number">3.2.6. </span>Vytváření úvodních bodů<a class="headerlink" href="#creation-des-points-dintroduction" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Úvodní bod je vytvořen vytvořením instalační části, která má „Typ“ = „úvodní bod“. Po dokončení se při generování uzlů automaticky vytvoří úvodní bod ve vrstvě „Uzly“ (viz níže uvedená vysvětlení).</p>
 </section>
 <section id="creation-des-vannes">
-<h2><span class="section-number">3.2.7. </span>Création des vannes<a class="headerlink" href="#creation-des-vannes" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer de nouvelles vannes il faut sélectionner la catégorie « vannes » qui est une
-sous‐couche dans la couche « Réseau ». Il faut ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.7. </span>Tvorba ventilů<a class="headerlink" href="#creation-des-vannes" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit nové ventily, vyberte kategorii „ventily“, což je podvrstva ve vrstvě „Síť“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité ».</p>
+<p>a použijte tlačítko „přidat entitu“.</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
-<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
-Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář pro objekt, musíte vyplnit následující pole:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>Onglet Général</dt><dd><ul>
-<li><p>Année</p></li>
-<li><p>Fermée (à cocher si c’est le cas)</p></li>
-<li><p>Type</p></li>
-<li><p>Fonction</p></li>
-<li><p>Statut</p></li>
-<li><p>Maintenance (si défaut)</p></li>
+<dt>Karta Obecné</dt><dd><ul>
+<li><p>Rok</p></li>
+<li><p>Uzavřeno (zkontrolujte, zda tomu tak je)</p></li>
+<li><p>Typ</p></li>
+<li><p>Funkce</p></li>
+<li><p>Stav</p></li>
+<li><p>Údržba (pokud je výchozí)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Géométrie</dt><dd><ul>
-<li><p>Altitude réelle (coordonnée Z du point)</p></li>
-<li><p>Précision alti.</p></li>
-<li><p>Précision (planimétrique)</p></li>
+<dt>Geometrie</dt><dd><ul>
+<li><p>Skutečná výška (souřadnice Z bodu)</p></li>
+<li><p>Přesnost Alti.</p></li>
+<li><p>Přesnost (planimetrická)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Rendu</dt><dd><ul>
-<li><p>Schématique à cocher si on veut que la conduite apparaisse sur la schématique</p></li>
+<dt>Vykreslování</dt><dd><ul>
+<li><p>Schéma pro kontrolu, zda chcete, aby se potrubí ve schématu objevilo</p></li>
 </ul>
 </dd>
 </dl>
@@ -267,43 +251,41 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-des-bornes-hydrantes">
-<h2><span class="section-number">3.2.8. </span>Création des bornes hydrantes<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer de nouvelles bornes hydrantes il faut sélectionner la catégorie « hydrantes »
-qui est une sous‐couche dans la couche « Réseau ».</p>
-<p>Il faut ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.8. </span>Tvorba hydrantů<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit nové hydranty, vyberte kategorii „hydranty“, která je ve vrstvě „Síť“ podkladovou vrstvou.</p>
+<p>Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité ».</p>
+<p>a použijte tlačítko „přidat entitu“.</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
-<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
-Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář pro objekt, musíte vyplnit následující pole:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>Onglet Général</dt><dd><ul>
-<li><p>Année</p></li>
-<li><p>Distributeur</p></li>
-<li><p>Etat</p></li>
-<li><p>Fournisseur</p></li>
-<li><p>Souterraine (à cocher si c’est le cas)</p></li>
+<dt>Karta Obecné</dt><dd><ul>
+<li><p>Rok</p></li>
+<li><p>Distributor</p></li>
+<li><p>Stát</p></li>
+<li><p>Poskytovatel</p></li>
+<li><p>Podzemí (zkontrolujte, zda tomu tak je)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Géométrie</dt><dd><ul>
-<li><p>Altitude réelle (coordonnée Z du point)</p></li>
-<li><p>Précision alti.</p></li>
-<li><p>Précision (planimétrique)</p></li>
+<dt>Geometrie</dt><dd><ul>
+<li><p>Skutečná výška (souřadnice Z bodu)</p></li>
+<li><p>Přesnost Alti.</p></li>
+<li><p>Přesnost (planimetrická)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Hydraulique</dt><dd><ul>
-<li><p>Pression statique</p></li>
-<li><p>Pression dynamique</p></li>
-<li><p>Débit</p></li>
-<li><p>Mesuré le</p></li>
-<li><p>Mesuré par</p></li>
+<dt>Hydraulický</dt><dd><ul>
+<li><p>Statický tlak</p></li>
+<li><p>Dynamický tlak</p></li>
+<li><p>Průtok</p></li>
+<li><p>Měřeno</p></li>
+<li><p>Měřeno pomocí</p></li>
 </ul>
 </dd>
 </dl>
@@ -311,162 +293,145 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-dun-manchon-de-reparation">
-<h2><span class="section-number">3.2.9. </span>Création d’un manchon de réparation<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer un nouveau manchon de réparation il faut sélectionner la catégorie « fuites »
-qui est une sous‐couche dans la couche « Réseau ».
-Il faut ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.9. </span>Vytvoření opravného pouzdra<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit nové opravné pouzdro, vyberte kategorii „netěsnosti“, což je podložka ve vrstvě „Síť“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité ».</p>
+<p>a použijte tlačítko „přidat entitu“.</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
-<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
-Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář pro objekt, musíte vyplnit následující pole:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>« réparée »</dt><dd><ul>
-<li><p>à cocher si la fuite est réparée</p></li>
+<dt>« opraveno »</dt><dd><ul>
+<li><p>zkontrolujte, zda je netěsnost opravena</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>détection</dt><dd><ul>
-<li><p>date de détection de la fuite</p></li>
+<dt>detekce</dt><dd><ul>
+<li><p>datum detekce úniku</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>adresse</dt><dd><ul>
-<li><p>endroit où a eu lieu la fuite</p></li>
+<dt>adresa</dt><dd><ul>
+<li><p>místo, kde došlo k úniku</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Description</p></li>
+<li><p>Popis</p></li>
 <li><dl class="simple">
-<dt>Type</dt><dd><ul>
-<li><p>Type de dégâts</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Cause</dt><dd><ul>
-<li><p>Cause de la fuite</p></li>
+<dt>Typ</dt><dd><ul>
+<li><p>Druh poškození</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Dommage</dt><dd><ul>
-<li><p>Gravité des dégâts</p></li>
+<dt>Příčina</dt><dd><ul>
+<li><p>Příčina úniku</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>« Conduite remplacée »</dt><dd><ul>
-<li><p>à cocher si un bout de conduite a été changé</p></li>
+<dt>Škoda</dt><dd><ul>
+<li><p>Závažnost poškození</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Réparation</dt><dd><ul>
-<li><p>Pièce utilisée pour la réparation</p></li>
+<dt>„Řádek nahrazen“</dt><dd><ul>
+<li><p>zkontrolujte, zda byl kus potrubí změněn</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p>Date réparation</p></li>
+<li><dl class="simple">
+<dt>Opravit</dt><dd><ul>
+<li><p>Část použitá pro opravu</p></li>
 </ul>
-<p>Pour que la liaison avec la conduite se fasse automatiquement, il faut enregistrer
-la conduite une fois le manchon crée.</p>
+</dd>
+</dl>
+</li>
+<li><p>Datum opravy</p></li>
+</ul>
+<p>Aby se spojení s trubkou uskutečnilo automaticky, musí být trubka zaznamenána, jakmile byla vytvořena objímka.</p>
 </section>
 <section id="creation-douvrages-ainsi-que-de-tous-leurs-details">
-<h2><span class="section-number">3.2.10. </span>Création d’ouvrages ainsi que de tous leurs détails<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Les ouvrages et leurs détails sont contenus dans plusieurs couches:</p>
+<h2><span class="section-number">3.2.10. </span>Tvorba díla a všechny jejich detaily<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Práce a jejich detaily jsou obsaženy v několika vrstvách:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Le points principal se trouve dans la sous‐couche « ouvrage général »</p></li>
-<li><p>Le couvercle de l’ouvrage, si il y en a un, se trouve dans la sous‐couche « couvercle »</p></li>
-<li><p>L’emprise réelle de l’ouvrage se trouve dans la sous‐couche « ouvrage – polygones »</p></li>
-<li><p>Les points de détail des ouvrages (par exemple les vannes d’une chambre de vannes) se trouvent dans la sous‐couche « détail ».</p></li>
+<li><p>Hlavní bod je v podvrství „obecná struktura“</p></li>
+<li><p>Obal předmětu, pokud existuje, je v podkladu „obal“</p></li>
+<li><p>Skutečné právo na strukturu se nachází v podvrstvě „struktura - polygony“</p></li>
+<li><p>Podrobné body struktur (například ventily ventilové komory) jsou nalezeny v „detailní“ podvrstvě.</p></li>
 </ul>
 </div></blockquote>
 </section>
 <section id="creation-de-louvrage-general">
-<h2><span class="section-number">3.2.11. </span>Création de l’ouvrage général<a class="headerlink" href="#creation-de-louvrage-general" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
-qui est une sous‐couche dans la couche « ouvrages ».
-Il faut ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.11. </span>Vytvoření obecného díla<a class="headerlink" href="#creation-de-louvrage-general" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit pracovní bod, musíte vybrat kategorii „obecná práce“, což je podložka ve vrstvě „funguje“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité ».</p>
+<p>a použijte tlačítko „přidat entitu“.</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
-<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
-Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář pro objekt, musíte vyplnit následující pole:</p>
 <ul class="simple">
-<li><p>Nom (composé d’une lettre suivi d’un nombre)</p></li>
-<li><p>Statut</p></li>
-<li><p>« Visible schéma » à cocher si on veut que la conduite apparaisse sur la schématique</p></li>
-<li><p>Année</p></li>
-<li><p>Type</p></li>
+<li><p>Jméno (sestávající z písmene následovaného číslem)</p></li>
+<li><p>Stav</p></li>
+<li><p>„Viditelný diagram“, abyste zkontrolovali, zda se má potrubí na diagramu objevit</p></li>
+<li><p>Rok</p></li>
+<li><p>Typ</p></li>
 </ul>
 </section>
 <section id="creation-du-couvercle-de-louvrage">
-<h2><span class="section-number">3.2.12. </span>Création du couvercle de l’ouvrage<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer le couvercle de l’ouvrage, il faut sélectionner la catégorie « couvercles »
-qui est une sous‐couche dans la couche « ouvrages ».
-Il faut ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.12. </span>Vytvoření obálky knihy<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit kryt struktury, musíte vybrat vrstvu „kryty“, což je podložka ve vrstvě „struktury“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité ».</p>
+<p>a použijte tlačítko „přidat entitu“.</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
-<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
-Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
+<p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář pro objekt, musíte vyplnit následující pole:</p>
 <ul>
-<li><p>identification (identique au champ « Nom » de l’ouvrage)</p></li>
-<li><p>Diamètre (en mm)</p></li>
-<li><p>Altitude</p></li>
-<li><p>Type</p></li>
-<li><p>« Circulaire » à cocher si le couvercle est rond</p></li>
+<li><p>identifikace (shodná s polem „Název“ díla)</p></li>
+<li><p>Průměr (v mm)</p></li>
+<li><p>Nadmořská výška</p></li>
+<li><p>Typ</p></li>
+<li><p>„Kruhový“ pro kontrolu, zda je kryt kulatý</p></li>
 <li><dl>
-<dt>Ouvrage</dt><dd><ul class="simple">
-<li><p>Il faut lier l’ouvrage principal au couvercle. Pour se faire, cliquez sur le bouton</p></li>
+<dt>Práce</dt><dd><ul class="simple">
+<li><p>Hlavní práce musí být připevněna ke krytu. Klikněte na tlačítko</p></li>
 </ul>
 <img alt="../_images/icon_link.png" src="../_images/icon_link.png" />
-<p>et ensuite aller cliquez sur le point principal de l’ouvrage (sur le plan).
-Le champ a du se remplir avec le nom de l’ouvrage.</p>
+<p>a poté klikněte na hlavní bod práce (na mapě). Pole musí být vyplněno názvem díla.</p>
 </dd>
 </dl>
 </li>
 </ul>
 </section>
 <section id="creation-de-lemprise-de-louvrage">
-<h2><span class="section-number">3.2.13. </span>Création de l’emprise de l’ouvrage<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
-qui est une sous‐couche dans la couche « ouvrages ».
-Il faut ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.13. </span>Vytvoření práva na cestu struktury<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit pracovní bod, musíte vybrat kategorii „obecná práce“, což je podložka ve vrstvě „funguje“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité ».</p>
+<p>a použijte tlačítko „přidat entitu“.</p>
 <img alt="../_images/icon_create_polygon.png" src="../_images/icon_create_polygon.png" />
-<p>Il ne reste plus qu’à digitaliser l’emprise de l’ouvrage. Une fois le polygone crée, faites un clic‐droit pour arrêter la saisie.
-Le formulaire s’ouvre, il faut remplir les champs suivants:</p>
+<p>Zbývá pouze digitalizovat stopu struktury. Po vytvoření mnohoúhelníku ukončete psaní klepnutím pravým tlačítkem. Otevře se formulář, musíte vyplnit následující pole:</p>
 <ul class="simple">
-<li><p>name (identique au champ « Nom » de l’ouvrage)</p></li>
+<li><p>jméno (shodné s polem „Název“ díla)</p></li>
 <li><p>id_type</p></li>
-<li><p>Year</p></li>
+<li><p>Rok</p></li>
 </ul>
 </section>
 <section id="creation-des-details-de-louvrage">
-<h2><span class="section-number">3.2.14. </span>Création des détails de l’ouvrage<a class="headerlink" href="#creation-des-details-de-louvrage" title="Trvalý odkaz na tento nadpis"></a></h2>
-<p>Pour créer les détails de l’ouvrage, il faut sélectionner la catégorie du détail voulu qui est une sous‐couche dans la couche « détail ».
-Il faut ensuite basculer en mode édition</p>
+<h2><span class="section-number">3.2.14. </span>Vytvoření detailů díla<a class="headerlink" href="#creation-des-details-de-louvrage" title="Trvalý odkaz na tento nadpis"></a></h2>
+<p>Chcete-li vytvořit podrobnosti o díle, musíte vybrat vrstvu požadovaného detailu, což je podložka ve vrstvě „detail“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
-<p>et utiliser le bouton « ajouter une entité ».</p>
+<p>a použijte tlačítko „přidat entitu“.</p>
 <img alt="../_images/icon_create_point.png" src="../_images/icon_create_point.png" />
-<p>Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
-Le formulaire de l’objet s’ouvre, il faut remplir les attributs selon
-le type de détail que l’on a créé (réservoirs, sources etc..).</p>
+<p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář objektu, musíte vyplnit atributy podle typu detailu, který jste vytvořili (nádrže, zdroje atd.).</p>
 </section>
 </section>
 
@@ -474,8 +439,8 @@ le type de détail que l’on a créé (réservoirs, sources etc..).</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="qwat_struct.html" class="btn btn-neutral float-left" title="3.1. Structuration du réseau d’Eau Potable sur QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="update.html" class="btn btn-neutral float-right" title="3.3. Règles de base pour la mise à jour sur QWAT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="qwat_struct.html" class="btn btn-neutral float-left" title="3.1. Struktura sítě pitné vody na QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="update.html" class="btn btn-neutral float-right" title="3.3. Základní pravidla pro aktualizaci na QWAT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
