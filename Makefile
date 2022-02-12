@@ -108,10 +108,12 @@ compile_messages: init
 		echo "Compiling messages for $$lang..."; \
 		for f in `find ./i18n/$$lang -type f -name \*.po`; \
 		do \
-		bn=`basename $$f .po`; \
-		echo "Compiling messages for $$f"; \
-		mkdir -p ./i18n/$$lang/LC_MESSAGES; \
-		msgfmt $$f -o ./i18n/$$lang/LC_MESSAGES/$$bn.mo; \
+		relpath=$$(realpath --relative-to="./i18n/$$lang" $$f); \
+		bn=$$(basename $$f .po); \
+		basepath=$$(dirname $$relpath); \
+		echo "Compiling messages for $$f to $$bn"; \
+		mkdir -p ./i18n/$$lang/LC_MESSAGES/$$basepath; \
+		msgfmt $$f -o ./i18n/$$lang/LC_MESSAGES/$$basepath/$$bn.mo; \
 		done; \
 	done
 	@echo "Messages compiled. Now you can build updated version for html and pdf.";\
