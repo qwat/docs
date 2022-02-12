@@ -16,7 +16,7 @@ jobs:
           sudo apt-get install -y gettext
 
       - name: tx push / pull
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/move_away_from_travis' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         run: |
           TX_TOKEN=${{ secrets.TX_TOKEN }} make transifex_sync # push
           TX_TOKEN=${{ secrets.TX_TOKEN }} make transifex_pull
@@ -31,7 +31,7 @@ jobs:
           touch build/html/.nojekyll
 
       - name: Deploy 🚀
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/move_away_from_travis' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/maste' }}
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
