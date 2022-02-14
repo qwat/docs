@@ -31,7 +31,7 @@ jobs:
           touch build/html/.nojekyll
 
       - name: Deploy 🚀
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/maste' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
