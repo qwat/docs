@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Creates a transifex configuration from pot files that are found in i18n/pot
+# Will be automatically run and committed via github actions
 
 from pathlib import Path
 import os
