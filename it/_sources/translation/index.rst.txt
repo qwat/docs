@@ -9,3 +9,4 @@ The documentation is available in:
 - `French <../../fr/>`_
 - `Italian <../../it/>`_
 - `Romanian <../../ro/>`_
+- `Czech <../../cs/`_
