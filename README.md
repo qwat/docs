@@ -10,6 +10,7 @@ The final product can be found here:
  * [Français](https://qwat.github.io/docs/fr/)
  * [Italiano](https://qwat.github.io/docs/it/)
  * [Română](https://qwat.github.io/docs/ro/)
+ * [Czech](https://qwat.github.io/docs/cs/)
 
 ## Process
 
