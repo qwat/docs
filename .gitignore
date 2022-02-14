@@ -1,6 +1,5 @@
 conf.py
-.tx
-_build
+build
 compile_messages
 init
 *~
@@ -9,3 +8,6 @@ init
 *.bak
 i18n
 locale
+.vscode
+Pipfile
+Pipfile.lock
