@@ -1,4 +1,4 @@
-# TEKSI Water module (project QWAT)-Documentation
+# TEKSI drinking water module (project QWAT)-Documentation
 This is the documentation for the TEKSI Water module (project QWAT)
 
 ## Resources
