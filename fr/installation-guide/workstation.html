@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.3. Setup workstation &mdash; Documentation QWAT 1.0</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -42,7 +43,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI drinking water module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / Module TEKSI eau potable</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">2. Guide d’installation QWAT</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="server.html">2.1. Setup database server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="database-initialization.html">2.2. Initialisation de la base de données</a></li>
@@ -98,11 +99,11 @@
            <div itemprop="articleBody">
              
   <section id="setup-workstation">
-<h1><span class="section-number">2.3. </span>Setup workstation<a class="headerlink" href="#setup-workstation" title="Lien permanent vers ce titre"></a></h1>
+<h1><span class="section-number">2.3. </span>Setup workstation<a class="headerlink" href="#setup-workstation" title="Lien permanent vers cette rubrique"></a></h1>
 <section id="required-software">
-<h2><span class="section-number">2.3.1. </span>Required Software<a class="headerlink" href="#required-software" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">2.3.1. </span>Required Software<a class="headerlink" href="#required-software" title="Lien permanent vers cette rubrique"></a></h2>
 <section id="install-qgis">
-<h3><span class="section-number">2.3.1.1. </span>Install QGIS<a class="headerlink" href="#install-qgis" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">2.3.1.1. </span>Install QGIS<a class="headerlink" href="#install-qgis" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Client side components are:</p>
 <ul class="simple">
 <li><p>QGIS (2.14+)</p></li>
@@ -127,19 +128,19 @@ For Windows installation, download the <a class="reference external" href="http:
 </div>
 </section>
 <section id="optional-plugin">
-<h3><span class="section-number">2.3.1.2. </span>Optional plugin<a class="headerlink" href="#optional-plugin" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">2.3.1.2. </span>Optional plugin<a class="headerlink" href="#optional-plugin" title="Lien permanent vers cette rubrique"></a></h3>
 <p>QWAT uses a data historization process. The <code class="docutils literal notranslate"><span class="pre">pg</span> <span class="pre">history</span> <span class="pre">viewer</span></code> <a class="reference external" href="http://plugins.qgis.org/plugins/pg_history_viewer/">plugin</a> allows you to view the changes made and replay some of them.</p>
 </section>
 </section>
 <section id="database-configuration">
-<h2><span class="section-number">2.3.2. </span>Database configuration<a class="headerlink" href="#database-configuration" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">2.3.2. </span>Database configuration<a class="headerlink" href="#database-configuration" title="Lien permanent vers cette rubrique"></a></h2>
 <p>To tell a workstation, where the database is (on the local system or on a
 network server) you will have to create some files initially on every device on
 which you will have QGIS/QWAT running. It is not required to do that on the
 server itself.</p>
 <p>These instructions depend on your operating system.</p>
 <section id="windows-pg-service">
-<h3><span class="section-number">2.3.2.1. </span>Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">2.3.2.1. </span>Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Create a new directory where you want to store the configuration in. (E.g. a new folder <code class="docutils literal notranslate"><span class="pre">pgconfig</span></code> in your home folder). This directory will be referred to as <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code> in this guide.</p>
 <p>Set the environment variable <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code> to the path to <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <p>Inside this folder, there will be two files</p>
@@ -155,11 +156,11 @@ and <code class="docutils literal notranslate"><span class="pre">Edit</span> <sp
 </div>
 </section>
 <section id="unix-pg-service">
-<span id="pg-service-unix"></span><h3><span class="section-number">2.3.2.2. </span>Unix pg_service<a class="headerlink" href="#unix-pg-service" title="Lien permanent vers ce titre"></a></h3>
+<span id="pg-service-unix"></span><h3><span class="section-number">2.3.2.2. </span>Unix pg_service<a class="headerlink" href="#unix-pg-service" title="Lien permanent vers cette rubrique"></a></h3>
 <p>On Unix-like systems (linux/macOS/*BSD etc.) you may put the files <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> and <code class="docutils literal notranslate"><span class="pre">.pgpass</span></code> into your home folder (normally <code class="docutils literal notranslate"><span class="pre">/home/[username]</span></code>).</p>
 </section>
 <section id="all-systems">
-<h3><span class="section-number">2.3.2.3. </span>All systems<a class="headerlink" href="#all-systems" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">2.3.2.3. </span>All systems<a class="headerlink" href="#all-systems" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Put the following content in the file <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> or <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code>.
 You may have to adapt the variables for your setup.</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[qwat]</span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.7. Elevation &mdash; QWAT 1.0 documentation</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -96,11 +97,11 @@
            <div itemprop="articleBody">
              
   <section id="elevation">
-<h1><span class="section-number">3.7. </span>Elevation<a class="headerlink" href="#elevation" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">3.7. </span>Elevation<a class="headerlink" href="#elevation" title="Permalink to this heading"></a></h1>
 <p>Managing Z values in a water distribution network is important and has to be treated carefully. We have to follow conventions and principles to ensure that we keep precision, measurements sources, and providing useful and easy way of managing the elevation information.</p>
 <p>This page details how elevation is managed in the QWAT project.</p>
 <section id="principles">
-<h2><span class="section-number">3.7.1. </span>Principles<a class="headerlink" href="#principles" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.7.1. </span>Principles<a class="headerlink" href="#principles" title="Permalink to this heading"></a></h2>
 <ul>
 <li><p>Reference altitude values are stored in nodes and survey points. They may have been set manually, or set from field measurements</p></li>
 <li><p>3D geometries for pipes are automatically recomputed, and the Z value of the pipe’s vertices should not be set manually. The 3D geometry is recomputed from nodes and survey points by interpolating the values.</p></li>
@@ -120,7 +121,7 @@
 </ul>
 </section>
 <section id="behaviours">
-<h2><span class="section-number">3.7.2. </span>Behaviours<a class="headerlink" href="#behaviours" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.7.2. </span>Behaviours<a class="headerlink" href="#behaviours" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>If we move an element of the network (valve, part, hydrant …) then attached pipe’s geometries are recomputed with 3D information</p></li>
 <li><p>Any modification of a pipe’s geometry will trigger recomputation of its 3D geometry with calculated interpolated elevation</p></li>
@@ -129,7 +130,7 @@
 </ul>
 </section>
 <section id="needed-tools">
-<h2><span class="section-number">3.7.3. </span>Needed tools<a class="headerlink" href="#needed-tools" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.7.3. </span>Needed tools<a class="headerlink" href="#needed-tools" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>A tool to compute interpolated elevation for specific network element (valve, hydrant..). It uses the N nearest nodes and survey points to interpolate the altitude. N can be chosen in QGIS GUI.</p></li>
 <li><p>Tool to compute interpolated elevation for specific network elements by pointing to a pipe</p></li>
@@ -138,14 +139,14 @@
 </ul>
 </section>
 <section id="open-issues">
-<h2><span class="section-number">3.7.4. </span>Open Issues<a class="headerlink" href="#open-issues" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.7.4. </span>Open Issues<a class="headerlink" href="#open-issues" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>How to compute the precision for a pipe given the precision for nodes ? Where to store this computed information ?</p></li>
 <li><p>When interpolating the pipe’s elevation, is there any parameter we want to set ? There should’nt be, but the buffer around the pipe to take survey points into account looks like an important parameter.</p></li>
 </ul>
 </section>
 <section id="references">
-<h2><span class="section-number">3.7.5. </span>Références<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">3.7.5. </span>Références<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/qwat/QWAT/issues/93">https://github.com/qwat/QWAT/issues/93</a></p></li>
 <li><p><a class="reference external" href="https://github.com/qwat/qwat-data-model/issues/82">https://github.com/qwat/qwat-data-model/issues/82</a></p></li>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="cs" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1. QWAT / TEKSI modul pitné vody &mdash; Dokumentace pro QWAT 1.0</title>
@@ -14,13 +14,14 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
     <link rel="next" title="2. Instalační příručka QWAT" href="../installation-guide/index.html" />
-    <link rel="prev" title="Vítejte v dokumentaci QWAT!" href="../index.html" /> 
+    <link rel="prev" title="QWAT / TEKSI drinking water module documentation" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -89,7 +90,7 @@
            <div itemprop="articleBody">
              
   <section id="qwat-teksi-drinking-water-module">
-<h1><span class="section-number">1. </span>QWAT / TEKSI modul pitné vody<a class="headerlink" href="#qwat-teksi-drinking-water-module" title="Trvalý odkaz na tento nadpis"></a></h1>
+<h1><span class="section-number">1. </span>QWAT / TEKSI modul pitné vody<a class="headerlink" href="#qwat-teksi-drinking-water-module" title="Permalink to this heading"></a></h1>
 <p>Modul TEKSI pro pitnou vodu (název projektu: QWAT) je výběr nástrojů a implementace databáze, která umožňuje:</p>
 <ul class="simple">
 <li><p>spravujte a mapujte data vaší sítě pitné vody se všemi jejími součástmi, jako jsou potrubí, ventily, čerpadla, nádrže atd.</p></li>
@@ -99,9 +100,9 @@
 </ul>
 <p>Modul TEKSI pro pitnou vodu je kompletní open source modul založený na datovém modelu PostgreSQL - PostGIS, který je téměř kompatibilní se švýcarskou normou SIA405. K datům se přistupuje a upravují se pomocí specializovaného projektu QGIS. Projekt je spravován komunitou <a class="reference external" href="https://www.teksi.ch">TEKSI</a>.</p>
 <section id="main-features">
-<h2><span class="section-number">1.1. </span>Hlavní funkce<a class="headerlink" href="#main-features" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">1.1. </span>Hlavní funkce<a class="headerlink" href="#main-features" title="Permalink to this heading"></a></h2>
 <section id="network-objects">
-<h3><span class="section-number">1.1.1. </span>Síťové objekty<a class="headerlink" href="#network-objects" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">1.1.1. </span>Síťové objekty<a class="headerlink" href="#network-objects" title="Permalink to this heading"></a></h3>
 <p>Datový model obsahuje všechny objekty sítě pitné vody a jejich atributy:</p>
 <ul class="simple">
 <li><p>Potrubí</p></li>
@@ -123,18 +124,18 @@
 <p>Datový model je téměř kompatibilní s modelem SIA405. Model je komplexní a poskytuje všechny běžné objekty a atributy. Existuje však možnost přizpůsobit atributy nebo objekty a navrhnout komunitě úpravy.</p>
 </section>
 <section id="viewing-and-editing">
-<h3><span class="section-number">1.1.2. </span>Prohlížení a úpravy<a class="headerlink" href="#viewing-and-editing" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">1.1.2. </span>Prohlížení a úpravy<a class="headerlink" href="#viewing-and-editing" title="Permalink to this heading"></a></h3>
 <p>K dispozici je předkonfigurovaný projekt QGIS. Síťové objekty jsou zobrazeny se standardní symbologií.</p>
 <p>Úpravy lze provádět přímo z QGIS, každý objekt má odpovídající formulář, který usnadňuje editaci atributů.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/master/en/html/user-guide/create.html">Dokumentace k vydání</a></p>
 </section>
 <section id="printing">
-<h3><span class="section-number">1.1.3. </span>Tisk<a class="headerlink" href="#printing" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">1.1.3. </span>Tisk<a class="headerlink" href="#printing" title="Permalink to this heading"></a></h3>
 <p>V projektu QGIS jsou k dispozici předem nakonfigurovaná rozložení. Geometrie potrubí a popisky jsou optimalizovány podle měřítka rozvržení.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/master/en/html/user-guide/print.html">Tisk dokumentace</a></p>
 </section>
 <section id="export">
-<h3><span class="section-number">1.1.4. </span>Export<a class="headerlink" href="#export" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">1.1.4. </span>Export<a class="headerlink" href="#export" title="Permalink to this heading"></a></h3>
 <p>Pro export sítě do rozhraní SIA405 je k dispozici knihovna <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">Python</a>.</p>
 <p>Některá rozšíření jsou vyvinuta pro jiné standardy:</p>
 <ul class="simple">
@@ -144,7 +145,7 @@
 </ul>
 </section>
 <section id="history-viewer">
-<h3><span class="section-number">1.1.5. </span>Prohlížeč historie<a class="headerlink" href="#history-viewer" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">1.1.5. </span>Prohlížeč historie<a class="headerlink" href="#history-viewer" title="Permalink to this heading"></a></h3>
 <p>Pro QWAT lze nakonfigurovat <a class="reference external" href="https://plugins.qgis.org/plugins/pg_history_viewer/">plugin PG History Viewer</a>. Tento zásuvný modul sleduje změny aplikované na data. Nežádoucí změny lze vybrat a vrátit zpět.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/master/en/html/user-guide/history.html#">Dokumentace prohlížeče historie</a></p>
 </section>
@@ -155,7 +156,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Vítejte v dokumentaci QWAT!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="QWAT / TEKSI drinking water module documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../installation-guide/index.html" class="btn btn-neutral float-right" title="2. Instalační příručka QWAT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="cs" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2.3. Nastavení pracovní stanice &mdash; Dokumentace pro QWAT 1.0</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -48,7 +49,7 @@
 <li class="toctree-l2"><a class="reference internal" href="database-initialization.html">2.2. Inicializace databáze</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2.3. Nastavení pracovní stanice</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#required-software">2.3.1. Vyžadovaný Software</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#install-qgis">2.3.1.1. Instalovat QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-qgis">2.3.1.1. Instalace QGIS</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#optional-plugin">2.3.1.2. Volitelný plugin</a></li>
 </ul>
 </li>
@@ -98,11 +99,11 @@
            <div itemprop="articleBody">
              
   <section id="setup-workstation">
-<h1><span class="section-number">2.3. </span>Nastavení pracovní stanice<a class="headerlink" href="#setup-workstation" title="Trvalý odkaz na tento nadpis"></a></h1>
+<h1><span class="section-number">2.3. </span>Nastavení pracovní stanice<a class="headerlink" href="#setup-workstation" title="Permalink to this heading"></a></h1>
 <section id="required-software">
-<h2><span class="section-number">2.3.1. </span>Vyžadovaný Software<a class="headerlink" href="#required-software" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">2.3.1. </span>Vyžadovaný Software<a class="headerlink" href="#required-software" title="Permalink to this heading"></a></h2>
 <section id="install-qgis">
-<h3><span class="section-number">2.3.1.1. </span>Instalovat QGIS<a class="headerlink" href="#install-qgis" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">2.3.1.1. </span>Instalace QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this heading"></a></h3>
 <p>Komponenty na straně klienta jsou:</p>
 <ul class="simple">
 <li><p>QGIS (2.14+)</p></li>
@@ -123,16 +124,16 @@
 </div>
 </section>
 <section id="optional-plugin">
-<h3><span class="section-number">2.3.1.2. </span>Volitelný plugin<a class="headerlink" href="#optional-plugin" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">2.3.1.2. </span>Volitelný plugin<a class="headerlink" href="#optional-plugin" title="Permalink to this heading"></a></h3>
 <p>QWAT používá proces historizace dat. Plugin <code class="docutils literal notranslate"><span class="pre">pg</span> <span class="pre">history</span> <span class="pre">viewer</span></code> <a class="reference external" href="http://plugins.qgis.org/plugins/pg_history_viewer/">plugin</a>  vám umožňuje zobrazit provedené změny a přehrát některé z nich.</p>
 </section>
 </section>
 <section id="database-configuration">
-<h2><span class="section-number">2.3.2. </span>Konfigurace databáze<a class="headerlink" href="#database-configuration" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">2.3.2. </span>Konfigurace databáze<a class="headerlink" href="#database-configuration" title="Permalink to this heading"></a></h2>
 <p>Chcete-li sdělit pracovní stanici, kde je databáze (v místním systému nebo na síťovém serveru), musíte nejprve vytvořit některé soubory na každém zařízení, na kterém budete mít spuštěný QGIS / QWAT. Není nutné to dělat na samotném serveru.</p>
 <p>Tyto pokyny závisí na vašem operačním systému.</p>
 <section id="windows-pg-service">
-<h3><span class="section-number">2.3.2.1. </span>Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">2.3.2.1. </span>Windows pg_service<a class="headerlink" href="#windows-pg-service" title="Permalink to this heading"></a></h3>
 <p>Vytvořte nový adresář, do kterého chcete uložit konfiguraci. (Např. Nová složka <code class="docutils literal notranslate"><span class="pre">pgconfig</span></code> ve vaší domovské složce). Tento adresář bude v této příručce označen jako <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <p>Nastavte proměnnou prostředí <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code> na cestu k <code class="docutils literal notranslate"><span class="pre">PGSYSCONFDIR</span></code>.</p>
 <p>Uvnitř této složky budou dva soubory</p>
@@ -146,11 +147,11 @@
 </div>
 </section>
 <section id="unix-pg-service">
-<span id="pg-service-unix"></span><h3><span class="section-number">2.3.2.2. </span>Unix pg_service<a class="headerlink" href="#unix-pg-service" title="Trvalý odkaz na tento nadpis"></a></h3>
+<span id="pg-service-unix"></span><h3><span class="section-number">2.3.2.2. </span>Unix pg_service<a class="headerlink" href="#unix-pg-service" title="Permalink to this heading"></a></h3>
 <p>Na unixových systémech (linux/macOS/*BSD atd.) Můžete soubory <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> a <code class="docutils literal notranslate"><span class="pre">.pgpass</span></code> umístit do své domovské složky (obvykle <code class="docutils literal notranslate"><span class="pre">/home/[username]</span></code>).</p>
 </section>
 <section id="all-systems">
-<h3><span class="section-number">2.3.2.3. </span>Všechny systémy<a class="headerlink" href="#all-systems" title="Trvalý odkaz na tento nadpis"></a></h3>
+<h3><span class="section-number">2.3.2.3. </span>Všechny systémy<a class="headerlink" href="#all-systems" title="Permalink to this heading"></a></h3>
 <p>Vložte následující obsah do souboru <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> nebo <cite>.pg_service.conf`</cite>.  Možná budete muset upravit proměnné pro vaše nastavení.</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[qwat]</span>
 <span class="na">host</span><span class="o">=</span><span class="s">localhost</span>

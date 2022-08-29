@@ -3,19 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to QWAT's documentation!
-================================
+QWAT / TEKSI drinking water module documentation
+================================================
 
-This is QWAT's project main knowledge base.
+TEKSI drinking water module (Project name : QWAT) is an open source water distribution management module for QGIS inspired from the swiss norm SIA 405 drinking water (pipeline cadastre) developed closely to the QGIS application.
 
-For general information about the project, please visit `<http://qwat.org/>`_
+For general information about the project, please visit `<https://www.teksi.ch/>`_
 
-*******
-Context
-*******
-
-QWAT is a GIS application developp to manage Drinkable Water networks. It relies on QGIS and postgreSQL.
 All sources are avalaible at `<https://github.com/qwat/QWAT>`_.
+
+`Glossary <glossary/index.html>`__ and `translation <translation/index.html>`__ are available (community driven). Contributions are welcome in any language.
+
+Contents
+========
 
 .. toctree::
    :maxdepth: 2
@@ -31,10 +31,6 @@ All sources are avalaible at `<https://github.com/qwat/QWAT>`_.
    faq/index
    glossary/index
    translation/index
-
-And you will find a `glossary <glossary/index.html>`__ if some terms sound obscure to you.
-
-For non-native english speakers, `translation <translation/index.html>`__ of recurrent terms are available.
 
 
 Indices and tables

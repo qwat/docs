@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="cs" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.7. Nadmořská výška &mdash; Dokumentace pro QWAT 1.0</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -97,11 +98,11 @@
            <div itemprop="articleBody">
              
   <section id="elevation">
-<h1><span class="section-number">3.7. </span>Nadmořská výška<a class="headerlink" href="#elevation" title="Trvalý odkaz na tento nadpis"></a></h1>
+<h1><span class="section-number">3.7. </span>Nadmořská výška<a class="headerlink" href="#elevation" title="Permalink to this heading"></a></h1>
 <p>Správa hodnot Z ve vodní distribuční síti je důležitá a musí se s ní zacházet opatrně. Musíme se řídit konvencemi a zásadami, abychom zajistili, že zachováváme přesnost, zdroje měření a poskytujeme užitečný a snadný způsob správy výškových informací.</p>
 <p>Tato stránka podrobně popisuje, jak je sklon  řízen v projektu QWAT.</p>
 <section id="principles">
-<h2><span class="section-number">3.7.1. </span>Zásady<a class="headerlink" href="#principles" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">3.7.1. </span>Zásady<a class="headerlink" href="#principles" title="Permalink to this heading"></a></h2>
 <ul>
 <li><p>Referenční hodnoty nadmořské výšky jsou uloženy v uzlech a bodech průzkumu. Mohly být nastaveny ručně nebo z terénních měření</p></li>
 <li><p>3D geometrie trubek se automaticky přepočítávají a hodnota Z vrcholů trubek by se neměla nastavovat ručně. 3D geometrie se přepočítává z uzlů a bodů průzkumu interpolací hodnot.</p></li>
@@ -121,7 +122,7 @@
 </ul>
 </section>
 <section id="behaviours">
-<h2><span class="section-number">3.7.2. </span>Chování<a class="headerlink" href="#behaviours" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">3.7.2. </span>Chování<a class="headerlink" href="#behaviours" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Pokud přesuneme prvek sítě (ventil, část, hydrant …), pak se připojené geometrie potrubí přepočítají s 3D informacemi</p></li>
 <li><p>Jakákoli modifikace geometrie potrubí spustí přepočítání jeho 3D geometrie s vypočítaným interpolovaným sklonem</p></li>
@@ -130,7 +131,7 @@
 </ul>
 </section>
 <section id="needed-tools">
-<h2><span class="section-number">3.7.3. </span>Potřebné nástroje<a class="headerlink" href="#needed-tools" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">3.7.3. </span>Potřebné nástroje<a class="headerlink" href="#needed-tools" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Nástroj pro výpočet interpolovaného sklonu pro konkrétní prvek sítě (ventil, hydrant ..). K interpolaci sklonu používá N nejbližší uzly a body průzkumu. N lze vybrat v GUI QGIS.</p></li>
 <li><p>Nástroj pro výpočet interpolovaného sklonu pro konkrétní prvky sítě směřováním na potrubí</p></li>
@@ -139,14 +140,14 @@
 </ul>
 </section>
 <section id="open-issues">
-<h2><span class="section-number">3.7.4. </span>Otevřené Issues<a class="headerlink" href="#open-issues" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">3.7.4. </span>Otevřené Issues<a class="headerlink" href="#open-issues" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Jak vypočítat přesnost potrubí vzhledem k přesnosti uzlů? Kam ukládat tyto vypočítané informace?</p></li>
 <li><p>Při interpolaci stoupání potrubí je nějaký parametr, který chceme nastavit? Nemělo by existovat, ale kompenzace kolem potrubí, která zohledňuje body průzkumu, vypadá jako důležitý parametr.</p></li>
 </ul>
 </section>
 <section id="references">
-<h2><span class="section-number">3.7.5. </span>Reference<a class="headerlink" href="#references" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">3.7.5. </span>Reference<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/qwat/QWAT/issues/93">https://github.com/qwat/QWAT/issues/93</a></p></li>
 <li><p><a class="reference external" href="https://github.com/qwat/qwat-data-model/issues/82">https://github.com/qwat/qwat-data-model/issues/82</a></p></li>

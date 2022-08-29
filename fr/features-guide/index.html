@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. QWAT / TEKSI drinking water module &mdash; Documentation QWAT 1.0</title>
+  <title>1. QWAT / Module TEKSI eau potable &mdash; Documentation QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -14,13 +14,14 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="2. Guide d’installation QWAT" href="../installation-guide/index.html" />
-    <link rel="prev" title="Bienvenue sur la documentation de QWAT" href="../index.html" /> 
+    <link rel="prev" title="QWAT / TEKSI drinking water module documentation" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,7 +43,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. QWAT / TEKSI drinking water module</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. QWAT / Module TEKSI eau potable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#main-features">1.1. Principales fonctionnalités</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#network-objects">1.1.1. Objets du réseaux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#viewing-and-editing">1.1.2. Consultation et édition</a></li>
@@ -78,7 +79,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">1. </span>QWAT / TEKSI drinking water module</li>
+      <li><span class="section-number">1. </span>QWAT / Module TEKSI eau potable</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/features-guide/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -89,20 +90,19 @@
            <div itemprop="articleBody">
              
   <section id="qwat-teksi-drinking-water-module">
-<h1><span class="section-number">1. </span>QWAT / TEKSI drinking water module<a class="headerlink" href="#qwat-teksi-drinking-water-module" title="Lien permanent vers ce titre"></a></h1>
-<p>TEKSI drinking water module (project name: QWAT) is a selection of tools and a database implementation that allows you to:</p>
+<h1><span class="section-number">1. </span>QWAT / Module TEKSI eau potable<a class="headerlink" href="#qwat-teksi-drinking-water-module" title="Lien permanent vers cette rubrique"></a></h1>
+<p>Le module TEKSI eau potable (nom de projet : QWAT) est une sélection d’outils et une implémentation de base de données qui vous permet de :</p>
 <ul class="simple">
 <li><p>gérer et cartographier votre réseau de distribution d’eau avec tous ses composants: conduites, vannes, pompes, réservoirs, etc.</p></li>
-<li><p>récolter les attributs des objets du réseau (diamètres, matériaux, profondeurs, fuites, dates d’installation, etc.).</p></li>
+<li><p>récolter les attributs des objets du réseau tels que diamètres, matériaux, profondeurs, fuites, dates d’installation, etc.</p></li>
 <li><p>générer des plans, cibler les interventions à prévoir et extraire des statistiques comme la valeur du réseau, la longueur totale des conduites, etc.</p></li>
 <li><p>exporter des géodonnées dans les modèles de données standards suisses.</p></li>
 </ul>
-<p>TEKSI drinking water module is a complete open source module based on a PostgreSQL - PostGIS data model almost compatible with the swiss norm SIA405. The data are accessed and edited with a dedicated QGIS project.
-The project is maintained by the <a class="reference external" href="https://www.teksi.ch">TEKSI community</a>.</p>
+<p>TEKSI eau potable est un module open source complet basé sur un modèle de données PostgreSQL - PostGIS inspiré de la norme suisse SIA405. Les données sont accessibles et éditables à l’aide d’un projet QGIS dédié. Le projet est maintenu par la <a class="reference external" href="https://www.teksi.ch">communauté TEKSI</a>.</p>
 <section id="main-features">
-<h2><span class="section-number">1.1. </span>Principales fonctionnalités<a class="headerlink" href="#main-features" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">1.1. </span>Principales fonctionnalités<a class="headerlink" href="#main-features" title="Lien permanent vers cette rubrique"></a></h2>
 <section id="network-objects">
-<h3><span class="section-number">1.1.1. </span>Objets du réseaux<a class="headerlink" href="#network-objects" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">1.1.1. </span>Objets du réseaux<a class="headerlink" href="#network-objects" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Le modèle de données contient tous les objets d’un réseau de distribution d’eau et leurs attributs :</p>
 <ul class="simple">
 <li><p>Conduites</p></li>
@@ -124,18 +124,18 @@ The project is maintained by the <a class="reference external" href="https://www
 <p>Le modèle de données est quasi compatible avec la SIA405. Le modèle est complet et fourni tous les objets et attributs courants. Cependant, il est possible d’adapter les objets et attributs à ses propres besoins ou de proposer des modifications à la communauté.</p>
 </section>
 <section id="viewing-and-editing">
-<h3><span class="section-number">1.1.2. </span>Consultation et édition<a class="headerlink" href="#viewing-and-editing" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">1.1.2. </span>Consultation et édition<a class="headerlink" href="#viewing-and-editing" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Un projet QGIS pré-configuré est fourni. Les objets du réseau sont représentés avec une symbologie standard.</p>
 <p>L’édition peut être faite directement depuis QGIS, chaque objet possède un formulaire dédié qui facilite l’édition des attributs.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/master/fr/html/user-guide/create.html">Documentation sur l’édition</a></p>
 </section>
 <section id="printing">
-<h3><span class="section-number">1.1.3. </span>Impression<a class="headerlink" href="#printing" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">1.1.3. </span>Impression<a class="headerlink" href="#printing" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Des mises en page pré-configurées sont disponibles dans le projet QGIS. La géométries des conduites et les étiquettes sont adaptées à l’échelle d’impression.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/master/fr/html/user-guide/print.html">Documentation sur l’impression</a></p>
 </section>
 <section id="export">
-<h3><span class="section-number">1.1.4. </span>Export<a class="headerlink" href="#export" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">1.1.4. </span>Export<a class="headerlink" href="#export" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Une <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">librairie Python</a> est disponible pour exporter le réseau dans le modèle de données SIA405 en interlis.</p>
 <p>Des extensions sont développées pour d’autres standards:</p>
 <ul class="simple">
@@ -145,7 +145,7 @@ The project is maintained by the <a class="reference external" href="https://www
 </ul>
 </section>
 <section id="history-viewer">
-<h3><span class="section-number">1.1.5. </span>History viewer<a class="headerlink" href="#history-viewer" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">1.1.5. </span>History viewer<a class="headerlink" href="#history-viewer" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Le plugin <a class="reference external" href="https://plugins.qgis.org/plugins/pg_history_viewer/">PG History Viewer</a> peut être configuée pour QWAT. L’extension PostgreSQL permet de tracker les changements effectués sur les données. L’interface QGIS permet de sélectionner et annuler des changements.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/master/fr/html/user-guide/history.html#">Documentation History viewer</a></p>
 </section>
@@ -156,7 +156,7 @@ The project is maintained by the <a class="reference external" href="https://www
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Bienvenue sur la documentation de QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="QWAT / TEKSI drinking water module documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
         <a href="../installation-guide/index.html" class="btn btn-neutral float-right" title="2. Guide d’installation QWAT" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

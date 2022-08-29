@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.2. Création d’objets dans QWAT &mdash; Documentation QWAT 1.0</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -42,7 +43,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI drinking water module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / Module TEKSI eau potable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Guide d’installation QWAT</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">3. QWAT Guide de l’utilisateur</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Structuration du réseau d’Eau Potable sur QWAT</a></li>
@@ -106,11 +107,11 @@
            <div itemprop="articleBody">
              
   <section id="creation-dobjets-dans-qwat">
-<h1><span class="section-number">3.2. </span>Création d’objets dans QWAT<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Lien permanent vers ce titre"></a></h1>
+<h1><span class="section-number">3.2. </span>Création d’objets dans QWAT<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Lien permanent vers cette rubrique"></a></h1>
 <p>Ce guide se veut un résumé des fonctionnalités de créations des données adaptées au besoin de QWAT dans QGIS.</p>
 <p>Il ne saurait remplacer la lecture du <a class="reference external" href="https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html">manuel</a> de QGIS expliquant en détail les différentes commandes. Le dessinateur est libre d’utiliser les plugins de dessin pour enrichir sa palette d’outils.</p>
 <section id="importation-des-points-releves">
-<h2><span class="section-number">3.2.1. </span>Importation des points relevés<a class="headerlink" href="#importation-des-points-releves" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.1. </span>Importation des points relevés<a class="headerlink" href="#importation-des-points-releves" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour importer des points dans QWAT, il faut cliquer sur l’icône « <a class="reference external" href="https://github.com/VilleDePully/EasyImport">EasyImport</a> »</p>
 <img alt="../_images/icon_plugin.png" src="../_images/icon_plugin.png" />
 <p>La fenêtre suivante s’ouvre :</p>
@@ -124,7 +125,7 @@
 Vous devez maintenant remplir les attributs des différents points pour chaque couche en suivant la marche à suivre.</p>
 </section>
 <section id="creation-des-points-de-construction">
-<h2><span class="section-number">3.2.2. </span>Création des points de construction<a class="headerlink" href="#creation-des-points-de-construction" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.2. </span>Création des points de construction<a class="headerlink" href="#creation-des-points-de-construction" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer de nouveaux points de construction il faut sélectionner la catégorie
 « points de construction » qui est une sous‐couche dans la couche « Côtes ».
 Il faut ensuite basculer en mode édition</p>
@@ -136,7 +137,7 @@ Le formulaire de l’objet s’ouvre, il n’y a aucun champ à remplir.
 (Vous pouvez mettre une remarque éventuellement)</p>
 </section>
 <section id="creation-des-conduites">
-<h2><span class="section-number">3.2.3. </span>Création des conduites<a class="headerlink" href="#creation-des-conduites" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.3. </span>Création des conduites<a class="headerlink" href="#creation-des-conduites" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer de nouvelles conduites il faut sélectionner la catégorie « conduites »
 qui est une sous‐couche dans la couche « Réseau ». Nous devons ensuite basculer en mode édition</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
@@ -193,7 +194,7 @@ une fois tous les points de passage créés.</p>
 </ul>
 </section>
 <section id="separation-dune-conduite-en-deux-conduites">
-<h2><span class="section-number">3.2.4. </span>Séparation d’une conduite en deux conduites<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.4. </span>Séparation d’une conduite en deux conduites<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Lors d’une mise à jour, il arrive régulièrement que l’on doive couper une conduite existante
 pour se raccorder sur le nouveau point levé. Pour se faire, il faut utiliser l’outil « Séparer les entités »</p>
 <img alt="../_images/icon_cut_entity.png" src="../_images/icon_cut_entity.png" />
@@ -203,7 +204,7 @@ pour se raccorder sur le nouveau point levé. Pour se faire, il faut utiliser l�
 la nouvelle conduite reprend les même attributs, le numéro d’ID de la conduite est créé automatiquement.</p>
 </section>
 <section id="creation-des-differentes-pieces-dinstallation">
-<h2><span class="section-number">3.2.5. </span>Création des différentes pièces d’installation<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.5. </span>Création des différentes pièces d’installation<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer de nouvelles pièces d’installation il faut sélectionner la catégorie
 « pièce d’installation » qui est une sous‐couche dans la couche « Nœuds ».
 Il faut ensuite basculer en mode édition.</p>
@@ -221,13 +222,13 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-des-points-dintroduction">
-<h2><span class="section-number">3.2.6. </span>Création des points d’introduction<a class="headerlink" href="#creation-des-points-dintroduction" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.6. </span>Création des points d’introduction<a class="headerlink" href="#creation-des-points-dintroduction" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Le point d’introduction se crée en créant une pièce d’installation ayant comme
 « Type » = « point d’introduction ». Une fois cela fait, un point d’introduction sera
 automatiquement crée dans la couche « Nœuds » lors de la génération des nœuds (voir les explications ci-dessous).</p>
 </section>
 <section id="creation-des-vannes">
-<h2><span class="section-number">3.2.7. </span>Création des vannes<a class="headerlink" href="#creation-des-vannes" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.7. </span>Création des vannes<a class="headerlink" href="#creation-des-vannes" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer de nouvelles vannes il faut sélectionner la catégorie « vannes » qui est une
 sous‐couche dans la couche « Réseau ». Il faut ensuite basculer en mode édition</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
@@ -267,7 +268,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-des-bornes-hydrantes">
-<h2><span class="section-number">3.2.8. </span>Création des bornes hydrantes<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.8. </span>Création des bornes hydrantes<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer de nouvelles bornes hydrantes il faut sélectionner la catégorie « hydrantes »
 qui est une sous‐couche dans la couche « Réseau ».</p>
 <p>Il faut ensuite basculer en mode édition</p>
@@ -311,7 +312,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-dun-manchon-de-reparation">
-<h2><span class="section-number">3.2.9. </span>Création d’un manchon de réparation<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.9. </span>Création d’un manchon de réparation<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer un nouveau manchon de réparation il faut sélectionner la catégorie « fuites »
 qui est une sous‐couche dans la couche « Réseau ».
 Il faut ensuite basculer en mode édition</p>
@@ -384,7 +385,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 la conduite une fois le manchon crée.</p>
 </section>
 <section id="creation-douvrages-ainsi-que-de-tous-leurs-details">
-<h2><span class="section-number">3.2.10. </span>Création d’ouvrages ainsi que de tous leurs détails<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.10. </span>Création d’ouvrages ainsi que de tous leurs détails<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Les ouvrages et leurs détails sont contenus dans plusieurs couches:</p>
 <blockquote>
 <div><ul class="simple">
@@ -396,7 +397,7 @@ la conduite une fois le manchon crée.</p>
 </div></blockquote>
 </section>
 <section id="creation-de-louvrage-general">
-<h2><span class="section-number">3.2.11. </span>Création de l’ouvrage général<a class="headerlink" href="#creation-de-louvrage-general" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.11. </span>Création de l’ouvrage général<a class="headerlink" href="#creation-de-louvrage-general" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
 qui est une sous‐couche dans la couche « ouvrages ».
 Il faut ensuite basculer en mode édition</p>
@@ -414,7 +415,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-du-couvercle-de-louvrage">
-<h2><span class="section-number">3.2.12. </span>Création du couvercle de l’ouvrage<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.12. </span>Création du couvercle de l’ouvrage<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer le couvercle de l’ouvrage, il faut sélectionner la catégorie « couvercles »
 qui est une sous‐couche dans la couche « ouvrages ».
 Il faut ensuite basculer en mode édition</p>
@@ -442,7 +443,7 @@ Le champ a du se remplir avec le nom de l’ouvrage.</p>
 </ul>
 </section>
 <section id="creation-de-lemprise-de-louvrage">
-<h2><span class="section-number">3.2.13. </span>Création de l’emprise de l’ouvrage<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.13. </span>Création de l’emprise de l’ouvrage<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
 qui est une sous‐couche dans la couche « ouvrages ».
 Il faut ensuite basculer en mode édition</p>
@@ -458,7 +459,7 @@ Le formulaire s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-des-details-de-louvrage">
-<h2><span class="section-number">3.2.14. </span>Création des détails de l’ouvrage<a class="headerlink" href="#creation-des-details-de-louvrage" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">3.2.14. </span>Création des détails de l’ouvrage<a class="headerlink" href="#creation-des-details-de-louvrage" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Pour créer les détails de l’ouvrage, il faut sélectionner la catégorie du détail voulu qui est une sous‐couche dans la couche « détail ».
 Il faut ensuite basculer en mode édition</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />

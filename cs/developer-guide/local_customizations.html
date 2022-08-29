@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="cs" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>6.2. Přizpůsobte místní modely DB &mdash; Dokumentace pro QWAT 1.0</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -91,7 +92,7 @@
            <div itemprop="articleBody">
              
   <section id="customize-local-db-models">
-<h1><span class="section-number">6.2. </span>Přizpůsobte místní modely DB<a class="headerlink" href="#customize-local-db-models" title="Trvalý odkaz na tento nadpis"></a></h1>
+<h1><span class="section-number">6.2. </span>Přizpůsobte místní modely DB<a class="headerlink" href="#customize-local-db-models" title="Permalink to this heading"></a></h1>
 <p>Od QWAT 1.3.2 byl proces přizpůsobení a rozšíření formalizován.</p>
 <p>Rozšíření <strong>je přizpůsobení základního datového modelu</strong>, které je součástí vyhrazeného úložiště. Lze jej kdykoli aktivovat pomocí vlastního inicializačního skriptu. Rozšíření může následovat životní cyklus modelu základních dat, což znamená, že oprava nebo zlepšení rozšíření jádra bude vyžadovat aktualizaci QWAT, ale může mít svůj vlastní životní cyklus. V současné době je jediným rozšířením <a class="reference external" href="https://github.com/qwat/extension_sire">exportní rozšíření SIRE</a>. Všimněte si, že rozšiřuje seznamy hodnot a právě teď je upraveno jádro qwat.</p>
 <p>** Místní přizpůsobení ** se bude řídit přesně stejnými pravidly vývoje jako rozšíření, kromě toho, že musí být uloženo v samostatném úložišti, kromě základních adresářů QWAT. lokální přizpůsobení musí být nejprve inicializováno ručně a poté použito v procesu migrace QWAT pomocí specifické volby upgrade_db.sh pro přidání dalších adresářů.</p>
@@ -108,7 +109,7 @@
 </ul>
 <p>Úplný příklad je uveden ve složce  <a class="reference external" href="https://github.com/qwat/qwat-data-model/tree/master/.build/customizations/sigip">.build/customizations/sigip</a> nebo <a class="reference external" href="https://github.com/qwat/extension_sire">SIRE extension</a>.</p>
 <section id="customizing-the-data-model">
-<h2><span class="section-number">6.2.1. </span>Přizpůsobení datového modelu<a class="headerlink" href="#customizing-the-data-model" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">6.2.1. </span>Přizpůsobení datového modelu<a class="headerlink" href="#customizing-the-data-model" title="Permalink to this heading"></a></h2>
 <p>Tato část se týká modifikace datového modelu pro přidání konkrétních objektů, nahoře na jádrovém datovém modelu QWAT. Přestože existuje plná svoboda při používání funkcí PostGIS a PostgreSQL, zde jsou konvence a osvědčené postupy pro projekt QWAT.</p>
 <p>Povolené úpravy pro QWAT jsou:</p>
 <ul class="simple">
@@ -118,7 +119,7 @@
 <p>Není dovolena žádná změna základního datového modelu (názvy polí, typy, omezení …), nebo byste měli <a class="reference external" href="../contributor-guide/index.html#data-model-changes">požádat o centrální úpravu datového modelu QWAT</a>.</p>
 </section>
 <section id="adding-a-field">
-<h2><span class="section-number">6.2.2. </span>Přidání pole<a class="headerlink" href="#adding-a-field" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">6.2.2. </span>Přidání pole<a class="headerlink" href="#adding-a-field" title="Permalink to this heading"></a></h2>
 <p>Pokud chcete přidat pole do jedné z tabulek základních datových modelů, postupujte takto</p>
 <ul class="simple">
 <li><p>Uložte všechny modifikace jako samostatné skripty SQL. NIKDY neupravujte přímo strukturu vaší databáze.</p></li>
@@ -142,7 +143,7 @@
 </div>
 </section>
 <section id="adding-a-table">
-<h2><span class="section-number">6.2.3. </span>Přidání tabulky<a class="headerlink" href="#adding-a-table" title="Trvalý odkaz na tento nadpis"></a></h2>
+<h2><span class="section-number">6.2.3. </span>Přidání tabulky<a class="headerlink" href="#adding-a-table" title="Permalink to this heading"></a></h2>
 <p>Vlastní tabulky pasují na konkrétní schémata s předponou <cite>usr_</cite> . Pokud chcete mít další vlastní tabulky, měli byste se nejprve ujistit, že takové vlastní schéma existuje.</p>
 <p>Pokud chcete přidat tabulku, postupujte takto</p>
 <ul class="simple">
@@ -177,7 +178,7 @@
 </section>
 </section>
 <section id="create-an-extension">
-<h1><span class="section-number">6.3. </span>Vytvořte rozšíření<a class="headerlink" href="#create-an-extension" title="Trvalý odkaz na tento nadpis"></a></h1>
+<h1><span class="section-number">6.3. </span>Vytvořte rozšíření<a class="headerlink" href="#create-an-extension" title="Permalink to this heading"></a></h1>
 <p>Rozšíření mají vyhrazená úložiště jako SIRE Extension. Chcete-li vytvořit rozšíření, musíte vytvořit nové úložiště z <a class="reference external" href="https://github.com/qwat/extension_template">template</a> a pak postupujte podle pokynů.</p>
 </section>
 

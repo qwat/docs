@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>6.2. Personnaliser le modèle de données local &mdash; Documentation QWAT 1.0</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -42,7 +43,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI drinking water module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / Module TEKSI eau potable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Guide d’installation QWAT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT Guide de l’utilisateur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Guide Administrateur</a></li>
@@ -91,7 +92,7 @@
            <div itemprop="articleBody">
              
   <section id="customize-local-db-models">
-<h1><span class="section-number">6.2. </span>Personnaliser le modèle de données local<a class="headerlink" href="#customize-local-db-models" title="Lien permanent vers ce titre"></a></h1>
+<h1><span class="section-number">6.2. </span>Personnaliser le modèle de données local<a class="headerlink" href="#customize-local-db-models" title="Lien permanent vers cette rubrique"></a></h1>
 <p>Depuis QWAT 1.3.2, le processus de personnalisation et d’extension ont été formalisés.</p>
 <p>An <strong>extension is a core data model customization</strong> that is part of a dedicated repository. It can be activated at any time, using its own initialization script.
 An extension can follows the core data model life cycle, which means that fixing or improving a core extension will require a QWAT update, but can have an own life cycle.
@@ -111,7 +112,7 @@ local customizations must be first initialized manually and then applied in QWAT
 </ul>
 <p>A full example is provided in the <a class="reference external" href="https://github.com/qwat/qwat-data-model/tree/master/.build/customizations/sigip">.build/customizations/sigip</a> folder or the <a class="reference external" href="https://github.com/qwat/extension_sire">SIRE extension</a>.</p>
 <section id="customizing-the-data-model">
-<h2><span class="section-number">6.2.1. </span>Customizing the data model<a class="headerlink" href="#customizing-the-data-model" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">6.2.1. </span>Customizing the data model<a class="headerlink" href="#customizing-the-data-model" title="Lien permanent vers cette rubrique"></a></h2>
 <p>This part concerns the modification of the data model to add specific objects, on top on QWAT core data model.
 While there is full freedom for using PostGIS and PostgreSQL capabilities, here are the conventions and good practices for the QWAT project.</p>
 <p>Allowed customization for QWAT are :</p>
@@ -122,7 +123,7 @@ While there is full freedom for using PostGIS and PostgreSQL capabilities, here 
 <p>No change of the core data model is allowed (field names, types, constraints…), or you should <a class="reference external" href="../contributor-guide/index.html#data-model-changes">ask for the QWAT data model to be modified centrally</a>.</p>
 </section>
 <section id="adding-a-field">
-<h2><span class="section-number">6.2.2. </span>Adding a field<a class="headerlink" href="#adding-a-field" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">6.2.2. </span>Adding a field<a class="headerlink" href="#adding-a-field" title="Lien permanent vers cette rubrique"></a></h2>
 <p>If you want to add a field to one of the core data model tables, follow these steps</p>
 <ul class="simple">
 <li><p>Store all modifications as separate SQL scripts. NEVER modify directly your database structure.</p></li>
@@ -146,7 +147,7 @@ While there is full freedom for using PostGIS and PostgreSQL capabilities, here 
 </div>
 </section>
 <section id="adding-a-table">
-<h2><span class="section-number">6.2.3. </span>Adding a table<a class="headerlink" href="#adding-a-table" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">6.2.3. </span>Adding a table<a class="headerlink" href="#adding-a-table" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Custom tables go to specific schemas prefixed with <cite>usr_</cite> . If you want to have additional custom tables, you should first ensure that such a custom schema exists.</p>
 <p>If you want to add a table follow these steps</p>
 <ul class="simple">
@@ -181,7 +182,7 @@ While there is full freedom for using PostGIS and PostgreSQL capabilities, here 
 </section>
 </section>
 <section id="create-an-extension">
-<h1><span class="section-number">6.3. </span>Create an extension<a class="headerlink" href="#create-an-extension" title="Lien permanent vers ce titre"></a></h1>
+<h1><span class="section-number">6.3. </span>Create an extension<a class="headerlink" href="#create-an-extension" title="Lien permanent vers cette rubrique"></a></h1>
 <p>Extensions have dedicated repositories like SIRE Extension. To create an extension you have to make a new repository from the <a class="reference external" href="https://github.com/qwat/extension_template">template</a> and follow the procedure.</p>
 </section>
 

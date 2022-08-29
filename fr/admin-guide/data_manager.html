@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4.1. Gestionnaire de données &mdash; Documentation QWAT 1.0</title>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -42,7 +43,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI drinking water module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / Module TEKSI eau potable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Guide d’installation QWAT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">3. QWAT Guide de l’utilisateur</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Guide Administrateur</a><ul class="current">
@@ -97,14 +98,14 @@
            <div itemprop="articleBody">
              
   <section id="data-manager">
-<h1><span class="section-number">4.1. </span>Gestionnaire de données<a class="headerlink" href="#data-manager" title="Lien permanent vers ce titre"></a></h1>
+<h1><span class="section-number">4.1. </span>Gestionnaire de données<a class="headerlink" href="#data-manager" title="Lien permanent vers cette rubrique"></a></h1>
 <section id="import-data-to-qwat">
-<h2><span class="section-number">4.1.1. </span>Importer des données dans QWAT<a class="headerlink" href="#import-data-to-qwat" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">4.1.1. </span>Importer des données dans QWAT<a class="headerlink" href="#import-data-to-qwat" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Il est généralement préférable de charger les données directement à travers les vues plutôt que dans les tables, étant donné la complexité du modèle objet et de l’intelligence stockée dans les déclencheurs d’édition. (p. ex. gestion des noeuds et de la topologie).</p>
 <p>Une [belle alternative technique](<a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:nliaudat/qwat-import-sample.git) est proposée par Nicolas Liaudat, en utilisant directement QGIS et ses expressions pour charger les jeux de données. Merci de contribuer si vous trouvez des améliorations ou des erreurs.</p>
 </section>
 <section id="import-data-from-topobase">
-<h2><span class="section-number">4.1.2. </span>Importer les données depuis Topobase<a class="headerlink" href="#import-data-from-topobase" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">4.1.2. </span>Importer les données depuis Topobase<a class="headerlink" href="#import-data-from-topobase" title="Lien permanent vers cette rubrique"></a></h2>
 <ul class="simple">
 <li><p>Décrire le processus et les outils</p></li>
 <li><p>Décrire les checks automatiques et manuels à faire</p></li>
@@ -112,10 +113,10 @@
 </ul>
 </section>
 <section id="export-data-to-interlis-sia-405-format">
-<h2><span class="section-number">4.1.3. </span>Exporter les données au format INTERLIS SIA 405<a class="headerlink" href="#export-data-to-interlis-sia-405-format" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">4.1.3. </span>Exporter les données au format INTERLIS SIA 405<a class="headerlink" href="#export-data-to-interlis-sia-405-format" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Exporter une base de données QWAT au format d’échange INTERLIS (.xtf) est possible en utilisant l’outil dédié <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">qgepqwat2ili</a> développé comme partie d’un projet NGDI.</p>
 <section id="usage">
-<h3><span class="section-number">4.1.3.1. </span>Usage<a class="headerlink" href="#usage" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">4.1.3.1. </span>Usage<a class="headerlink" href="#usage" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Qgepqwat2ili requiert Java (JRE 1.6 ou ultérieur) et python (3.6 ou ultérieur).</p>
 <p>Ensuite, il peut être installé comme n’importe quelle autre librairie python :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">qgepqwat2ili</span>
@@ -146,7 +147,7 @@
 <p>Une documentation plus complète ainsi qu’un suivi des erreurs peut être trouvé sur le <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">répertoire gepqwat2ili</a>.</p>
 </section>
 <section id="limitations">
-<h3><span class="section-number">4.1.3.2. </span>Limitations<a class="headerlink" href="#limitations" title="Lien permanent vers ce titre"></a></h3>
+<h3><span class="section-number">4.1.3.2. </span>Limitations<a class="headerlink" href="#limitations" title="Lien permanent vers cette rubrique"></a></h3>
 <p>L’outil est actuellement expérimental. Prêtez attention aux limitations suivantes :</p>
 <ul class="simple">
 <li><p>L’outil n’a jusqu’ici peu été testé avec des données réelles.</p></li>
@@ -159,7 +160,7 @@
 </section>
 </section>
 <section id="export-data-to-sire">
-<h2><span class="section-number">4.1.4. </span>Export des données vers SIRE<a class="headerlink" href="#export-data-to-sire" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">4.1.4. </span>Export des données vers SIRE<a class="headerlink" href="#export-data-to-sire" title="Lien permanent vers cette rubrique"></a></h2>
 <ul class="simple">
 <li><p>Décrire le processus et les outils</p></li>
 <li><p>Décrire les checks automatiques et manuels à faire</p></li>
@@ -167,21 +168,21 @@
 </ul>
 </section>
 <section id="backup-data">
-<h2><span class="section-number">4.1.5. </span>Sauvegarder les données<a class="headerlink" href="#backup-data" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">4.1.5. </span>Sauvegarder les données<a class="headerlink" href="#backup-data" title="Lien permanent vers cette rubrique"></a></h2>
 <ul class="simple">
 <li><p>Utiliser une sauvegarde de données PostgreSQL</p></li>
 <li><p>A noter (version de PG ….)</p></li>
 </ul>
 </section>
 <section id="restoring-data">
-<h2><span class="section-number">4.1.6. </span>Restaurer les données<a class="headerlink" href="#restoring-data" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">4.1.6. </span>Restaurer les données<a class="headerlink" href="#restoring-data" title="Lien permanent vers cette rubrique"></a></h2>
 <ul class="simple">
 <li><p>Utiliser une sauvegarde de données PostgreSQL</p></li>
 <li><p>Points à noter</p></li>
 </ul>
 </section>
 <section id="qwat-analysis-tools">
-<h2><span class="section-number">4.1.7. </span>Outils d’analyse QWAT<a class="headerlink" href="#qwat-analysis-tools" title="Lien permanent vers ce titre"></a></h2>
+<h2><span class="section-number">4.1.7. </span>Outils d’analyse QWAT<a class="headerlink" href="#qwat-analysis-tools" title="Lien permanent vers cette rubrique"></a></h2>
 <ul class="simple">
 <li><p>Ou trouver des scripts d’analyse de données</p></li>
 <li><p>Comment utiliser les scripts</p></li>
