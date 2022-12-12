@@ -94,12 +94,12 @@ transifex_mapping: gettext
 
 transifex_sync: transifex_mapping
 	@set -e;\
-	tx push -s;
+	./tx push -s;
 	@echo "Transifex resources synchronized"
 
 transifex_pull: transifex_mapping
 	@set -e;\
-	  tx pull -a;
+	./tx pull -a;
 	@echo "Transifex translations pulled"
 
 compile_messages: init
