@@ -162,4 +162,3 @@ file_filter = i18n/<lang>/user-guide/create.po
 source_file = i18n/pot/user-guide/create.pot
 source_lang = en
 type = PO
-
