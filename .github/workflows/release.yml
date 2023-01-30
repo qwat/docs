@@ -1,6 +1,12 @@
 name: Release
 
-on: [push, pull_request]
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -19,13 +25,17 @@ jobs:
           curl -OL https://github.com/transifex/cli/releases/download/v1.3.1/tx-linux-amd64.tar.gz
           tar -xvzf tx-linux-amd64.tar.gz
 
-      - name: tx sync (push -> pull)
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      - name: Pull then push translation strings
         env:
           TX_TOKEN: ${{ secrets.TX_TOKEN }}
+          # TX_TOKEN: "super_secret_token"
+          PROBE: 1
         run: |
-          make transifex_sync # push
-          make transifex_pull
+          echo $GITHUB_CONTEXT >> context.txt
+          echo $PROBE >> probe.txt
+          echo $TX_TOKEN >> token.txt
+          TX_TOKEN=$TX_TOKEN PROBE=$PROBE make transifex_pull
+          TX_TOKEN=$TX_TOKEN PROBE=$PROBE make transifex_push
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -37,8 +47,11 @@ jobs:
           touch build/html/.nojekyll
 
       - name: Deploy 🚀
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: build/html
+
+      - name: tmate
+        if: failure()
+        uses: m-kuhn/action-tmate@patch-1
