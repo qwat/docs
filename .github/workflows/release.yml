@@ -27,15 +27,14 @@ jobs:
 
       - name: Pull then push translation strings
         env:
-          TX_TOKEN: ${{ secrets.TX_TOKEN }}
-          # TX_TOKEN: "super_secret_token"
-          PROBE: 1
+          tx_token: ${{ secrets.TX_TOKEN }}
+          probe: 1
         run: |
           echo $GITHUB_CONTEXT >> context.txt
-          echo $PROBE >> probe.txt
-          echo $TX_TOKEN >> token.txt
-          TX_TOKEN=$TX_TOKEN PROBE=$PROBE make transifex_pull
-          TX_TOKEN=$TX_TOKEN PROBE=$PROBE make transifex_push
+          echo $probe >> probe.txt
+          echo $tx_token >> token.txt
+          TX_TOKEN=$tx_token PROBE=$probe make transifex_pull
+          TX_TOKEN=$tx_token PROBE=$probe make transifex_push
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
