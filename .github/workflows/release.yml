@@ -54,4 +54,6 @@ jobs:
 
       - name: tmate
         if: failure()
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
         uses: m-kuhn/action-tmate@patch-1
