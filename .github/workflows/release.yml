@@ -1,9 +1,6 @@
 name: Release
 
 on:
-  pull_request:
-    branches:
-      - master
   push:
     branches:
       - master
@@ -28,11 +25,7 @@ jobs:
       - name: Pull then push translation strings
         env:
           tx_token: ${{ secrets.TX_TOKEN }}
-          probe: 1
         run: |
-          echo $GITHUB_CONTEXT >> context.txt
-          echo $probe >> probe.txt
-          echo $tx_token >> token.txt
           TX_TOKEN=$tx_token PROBE=$probe make transifex_pull
           TX_TOKEN=$tx_token PROBE=$probe make transifex_push
 

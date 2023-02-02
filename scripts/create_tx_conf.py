@@ -4,18 +4,9 @@
 # Will be automatically run and committed via github actions
 
 from pathlib import Path
-from os import environ
 
 organization = "qwat"
 project = "qwat-doc"
-
-token = environ.get("TX_TOKEN")
-probe = environ.get("PROBE")
-print(f"Probe reads: {probe}")
-if not token or len(token) < 5:
-    raise ValueError(
-        f"Your TX_TOKEN could not be retrieved from the environment or is too short: (***{token[-3:]})"
-    )
 
 with open(".tx/config", "w") as f:
     config = "[main]\n"

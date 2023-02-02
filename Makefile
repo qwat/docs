@@ -90,7 +90,6 @@ init: en/*
 transifex_mapping: gettext
 	@set -e;
 	TX_TOKEN=$$TX_TOKEN
-	PROBE=$$PROBE
 	python ./scripts/create_tx_conf.py
 	@echo "Transifex mapping created"
 
