@@ -43,9 +43,3 @@ jobs:
         with:
           branch: gh-pages
           folder: build/html
-
-      - name: tmate
-        if: failure()
-        env:
-          TX_TOKEN: ${{ secrets.TX_TOKEN }}
-        uses: m-kuhn/action-tmate@patch-1
