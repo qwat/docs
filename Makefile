@@ -88,18 +88,21 @@ init: en/*
 	touch init
 
 transifex_mapping: gettext
-	@set -e;\
+	@set -e;
+	TX_TOKEN=$$TX_TOKEN
 	python ./scripts/create_tx_conf.py
 	@echo "Transifex mapping created"
 
-transifex_sync: transifex_mapping
-	@set -e;\
-	tx push -s;
-	@echo "Transifex resources synchronized"
+transifex_push: transifex_mapping
+	@set -e;
+	TX_TOKEN=$$TX_TOKEN
+	./tx push -s
+	@echo "Translation resources pushed to Transifex"
 
 transifex_pull: transifex_mapping
-	@set -e;\
-	  tx pull -a;
+	@set -e;
+	TX_TOKEN=$$TX_TOKEN
+	./tx pull -a
 	@echo "Transifex translations pulled"
 
 compile_messages: init

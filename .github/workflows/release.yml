@@ -1,6 +1,9 @@
 name: Release
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -10,16 +13,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: install requirements
+      - name: Install dependencies
         run: |
+          # Python
           pip install -r requirements.txt
           sudo apt-get install -y gettext
+          # Go
+          curl -OL https://github.com/transifex/cli/releases/download/v1.3.1/tx-linux-amd64.tar.gz
+          tar -xvzf tx-linux-amd64.tar.gz
 
-      - name: tx push / pull
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      - name: Pull then push translation strings
+        env:
+          tx_token: ${{ secrets.TX_TOKEN }}
         run: |
-          TX_TOKEN=${{ secrets.TX_TOKEN }} make transifex_sync # push
-          TX_TOKEN=${{ secrets.TX_TOKEN }} make transifex_pull
+          TX_TOKEN=$tx_token PROBE=$probe make transifex_pull
+          TX_TOKEN=$tx_token PROBE=$probe make transifex_push
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -31,7 +39,6 @@ jobs:
           touch build/html/.nojekyll
 
       - name: Deploy 🚀
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
