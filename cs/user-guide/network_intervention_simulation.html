@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="cs" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.9. Simulation d’intervention sur le réseau &mdash; Dokumentace pro QWAT 1.0</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="4. Průvodce správce" href="../admin-guide/index.html" />
+    <link rel="prev" title="3.8. Prohlížeč historie" href="history.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            QWAT
+          </a>
+              <div class="version">
+                1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI modul pitné vody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Instalační příručka QWAT</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Uživatelská příručka QWAT</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Struktura sítě pitné vody na QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create.html">3.2. Vytváření objektů v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="update.html">3.3. Základní pravidla pro aktualizaci na QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delete.html">3.4. Mazání objektů v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">3.5. Odkazy různých objektů v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Tisk v QWAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Nadmořská výška</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">3.8. Prohlížeč historie</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.9. Simulation d’intervention sur le réseau</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#incident-reseau">3.9.1. Incident réseau</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pollution-reseau">3.9.2. Pollution réseau</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interruption-reseau">3.9.3. Interruption réseau</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">3.9.4. Références</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Průvodce správce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">5. Příručka přispěvatele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">6. Příručka pro vývojáře</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Ukázková data a projekt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. Časté otázky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Slovník</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Překlad</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">QWAT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3. </span>Uživatelská příručka QWAT</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.9. </span>Simulation d’intervention sur le réseau</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user-guide/network_intervention_simulation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="simulation-d-intervention-sur-le-reseau">
+<h1><span class="section-number">3.9. </span>Simulation d’intervention sur le réseau<a class="headerlink" href="#simulation-d-intervention-sur-le-reseau" title="Permalink to this heading"></a></h1>
+<p>Des outils de simulation d’intervention sur le réseau sont disponibles à partir de la version 1.4.0</p>
+<p>Ces outils se présentent sous la forme d’actions dans le projet QGIS.</p>
+<section id="incident-reseau">
+<h2><span class="section-number">3.9.1. </span>Incident réseau<a class="headerlink" href="#incident-reseau" title="Permalink to this heading"></a></h2>
+<p>Cet outil permet d’identifier les vannes réseau à fermer situées au plus proche de l’incident. L’outil est disponible dans l’action „Incident“ sur la couche „Conduites“.</p>
+<p>L’incident réseau est situé aux coordonnées où l’utilisateur a exécuté l’action (l’action peut être lancée via un clic droit sur une conduite).</p>
+<p>Une boîte de dialogue permet de renseigner le kilométrage maximum à parcourir pour la recherche des vannes à fermer.</p>
+<p>L’utilisateur peut également choisir de s’arrêter uniquement sur les vannes réseau ou non avec une case à cocher. Si la case n’est pas cochée, les vannes de branchement seront prises en compte et remontées dans le résultat.</p>
+<p>Le résultat est sous la forme d’une couche temporaire. Les vannes à fermer peuvent être consultées via la table attributaire.</p>
+<p>Exemple en prenant en compte uniquement les vannes réseau:</p>
+<img alt="../_images/incident_reseau_1.png" src="../_images/incident_reseau_1.png" />
+<p>Le résultat est le suivant:</p>
+<img alt="../_images/incident_reseau_result_1.png" src="../_images/incident_reseau_result_1.png" />
+<p>Exemple en prenant en compte les vannes réseau et les vannes de branchement:</p>
+<img alt="../_images/incident_reseau_2.png" src="../_images/incident_reseau_2.png" />
+<p>Le résultat est le suivant:</p>
+<img alt="../_images/incident_reseau_result_2.png" src="../_images/incident_reseau_result_2.png" />
+</section>
+<section id="pollution-reseau">
+<h2><span class="section-number">3.9.2. </span>Pollution réseau<a class="headerlink" href="#pollution-reseau" title="Permalink to this heading"></a></h2>
+<p>Cet outil permet d’identifier les conduites et les abonnés touchés par une pollution. L’outil est disponible dans l’action „Pollution“ sur la couche „Conduites“.</p>
+<p>La pollution réseau est située aux coordonnées où l’utilisateur a exécuté l’action (l’action peut être lancée via un clic droit sur une conduite).</p>
+<p>Une boîte de dialogue permet de renseigner le kilométrage maximum à parcourir pour la recherche des conduites et des abonnés.</p>
+<p>L’utilisateur peut choisir de s’arrêter aux vannes réseaux, s’arrêter aux vannes abonnés et limiter la recherche à la zone de pression courante grâce aux cases à cocher.</p>
+<p>Le résultat est sous la forme d’un groupe de couches temporaires. Les conduites et les abonnés identifiés peuvent être consultés via la table attributaire.</p>
+<p>Exemple en s’arrêtant aux vannes réseau et abonnés:</p>
+<img alt="../_images/pollution_reseau_1.png" src="../_images/pollution_reseau_1.png" />
+<p>Le résultat est le suivant:</p>
+<img alt="../_images/pollution_reseau_result_1.png" src="../_images/pollution_reseau_result_1.png" />
+</section>
+<section id="interruption-reseau">
+<h2><span class="section-number">3.9.3. </span>Interruption réseau<a class="headerlink" href="#interruption-reseau" title="Permalink to this heading"></a></h2>
+<p>Cet outil permet d’identifier les conduites, les compteurs, les bornes hydrantes et les abonnés concernés par une interruption de réseau. L’outil est disponible dans l’action „Coupure de réseau“ sur la couche „Vannes“.</p>
+<p>L’interruption de réseau est caractérisée par plusieurs vannes fermées que l’utilisateur identifie lors du lancement de l’action et une conduite pour définir le côté du réseau concerné par l’interruption.</p>
+<p>Le résultat est sous la forme d’un groupe de couches temporaires. Les objets du réseau identifiés peuvent être consultés via la table attributaire.</p>
+<p>Exemple d’interruption réseau:</p>
+<img alt="../_images/interruption_reseau.png" src="../_images/interruption_reseau.png" />
+<p>Le résultat est le suivant:</p>
+<img alt="../_images/interruption_reseau_result.png" src="../_images/interruption_reseau_result.png" />
+</section>
+<section id="references">
+<h2><span class="section-number">3.9.4. </span>Références<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/qwat/QWAT/pull/318">https://github.com/qwat/QWAT/pull/318</a></p></li>
+<li><p><a class="reference external" href="https://github.com/qwat/qwat-data-model/pull/345">https://github.com/qwat/qwat-data-model/pull/345</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="history.html" class="btn btn-neutral float-left" title="3.8. Prohlížeč historie" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../admin-guide/index.html" class="btn btn-neutral float-right" title="4. Průvodce správce" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, QWAT team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

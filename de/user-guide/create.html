@@ -1,97 +1,49 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="de" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>3.2. Objekte in QWAT erstellen &mdash; QWAT 1.0 Dokumentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
     <link rel="next" title="3.3. Règles de base pour la mise à jour sur QWAT" href="update.html" />
     <link rel="prev" title="3.1. Structuration du réseau d’Eau Potable sur QWAT" href="qwat_struct.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> QWAT
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            QWAT
           </a>
-
-          
-            
-            
               <div class="version">
                 1.0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Dokumentation durchsuchen" />
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../features-guide/index.html">1. QWAT / TEKSI drinking water module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
@@ -120,6 +72,7 @@
 <li class="toctree-l2"><a class="reference internal" href="print.html">3.6. Impression dans QWAT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="elevation.html">3.7. Elevation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">3.8. History viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network_intervention_simulation.html">3.9. Simulation d’intervention sur le réseau</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide/index.html">4. Admin Guide</a></li>
@@ -131,79 +84,37 @@
 <li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">QWAT</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="index.html"><span class="section-number">3. </span>QWAT User Guide</a> &raquo;</li>
-        
-      <li><span class="section-number">3.2. </span>Objekte in QWAT erstellen</li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3. </span>QWAT User Guide</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Objekte in QWAT erstellen</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/user-guide/create.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <section id="creation-dobjets-dans-qwat">
-<h1><span class="section-number">3.2. </span>Objekte in QWAT erstellen<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Permalink to this heading">¶</a></h1>
+<h1><span class="section-number">3.2. </span>Objekte in QWAT erstellen<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Permalink to this heading"></a></h1>
 <p>Ce guide se veut un résumé des fonctionnalités de créations des données adaptées au besoin de QWAT dans QGIS.</p>
 <p>Il ne saurait remplacer la lecture du <a class="reference external" href="https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html">manuel</a> de QGIS expliquant en détail les différentes commandes. Le dessinateur est libre d’utiliser les plugins de dessin pour enrichir sa palette d’outils.</p>
 <section id="importation-des-points-releves">
-<h2><span class="section-number">3.2.1. </span>Importation des points relevés<a class="headerlink" href="#importation-des-points-releves" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.1. </span>Importation des points relevés<a class="headerlink" href="#importation-des-points-releves" title="Permalink to this heading"></a></h2>
 <p>Pour importer des points dans QWAT, il faut cliquer sur l’icône « <a class="reference external" href="https://github.com/VilleDePully/EasyImport">EasyImport</a> »</p>
 <img alt="../_images/icon_plugin.png" src="../_images/icon_plugin.png" />
 <p>Das folgende Fenster öffnet sich:</p>
@@ -217,7 +128,7 @@
 Vous devez maintenant remplir les attributs des différents points pour chaque couche en suivant la marche à suivre.</p>
 </section>
 <section id="creation-des-points-de-construction">
-<h2><span class="section-number">3.2.2. </span>Création des points de construction<a class="headerlink" href="#creation-des-points-de-construction" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.2. </span>Création des points de construction<a class="headerlink" href="#creation-des-points-de-construction" title="Permalink to this heading"></a></h2>
 <p>Pour créer de nouveaux points de construction il faut sélectionner la catégorie
 « points de construction » qui est une sous‐couche dans la couche « Côtes ».
 Il faut ensuite basculer en mode édition</p>
@@ -229,7 +140,7 @@ Le formulaire de l’objet s’ouvre, il n’y a aucun champ à remplir.
 (Vous pouvez mettre une remarque éventuellement)</p>
 </section>
 <section id="creation-des-conduites">
-<h2><span class="section-number">3.2.3. </span>Création des conduites<a class="headerlink" href="#creation-des-conduites" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.3. </span>Création des conduites<a class="headerlink" href="#creation-des-conduites" title="Permalink to this heading"></a></h2>
 <p>Pour créer de nouvelles conduites il faut sélectionner la catégorie « conduites »
 qui est une sous‐couche dans la couche « Réseau ». Nous devons ensuite basculer en mode édition</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
@@ -286,7 +197,7 @@ une fois tous les points de passage créés.</p>
 </ul>
 </section>
 <section id="separation-dune-conduite-en-deux-conduites">
-<h2><span class="section-number">3.2.4. </span>Séparation d’une conduite en deux conduites<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.4. </span>Séparation d’une conduite en deux conduites<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Permalink to this heading"></a></h2>
 <p>Lors d’une mise à jour, il arrive régulièrement que l’on doive couper une conduite existante
 pour se raccorder sur le nouveau point levé. Pour se faire, il faut utiliser l’outil « Séparer les entités »</p>
 <img alt="../_images/icon_cut_entity.png" src="../_images/icon_cut_entity.png" />
@@ -296,7 +207,7 @@ pour se raccorder sur le nouveau point levé. Pour se faire, il faut utiliser l�
 la nouvelle conduite reprend les même attributs, le numéro d’ID de la conduite est créé automatiquement.</p>
 </section>
 <section id="creation-des-differentes-pieces-dinstallation">
-<h2><span class="section-number">3.2.5. </span>Création des différentes pièces d’installation<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.5. </span>Création des différentes pièces d’installation<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Permalink to this heading"></a></h2>
 <p>Pour créer de nouvelles pièces d’installation il faut sélectionner la catégorie
 « pièce d’installation » qui est une sous‐couche dans la couche « Nœuds ».
 Il faut ensuite basculer en mode édition.</p>
@@ -314,13 +225,13 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-des-points-dintroduction">
-<h2><span class="section-number">3.2.6. </span>Création des points d’introduction<a class="headerlink" href="#creation-des-points-dintroduction" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.6. </span>Création des points d’introduction<a class="headerlink" href="#creation-des-points-dintroduction" title="Permalink to this heading"></a></h2>
 <p>Le point d’introduction se crée en créant une pièce d’installation ayant comme
 « Type » = « point d’introduction ». Une fois cela fait, un point d’introduction sera
 automatiquement crée dans la couche « Nœuds » lors de la génération des nœuds (voir les explications ci-dessous).</p>
 </section>
 <section id="creation-des-vannes">
-<h2><span class="section-number">3.2.7. </span>Création des vannes<a class="headerlink" href="#creation-des-vannes" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.7. </span>Création des vannes<a class="headerlink" href="#creation-des-vannes" title="Permalink to this heading"></a></h2>
 <p>Pour créer de nouvelles vannes il faut sélectionner la catégorie « vannes » qui est une
 sous‐couche dans la couche « Réseau ». Il faut ensuite basculer en mode édition</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
@@ -360,7 +271,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-des-bornes-hydrantes">
-<h2><span class="section-number">3.2.8. </span>Création des bornes hydrantes<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.8. </span>Création des bornes hydrantes<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Permalink to this heading"></a></h2>
 <p>Pour créer de nouvelles bornes hydrantes il faut sélectionner la catégorie « hydrantes »
 qui est une sous‐couche dans la couche « Réseau ».</p>
 <p>Il faut ensuite basculer en mode édition</p>
@@ -404,7 +315,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-dun-manchon-de-reparation">
-<h2><span class="section-number">3.2.9. </span>Création d’un manchon de réparation<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.9. </span>Création d’un manchon de réparation<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Permalink to this heading"></a></h2>
 <p>Pour créer un nouveau manchon de réparation il faut sélectionner la catégorie « fuites »
 qui est une sous‐couche dans la couche « Réseau ».
 Il faut ensuite basculer en mode édition</p>
@@ -477,7 +388,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 la conduite une fois le manchon crée.</p>
 </section>
 <section id="creation-douvrages-ainsi-que-de-tous-leurs-details">
-<h2><span class="section-number">3.2.10. </span>Création d’ouvrages ainsi que de tous leurs détails<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.10. </span>Création d’ouvrages ainsi que de tous leurs détails<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Permalink to this heading"></a></h2>
 <p>Les ouvrages et leurs détails sont contenus dans plusieurs couches:</p>
 <blockquote>
 <div><ul class="simple">
@@ -489,7 +400,7 @@ la conduite une fois le manchon crée.</p>
 </div></blockquote>
 </section>
 <section id="creation-de-louvrage-general">
-<h2><span class="section-number">3.2.11. </span>Création de l’ouvrage général<a class="headerlink" href="#creation-de-louvrage-general" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.11. </span>Création de l’ouvrage général<a class="headerlink" href="#creation-de-louvrage-general" title="Permalink to this heading"></a></h2>
 <p>Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
 qui est une sous‐couche dans la couche « ouvrages ».
 Il faut ensuite basculer en mode édition</p>
@@ -507,7 +418,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-du-couvercle-de-louvrage">
-<h2><span class="section-number">3.2.12. </span>Création du couvercle de l’ouvrage<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.12. </span>Création du couvercle de l’ouvrage<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Permalink to this heading"></a></h2>
 <p>Pour créer le couvercle de l’ouvrage, il faut sélectionner la catégorie « couvercles »
 qui est une sous‐couche dans la couche « ouvrages ».
 Il faut ensuite basculer en mode édition</p>
@@ -535,7 +446,7 @@ Le champ a du se remplir avec le nom de l’ouvrage.</p>
 </ul>
 </section>
 <section id="creation-de-lemprise-de-louvrage">
-<h2><span class="section-number">3.2.13. </span>Création de l’emprise de l’ouvrage<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.13. </span>Création de l’emprise de l’ouvrage<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Permalink to this heading"></a></h2>
 <p>Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
 qui est une sous‐couche dans la couche « ouvrages ».
 Il faut ensuite basculer en mode édition</p>
@@ -551,7 +462,7 @@ Le formulaire s’ouvre, il faut remplir les champs suivants:</p>
 </ul>
 </section>
 <section id="creation-des-details-de-louvrage">
-<h2><span class="section-number">3.2.14. </span>Création des détails de l’ouvrage<a class="headerlink" href="#creation-des-details-de-louvrage" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">3.2.14. </span>Création des détails de l’ouvrage<a class="headerlink" href="#creation-des-details-de-louvrage" title="Permalink to this heading"></a></h2>
 <p>Pour créer les détails de l’ouvrage, il faut sélectionner la catégorie du détail voulu qui est une sous‐couche dans la couche « détail ».
 Il faut ensuite basculer en mode édition</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
@@ -565,50 +476,33 @@ le type de détail que l’on a créé (réservoirs, sources etc..).</p>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="update.html" class="btn btn-neutral float-right" title="3.3. Règles de base pour la mise à jour sur QWAT" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="qwat_struct.html" class="btn btn-neutral float-left" title="3.1. Structuration du réseau d’Eau Potable sur QWAT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="update.html" class="btn btn-neutral float-right" title="3.3. Règles de base pour la mise à jour sur QWAT" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2018, QWAT team.
-
-    </p>
+    <p>&#169; Copyright 2018, QWAT team.</p>
   </div>
-    
-    
-    
-    Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
-    
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>. 
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
