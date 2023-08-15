@@ -1,5 +1,5 @@
 sphinx
 sphinx[transifex]
 sphinx-intl
-sphinx-rtd-theme
+sphinx-rtd-theme=1.2.0
 Pygments>=2.0.1
