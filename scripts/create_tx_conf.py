@@ -10,7 +10,7 @@ project = "qwat-doc"
 
 with open(".tx/config", "w") as f:
     config = "[main]\n"
-    config += "host = https://www.transifex.com\n\n"
+    config += "host = https://app.transifex.com\n\n"
 
     for pot in Path("i18n/pot/").rglob("*.pot"):
         rel_pot = pot.relative_to("i18n/pot/")
