@@ -1,12 +1,23 @@
-Création d’objets dans QWAT
+Object creation in QWAT
 ===========================
 
-Ce guide se veut un résumé des fonctionnalités de créations des données adaptées au besoin de QWAT dans QGIS.
+This guide is intended to summarize feature creation according to QWAT fonctionnalities in QGIS.
 
-Il ne saurait remplacer la lecture du `manuel <https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_ de QGIS expliquant en détail les différentes commandes. Le dessinateur est libre d'utiliser les plugins de dessin pour enrichir sa palette d'outils.
 
-Importation des points relevés
+It is not a substitute of the QGIS `documentation <https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html>`_.
+The user is free to use drawing plugin tools to enhance his toolbox. However many of theses have been integrated in QGIS so be
+sure to check QGIS documentation first.
+
+Import of survey points
 ------------------------------
+
+To be redefined according to Land Survey Codes Import
+
+Actual possible tool :
+
+You can use QGIS native import tool to import any points from almost any format.
+
+If you use an ascii columned format we suggest following approach : (Custom plugin EasyImport) :
 
 Pour importer des points dans QWAT, il faut cliquer sur l’icône « `EasyImport <https://github.com/VilleDePully/EasyImport>`_ »
 
@@ -24,7 +35,7 @@ Les points ont été importés dans les bonnes couches, ces dernières sont pass
 Vous devez maintenant remplir les attributs des différents points pour chaque couche en suivant la marche à suivre.
 
 
-Création des points de construction
+Construction points creation
 -----------------------------------
 
 Pour créer de nouveaux points de construction il faut sélectionner la catégorie

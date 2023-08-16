@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2. Objekte in QWAT erstellen &mdash; QWAT 1.0 Dokumentation</title>
+  <title>3.2. Object creation in QWAT &mdash; QWAT 1.0 Dokumentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -49,9 +49,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. QWAT Installation Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">3. QWAT User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Structuration du réseau d’Eau Potable sur QWAT</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Objekte in QWAT erstellen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#importation-des-points-releves">3.2.1. Importation des points relevés</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-points-de-construction">3.2.2. Création des points de construction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Object creation in QWAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#import-of-survey-points">3.2.1. Import of survey points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#construction-points-creation">3.2.2. Construction points creation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creation-des-conduites">3.2.3. Création des conduites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#separation-dune-conduite-en-deux-conduites">3.2.4. Séparation d’une conduite en deux conduites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creation-des-differentes-pieces-dinstallation">3.2.5. Création des différentes pièces d’installation</a></li>
@@ -99,7 +99,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3. </span>QWAT User Guide</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Objekte in QWAT erstellen</li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Object creation in QWAT</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/user-guide/create.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
@@ -109,12 +109,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="creation-dobjets-dans-qwat">
-<h1><span class="section-number">3.2. </span>Objekte in QWAT erstellen<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Permalink to this heading"></a></h1>
-<p>Ce guide se veut un résumé des fonctionnalités de créations des données adaptées au besoin de QWAT dans QGIS.</p>
-<p>Il ne saurait remplacer la lecture du <a class="reference external" href="https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html">manuel</a> de QGIS expliquant en détail les différentes commandes. Le dessinateur est libre d’utiliser les plugins de dessin pour enrichir sa palette d’outils.</p>
-<section id="importation-des-points-releves">
-<h2><span class="section-number">3.2.1. </span>Importation des points relevés<a class="headerlink" href="#importation-des-points-releves" title="Permalink to this heading"></a></h2>
+  <section id="object-creation-in-qwat">
+<h1><span class="section-number">3.2. </span>Object creation in QWAT<a class="headerlink" href="#object-creation-in-qwat" title="Permalink to this heading"></a></h1>
+<p>This guide is intended to summarize feature creation according to QWAT fonctionnalities in QGIS.</p>
+<p>It is not a substitute of the QGIS <a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html">documentation</a>.
+The user is free to use drawing plugin tools to enhance his toolbox. However many of theses have been integrated in QGIS so be
+sure to check QGIS documentation first.</p>
+<section id="import-of-survey-points">
+<h2><span class="section-number">3.2.1. </span>Import of survey points<a class="headerlink" href="#import-of-survey-points" title="Permalink to this heading"></a></h2>
+<p>To be redefined according to Land Survey Codes Import</p>
+<p>Actual possible tool :</p>
+<p>You can use QGIS native import tool to import any points from almost any format.</p>
+<p>If you use an ascii columned format we suggest following approach : (Custom plugin EasyImport) :</p>
 <p>Pour importer des points dans QWAT, il faut cliquer sur l’icône « <a class="reference external" href="https://github.com/VilleDePully/EasyImport">EasyImport</a> »</p>
 <img alt="../_images/icon_plugin.png" src="../_images/icon_plugin.png" />
 <p>Das folgende Fenster öffnet sich:</p>
@@ -127,8 +133,8 @@
 <p>Les points ont été importés dans les bonnes couches, ces dernières sont passées en mode édition.
 Vous devez maintenant remplir les attributs des différents points pour chaque couche en suivant la marche à suivre.</p>
 </section>
-<section id="creation-des-points-de-construction">
-<h2><span class="section-number">3.2.2. </span>Création des points de construction<a class="headerlink" href="#creation-des-points-de-construction" title="Permalink to this heading"></a></h2>
+<section id="construction-points-creation">
+<h2><span class="section-number">3.2.2. </span>Construction points creation<a class="headerlink" href="#construction-points-creation" title="Permalink to this heading"></a></h2>
 <p>Pour créer de nouveaux points de construction il faut sélectionner la catégorie
 « points de construction » qui est une sous‐couche dans la couche « Côtes ».
 Il faut ensuite basculer en mode édition</p>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2. Vytváření objektů v QWAT &mdash; Dokumentace pro QWAT 1.0</title>
+  <title>3.2. Object creation in QWAT &mdash; Dokumentace pro QWAT 1.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -49,9 +49,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation-guide/index.html">2. Instalační příručka QWAT</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Uživatelská příručka QWAT</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="qwat_struct.html">3.1. Struktura sítě pitné vody na QWAT</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Vytváření objektů v QWAT</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#importation-des-points-releves">3.2.1. Import sledovaných bodů</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#creation-des-points-de-construction">3.2.2. Vytváření stavebních bodů</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Object creation in QWAT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#import-of-survey-points">3.2.1. Import of survey points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#construction-points-creation">3.2.2. Construction points creation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creation-des-conduites">3.2.3. Vytváření potrubí</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#separation-dune-conduite-en-deux-conduites">3.2.4. Rozdělení potrubí na dvě trubky</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#creation-des-differentes-pieces-dinstallation">3.2.5. Vytvoření různých instalačních dílů</a></li>
@@ -99,7 +99,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html"><span class="section-number">3. </span>Uživatelská příručka QWAT</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Vytváření objektů v QWAT</li>
+      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Object creation in QWAT</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/user-guide/create.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -109,12 +109,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="creation-dobjets-dans-qwat">
-<h1><span class="section-number">3.2. </span>Vytváření objektů v QWAT<a class="headerlink" href="#creation-dobjets-dans-qwat" title="Permalink to this heading"></a></h1>
-<p>Účelem této příručky je shrnout funkce vytváření dat přizpůsobené potřebám QWAT v QGIS.</p>
-<p>Nenahrazuje čtení příručky QGIS &lt;<a class="reference external" href="https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html">https://docs.qgis.org/latest/fr/docs/user_manual/working_with_vector/editing_geometry_attributes.html</a>&gt;`_, která podrobně vysvětluje jednotlivé příkazy. Kreslíř může volně používat zásuvné moduly pro obohacení své palety nástrojů.</p>
-<section id="importation-des-points-releves">
-<h2><span class="section-number">3.2.1. </span>Import sledovaných bodů<a class="headerlink" href="#importation-des-points-releves" title="Permalink to this heading"></a></h2>
+  <section id="object-creation-in-qwat">
+<h1><span class="section-number">3.2. </span>Object creation in QWAT<a class="headerlink" href="#object-creation-in-qwat" title="Permalink to this heading"></a></h1>
+<p>This guide is intended to summarize feature creation according to QWAT fonctionnalities in QGIS.</p>
+<p>It is not a substitute of the QGIS <a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html">documentation</a>.
+The user is free to use drawing plugin tools to enhance his toolbox. However many of theses have been integrated in QGIS so be
+sure to check QGIS documentation first.</p>
+<section id="import-of-survey-points">
+<h2><span class="section-number">3.2.1. </span>Import of survey points<a class="headerlink" href="#import-of-survey-points" title="Permalink to this heading"></a></h2>
+<p>To be redefined according to Land Survey Codes Import</p>
+<p>Actual possible tool :</p>
+<p>You can use QGIS native import tool to import any points from almost any format.</p>
+<p>If you use an ascii columned format we suggest following approach : (Custom plugin EasyImport) :</p>
 <p>Chcete-li importovat body do QWAT, klikněte na ikonu « <a class="reference external" href="https://github.com/VilleDePully/EasyImport">EasyImport</a> »</p>
 <img alt="../_images/icon_plugin.png" src="../_images/icon_plugin.png" />
 <p>Otevře se následující okno:</p>
@@ -126,8 +132,8 @@
 </ul>
 <p>Body byly importovány do správných vrstev, ty byly přepnuty do režimu úprav. Nyní musíte vyplnit atributy různých bodů pro každou vrstvu podle následujícího postupu.</p>
 </section>
-<section id="creation-des-points-de-construction">
-<h2><span class="section-number">3.2.2. </span>Vytváření stavebních bodů<a class="headerlink" href="#creation-des-points-de-construction" title="Permalink to this heading"></a></h2>
+<section id="construction-points-creation">
+<h2><span class="section-number">3.2.2. </span>Construction points creation<a class="headerlink" href="#construction-points-creation" title="Permalink to this heading"></a></h2>
 <p>Chcete-li vytvořit nové stavební body, vyberte kategorii „stavební body“, což je podložka ve vrstvě „Pobřeží“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“</p>
