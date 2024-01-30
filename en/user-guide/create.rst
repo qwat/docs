@@ -304,7 +304,7 @@ Le formulaire de l’objet s’ouvre, il faut remplir les champs suivants:
 Création de l’emprise de l’ouvrage
 ----------------------------------
 
-Pour créer le point d’ouvrage, il faut sélectionner la catégorie « ouvrage général »
+Pour créer l'emprise de l’ouvrage, il faut sélectionner la catégorie « ouvrage – polygones »
 qui est une sous‐couche dans la couche « ouvrages ».
 Il faut ensuite basculer en mode édition
 
