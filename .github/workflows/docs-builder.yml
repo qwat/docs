@@ -1,13 +1,23 @@
-name: Release
+name: 📚 Documentation builder
+
+concurrency:
+  group: docs-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 on:
   push:
+    branches:
+      - master
   pull_request:
+    branches:
+      - master
   schedule:
-    - cron: "22 11 * * *"
+    - cron: "30 04 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
+    name: Create gather translations and publish the documentation
     runs-on: ubuntu-22.04
 
     steps:
