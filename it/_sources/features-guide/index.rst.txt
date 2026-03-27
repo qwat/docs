@@ -48,14 +48,14 @@ A preconfigured QGIS project is provided. The network objects are shown with a s
 The editing can be done directly from QGIS, each object has a corresponding form that eases the edition of attributes.
 
 
-`Edition documentation <https://qwat.github.io/docs/master/en/html/user-guide/create.html>`_
+`Edition documentation <https://qwat.github.io/docs/en/user-guide/create.html>`_
 
 Printing
 ^^^^^^^^
 
 Pre-configured layouts are provided in the QGIS project. The pipes geometries and labels are optimized to the layouts scale.
 
-`Printing documentation <https://qwat.github.io/docs/master/en/html/user-guide/print.html>`_
+`Printing documentation <https://qwat.github.io/docs/en/user-guide/print.html>`_
 
 Export
 ^^^^^^
@@ -73,4 +73,4 @@ History viewer
 The `plugin PG History Viewer <https://plugins.qgis.org/plugins/pg_history_viewer/>`_ can be configured for QWAT. 
 This plugin tracks the changes applied to the data. Unwanted changes can be selected and reversed.
 
-`History viewer documentation <https://qwat.github.io/docs/master/en/html/user-guide/history.html#>`_
+`History viewer documentation <https://qwat.github.io/docs/en/user-guide/history.html#>`_
