@@ -18,7 +18,7 @@ deploy:
 #    keep-history: true
 #    local-dir: _build/html
 #    on:
-#      branch: master
+#      branch: main
   - provider: script
     skip_cleanup: true
     script: bash scripts/travis_tag_publish.sh $TRAVIS_TAG
@@ -28,4 +28,4 @@ deploy:
     skip_cleanup: true
     script: bash scripts/travis_tag_publish.sh
     on:
-      branch: master
+      branch: main
