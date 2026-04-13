@@ -9,7 +9,7 @@ Create a new upgrade delta
 * Create the corresponding SQL delta file in *data-model/update/delta*.
   * file must be named : delta_{tag_number}_{increment}_{short description}.sql `see Release cycles and versioning. <qwat_dev.html#release-cycles-and-versioning>`_
 * Push your branch, and check travis result
-* If travis test is OK, then you can create a pull request to merge your modifications in master
+* If travis test is OK, then you can create a pull request to merge your modifications in `main` branch
 
 .. note:: Data model should be TAGGED. Tag should respect the following syntax like this: x.x.x. For each major version, the tag MUST be called x.0.0.
 

@@ -153,7 +153,7 @@
 <li><p>It is possible to multiple Delta files for one <em>version-release</em> Ex: <cite>delta_1.3.2_0001_one_change</cite>, <cite>delta_1.3.2_0002_another_change</cite></p></li>
 <li><p>Each new version will systematically have a release. A release is materialized by a git tag</p></li>
 <li><p>travis-CI automatically deploys a release when the tag is pushed AND the tests succeed</p></li>
-<li><p>Data administrators must NEVER work on master branch, but use release. The rationale behind that is that the latest version in master branch changes until the release, so it is not a reliable version tag . This means for git user they ahve to fetch remote tags and checkout to the desired release using git checkout tag_number</p></li>
+<li><p>Data administrators must NEVER work on branch <cite>main</cite>, but use the <cite>release</cite> branch. The rationale behind that is that the latest version in branch <cite>main</cite> changes until the release, so it is not a reliable version tag . This means for git user they ahve to fetch remote tags and checkout to the desired release using git checkout tag_number</p></li>
 </ul>
 </section>
 </section>

@@ -154,7 +154,7 @@
 <li><p>Je možné mít více rozdílových souborů Delta pro jednu <em>verzi-vydání</em> Příklad: <cite>delta_1.3.2_0001_one_change</cite>, <cite>delta_1.3.2_0002_another_change</cite></p></li>
 <li><p>Každá nová verze bude systematicky vydána. Vydání se projeví pomocí značky git</p></li>
 <li><p>travis-CI automaticky uvolní vydání když přijde čas a testy jsou úspěšné</p></li>
-<li><p>Správci dat nesmí NIKDY pracovat na hlavní větvi, ale používat vydání. Důvodem je to, že nejnovější verze hlavní větve se až do vydání mění, takže nejde o spolehlivou značku verze. To pro uživatele git znamená, že mají načíst vzdálené značky a provést kontrolu do požadovaného vydání pomocí git checkout tag_number</p></li>
+<li><p>Data administrators must NEVER work on branch <cite>main</cite>, but use the <cite>release</cite> branch. The rationale behind that is that the latest version in branch <cite>main</cite> changes until the release, so it is not a reliable version tag . This means for git user they ahve to fetch remote tags and checkout to the desired release using git checkout tag_number</p></li>
 </ul>
 </section>
 </section>
