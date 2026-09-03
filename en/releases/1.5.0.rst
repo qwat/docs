@@ -1,0 +1,20 @@
+.. _150:
+
+1.5.0 (future)
+===============
+
+Here you can find information about the future 1.5.0 release of TEKSI qwat
+
+Main features
+----------------
+
+ - New great feature 1
+    - New great feature 2
+ - New great feature 3
+    - New great feature 4
+
+
+Bug fixes and performance improvements
+-----------------------------------------
+
+ - Various bug fixes for ...
