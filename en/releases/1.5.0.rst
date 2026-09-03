@@ -8,13 +8,42 @@ Here you can find information about the future 1.5.0 release of TEKSI qwat
 Main features
 ----------------
 
- - New great feature 1
-    - New great feature 2
- - New great feature 3
-    - New great feature 4
+- Update vl_part_type.sql; add default values 101, 102 and 103
+- Change default SRID from 21781 to 2056 by @ponceta in #400
+- Add identification to pipes by @rbovard in #414
+- Update od_all_inheritance.py by @tproduit in #407
+- Update README.md by @nicolas-sitylb in #419
+- Update fn_pipe_get_id.sql using st_dwithin rather than st_intersects by @tproduit in #406
+- 2024 10 29 add protection tube distant control cable by @sjib in #388
+
+Documentation
+--------------
 
 
 Bug fixes and performance improvements
 -----------------------------------------
 
- - Various bug fixes for ...
+ - Fix typos
+ - Do not use an arbitrary default value for PN
+ 
+ 
+Adaptions to project file
+----------------------------------------
+
+The following new views have been integrated in this release:
+
+- 2024-12-06-project-add-sia405-control-cable-protection-tube by @sjib in #331
+- Update qwat.qgs disable macros by @varrieta in #345
+
+
+CI improvements
+---------------
+ 
+- Adapt test matrix to latest-1, latest and future by @ponceta in #398
+- Upgrade pg versions according to roadmap by @ponceta in #399
+- do not install pum v1 by @3nids in #401
+- Upgrade postgreSQL postgis versions according to roadmap by @ponceta in #395
+- Reorganize datamodel scripts by @ponceta in #394
+- Fix docker compose for schemaspy by @ponceta in #403
+- Fix/rename branch master to main by @nicolas-sitylb in #422
+- Some fix for the old release process by @ponceta in #432
