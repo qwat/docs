@@ -18,7 +18,8 @@ Main features
 
 Documentation
 --------------
-
+- TO DO new chapter Fernwirkkabel / Schutzrohr
+- New Release chapter added
 
 Bug fixes and performance improvements
 -----------------------------------------
@@ -32,8 +33,8 @@ Adaptions to project file
 
 The following new views have been integrated in this release:
 
-- 2024-12-06-project-add-sia405-control-cable-protection-tube by @sjib in #331
-- Update qwat.qgs disable macros by @varrieta in #345
+- The qwat.qgs was extende to show the new layers organisation, control cable and protection tube. Layer definition files (*.qlr) and style file format files (*.qml) are made available separately (https://github.com/qwat/QWAT/tree/main/qgis-project/layer_definitions).
+- Update qwat.qgs - disable macros
 
 
 CI improvements
@@ -47,3 +48,6 @@ CI improvements
 - Fix docker compose for schemaspy by @ponceta in #403
 - Fix/rename branch master to main by @nicolas-sitylb in #422
 - Some fix for the old release process by @ponceta in #432
+
+- Rewrite docs builder 
+- Update create.rst
