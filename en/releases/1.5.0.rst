@@ -8,13 +8,59 @@ Here you can find information about the future 1.5.0 release of TEKSI qwat
 Main features
 ----------------
 
- - New great feature 1
-    - New great feature 2
- - New great feature 3
-    - New great feature 4
+- Update vl_part_type.sql; add default values 101, 102 and 103
+- Change default SRID from 21781 to 2056
+- Add identification attribute to pipes
+- Update od_all_inheritance.py
+- Update README.md
+- Update fn_pipe_get_id.sql using st_dwithin rather than st_intersects
+- Add model table including attributes and value lists for SIA 405 protection tube distant control cable (same implementation as in TEKSI Wastewaster)
+- This integrates also the organisation table 
 
+Documentation
+--------------
+- TO DO new chapter Fernwirkkabel / Schutzrohr
+- New Release chapter added
 
 Bug fixes and performance improvements
 -----------------------------------------
 
- - Various bug fixes for ...
+ - Fix typos
+ - Do not use an arbitrary default value for Pressure_nominale
+ 
+ 
+Adaptions to project file
+----------------------------------------
+
+The following new views have been integrated in this release:
+
+- The qwat.qgs was extende to show the new layers organisation, control cable and protection tube. Layer definition files (*.qlr) and style file format files (*.qml) are made available separately (https://github.com/qwat/QWAT/tree/main/qgis-project/layer_definitions).
+
+
+TO DO add screenshots from testing new layers
+
+
+
+- Update qwat.qgs - disable macros
+
+
+CI improvements
+---------------
+ 
+- Adapt test matrix to latest-1, latest and future by @ponceta in #398
+- Upgrade pg versions according to roadmap by @ponceta in #399
+- do not install pum v1 by @3nids in #401
+- Upgrade postgreSQL postgis versions according to roadmap by @ponceta in #395
+- Reorganize datamodel scripts by @ponceta in #394
+- Fix docker compose for schemaspy by @ponceta in #403
+- Fix/rename branch master to main by @nicolas-sitylb in #422
+- Some fix for the old release process by @ponceta in #432
+
+- Rewrite docs builder 
+- Update create.rst
+
+
+For technical details see Release pages resp. closed pull requests (docs):
+https://github.com/qwat/QWAT/releases/tag/1.5.0
+https://github.com/qwat/qwat-data-model/releases/tag/1.5.0
+https://github.com/qwat/docs/pulls?q=is%3Apr+is%3Aclosed
