@@ -45,7 +45,7 @@ If you already have the service defined you can skip this step, else edit the ``
 
 ::
 
-    [qwat]
+    [pg_qwat]
     #enter your database ip
     host=127.0.0.1
     #database name
@@ -54,16 +54,20 @@ If you already have the service defined you can skip this step, else edit the ``
     user=postgres
     #you can also add your password if you like
     password=YourPassword
+    # Choose sslmode=disable if you don't want to use SSL, or sslmode=require if you want to force SSL connections.
+    ssslmode=prefer
 
-    [qwat_prod]
+    [pg_qwat_prod]
     #enter your database ip
     host=127.0.0.1
     #database name
-    dbname=qwat
+    dbname=qwat_prod
     port=5432
     user=postgres
     #you can also add your password if you like
     password=YourPassword
+    # Choose sslmode=disable if you don't want to use SSL, or sslmode=require if you want to force SSL connections.
+    ssslmode=prefer
 
 **Open the qgis project**
 
