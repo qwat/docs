@@ -3,7 +3,9 @@
 Releases
 ===============
 
-Here you can find information about the different TEKSI qwat releases, including new features displayed in a visual changelog, release notes, and download links.
+Here you can find information about the different TEKSI QWAT releases, 
+including new features displayed in a visual changelog, release notes
+and download links.
 
 .. toctree::
    :maxdepth: 3
