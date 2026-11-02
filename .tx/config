@@ -73,6 +73,12 @@ source_file = i18n/pot/demo-guide/index.pot
 source_lang = en
 type = PO
 
+[o:qwat:p:qwat-doc:r:releases-index]
+file_filter = i18n/<lang>/releases/index.po
+source_file = i18n/pot/releases/index.pot
+source_lang = en
+type = PO
+
 [o:qwat:p:qwat-doc:r:translation-index]
 file_filter = i18n/<lang>/translation/index.po
 source_file = i18n/pot/translation/index.pot
