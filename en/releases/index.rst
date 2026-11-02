@@ -8,6 +8,6 @@ Here you can find information about the different TEKSI qwat releases, including
 .. toctree::
    :maxdepth: 3
 
-   1.5.0
-   1.6.0
+   1_5
+
 
