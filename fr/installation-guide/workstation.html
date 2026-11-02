@@ -72,7 +72,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../demo-guide/index.html">7. Projet démo et données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Traduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releases/index.html">10. Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">11. Traduction</a></li>
 </ul>
 
         </div>
@@ -165,11 +166,17 @@ and <code class="docutils literal notranslate"><span class="pre">Edit</span> <sp
 <h3><span class="section-number">2.3.2.3. </span>All systems<a class="headerlink" href="#all-systems" title="Lien permanent vers cette rubrique"></a></h3>
 <p>Put the following content in the file <code class="docutils literal notranslate"><span class="pre">pg_service.conf</span></code> or <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code>.
 You may have to adapt the variables for your setup.</p>
-<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[qwat]</span>
-<span class="na">host</span><span class="o">=</span><span class="s">localhost</span>
-<span class="na">port</span><span class="o">=</span><span class="s">5432</span>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[pg_qwat]</span>
+<span class="c1"># Enter your database ip</span>
+<span class="na">host</span><span class="o">=</span><span class="s">127.0.0.1</span>
+<span class="c1"># Database name</span>
 <span class="na">dbname</span><span class="o">=</span><span class="s">qwat</span>
-<span class="na">user</span><span class="o">=</span><span class="s">qwatuser</span>
+<span class="na">port</span><span class="o">=</span><span class="s">5432</span>
+<span class="na">user</span><span class="o">=</span><span class="s">postgres</span>
+<span class="c1"># You can also add your password if you like</span>
+<span class="na">password</span><span class="o">=</span><span class="s">YourPassword</span>
+<span class="c1"># Choose sslmode=disable if you don't want to use SSL, or sslmode=require if you want to force SSL connections.</span>
+<span class="na">sslmode</span><span class="o">=</span><span class="s">prefer</span>
 </pre></div>
 </div>
 <p>To save the password as well on the system you may use the file <a class="reference external" href="http://www.postgresql.org/docs/current/static/libpq-pgpass.html">pgpass</a>.</p>

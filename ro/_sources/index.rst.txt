@@ -30,6 +30,7 @@ Contents
    demo-guide/index
    faq/index
    glossary/index
+   releases/index
    translation/index
 
 

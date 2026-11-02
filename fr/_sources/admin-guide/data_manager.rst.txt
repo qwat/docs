@@ -32,17 +32,17 @@ Then, it can be installed like any other python library:
 
     pip install --upgrade qgepqwat2ili
 
-A simple export is done like this (assuming you have a pgservice defined named `qwat`):
+A simple export is done like this (assuming you have a pgservice defined named `pg_qwat`):
 
 .. code-block::
 
-    python -m qgepqwat2ili qwat export desktop/my_export.xtf
+    python -m qgepqwat2ili pg_qwat export desktop/my_export.xtf
 
 Full usage:
 
 .. code-block::
 
-    usage: python -m qgepqwat2ili qwat [-h] [--recreate_schema] [--skip_validation] [--pgservice PGSERVICE] [--log] [--include_hydraulics] export path
+    usage: python -m qgepqwat2ili pg_qwat [-h] [--recreate_schema] [--skip_validation] [--pgservice PGSERVICE] [--log] [--include_hydraulics] export path
 
     positional arguments:
     {import,export}       import is currently not supported
@@ -55,7 +55,7 @@ Full usage:
                             (default: False)
     --include_hydraulics  if provided, exports will include hydraulischer_strang and hydraulischer_node classes (these are currently likely to make the export invalid due to issues with the current ili model) (default: False)
     --pgservice PGSERVICE
-                            name of the pgservice to use to connect to the database (default: qwat)
+                            name of the pgservice to use to connect to the database (default: pg_qwat)
     --log                 saves a log file next to the input/output file (default: False)
 
 Further documentation as well as an issue tracker can be found on the `qgepqwat2ili repository <https://github.com/QGEP/qgepqwat2ili>`_.

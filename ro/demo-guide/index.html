@@ -54,7 +54,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Demo data and project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">8. FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">9. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">10. Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../releases/index.html">10. Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../translation/index.html">11. Translation</a></li>
 </ul>
 
         </div>
@@ -95,15 +96,15 @@
 <p>How to install the data sample from the QWAT Water distribution management project.</p>
 <p>Create the QWAT database model with roles and restore the latest version:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the database and the extensions</span>
-<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create database qwat;&#39;</span>
-<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create extension postgis;&#39;</span>
-<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;create extension hstore;&#39;</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">c</span> <span class="s1">'create database qwat;'</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">c</span> <span class="s1">'create extension postgis;'</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">-</span><span class="n">d</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">c</span> <span class="s1">'create extension hstore;'</span>
 
 <span class="c1"># Create the roles for QWAT</span>
-<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;CREATE ROLE qwat_viewer NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;&#39;</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
-<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;CREATE ROLE qwat_user NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;&#39;</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
-<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;CREATE ROLE qwat_manager NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;&#39;</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
-<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;CREATE ROLE qwat_sysadmin NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;&#39;</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">'CREATE ROLE qwat_viewer NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;'</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">'CREATE ROLE qwat_user NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;'</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">'CREATE ROLE qwat_manager NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;'</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">c</span> <span class="s1">'CREATE ROLE qwat_sysadmin NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;'</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span>
 
 <span class="c1"># And restore it into your QWAT database</span>
 <span class="n">pg_restore</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="o">--</span><span class="n">dbname</span> <span class="n">qwat</span> <span class="o">-</span><span class="n">e</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">owner</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">--</span><span class="n">jobs</span><span class="o">=</span><span class="mi">3</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">triggers</span> <span class="o">--</span><span class="n">port</span> <span class="mi">5432</span> <span class="n">qwat_dump</span><span class="o">.</span><span class="n">backup</span>
@@ -112,7 +113,7 @@
 <p>You now have the latest data model (with sample data) + database roles.</p>
 <p><strong>Create the QWAT service in the .pg_service.conf file</strong></p>
 <p>If you already have the service defined you can skip this step, else edit the <code class="docutils literal notranslate"><span class="pre">.pg_service.conf</span></code> file and make it look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">qwat</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">pg_qwat</span><span class="p">]</span>
 <span class="c1">#enter your database ip</span>
 <span class="n">host</span><span class="o">=</span><span class="mf">127.0.0.1</span>
 <span class="c1">#database name</span>
@@ -121,16 +122,20 @@
 <span class="n">user</span><span class="o">=</span><span class="n">postgres</span>
 <span class="c1">#you can also add your password if you like</span>
 <span class="n">password</span><span class="o">=</span><span class="n">YourPassword</span>
+<span class="c1"># Choose sslmode=disable if you don't want to use SSL, or sslmode=require if you want to force SSL connections.</span>
+<span class="n">ssslmode</span><span class="o">=</span><span class="n">prefer</span>
 
-<span class="p">[</span><span class="n">qwat_prod</span><span class="p">]</span>
+<span class="p">[</span><span class="n">pg_qwat_prod</span><span class="p">]</span>
 <span class="c1">#enter your database ip</span>
 <span class="n">host</span><span class="o">=</span><span class="mf">127.0.0.1</span>
 <span class="c1">#database name</span>
-<span class="n">dbname</span><span class="o">=</span><span class="n">qwat</span>
+<span class="n">dbname</span><span class="o">=</span><span class="n">qwat_prod</span>
 <span class="n">port</span><span class="o">=</span><span class="mi">5432</span>
 <span class="n">user</span><span class="o">=</span><span class="n">postgres</span>
 <span class="c1">#you can also add your password if you like</span>
 <span class="n">password</span><span class="o">=</span><span class="n">YourPassword</span>
+<span class="c1"># Choose sslmode=disable if you don't want to use SSL, or sslmode=require if you want to force SSL connections.</span>
+<span class="n">ssslmode</span><span class="o">=</span><span class="n">prefer</span>
 </pre></div>
 </div>
 <p><strong>Open the qgis project</strong></p>

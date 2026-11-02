@@ -77,11 +77,17 @@ You may have to adapt the variables for your setup.
 
 .. code:: ini
 
-    [qwat]
-    host=localhost
-    port=5432
+    [pg_qwat]
+    # Enter your database ip
+    host=127.0.0.1
+    # Database name
     dbname=qwat
-    user=qwatuser
+    port=5432
+    user=postgres
+    # You can also add your password if you like
+    password=YourPassword
+    # Choose sslmode=disable if you don't want to use SSL, or sslmode=require if you want to force SSL connections.
+    sslmode=prefer
 
 To save the password as well on the system you may use the file `pgpass <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_.
 

@@ -337,3 +337,12 @@ Il ne reste plus qu’à cliquer à l’emplacement du point voulu.
 Le formulaire de l’objet s’ouvre, il faut remplir les attributs selon
 le type de détail que l’on a créé (réservoirs, sources etc..).
 
+
+Création des tubes de protection
+---------------------------------
+
+
+Création des cable de contrôles
+---------------------------------
+
+
