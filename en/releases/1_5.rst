@@ -1,6 +1,6 @@
 .. _150:
 
-1.5.0 (future)
+1.5.0
 ===============
 
 Here you can find information about the future 1.5.0 release of TEKSI qwat
@@ -14,13 +14,14 @@ Main features
 - Update od_all_inheritance.py
 - Update README.md
 - Update fn_pipe_get_id.sql using st_dwithin rather than st_intersects
-- Add model table including attributes and value lists for SIA 405 protection tube distant control cable (same implementation as in TEKSI Wastewaster)
+- Add model table including attributes and value lists for SIA 405 protection tube & distant control cable (same implementation as in TEKSI Wastewaster)
 - This integrates also the organisation table 
 
 Documentation
 --------------
-- TO DO new chapter Fernwirkkabel / Schutzrohr
+
 - New Release chapter added
+- Chapter Protection tubes and distant control cables added in Object creation chapter (needs to be updated)
 
 Bug fixes and performance improvements
 -----------------------------------------
@@ -35,11 +36,6 @@ Adaptions to project file
 The following new views have been integrated in this release:
 
 - The qwat.qgs was extende to show the new layers organisation, control cable and protection tube. Layer definition files (*.qlr) and style file format files (*.qml) are made available separately (https://github.com/qwat/QWAT/tree/main/qgis-project/layer_definitions).
-
-
-TO DO add screenshots from testing new layers
-
-
 
 - Update qwat.qgs - disable macros
 
