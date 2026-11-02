@@ -7,36 +7,6 @@ source_file = i18n/pot/index.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:contributor-guide-index]
-file_filter = i18n/<lang>/contributor-guide/index.po
-source_file = i18n/pot/contributor-guide/index.pot
-source_lang = en
-type = PO
-
-[o:qwat:p:qwat-doc:r:developer-guide-upgrade]
-file_filter = i18n/<lang>/developer-guide/upgrade.po
-source_file = i18n/pot/developer-guide/upgrade.pot
-source_lang = en
-type = PO
-
-[o:qwat:p:qwat-doc:r:developer-guide-local-customizations]
-file_filter = i18n/<lang>/developer-guide/local_customizations.po
-source_file = i18n/pot/developer-guide/local_customizations.pot
-source_lang = en
-type = PO
-
-[o:qwat:p:qwat-doc:r:developer-guide-index]
-file_filter = i18n/<lang>/developer-guide/index.po
-source_file = i18n/pot/developer-guide/index.pot
-source_lang = en
-type = PO
-
-[o:qwat:p:qwat-doc:r:developer-guide-qwat-dev]
-file_filter = i18n/<lang>/developer-guide/qwat_dev.po
-source_file = i18n/pot/developer-guide/qwat_dev.pot
-source_lang = en
-type = PO
-
 [o:qwat:p:qwat-doc:r:faq-index]
 file_filter = i18n/<lang>/faq/index.po
 source_file = i18n/pot/faq/index.pot
@@ -49,45 +19,33 @@ source_file = i18n/pot/admin-guide/triggers.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:admin-guide-index]
-file_filter = i18n/<lang>/admin-guide/index.po
-source_file = i18n/pot/admin-guide/index.pot
-source_lang = en
-type = PO
-
 [o:qwat:p:qwat-doc:r:admin-guide-data-manager]
 file_filter = i18n/<lang>/admin-guide/data_manager.po
 source_file = i18n/pot/admin-guide/data_manager.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:features-guide-index]
-file_filter = i18n/<lang>/features-guide/index.po
-source_file = i18n/pot/features-guide/index.pot
+[o:qwat:p:qwat-doc:r:admin-guide-index]
+file_filter = i18n/<lang>/admin-guide/index.po
+source_file = i18n/pot/admin-guide/index.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:demo-guide-index]
-file_filter = i18n/<lang>/demo-guide/index.po
-source_file = i18n/pot/demo-guide/index.pot
+[o:qwat:p:qwat-doc:r:user-guide-history]
+file_filter = i18n/<lang>/user-guide/history.po
+source_file = i18n/pot/user-guide/history.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:releases-index]
-file_filter = i18n/<lang>/releases/index.po
-source_file = i18n/pot/releases/index.pot
+[o:qwat:p:qwat-doc:r:user-guide-elevation]
+file_filter = i18n/<lang>/user-guide/elevation.po
+source_file = i18n/pot/user-guide/elevation.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:translation-index]
-file_filter = i18n/<lang>/translation/index.po
-source_file = i18n/pot/translation/index.pot
-source_lang = en
-type = PO
-
-[o:qwat:p:qwat-doc:r:glossary-index]
-file_filter = i18n/<lang>/glossary/index.po
-source_file = i18n/pot/glossary/index.pot
+[o:qwat:p:qwat-doc:r:user-guide-qwat-struct]
+file_filter = i18n/<lang>/user-guide/qwat_struct.po
+source_file = i18n/pot/user-guide/qwat_struct.pot
 source_lang = en
 type = PO
 
@@ -103,33 +61,15 @@ source_file = i18n/pot/user-guide/network_intervention_simulation.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:user-guide-elevation]
-file_filter = i18n/<lang>/user-guide/elevation.po
-source_file = i18n/pot/user-guide/elevation.pot
-source_lang = en
-type = PO
-
-[o:qwat:p:qwat-doc:r:user-guide-index]
-file_filter = i18n/<lang>/user-guide/index.po
-source_file = i18n/pot/user-guide/index.pot
-source_lang = en
-type = PO
-
 [o:qwat:p:qwat-doc:r:user-guide-create]
 file_filter = i18n/<lang>/user-guide/create.po
 source_file = i18n/pot/user-guide/create.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:user-guide-qwat-struct]
-file_filter = i18n/<lang>/user-guide/qwat_struct.po
-source_file = i18n/pot/user-guide/qwat_struct.pot
-source_lang = en
-type = PO
-
-[o:qwat:p:qwat-doc:r:user-guide-history]
-file_filter = i18n/<lang>/user-guide/history.po
-source_file = i18n/pot/user-guide/history.pot
+[o:qwat:p:qwat-doc:r:user-guide-delete]
+file_filter = i18n/<lang>/user-guide/delete.po
+source_file = i18n/pot/user-guide/delete.pot
 source_lang = en
 type = PO
 
@@ -145,9 +85,75 @@ source_file = i18n/pot/user-guide/print.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:user-guide-delete]
-file_filter = i18n/<lang>/user-guide/delete.po
-source_file = i18n/pot/user-guide/delete.pot
+[o:qwat:p:qwat-doc:r:user-guide-index]
+file_filter = i18n/<lang>/user-guide/index.po
+source_file = i18n/pot/user-guide/index.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:releases-template]
+file_filter = i18n/<lang>/releases/template.po
+source_file = i18n/pot/releases/template.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:releases-1-5]
+file_filter = i18n/<lang>/releases/1_5.po
+source_file = i18n/pot/releases/1_5.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:releases-index]
+file_filter = i18n/<lang>/releases/index.po
+source_file = i18n/pot/releases/index.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:glossary-index]
+file_filter = i18n/<lang>/glossary/index.po
+source_file = i18n/pot/glossary/index.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:developer-guide-qwat-dev]
+file_filter = i18n/<lang>/developer-guide/qwat_dev.po
+source_file = i18n/pot/developer-guide/qwat_dev.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:developer-guide-local-customizations]
+file_filter = i18n/<lang>/developer-guide/local_customizations.po
+source_file = i18n/pot/developer-guide/local_customizations.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:developer-guide-upgrade]
+file_filter = i18n/<lang>/developer-guide/upgrade.po
+source_file = i18n/pot/developer-guide/upgrade.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:developer-guide-index]
+file_filter = i18n/<lang>/developer-guide/index.po
+source_file = i18n/pot/developer-guide/index.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:demo-guide-index]
+file_filter = i18n/<lang>/demo-guide/index.po
+source_file = i18n/pot/demo-guide/index.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:contributor-guide-index]
+file_filter = i18n/<lang>/contributor-guide/index.po
+source_file = i18n/pot/contributor-guide/index.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:installation-guide-workstation]
+file_filter = i18n/<lang>/installation-guide/workstation.po
+source_file = i18n/pot/installation-guide/workstation.pot
 source_lang = en
 type = PO
 
@@ -157,21 +163,27 @@ source_file = i18n/pot/installation-guide/server.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:installation-guide-index]
-file_filter = i18n/<lang>/installation-guide/index.po
-source_file = i18n/pot/installation-guide/index.pot
-source_lang = en
-type = PO
-
 [o:qwat:p:qwat-doc:r:installation-guide-database-initialization]
 file_filter = i18n/<lang>/installation-guide/database-initialization.po
 source_file = i18n/pot/installation-guide/database-initialization.pot
 source_lang = en
 type = PO
 
-[o:qwat:p:qwat-doc:r:installation-guide-workstation]
-file_filter = i18n/<lang>/installation-guide/workstation.po
-source_file = i18n/pot/installation-guide/workstation.pot
+[o:qwat:p:qwat-doc:r:installation-guide-index]
+file_filter = i18n/<lang>/installation-guide/index.po
+source_file = i18n/pot/installation-guide/index.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:features-guide-index]
+file_filter = i18n/<lang>/features-guide/index.po
+source_file = i18n/pot/features-guide/index.pot
+source_lang = en
+type = PO
+
+[o:qwat:p:qwat-doc:r:translation-index]
+file_filter = i18n/<lang>/translation/index.po
+source_file = i18n/pot/translation/index.pot
 source_lang = en
 type = PO
 
