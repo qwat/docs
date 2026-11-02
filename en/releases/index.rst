@@ -9,5 +9,3 @@ Here you can find information about the different TEKSI qwat releases, including
    :maxdepth: 3
 
    1_5
-
-
