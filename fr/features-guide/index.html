@@ -1,20 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="fr" >
+<html class="writer-html5" lang="fr" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1. QWAT / Module TEKSI eau potable &mdash; Documentation QWAT 1.0</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7a28dfa3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -33,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             QWAT
           </a>
-              <div class="version">
-                1.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
@@ -93,7 +92,7 @@
            <div itemprop="articleBody">
              
   <section id="qwat-teksi-drinking-water-module">
-<h1><span class="section-number">1. </span>QWAT / Module TEKSI eau potable<a class="headerlink" href="#qwat-teksi-drinking-water-module" title="Lien permanent vers cette rubrique"></a></h1>
+<h1><span class="section-number">1. </span>QWAT / Module TEKSI eau potable<a class="headerlink" href="#qwat-teksi-drinking-water-module" title="Lien vers cette rubrique"></a></h1>
 <p>Le module TEKSI eau potable (nom de projet : QWAT) est une sélection d’outils et une implémentation de base de données qui vous permet de :</p>
 <ul class="simple">
 <li><p>gérer et cartographier votre réseau de distribution d’eau avec tous ses composants: conduites, vannes, pompes, réservoirs, etc.</p></li>
@@ -103,9 +102,9 @@
 </ul>
 <p>TEKSI eau potable est un module open source complet basé sur un modèle de données PostgreSQL - PostGIS inspiré de la norme suisse SIA405. Les données sont accessibles et éditables à l’aide d’un projet QGIS dédié. Le projet est maintenu par la <a class="reference external" href="https://www.teksi.ch">communauté TEKSI</a>.</p>
 <section id="main-features">
-<h2><span class="section-number">1.1. </span>Principales fonctionnalités<a class="headerlink" href="#main-features" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">1.1. </span>Principales fonctionnalités<a class="headerlink" href="#main-features" title="Lien vers cette rubrique"></a></h2>
 <section id="network-objects">
-<h3><span class="section-number">1.1.1. </span>Objets du réseaux<a class="headerlink" href="#network-objects" title="Lien permanent vers cette rubrique"></a></h3>
+<h3><span class="section-number">1.1.1. </span>Objets du réseaux<a class="headerlink" href="#network-objects" title="Lien vers cette rubrique"></a></h3>
 <p>Le modèle de données contient tous les objets d’un réseau de distribution d’eau et leurs attributs :</p>
 <ul class="simple">
 <li><p>Conduites</p></li>
@@ -127,18 +126,18 @@
 <p>Le modèle de données est quasi compatible avec la SIA405. Le modèle est complet et fourni tous les objets et attributs courants. Cependant, il est possible d’adapter les objets et attributs à ses propres besoins ou de proposer des modifications à la communauté.</p>
 </section>
 <section id="viewing-and-editing">
-<h3><span class="section-number">1.1.2. </span>Consultation et édition<a class="headerlink" href="#viewing-and-editing" title="Lien permanent vers cette rubrique"></a></h3>
+<h3><span class="section-number">1.1.2. </span>Consultation et édition<a class="headerlink" href="#viewing-and-editing" title="Lien vers cette rubrique"></a></h3>
 <p>Un projet QGIS pré-configuré est fourni. Les objets du réseau sont représentés avec une symbologie standard.</p>
 <p>L’édition peut être faite directement depuis QGIS, chaque objet possède un formulaire dédié qui facilite l’édition des attributs.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/en/user-guide/create.html">Edition documentation</a></p>
 </section>
 <section id="printing">
-<h3><span class="section-number">1.1.3. </span>Impression<a class="headerlink" href="#printing" title="Lien permanent vers cette rubrique"></a></h3>
+<h3><span class="section-number">1.1.3. </span>Impression<a class="headerlink" href="#printing" title="Lien vers cette rubrique"></a></h3>
 <p>Des mises en page pré-configurées sont disponibles dans le projet QGIS. La géométries des conduites et les étiquettes sont adaptées à l’échelle d’impression.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/en/user-guide/print.html">Printing documentation</a></p>
 </section>
 <section id="export">
-<h3><span class="section-number">1.1.4. </span>Export<a class="headerlink" href="#export" title="Lien permanent vers cette rubrique"></a></h3>
+<h3><span class="section-number">1.1.4. </span>Export<a class="headerlink" href="#export" title="Lien vers cette rubrique"></a></h3>
 <p>Une <a class="reference external" href="https://github.com/QGEP/qgepqwat2ili">librairie Python</a> est disponible pour exporter le réseau dans le modèle de données SIA405 en interlis.</p>
 <p>Des extensions sont développées pour d’autres standards:</p>
 <ul class="simple">
@@ -148,7 +147,7 @@
 </ul>
 </section>
 <section id="history-viewer">
-<h3><span class="section-number">1.1.5. </span>History viewer<a class="headerlink" href="#history-viewer" title="Lien permanent vers cette rubrique"></a></h3>
+<h3><span class="section-number">1.1.5. </span>History viewer<a class="headerlink" href="#history-viewer" title="Lien vers cette rubrique"></a></h3>
 <p>Le plugin <a class="reference external" href="https://plugins.qgis.org/plugins/pg_history_viewer/">PG History Viewer</a> peut être configuée pour QWAT. L’extension PostgreSQL permet de tracker les changements effectués sur les données. L’interface QGIS permet de sélectionner et annuler des changements.</p>
 <p><a class="reference external" href="https://qwat.github.io/docs/en/user-guide/history.html#">History viewer documentation</a></p>
 </section>
@@ -166,7 +165,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018, QWAT team.</p>
+    <p>&#169; Droits d'auteur 2018, QWAT team.</p>
   </div>
 
   Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un

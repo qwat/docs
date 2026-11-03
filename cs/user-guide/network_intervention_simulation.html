@@ -1,20 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="cs" >
+<html class="writer-html5" lang="cs" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.9. Simulace zásahu v síti &mdash; Dokumentace pro QWAT 1.0</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=31134d49"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=22e1c300"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
@@ -33,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             QWAT
           </a>
-              <div class="version">
-                1.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -101,11 +100,11 @@
            <div itemprop="articleBody">
              
   <section id="simulation-d-intervention-sur-le-reseau">
-<h1><span class="section-number">3.9. </span>Simulace zásahu v síti<a class="headerlink" href="#simulation-d-intervention-sur-le-reseau" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">3.9. </span>Simulace zásahu v síti<a class="headerlink" href="#simulation-d-intervention-sur-le-reseau" title="Link to this heading"></a></h1>
 <p>Nástroje pro simulaci síťových zásahů jsou k dispozici od verze 1.4.0.</p>
 <p>Tyto nástroje jsou v projektu QGIS prezentovány jako akce.</p>
 <section id="incident-reseau">
-<h2><span class="section-number">3.9.1. </span>Incident v síti<a class="headerlink" href="#incident-reseau" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.9.1. </span>Incident v síti<a class="headerlink" href="#incident-reseau" title="Link to this heading"></a></h2>
 <p>Tento nástroj identifikuje síťové ventily, které mají být uzavřeny a které jsou nejblíže incidentu. Nástroj je k dispozici v akci „Incident“ na vrstvě „Pipes“.</p>
 <p>Incident v síti se nachází na souřadnicích, kde uživatel provedl akci (akci lze spustit kliknutím pravým tlačítkem myši na potrubí).</p>
 <p>Dialogové okno umožňuje zadat maximální vzdálenost, kterou je třeba urazit při hledání ventilů, které mají být uzavřeny.</p>
@@ -121,7 +120,7 @@
 <img alt="../_images/incident_reseau_result_2.png" src="../_images/incident_reseau_result_2.png" />
 </section>
 <section id="pollution-reseau">
-<h2><span class="section-number">3.9.2. </span>Znečištění v síti<a class="headerlink" href="#pollution-reseau" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.9.2. </span>Znečištění v síti<a class="headerlink" href="#pollution-reseau" title="Link to this heading"></a></h2>
 <p>Tento nástroj umožňuje identifikovat potrubí a odběratele zasažené znečištěním. Nástroj je k dispozici v akci „Znečištění“ na vrstvě „Potrubí“.</p>
 <p>Znečištění sítě se nachází na souřadnicích, kde uživatel provedl akci (akci lze spustit kliknutím pravým tlačítkem myši na potrubí).</p>
 <p>Dialogové okno umožňuje zadat maximální vzdálenost, která má být při vyhledávání potrubí a účastníků překonána.</p>
@@ -133,7 +132,7 @@
 <img alt="../_images/pollution_reseau_result_1.png" src="../_images/pollution_reseau_result_1.png" />
 </section>
 <section id="interruption-reseau">
-<h2><span class="section-number">3.9.3. </span>Přerušení sítě<a class="headerlink" href="#interruption-reseau" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.9.3. </span>Přerušení sítě<a class="headerlink" href="#interruption-reseau" title="Link to this heading"></a></h2>
 <p>Tento nástroj umožňuje identifikovat potrubí, měřiče, hydranty a odběratele postižené přerušením sítě. Nástroj je k dispozici v akci „Přerušení sítě“ ve vrstvě „Ventily“.</p>
 <p>Přerušení sítě je charakterizováno několika uzavřenými ventily, které uživatel identifikuje při zahájení akce, a potrubím, které definuje stranu sítě zasaženou přerušením.</p>
 <p>Výsledkem je skupina dočasných vrstev. Do identifikovaných síťových objektů lze nahlížet prostřednictvím atributové tabulky.</p>
@@ -143,7 +142,7 @@
 <img alt="../_images/interruption_reseau_result.png" src="../_images/interruption_reseau_result.png" />
 </section>
 <section id="references">
-<h2><span class="section-number">3.9.4. </span>Odkazy<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.9.4. </span>Odkazy<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/qwat/QWAT/pull/318">https://github.com/qwat/QWAT/pull/318</a></p></li>
 <li><p><a class="reference external" href="https://github.com/qwat/qwat-data-model/pull/345">https://github.com/qwat/qwat-data-model/pull/345</a></p></li>

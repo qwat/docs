@@ -1,20 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="ro" >
+<html class="writer-html5" lang="ro" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.9. Simulation d’intervention sur le réseau &mdash; QWAT 1.0 documentație</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0a170a76"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=055b6fdf"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Căutare" href="../search.html" />
@@ -33,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             QWAT
           </a>
-              <div class="version">
-                1.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -101,11 +100,11 @@
            <div itemprop="articleBody">
              
   <section id="simulation-d-intervention-sur-le-reseau">
-<h1><span class="section-number">3.9. </span>Simulation d’intervention sur le réseau<a class="headerlink" href="#simulation-d-intervention-sur-le-reseau" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">3.9. </span>Simulation d’intervention sur le réseau<a class="headerlink" href="#simulation-d-intervention-sur-le-reseau" title="Link to this heading"></a></h1>
 <p>Des outils de simulation d’intervention sur le réseau sont disponibles à partir de la version 1.4.0</p>
 <p>Ces outils se présentent sous la forme d’actions dans le projet QGIS.</p>
 <section id="incident-reseau">
-<h2><span class="section-number">3.9.1. </span>Incident réseau<a class="headerlink" href="#incident-reseau" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.9.1. </span>Incident réseau<a class="headerlink" href="#incident-reseau" title="Link to this heading"></a></h2>
 <p>Cet outil permet d’identifier les vannes réseau à fermer situées au plus proche de l’incident. L’outil est disponible dans l’action „Incident” sur la couche „Conduites”.</p>
 <p>L’incident réseau est situé aux coordonnées où l’utilisateur a exécuté l’action (l’action peut être lancée via un clic droit sur une conduite).</p>
 <p>Une boîte de dialogue permet de renseigner le kilométrage maximum à parcourir pour la recherche des vannes à fermer.</p>
@@ -121,7 +120,7 @@
 <img alt="../_images/incident_reseau_result_2.png" src="../_images/incident_reseau_result_2.png" />
 </section>
 <section id="pollution-reseau">
-<h2><span class="section-number">3.9.2. </span>Pollution réseau<a class="headerlink" href="#pollution-reseau" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.9.2. </span>Pollution réseau<a class="headerlink" href="#pollution-reseau" title="Link to this heading"></a></h2>
 <p>Cet outil permet d’identifier les conduites et les abonnés touchés par une pollution. L’outil est disponible dans l’action „Pollution” sur la couche „Conduites”.</p>
 <p>La pollution réseau est située aux coordonnées où l’utilisateur a exécuté l’action (l’action peut être lancée via un clic droit sur une conduite).</p>
 <p>Une boîte de dialogue permet de renseigner le kilométrage maximum à parcourir pour la recherche des conduites et des abonnés.</p>
@@ -133,7 +132,7 @@
 <img alt="../_images/pollution_reseau_result_1.png" src="../_images/pollution_reseau_result_1.png" />
 </section>
 <section id="interruption-reseau">
-<h2><span class="section-number">3.9.3. </span>Interruption réseau<a class="headerlink" href="#interruption-reseau" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.9.3. </span>Interruption réseau<a class="headerlink" href="#interruption-reseau" title="Link to this heading"></a></h2>
 <p>Cet outil permet d’identifier les conduites, les compteurs, les bornes hydrantes et les abonnés concernés par une interruption de réseau. L’outil est disponible dans l’action „Coupure de réseau” sur la couche „Vannes”.</p>
 <p>L’interruption de réseau est caractérisée par plusieurs vannes fermées que l’utilisateur identifie lors du lancement de l’action et une conduite pour définir le côté du réseau concerné par l’interruption.</p>
 <p>Le résultat est sous la forme d’un groupe de couches temporaires. Les objets du réseau identifiés peuvent être consultés via la table attributaire.</p>
@@ -143,7 +142,7 @@
 <img alt="../_images/interruption_reseau_result.png" src="../_images/interruption_reseau_result.png" />
 </section>
 <section id="references">
-<h2><span class="section-number">3.9.4. </span>Références<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.9.4. </span>Références<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/qwat/QWAT/pull/318">https://github.com/qwat/QWAT/pull/318</a></p></li>
 <li><p><a class="reference external" href="https://github.com/qwat/qwat-data-model/pull/345">https://github.com/qwat/qwat-data-model/pull/345</a></p></li>

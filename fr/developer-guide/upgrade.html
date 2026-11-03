@@ -1,20 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="fr" >
+<html class="writer-html5" lang="fr" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>6.4. Mettre à jour la base de données &mdash; Documentation QWAT 1.0</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7a28dfa3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=e6b791cb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -33,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             QWAT
           </a>
-              <div class="version">
-                1.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
@@ -95,9 +94,9 @@
            <div itemprop="articleBody">
              
   <section id="upgrade-database">
-<h1><span class="section-number">6.4. </span>Mettre à jour la base de données<a class="headerlink" href="#upgrade-database" title="Lien permanent vers cette rubrique"></a></h1>
+<h1><span class="section-number">6.4. </span>Mettre à jour la base de données<a class="headerlink" href="#upgrade-database" title="Lien vers cette rubrique"></a></h1>
 <section id="create-a-new-upgrade-delta">
-<h2><span class="section-number">6.4.1. </span>Créer un delta de mise à jour<a class="headerlink" href="#create-a-new-upgrade-delta" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">6.4.1. </span>Créer un delta de mise à jour<a class="headerlink" href="#create-a-new-upgrade-delta" title="Lien vers cette rubrique"></a></h2>
 <ul class="simple">
 <li><p>Premièrement créer une nouvelle branche pour votre modification du modèle</p></li>
 <li><p>Modifier le code SQL de création selon le besoin</p></li>
@@ -111,7 +110,7 @@
 </div>
 </section>
 <section id="migrate-an-existing-database">
-<h2><span class="section-number">6.4.2. </span>Migrer une base de donnée existante<a class="headerlink" href="#migrate-an-existing-database" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">6.4.2. </span>Migrer une base de donnée existante<a class="headerlink" href="#migrate-an-existing-database" title="Lien vers cette rubrique"></a></h2>
 <p>Si vous utilisez une ancienne version du modèle de donnée QWAT, vous pouvez le mettre à jour en suivant les instructions ci-dessous :</p>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
@@ -134,7 +133,7 @@
 </div>
 </section>
 <section id="the-way-it-works">
-<h2><span class="section-number">6.4.3. </span>Fonctionnement<a class="headerlink" href="#the-way-it-works" title="Lien permanent vers cette rubrique"></a></h2>
+<h2><span class="section-number">6.4.3. </span>Fonctionnement<a class="headerlink" href="#the-way-it-works" title="Lien vers cette rubrique"></a></h2>
 <p>Un tag est attribué pour une version x.0</p>
 <p>Dans <em>/update/delta/ directory</em> se trouvent les fichiers SQL qui contiennent les évolutions courantes (delta). Si on exécute <em>init_qwat.sh</em> dans le dossier git courant, la base de donnée générées correspond à la même base de données que si <em>init_qwat.sh</em> en version x.0 est exécuté.</p>
 <p>Pour un utilisateur, le processus de migration consiste en :</p>
@@ -175,7 +174,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018, QWAT team.</p>
+    <p>&#169; Droits d'auteur 2018, QWAT team.</p>
   </div>
 
   Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un

@@ -1,20 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="cs" >
+<html class="writer-html5" lang="cs" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3.2. Vytváření objektů v QWAT &mdash; Dokumentace pro QWAT 1.0</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=31134d49"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=22e1c300"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
@@ -33,9 +35,6 @@
           <a href="../index.html" class="icon icon-home">
             QWAT
           </a>
-              <div class="version">
-                1.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -113,11 +112,11 @@
            <div itemprop="articleBody">
              
   <section id="object-creation-in-qwat">
-<h1><span class="section-number">3.2. </span>Vytváření objektů v QWAT<a class="headerlink" href="#object-creation-in-qwat" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">3.2. </span>Vytváření objektů v QWAT<a class="headerlink" href="#object-creation-in-qwat" title="Link to this heading"></a></h1>
 <p>Tato příručka je určena ke shrnutí tvorby funkcí podle funkcí QWAT v QGIS.</p>
 <p>Nenahrazuje <a class="reference external" href="https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html">dokumentaci QGIS</a>. Uživatel může volně používat nástroje kreslicího zásuvného modulu k vylepšení své sady nástrojů. Nicméně mnoho z tezí bylo integrováno do QGIS, takže nejprve zkontrolujte dokumentaci QGIS.</p>
 <section id="import-of-survey-points">
-<h2><span class="section-number">3.2.1. </span>Import bodů průzkumu<a class="headerlink" href="#import-of-survey-points" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.1. </span>Import bodů průzkumu<a class="headerlink" href="#import-of-survey-points" title="Link to this heading"></a></h2>
 <p>Bude nově definováno podle Importu zeměměřičských kódů</p>
 <p>Aktuální možný nástroj :</p>
 <p>Pomocí nativního importního nástroje QGIS můžete importovat libovolné body z téměř libovolného formátu.</p>
@@ -134,7 +133,7 @@
 <p>Body byly importovány do správných vrstev, ty byly přepnuty do režimu úprav. Nyní musíte vyplnit atributy různých bodů pro každou vrstvu podle následujícího postupu.</p>
 </section>
 <section id="construction-points-creation">
-<h2><span class="section-number">3.2.2. </span>Vytváření stavebních bodů<a class="headerlink" href="#construction-points-creation" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.2. </span>Vytváření stavebních bodů<a class="headerlink" href="#construction-points-creation" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit nové stavební body, vyberte kategorii „stavební body“, což je podložka ve vrstvě „Pobřeží“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“</p>
@@ -142,7 +141,7 @@
 <p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář objektu, není vyplněno žádné pole. (V případě potřeby můžete napsat poznámku)</p>
 </section>
 <section id="creation-des-conduites">
-<h2><span class="section-number">3.2.3. </span>Vytváření potrubí<a class="headerlink" href="#creation-des-conduites" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.3. </span>Vytváření potrubí<a class="headerlink" href="#creation-des-conduites" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit nová potrubí, vyberte kategorii „potrubí“, která je pod vrstvou ve vrstvě „Síť“. Pak musíme přepnout do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“</p>
@@ -197,7 +196,7 @@
 </ul>
 </section>
 <section id="separation-dune-conduite-en-deux-conduites">
-<h2><span class="section-number">3.2.4. </span>Rozdělení potrubí na dvě trubky<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.4. </span>Rozdělení potrubí na dvě trubky<a class="headerlink" href="#separation-dune-conduite-en-deux-conduites" title="Link to this heading"></a></h2>
 <p>Během aktualizace se často stává, že pro připojení k novému zvýšenému bodu musíte přerušit existující potrubí. Chcete-li to provést, musíte použít nástroj „Oddělené entity“</p>
 <img alt="../_images/icon_cut_entity.png" src="../_images/icon_cut_entity.png" />
 <p>Pak musíme udělat přímku, která rozřízne naši trubku na místě, kde chceme, aby byla řezána:</p>
@@ -205,7 +204,7 @@
 <p>Potrubí se pak rozdělí na dvě trubky. Pole nemusí být vyplněna, nový kanál má stejné atributy, ID kanálu je vytvořeno automaticky.</p>
 </section>
 <section id="creation-des-differentes-pieces-dinstallation">
-<h2><span class="section-number">3.2.5. </span>Vytvoření různých instalačních dílů<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.5. </span>Vytvoření různých instalačních dílů<a class="headerlink" href="#creation-des-differentes-pieces-dinstallation" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit nové instalační kusy, vyberte kategorii „instalační kus“, což je podložka ve vrstvě „Uzly“. Poté musíte přepnout do režimu úprav.</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“</p>
@@ -220,11 +219,11 @@
 </ul>
 </section>
 <section id="creation-des-points-dintroduction">
-<h2><span class="section-number">3.2.6. </span>Vytváření úvodních bodů<a class="headerlink" href="#creation-des-points-dintroduction" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.6. </span>Vytváření úvodních bodů<a class="headerlink" href="#creation-des-points-dintroduction" title="Link to this heading"></a></h2>
 <p>Úvodní bod je vytvořen vytvořením instalační části, která má „Typ“ = „úvodní bod“. Po dokončení se při generování uzlů automaticky vytvoří úvodní bod ve vrstvě „Uzly“ (viz níže uvedená vysvětlení).</p>
 </section>
 <section id="creation-des-vannes">
-<h2><span class="section-number">3.2.7. </span>Tvorba ventilů<a class="headerlink" href="#creation-des-vannes" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.7. </span>Tvorba ventilů<a class="headerlink" href="#creation-des-vannes" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit nové ventily, vyberte kategorii „ventily“, což je podvrstva ve vrstvě „Síť“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“.</p>
@@ -262,7 +261,7 @@
 </ul>
 </section>
 <section id="creation-des-bornes-hydrantes">
-<h2><span class="section-number">3.2.8. </span>Tvorba hydrantů<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.8. </span>Tvorba hydrantů<a class="headerlink" href="#creation-des-bornes-hydrantes" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit nové hydranty, vyberte kategorii „hydranty“, která je ve vrstvě „Síť“ podkladovou vrstvou.</p>
 <p>Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
@@ -304,7 +303,7 @@
 </ul>
 </section>
 <section id="creation-dun-manchon-de-reparation">
-<h2><span class="section-number">3.2.9. </span>Vytvoření opravného pouzdra<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.9. </span>Vytvoření opravného pouzdra<a class="headerlink" href="#creation-dun-manchon-de-reparation" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit nové opravné pouzdro, vyberte kategorii „netěsnosti“, což je podložka ve vrstvě „Síť“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“.</p>
@@ -373,7 +372,7 @@
 <p>Aby se spojení s trubkou uskutečnilo automaticky, musí být trubka zaznamenána, jakmile byla vytvořena objímka.</p>
 </section>
 <section id="creation-douvrages-ainsi-que-de-tous-leurs-details">
-<h2><span class="section-number">3.2.10. </span>Tvorba díla a všechny jejich detaily<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.10. </span>Tvorba díla a všechny jejich detaily<a class="headerlink" href="#creation-douvrages-ainsi-que-de-tous-leurs-details" title="Link to this heading"></a></h2>
 <p>Práce a jejich detaily jsou obsaženy v několika vrstvách:</p>
 <blockquote>
 <div><ul class="simple">
@@ -385,7 +384,7 @@
 </div></blockquote>
 </section>
 <section id="creation-de-louvrage-general">
-<h2><span class="section-number">3.2.11. </span>Vytvoření obecného díla<a class="headerlink" href="#creation-de-louvrage-general" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.11. </span>Vytvoření obecného díla<a class="headerlink" href="#creation-de-louvrage-general" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit pracovní bod, musíte vybrat kategorii „obecná práce“, což je podložka ve vrstvě „funguje“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“.</p>
@@ -400,7 +399,7 @@
 </ul>
 </section>
 <section id="creation-du-couvercle-de-louvrage">
-<h2><span class="section-number">3.2.12. </span>Vytvoření obálky knihy<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.12. </span>Vytvoření obálky knihy<a class="headerlink" href="#creation-du-couvercle-de-louvrage" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit kryt struktury, musíte vybrat vrstvu „kryty“, což je podložka ve vrstvě „struktury“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“.</p>
@@ -424,7 +423,7 @@
 </ul>
 </section>
 <section id="creation-de-lemprise-de-louvrage">
-<h2><span class="section-number">3.2.13. </span>Vytvoření práva na cestu struktury<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.13. </span>Vytvoření práva na cestu struktury<a class="headerlink" href="#creation-de-lemprise-de-louvrage" title="Link to this heading"></a></h2>
 <p>Pour créer l’emprise de l’ouvrage, il faut sélectionner la catégorie « ouvrage – polygones »
 qui est une sous‐couche dans la couche « ouvrages ».
 Il faut ensuite basculer en mode édition</p>
@@ -439,7 +438,7 @@ Il faut ensuite basculer en mode édition</p>
 </ul>
 </section>
 <section id="creation-des-details-de-louvrage">
-<h2><span class="section-number">3.2.14. </span>Vytvoření detailů díla<a class="headerlink" href="#creation-des-details-de-louvrage" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.14. </span>Vytvoření detailů díla<a class="headerlink" href="#creation-des-details-de-louvrage" title="Link to this heading"></a></h2>
 <p>Chcete-li vytvořit podrobnosti o díle, musíte vybrat vrstvu požadovaného detailu, což je podložka ve vrstvě „detail“. Poté přepněte do režimu úprav</p>
 <img alt="../_images/icon_edit.png" src="../_images/icon_edit.png" />
 <p>a použijte tlačítko „přidat entitu“.</p>
@@ -447,10 +446,10 @@ Il faut ensuite basculer en mode édition</p>
 <p>Zbývá pouze kliknout na místo požadovaného bodu. Otevře se formulář objektu, musíte vyplnit atributy podle typu detailu, který jste vytvořili (nádrže, zdroje atd.).</p>
 </section>
 <section id="creation-des-tubes-de-protection">
-<h2><span class="section-number">3.2.15. </span>Création des tubes de protection<a class="headerlink" href="#creation-des-tubes-de-protection" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.15. </span>Création des tubes de protection<a class="headerlink" href="#creation-des-tubes-de-protection" title="Link to this heading"></a></h2>
 </section>
 <section id="creation-des-cable-de-controles">
-<h2><span class="section-number">3.2.16. </span>Création des cable de contrôles<a class="headerlink" href="#creation-des-cable-de-controles" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2.16. </span>Création des cable de contrôles<a class="headerlink" href="#creation-des-cable-de-controles" title="Link to this heading"></a></h2>
 </section>
 </section>
 
