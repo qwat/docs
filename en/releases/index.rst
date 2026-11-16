@@ -10,4 +10,5 @@ and download links.
 .. toctree::
    :maxdepth: 3
 
+   1_6
    1_5

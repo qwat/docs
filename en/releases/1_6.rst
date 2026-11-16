@@ -1,0 +1,43 @@
+.. _1_6:
+
+1.6.0
+===============
+
+Here you can find information about the future 1.6.0 release of TEKSI qwat
+
+Main features
+----------------
+
+- xxx
+
+Documentation
+--------------
+
+- New Release chapter added
+- Chapter Protection tubes and distant control cables added in Object creation chapter (needs to be updated)
+
+Bug fixes and performance improvements
+-----------------------------------------
+
+ - xxx
+ 
+ 
+Adaptions to project file
+----------------------------------------
+
+The following new views have been integrated in this release:
+
+- xxx
+
+
+
+CI improvements
+---------------
+ 
+- xxx
+
+
+For technical details see Release pages resp. closed pull requests (docs):
+https://github.com/qwat/QWAT/releases/tag/1.6.0
+https://github.com/qwat/qwat-data-model/releases/tag/1.6.0
+https://github.com/qwat/docs/pulls?q=is%3Apr+is%3Aclosed
